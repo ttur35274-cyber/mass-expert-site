@@ -69,10 +69,14 @@ document.addEventListener('DOMContentLoaded', () => {
   const navLinks = document.querySelector('.navbar-links');
   if (toggle) {
     toggle.addEventListener('click', () => {
-      navLinks.classList.toggle('open');
+      const isOpen = navLinks.classList.toggle('open');
+      document.body.style.overflow = isOpen ? 'hidden' : '';
     });
     navLinks.querySelectorAll('a').forEach(link => {
-      link.addEventListener('click', () => navLinks.classList.remove('open'));
+      link.addEventListener('click', () => {
+        navLinks.classList.remove('open');
+        document.body.style.overflow = '';
+      });
     });
   }
 
@@ -108,7 +112,9 @@ document.addEventListener('DOMContentLoaded', () => {
       const target = document.querySelector(this.getAttribute('href'));
       if (target) {
         e.preventDefault();
-        target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        // Instant scroll on mobile when nav menu is open, smooth otherwise
+        const useSmooth = !navLinks || !navLinks.classList.contains('open');
+        target.scrollIntoView({ behavior: useSmooth ? 'smooth' : 'instant', block: 'start' });
       }
     });
   });
