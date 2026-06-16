@@ -4,6 +4,61 @@
 
 document.addEventListener('DOMContentLoaded', () => {
 
+  // --- Theme System (Dark + Accessibility) ---
+  const html = document.documentElement;
+  const themeToggle = document.getElementById('themeToggle');
+  const accessibilityToggle = document.getElementById('accessibilityToggle');
+
+  function setTheme(theme) {
+    // Remove both theme classes
+    html.classList.remove('theme-dark', 'theme-accessibility');
+    if (theme === 'dark') html.classList.add('theme-dark');
+    if (theme === 'accessibility') html.classList.add('theme-accessibility');
+    // Update icons
+    if (themeToggle) {
+      themeToggle.innerHTML = theme === 'dark'
+        ? '<i class="fas fa-sun"></i>'
+        : '<i class="fas fa-moon"></i>';
+      themeToggle.title = theme === 'dark' ? 'Светлая тема' : 'Тёмная тема';
+    }
+    if (accessibilityToggle) {
+      const isA11y = theme === 'accessibility';
+      accessibilityToggle.innerHTML = isA11y
+        ? '<i class="fas fa-eye-slash"></i>'
+        : '<i class="fas fa-eye"></i>';
+      accessibilityToggle.title = isA11y ? 'Обычный режим' : 'Режим для слабовидящих';
+    }
+    localStorage.setItem('mass-expert-theme', theme || '');
+  }
+
+  // Load saved theme
+  const saved = localStorage.getItem('mass-expert-theme');
+  if (saved) setTheme(saved);
+
+  // Theme toggle click
+  if (themeToggle) {
+    themeToggle.addEventListener('click', () => {
+      const current = html.classList.contains('theme-dark');
+      setTheme(current ? '' : 'dark');
+    });
+  }
+
+  // Accessibility toggle click
+  if (accessibilityToggle) {
+    accessibilityToggle.addEventListener('click', () => {
+      const current = html.classList.contains('theme-accessibility');
+      // When enabling accessibility, also apply dark theme for better contrast
+      setTheme(current ? '' : 'accessibility');
+      if (!current && !html.classList.contains('theme-dark')) {
+        html.classList.add('theme-dark');
+        if (themeToggle) {
+          themeToggle.innerHTML = '<i class="fas fa-sun"></i>';
+          themeToggle.title = 'Светлая тема';
+        }
+      }
+    });
+  }
+
   // --- Mobile Nav Toggle ---
   const toggle = document.querySelector('.navbar-toggle');
   const navLinks = document.querySelector('.navbar-links');
@@ -11,7 +66,6 @@ document.addEventListener('DOMContentLoaded', () => {
     toggle.addEventListener('click', () => {
       navLinks.classList.toggle('open');
     });
-    // Close on link click
     navLinks.querySelectorAll('a').forEach(link => {
       link.addEventListener('click', () => navLinks.classList.remove('open'));
     });
@@ -19,11 +73,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // --- Navbar scroll effect ---
   const navbar = document.querySelector('.navbar');
-  let lastScroll = 0;
   window.addEventListener('scroll', () => {
-    const current = window.scrollY;
-    navbar.classList.toggle('scrolled', current > 50);
-    lastScroll = current;
+    navbar.classList.toggle('scrolled', window.scrollY > 50);
   });
 
   // --- Active nav link based on scroll ---
