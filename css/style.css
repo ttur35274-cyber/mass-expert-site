@@ -55,7 +55,7 @@ body {
   overflow-x: hidden;
 }
 
-img { max-width: 100%; height: auto; display: block; }
+img { max-width: 100%; height: auto; display: block; margin: 0 auto; }
 a { color: var(--primary); text-decoration: none; transition: color var(--transition); }
 a:hover { color: var(--accent-hover); }
 ul, ol { list-style: none; }
