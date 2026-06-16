@@ -55,7 +55,7 @@ mass-expert-site/
 2. **О продукте** — описание расходомера и компании-производителя
 3. **7 преимуществ** — ключевые конкурентные преимущества
 4. **Принцип работы** — эффект Кориолиса: массовый расход, плотность, объём, температура
-5. **Отрасли применения** — 16 отраслей промышленности
+5. **Отрасли применения** — 16 отраслей промышленности с отдельными страницами для каждой: [нефтегаз](applications/neftegaz.html), [химия](applications/chemical.html), [полимеры](applications/polymers.html), [фарма](applications/pharma.html), [пищевая](applications/food.html), [электроника](applications/electronics.html), [водород](applications/hydrogen.html), [аккумуляторы](applications/batteries.html), [биотех](applications/biotech.html), [дозирование](applications/dosing.html), [лаборатории](applications/laboratories.html), [теплоэнергетика](applications/heatpower.html), [крио](applications/cryogenic.html), [СУГ](applications/lpg.html), [СПГ](applications/lng.html), [коммерческий учёт](applications/commercial.html)
 6. **Типоразмеры** — таблицы расходов, стабильности нуля, высокого давления
 7. **Технические характеристики** — полные метрологические и технические данные
 8. **Трансмиттеры** — ME100, ME200, ME300

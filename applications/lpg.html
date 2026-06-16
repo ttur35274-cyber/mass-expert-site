@@ -1,0 +1,856 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>СУГ / LPG (пропан-бутан) — Mass-EXPERT | Кориолисовые расходомеры</title>
+  <meta name="description" content="Массовые расходомеры Mass-EXPERT для коммерческого учёта сжиженных углеводородных газов (СУГ, LPG): пропан, бутан, СПБТ. Заправка газгольдеров и автоцистерн. Взрывозащита Ex. Исполнение P для высокого давления до 25–45 МПа. Рекомендуемые конфигурации: U-тип, P-исполнение, ME200 Ex, RS-485 Modbus.">
+  <meta name="keywords" content="СУГ, LPG, пропан-бутан, сжиженный углеводородный газ, СПБТ, кориолисовый расходомер, Mass-EXPERT, коммерческий учёт СУГ, газгольдер, автоцистерна, взрывозащита Ex, высокое давление, P-исполнение, ME200, RS-485 Modbus, пропан, бутан">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <!-- Open Graph -->
+  <meta property="og:title" content="СУГ / LPG (пропан-бутан) — Mass-EXPERT">
+  <meta property="og:description" content="Коммерческий учёт сжиженных углеводородных газов с кориолисовыми расходомерами Mass-EXPERT. Пропан, бутан, СПБТ. Заправка газгольдеров. Взрывозащита Ex. Высокое давление до 45 МПа.">
+  <meta property="og:type" content="website">
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 40 40'><rect width='40' height='40' rx='8' fill='%23F59E0B'/><text x='20' y='26' text-anchor='middle' font-size='14' font-weight='900' fill='%230F172A' font-family='Inter'>ME</text></svg>">
+  <style>
+    /* Application page specific styles */
+    .cond-hero {
+      position: relative;
+      min-height: 70vh;
+      display: flex;
+      align-items: center;
+      background: linear-gradient(135deg, #0a1628 0%, #2a3a1a 50%, #0d2137 100%);
+      overflow: hidden;
+      padding-top: 72px;
+    }
+    .cond-hero::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background:
+        radial-gradient(ellipse at 70% 30%, rgba(251, 191, 36, 0.10) 0%, transparent 60%),
+        radial-gradient(ellipse at 30% 80%, rgba(255,255,255,0.03) 0%, transparent 50%);
+      pointer-events: none;
+    }
+    .cond-hero-content {
+      position: relative;
+      z-index: 1;
+    }
+    .cond-hero-content .cond-label {
+      display: inline-block;
+      font-size: 0.75rem;
+      color: var(--gray-400);
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      font-weight: 600;
+      margin-bottom: 0.75rem;
+      background: rgba(255,255,255,0.08);
+      padding: 0.3rem 0.75rem;
+      border-radius: 999px;
+    }
+    .cond-hero-content h1 {
+      color: var(--white);
+      margin-bottom: 0.5rem;
+      font-size: 3.5rem;
+    }
+    .cond-hero-content .cond-subtitle {
+      font-size: 1.35rem;
+      color: var(--accent);
+      font-weight: 600;
+      margin-bottom: 1.5rem;
+    }
+    .cond-hero-content .cond-desc {
+      color: rgba(255,255,255,0.8);
+      font-size: 1.0625rem;
+      margin: 1.5rem 0 2rem;
+      max-width: 680px;
+    }
+    .cond-badges {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.75rem;
+      margin-top: 1.5rem;
+    }
+    .cond-badge {
+      background: rgba(255,255,255,0.1);
+      border: 1px solid rgba(255,255,255,0.15);
+      color: rgba(255,255,255,0.9);
+      padding: 0.4rem 1rem;
+      border-radius: 999px;
+      font-size: 0.8125rem;
+      font-weight: 500;
+    }
+    .cond-hero-icon {
+      font-size: 5rem;
+      color: var(--accent);
+      margin-bottom: 1rem;
+      opacity: 0.9;
+    }
+
+    /* Section standard overrides */
+    .section-header .section-icon-big {
+      font-size: 3rem;
+      color: var(--primary);
+      margin-bottom: 0.75rem;
+    }
+
+    /* Media cards grid */
+    .media-cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 1.5rem;
+      margin-top: 2rem;
+    }
+    .media-card {
+      background: var(--white);
+      border: 1px solid var(--gray-200);
+      border-radius: var(--radius-lg);
+      padding: 1.5rem;
+      transition: all var(--transition);
+    }
+    .media-card:hover {
+      border-color: var(--primary);
+      box-shadow: var(--shadow-md);
+      transform: translateY(-2px);
+    }
+    .media-card .mc-icon {
+      font-size: 2.5rem;
+      margin-bottom: 0.75rem;
+    }
+    .media-card h4 {
+      font-size: 1.0625rem;
+      color: var(--primary);
+      margin-bottom: 0.5rem;
+    }
+    .media-card p {
+      font-size: 0.9375rem;
+      color: var(--gray-500);
+      margin: 0;
+    }
+
+    /* Advantage cards */
+    .adv-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 1.5rem;
+      margin-top: 2rem;
+    }
+    .adv-card-app {
+      background: var(--white);
+      border: 1px solid var(--gray-200);
+      border-radius: var(--radius-lg);
+      padding: 1.5rem;
+      text-align: center;
+      transition: all var(--transition);
+    }
+    .adv-card-app:hover {
+      border-color: var(--primary);
+      box-shadow: var(--shadow-md);
+      transform: translateY(-2px);
+    }
+    .adv-card-app .adv-icon {
+      font-size: 2.5rem;
+      margin-bottom: 0.75rem;
+    }
+    .adv-card-app h4 {
+      font-size: 1.0625rem;
+      color: var(--primary);
+      margin-bottom: 0.5rem;
+    }
+    .adv-card-app p {
+      font-size: 0.9375rem;
+      color: var(--gray-500);
+      margin: 0;
+    }
+
+    /* Config cards */
+    .config-cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 1.5rem;
+      margin-top: 2rem;
+    }
+    .config-card {
+      background: var(--white);
+      border: 1px solid var(--gray-200);
+      border-radius: var(--radius-lg);
+      padding: 1.5rem;
+      border-top: 4px solid var(--primary);
+      transition: all var(--transition);
+    }
+    .config-card:hover {
+      box-shadow: var(--shadow-md);
+      transform: translateY(-2px);
+    }
+    .config-card .cfg-icon {
+      font-size: 2rem;
+      color: var(--primary);
+      margin-bottom: 0.75rem;
+    }
+    .config-card h4 {
+      font-size: 1.0625rem;
+      color: var(--primary);
+      margin-bottom: 0.5rem;
+    }
+    .config-card ul {
+      margin: 0.75rem 0 0;
+      padding: 0;
+      list-style: none;
+    }
+    .config-card ul li {
+      position: relative;
+      padding-left: 1.25rem;
+      margin-bottom: 0.35rem;
+      font-size: 0.875rem;
+      color: var(--gray-600);
+    }
+    .config-card ul li::before {
+      content: '✓';
+      position: absolute;
+      left: 0;
+      color: var(--success, #10B981);
+      font-weight: 700;
+    }
+
+    /* Materials table */
+    .materials-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 1rem;
+      margin: 1.5rem 0;
+    }
+    .material-card {
+      background: var(--gray-50);
+      border: 1px solid var(--gray-200);
+      border-radius: var(--radius);
+      padding: 1.25rem;
+      text-align: center;
+    }
+    .material-card .mat-icon {
+      font-size: 2rem;
+      margin-bottom: 0.5rem;
+    }
+    .material-card .mat-name {
+      font-weight: 700;
+      color: var(--gray-800);
+      font-size: 1rem;
+    }
+    .material-card .mat-desc {
+      font-size: 0.8125rem;
+      color: var(--gray-500);
+      margin-top: 0.25rem;
+    }
+
+    /* Highlight box */
+    .highlight-box {
+      background: linear-gradient(135deg, #FEF3C7, #FDE68A);
+      border: 1px solid #FCD34D;
+      border-left: 4px solid #D97706;
+      border-radius: var(--radius-lg);
+      padding: 1.5rem 2rem;
+      margin: 2rem 0;
+    }
+    .highlight-box h3 {
+      color: #92400E;
+      font-size: 1.0625rem;
+      margin-bottom: 0.5rem;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+    .highlight-box p {
+      color: #92400E;
+      font-size: 0.9375rem;
+      margin-bottom: 0;
+    }
+
+    /* Feature list */
+    .feat-list {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1rem;
+      margin: 1.5rem 0;
+    }
+    .feat-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 0.75rem;
+      padding: 0.75rem 0;
+    }
+    .feat-item .feat-icon {
+      flex-shrink: 0;
+      width: 28px;
+      height: 28px;
+      background: rgba(251, 191, 36, 0.15);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 0.875rem;
+      color: #B45309;
+      font-weight: 700;
+    }
+    .feat-item .feat-text {
+      font-size: 0.9375rem;
+      color: var(--gray-700);
+    }
+
+    /* Process flow */
+    .process-flow {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 1.5rem;
+      margin-top: 2rem;
+      counter-reset: step;
+    }
+    .process-step {
+      background: var(--white);
+      border: 1px solid var(--gray-200);
+      border-radius: var(--radius-lg);
+      padding: 1.5rem;
+      text-align: center;
+      position: relative;
+      transition: all var(--transition);
+    }
+    .process-step:hover {
+      border-color: var(--primary);
+      box-shadow: var(--shadow-md);
+      transform: translateY(-2px);
+    }
+    .process-step .step-num {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 36px;
+      height: 36px;
+      background: var(--primary);
+      color: var(--white);
+      border-radius: 50%;
+      font-weight: 700;
+      font-size: 0.9375rem;
+      margin: 0 auto 0.75rem;
+    }
+    .process-step .step-icon {
+      font-size: 2.2rem;
+      margin-bottom: 0.5rem;
+    }
+    .process-step h4 {
+      font-size: 1rem;
+      color: var(--primary);
+      margin-bottom: 0.5rem;
+    }
+    .process-step p {
+      font-size: 0.875rem;
+      color: var(--gray-500);
+      margin: 0;
+    }
+
+    @media (max-width: 768px) {
+      .feat-list { grid-template-columns: 1fr; }
+      .cond-hero { min-height: auto; padding: 6rem 0 3rem; }
+      .cond-hero-content h1 { font-size: 2.5rem; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ==================== NAVIGATION ==================== -->
+  <nav class="navbar" role="navigation" aria-label="Основная навигация">
+    <div class="container">
+      <a href="../index.html" class="navbar-brand">
+        <span class="brand-icon">MASS<br>EXPERT</span>
+        Mass-EXPERT
+      </a>
+      <button class="navbar-toggle" aria-label="Открыть меню">☰</button>
+      <div class="navbar-links">
+        <a href="../index.html#about">О продукте</a>
+        <a href="../index.html#advantages">Преимущества</a>
+        <a href="../index.html#principle">Принцип работы</a>
+        <a href="../index.html#product-line">Типоразмеры</a>
+        <a href="../index.html#specifications">Характеристики</a>
+        <a href="../index.html#contacts">Контакты</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ==================== HERO ==================== -->
+  <section class="cond-hero" id="hero">
+    <div class="container">
+      <div class="cond-hero-content">
+        <span class="cond-label">Отрасль применения</span>
+        <div class="cond-hero-icon"><i class="fas fa-gas-pump"></i></div>
+        <h1>СУГ / LPG (пропан-бутан)</h1>
+        <div class="cond-subtitle">Коммерческий учёт и заправка сжиженных углеводородных газов</div>
+        <p class="cond-desc">
+          Массовые расходомеры <strong>Mass-EXPERT</strong> для точного учёта сжиженных
+          углеводородных газов (СУГ / LPG) — пропана, бутана и их смесей (СПБТ).
+          Оптимальное решение для заправочных станций газгольдеров, налива автоцистерн,
+          узлов коммерческого учёта СУГ на газонаполнительных станциях (ГНС) и
+          газораспределительных пунктах. Взрывозащищённое исполнение Ex и работа
+          при высоком давлении до 25–45 МПа (исполнение P).
+        </p>
+        <div style="display:flex;gap:1rem;flex-wrap:wrap;">
+          <a href="#media" class="btn btn-primary">Типичные среды</a>
+          <a href="#advantages" class="btn btn-outline">Преимущества</a>
+        </div>
+        <div class="cond-badges">
+          <span class="cond-badge"><i class="fas fa-fire" style="margin-right:4px;"></i> Пропан (C₃H₈)</span>
+          <span class="cond-badge"><i class="fas fa-fire" style="margin-right:4px;"></i> Бутан (C₄H₁₀)</span>
+          <span class="cond-badge"><i class="fas fa-gas-pump" style="margin-right:4px;"></i> Заправка газгольдеров</span>
+          <span class="cond-badge"><i class="fas fa-truck" style="margin-right:4px;"></i> Налив автоцистерн</span>
+          <span class="cond-badge"><i class="fas fa-shield-halved" style="margin-right:4px;"></i> Взрывозащита Ex</span>
+          <span class="cond-badge"><i class="fas fa-gauge-high" style="margin-right:4px;"></i> P-исполнение (25–45 МПа)</span>
+          <span class="cond-badge"><i class="fas fa-balance-scale" style="margin-right:4px;"></i> Коммерческий учёт</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== TYPICAL MEDIA ==================== -->
+  <section class="section" id="media">
+    <div class="container">
+      <div class="section-header animate-on-scroll">
+        <span class="section-badge">Типичные среды</span>
+        <h2>Измерение сжиженных углеводородных газов</h2>
+        <p>Кориолисовые расходомеры Mass-EXPERT обеспечивают прямое измерение массового расхода сжиженных углеводородных газов (LPG) в жидкой и газовой фазе — от пропана и бутана до промышленных смесей СПБТ.</p>
+      </div>
+
+      <div class="media-cards animate-on-scroll">
+        <div class="media-card">
+          <div class="mc-icon"><i class="fas fa-fire"></i></div>
+          <h4>Пропан (C₃H₈)</h4>
+          <p>Измерение массового расхода сжиженного пропана на линиях заправки газгольдеров, налива автоцистерн и узлах коммерческого учёта. Прямое массовое измерение без корректировки на плотность — высокая точность при любых температурах.</p>
+        </div>
+        <div class="media-card">
+          <div class="mc-icon"><i class="fas fa-fire"></i></div>
+          <h4>Бутан (C₄H₁₀)</h4>
+          <p>Учёт сжиженного бутана на газонаполнительных станциях и терминалах. Стабильная работа при низких температурах и высоких давлениях. Массовый расходомер исключает погрешности, связанные с объёмным расширением и изменением плотности.</p>
+        </div>
+        <div class="media-card">
+          <div class="mc-icon"><i class="fas fa-flask"></i></div>
+          <h4>Смесь СПБТ (пропан-бутан технический)</h4>
+          <p>Измерение технической смеси пропана и бутана (СПБТ) в различных пропорциях — от зимних до летних составов. Кориолисовый принцип обеспечивает точность независимо от фактического соотношения компонентов в смеси.</p>
+        </div>
+        <div class="media-card">
+          <div class="mc-icon"><i class="fas fa-truck"></i></div>
+          <h4>СУГ при наливе автоцистерн</h4>
+          <p>Коммерческий учёт СУГ при наливе автоцистерн на газонаполнительных станциях. Высокоточное измерение массы отгружаемого продукта с погрешностью до ±0,1% — минимальные потери при отпуске.</p>
+        </div>
+        <div class="media-card">
+          <div class="mc-icon"><i class="fas fa-home"></i></div>
+          <h4>Заправка газгольдеров</h4>
+          <p>Учёт сжиженного газа при заправке резервуарных установок (газгольдеров) для автономного газоснабжения. Точное дозирование и автоматическая фиксация объёма заправки для биллинга.</p>
+        </div>
+        <div class="media-card">
+          <div class="mc-icon"><i class="fas fa-industry"></i></div>
+          <h4>СУГ на ГНС и ГРП</h4>
+          <p>Технологический и коммерческий учёт СУГ на газонаполнительных станциях (ГНС) и газораспределительных пунктах (ГРП). Интеграция с АСУ ТП через RS-485 Modbus для автоматического сбора данных.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== PROCESS FLOW ==================== -->
+  <section class="section section-gray" id="process">
+    <div class="container">
+      <div class="section-header animate-on-scroll">
+        <span class="section-badge">Технологический процесс</span>
+        <h2>Этапы учёта СУГ на объекте</h2>
+        <p>Полный цикл измерения сжиженных углеводородных газов — от приёма до отпуска — с кориолисовыми расходомерами Mass-EXPERT</p>
+      </div>
+
+      <div class="process-flow animate-on-scroll">
+        <div class="process-step">
+          <div class="step-num">1</div>
+          <div class="step-icon"><i class="fas fa-truck"></i></div>
+          <h4>Приём СУГ в резервуары</h4>
+          <p>Измерение массы принимаемого сжиженного газа при сливе из автоцистерн или железнодорожных цистерн в резервуарный парк хранения.</p>
+        </div>
+        <div class="process-step">
+          <div class="step-num">2</div>
+          <div class="step-icon"><i class="fas fa-warehouse"></i></div>
+          <h4>Хранение и учёт запасов</h4>
+          <p>Мониторинг уровня и массы СУГ в резервуарах хранения. Контроль утечек и учёт потерь при длительном хранении.</p>
+        </div>
+        <div class="process-step">
+          <div class="step-num">3</div>
+          <div class="step-icon"><i class="fas fa-random"></i></div>
+          <h4>Перекачка по трубопроводам</h4>
+          <p>Измерение расхода СУГ при межрезервуарной перекачке, подаче на узел налива и в распределительные сети.</p>
+        </div>
+        <div class="process-step">
+          <div class="step-num">4</div>
+          <div class="step-icon"><i class="fas fa-gas-pump"></i></div>
+          <h4>Заправка газгольдеров</h4>
+          <p>Коммерческий учёт СУГ при заправке индивидуальных газгольдеров. Точное измерение массы с автоматическим формированием актов отпуска.</p>
+        </div>
+        <div class="process-step">
+          <div class="step-num">5</div>
+          <div class="step-icon"><i class="fas fa-truck-moving"></i></div>
+          <h4>Налив автоцистерн</h4>
+          <p>Высокоточный учёт отгружаемого СУГ при наливе автоцистерн. Погрешность ±0,1% — соответствие требованиям коммерческого учёта.</p>
+        </div>
+        <div class="process-step">
+          <div class="step-num">6</div>
+          <div class="step-icon"><i class="fas fa-chart-line"></i></div>
+          <h4>Отчётность и биллинг</h4>
+          <p>Автоматический сбор данных с расходомеров через RS-485 Modbus в систему АСУ ТП. Формирование отчётов, актов и счёт-фактур.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== KEY CHALLENGES / ADVANTAGES ==================== -->
+  <section class="section" id="advantages">
+    <div class="container">
+      <div class="section-header animate-on-scroll">
+        <span class="section-badge">Преимущества</span>
+        <h2>Почему Mass-EXPERT для СУГ?</h2>
+        <p>Специализированные решения для коммерческого учёта и технологического контроля сжиженных углеводородных газов</p>
+      </div>
+
+      <div class="adv-grid animate-on-scroll">
+        <div class="adv-card-app">
+          <div class="adv-icon"><i class="fas fa-balance-scale"></i></div>
+          <h4>Коммерческий учёт ±0,1%</h4>
+          <p>Прямое измерение массы СУГ с точностью ±0,1% для жидкостей. Внесён в Госреестр СИ (№ 98506-26). Полное соответствие требованиям коммерческого учёта углеводородов без дополнительной коррекции на плотность и температуру.</p>
+        </div>
+        <div class="adv-card-app">
+          <div class="adv-icon"><i class="fas fa-shield-halved"></i></div>
+          <h4>Взрывозащита Ex</h4>
+          <p>Трансмиттеры ME200 Ex и ME200 CE Ex со взрывозащитой Ex d ib IIC T6 Gb для работы во взрывоопасных зонах газонаполнительных станций, резервуарных парков и заправочных пунктов. Сертификат ТР ТС 012.</p>
+        </div>
+        <div class="adv-card-app">
+          <div class="adv-icon"><i class="fas fa-gauge-high"></i></div>
+          <h4>Высокое давление до 45 МПа</h4>
+          <p>Исполнение P (Pressure) для работы при давлении до 25–45 МПа — оптимально для СУГ под высоким давлением в трубопроводах и на линиях налива. Усиленная конструкция сенсора гарантирует герметичность и безопасность.</p>
+        </div>
+        <div class="adv-card-app">
+          <div class="adv-icon"><i class="fas fa-plug"></i></div>
+          <h4>Цифровые интерфейсы RS-485 Modbus</h4>
+          <p>Интеграция с АСУ ТП предприятия через RS-485 Modbus (RTU/ASCII). Передача массового расхода, температуры, плотности, суммарного количества и диагностических данных в реальном времени.</p>
+        </div>
+        <div class="adv-card-app">
+          <div class="adv-icon"><i class="fas fa-microchip"></i></div>
+          <h4>Трансмиттер ME200 Ex</h4>
+          <p>Расширенный трансмиттер во взрывозащищённом исполнении с цветным дисплеем, двумя токовыми выходами 4–20 мА (HART), импульсным выходом, дискретным входом/выходом и RS-485 Modbus.</p>
+        </div>
+        <div class="adv-card-app">
+          <div class="adv-icon"><i class="fas fa-ruler-combined"></i></div>
+          <h4>Широкий диапазон DN10–DN250</h4>
+          <p>Типоразмеры от DN10 до DN250 перекрывают расходы от малых (заправка газгольдеров) до больших (магистральные трубопроводы СУГ). U-образный сенсор — оптимальная чувствительность для газов.</p>
+        </div>
+      </div>
+
+      <div class="highlight-box animate-on-scroll">
+        <h3>⛽ Коммерческий учёт СУГ — без поправок на плотность</h3>
+        <p>
+          Кориолисовые расходомеры <strong>Mass-EXPERT</strong> измеряют массу СУГ напрямую,
+          исключая погрешности, связанные с изменением плотности пропан-бутановой смеси
+          при колебаниях температуры и давления. В отличие от объёмных счётчиков, не требуют
+          установки корректоров плотности и температурных компенсаторов. Один прибор
+          заменяет целый измерительный комплекс — массовый расход, плотность, температуру
+          и суммарное количество в одном корпусе.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== P EXECUTION DETAILS ==================== -->
+  <section class="section section-gray" id="p-execution">
+    <div class="container">
+      <div class="section-header animate-on-scroll">
+        <span class="section-badge">Исполнение P</span>
+        <h2>Расходомеры P-исполнения для высокого давления</h2>
+        <p>Модификация P (Pressure) разработана для работы со сжиженными углеводородными газами под высоким давлением — до 25–45 МПа в зависимости от типоразмера.</p>
+      </div>
+
+      <div class="media-cards animate-on-scroll">
+        <div class="media-card">
+          <div class="mc-icon"><i class="fas fa-gauge-high"></i></div>
+          <h4>Давление до 25–45 МПа</h4>
+          <p>Максимальное рабочее давление в исполнении P от 25 до 45 МПа в зависимости от типоразмера сенсора. Усиленные измерительные трубки и корпус выдерживают высокое давление с запасом прочности 1,5× от номинала.</p>
+        </div>
+        <div class="media-card">
+          <div class="mc-icon"><i class="fas fa-shapes"></i></div>
+          <h4>U-образный сенсор</h4>
+          <p>U-образная геометрия измерительных трубок — классическая конфигурация для кориолисовых расходомеров. Высокая чувствительность, устойчивость к вибрациям и стабильность нулевой точки при работе со сжиженными газами.</p>
+        </div>
+        <div class="media-card">
+          <div class="mc-icon"><i class="fas fa-shield-halved"></i></div>
+          <h4>Взрывозащита Ex d ib IIC T6 Gb</h4>
+          <p>Полное взрывозащищённое исполнение для работы во взрывоопасных зонах класса 1 и 2. Искробезопасные цепи (ib) и взрывонепроницаемая оболочка (d) для электроники.</p>
+        </div>
+        <div class="media-card">
+          <div class="mc-icon"><i class="fas fa-exchange-alt"></i></div>
+          <h4>RS-485 Modbus + HART</h4>
+          <p>Два токовых выхода 4–20 мА с поддержкой HART-протокола, интерфейс RS-485 Modbus (RTU/ASCII), импульсный выход для сумматора и дискретный вход/выход. Полная интеграция в АСУ ТП.</p>
+        </div>
+      </div>
+
+      <div class="table-wrap animate-on-scroll" style="margin-top:2rem;">
+        <table>
+          <thead>
+            <tr>
+              <th>Модель</th>
+              <th>Макс. рабочее давление</th>
+              <th>Тип сенсора</th>
+              <th>Присоединения</th>
+              <th>Материалы трубок</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><td>Mass-EXPERT-003..P</td><td>≤ 45 МПа</td><td>U-образный</td><td>Фланцы / резьба</td><td>Нерж. сталь / Хастеллой</td></tr>
+            <tr><td>Mass-EXPERT-004..P</td><td>≤ 35 МПа</td><td>U-образный</td><td>Фланцы / резьба</td><td>Нерж. сталь / Хастеллой</td></tr>
+            <tr><td>Mass-EXPERT-006..P</td><td>≤ 35 МПа</td><td>U-образный</td><td>Фланцы</td><td>Нерж. сталь / Хастеллой</td></tr>
+            <tr><td>Mass-EXPERT-008..P</td><td>≤ 30 МПа</td><td>U-образный</td><td>Фланцы</td><td>Нерж. сталь / Хастеллой</td></tr>
+            <tr><td>Mass-EXPERT-015..P</td><td>≤ 30 МПа</td><td>U-образный</td><td>Фланцы</td><td>Нерж. сталь / Хастеллой</td></tr>
+            <tr><td>Mass-EXPERT-025..P</td><td>≤ 25 МПа</td><td>U-образный</td><td>Фланцы</td><td>Нерж. сталь / Хастеллой</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="highlight-box animate-on-scroll" style="background:linear-gradient(135deg, #ECFDF5, #D1FAE5);border-color:#A7F3D0;border-left-color:#059669;">
+        <h3 style="color:#065F46;">💡 P-исполнение — стандарт для СУГ высокого давления</h3>
+        <p style="color:#065F46;">
+          Массовые расходомеры <strong>Mass-EXPERT в исполнении P</strong> рекомендованы для
+          узлов коммерческого учёта СУГ на газонаполнительных станциях, терминалах по перевалке
+          сжиженных газов и заправочных комплексах. Сочетание высокого давления (до 45 МПа),
+          взрывозащиты Ex и точности ±0,1% делает P-исполнение отраслевым стандартом
+          для ответственных применений с СУГ.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== MATERIALS ==================== -->
+  <section class="section" id="materials">
+    <div class="container">
+      <div class="section-header animate-on-scroll">
+        <span class="section-badge">Материалы</span>
+        <h2>Материалы трубок и корпуса для работы с СУГ</h2>
+        <p>Сжиженные углеводородные газы не требуют специальных сплавов для защиты от коррозии, но для ряда применений (СУГ с примесями H₂S, влажный газ) Mass-EXPERT предлагает коррозионно-стойкие исполнения.</p>
+      </div>
+
+      <div class="materials-grid animate-on-scroll">
+        <div class="material-card">
+          <div class="mat-icon">🔩</div>
+          <div class="mat-name">Нержавеющая сталь 316L</div>
+          <div class="mat-desc">Стандартный материал для трубок и корпуса. Аустенитная нержавейка с низким содержанием углерода — оптимальна для чистых СУГ (пропан, бутан, СПБТ).</div>
+        </div>
+        <div class="material-card">
+          <div class="mat-icon">⚙️</div>
+          <div class="mat-name">Хастеллой C276 / C4</div>
+          <div class="mat-desc">Никелевый сплав с высокой стойкостью к коррозии. Рекомендован для СУГ с примесями сероводорода (H₂S) и влажного газа.</div>
+        </div>
+        <div class="material-card">
+          <div class="mat-icon">🔧</div>
+          <div class="mat-name">Углеродистая сталь (фланцы)</div>
+          <div class="mat-desc">Ответные фланцы из углеродистой стали поставляются в комплекте. Для стандартных применений без агрессивных сред.</div>
+        </div>
+        <div class="material-card">
+          <div class="mat-icon">🔬</div>
+          <div class="mat-name">Уплотнения для СУГ</div>
+          <div class="mat-desc">Специальные уплотнения, стойкие к дегазации сжиженных углеводородов. Исключают утечки при высоком давлении и циклических нагрузках.</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== RECOMMENDED CONFIGURATIONS ==================== -->
+  <section class="section section-gray" id="configurations">
+    <div class="container">
+      <div class="section-header animate-on-scroll">
+        <span class="section-badge">Рекомендуемые конфигурации</span>
+        <h2>Оптимальные решения для СУГ</h2>
+        <p>Проверенные комбинации типов сенсоров, материалов и трансмиттеров для типовых задач учёта сжиженных углеводородных газов</p>
+      </div>
+
+      <div class="config-cards animate-on-scroll">
+        <div class="config-card" style="border-top-color:var(--accent);">
+          <div class="cfg-icon" style="color:var(--accent);"><i class="fas fa-shapes"></i></div>
+          <h4>U-тип (универсальная конфигурация)</h4>
+          <p style="font-size:0.9375rem;color:var(--gray-500);">
+            Базовая конфигурация для большинства задач учёта СУГ — заправка газгольдеров, налив автоцистерн, технологический контроль.
+          </p>
+          <ul>
+            <li>U-образный сенсор — классическая кориолисова геометрия</li>
+            <li>Диаметр DN10–DN250 под любые расходы</li>
+            <li>Точность ±0,1% для жидких СУГ</li>
+            <li>Трубки из нержавеющей стали 316L</li>
+            <li>Фланцевые присоединения ГОСТ / ANSI / DIN</li>
+          </ul>
+        </div>
+        <div class="config-card" style="border-top-color:#10B981;">
+          <div class="cfg-icon" style="color:#10B981;"><i class="fas fa-gauge-high"></i></div>
+          <h4>P-исполнение (высокое давление)</h4>
+          <p style="font-size:0.9375rem;color:var(--gray-500);">
+            Для линий СУГ под высоким давлением — нагнетательные трубопроводы, подача на узел налива, перекачка между резервуарами.
+          </p>
+          <ul>
+            <li>Рабочее давление до 25–45 МПа</li>
+            <li>U-образный усиленный сенсор</li>
+            <li>Усиленный корпус с запасом прочности 1,5×</li>
+            <li>Точность ±0,1–0,15%</li>
+            <li>Фланцы под высокое давление (PN100–PN400)</li>
+          </ul>
+        </div>
+        <div class="config-card" style="border-top-color:#8B5CF6;">
+          <div class="cfg-icon" style="color:#8B5CF6;"><i class="fas fa-microchip"></i></div>
+          <h4>ME200 Ex (взрывозащита)</h4>
+          <p style="font-size:0.9375rem;color:var(--gray-500);">
+            Взрывозащищённая конфигурация для газонаполнительных станций, резервуарных парков и заправочных пунктов.
+          </p>
+          <ul>
+            <li>Трансмиттер ME200 Ex (Ex d ib IIC T6 Gb)</li>
+            <li>Цветной дисплей с отображением расхода и суммы</li>
+            <li>Два токовых выхода 4–20 мА + HART</li>
+            <li>Импульсный выход для внешнего сумматора</li>
+            <li>Дискретный вход/выход для управления</li>
+          </ul>
+        </div>
+        <div class="config-card" style="border-top-color:#F59E0B;">
+          <div class="cfg-icon" style="color:#F59E0B;"><i class="fas fa-plug"></i></div>
+          <h4>RS-485 Modbus (цифровая интеграция)</h4>
+          <p style="font-size:0.9375rem;color:var(--gray-500);">
+            Для автоматизированных систем коммерческого учёта энергоресурсов (АСКУЭ) и АСУ ТП с централизованным сбором данных.
+          </p>
+          <ul>
+            <li>Интерфейс RS-485 Modbus RTU / ASCII</li>
+            <li>Передача: массовый расход, сумма, плотность, температура</li>
+            <li>Диагностические данные в реальном времени</li>
+            <li>Multi-drop до 32 устройств на одной линии</li>
+            <li>Совместимость с любыми SCADA-системами</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="highlight-box animate-on-scroll">
+        <h3>⛽ Рекомендация для узла коммерческого учёта СУГ (ГНС)</h3>
+        <p>
+          Для типового узла коммерческого учёта сжиженных углеводородных газов на
+          газонаполнительной станции выбирайте комбинацию:<br><br>
+          <strong>Mass-EXPERT-015..P</strong> (до 30 МПа) + <strong>U-образный сенсор</strong>
+          + <strong>трубки из нержавеющей стали 316L</strong> + <strong>трансмиттер ME200 Ex</strong>
+          + <strong>RS-485 Modbus</strong>.<br><br>
+          Для заправочных станций газгольдеров — <strong>Mass-EXPERT-006..P</strong> с фланцевыми
+          присоединениями. Для налива автоцистерн — <strong>Mass-EXPERT-015..P</strong> или
+          <strong>Mass-EXPERT-025..P</strong> с увеличенным расходом.
+        </p>
+      </div>
+
+      <div class="animate-on-scroll" style="margin-top:2rem;">
+        <div class="section-header">
+          <span class="section-badge">Ключевые параметры</span>
+          <h3 style="font-size:1.25rem;">Технические возможности Mass-EXPERT для СУГ</h3>
+        </div>
+        <div class="feat-list">
+          <div class="feat-item">
+            <div class="feat-icon">✓</div>
+            <div class="feat-text"><strong>Массовый расход СУГ (жидкая фаза):</strong> от 6 до 280 000 кг/ч</div>
+          </div>
+          <div class="feat-item">
+            <div class="feat-icon">✓</div>
+            <div class="feat-text"><strong>Погрешность для жидкости:</strong> ±0,1% – ±0,15%</div>
+          </div>
+          <div class="feat-item">
+            <div class="feat-icon">✓</div>
+            <div class="feat-text"><strong>Максимальное давление:</strong> до 45 МПа (исп. P)</div>
+          </div>
+          <div class="feat-item">
+            <div class="feat-icon">✓</div>
+            <div class="feat-text"><strong>Температура среды:</strong> от –196 до +350 °C</div>
+          </div>
+          <div class="feat-item">
+            <div class="feat-icon">✓</div>
+            <div class="feat-text"><strong>Типы сенсоров:</strong> U-образный (основной)</div>
+          </div>
+          <div class="feat-item">
+            <div class="feat-icon">✓</div>
+            <div class="feat-text"><strong>Материалы трубок:</strong> 316L / Хастеллой C276 / C4</div>
+          </div>
+          <div class="feat-item">
+            <div class="feat-icon">✓</div>
+            <div class="feat-text"><strong>Присоединения:</strong> Фланцы ГОСТ/ANSI/DIN, резьба</div>
+          </div>
+          <div class="feat-item">
+            <div class="feat-icon">✓</div>
+            <div class="feat-text"><strong>Выходные сигналы:</strong> 4–20 мА HART, RS-485 Modbus</div>
+          </div>
+          <div class="feat-item">
+            <div class="feat-icon">✓</div>
+            <div class="feat-text"><strong>Взрывозащита:</strong> Ex d ib IIC T6 Gb</div>
+          </div>
+          <div class="feat-item">
+            <div class="feat-icon">✓</div>
+            <div class="feat-text"><strong>Госреестр СИ:</strong> № 98506-26</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== CTA ==================== -->
+  <section class="section section-gray" style="text-align:center;">
+    <div class="container">
+      <div class="animate-on-scroll">
+        <span class="section-badge">Готовы к внедрению?</span>
+        <h2>Подберём конфигурацию для вашей задачи с СУГ</h2>
+        <p style="max-width:600px;margin:1rem auto 2rem;">
+          Наши инженеры помогут выбрать оптимальный типоразмер, исполнение по давлению и тип трансмиттера
+          для вашего объекта — от газгольдерного заправочного пункта до крупной газонаполнительной станции.
+        </p>
+        <a href="../index.html#contacts" class="btn btn-primary btn-lg">Связаться с нами</a>
+        <a href="../index.html" class="btn btn-outline" style="margin-left:0.75rem;">На главную</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== FOOTER ==================== -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <h4>Mass-EXPERT</h4>
+          <p>Счетчики-расходомеры массовые кориолисового типа.</p>
+          <p>Госреестр № 98506-26. ТУ 26.51.52-016-88090790-2024.</p>
+          <p style="margin-top:0.75rem;font-size:0.8125rem;">
+            Разработка и производство:<br>
+            ООО «Автоматизация-Метрология-ЭКСПЕРТ», г. Уфа
+          </p>
+        </div>
+        <div class="footer-links">
+          <h5>Продукт</h5>
+          <a href="../index.html#specifications">Характеристики</a>
+          <a href="../index.html#product-line">Типоразмеры</a>
+          <a href="../index.html#options">Модификации</a>
+          <a href="../index.html#transmitters">Трансмиттеры</a>
+        </div>
+        <div class="footer-links">
+          <h5>Документация</h5>
+          <a href="../index.html#certificates">Сертификаты</a>
+          <a href="../docs/ОПИСАНИЕ_ТИПА_2026-98506-26.pdf" target="_blank">Описание типа</a>
+          <a href="../docs/РЭ_Масс_Эксперт_v09.pdf" target="_blank">Руководство по эксплуатации</a>
+          <a href="../docs/2026-МП_98506-26_compressed.pdf" target="_blank">Методика поверки</a>
+        </div>
+        <div class="footer-links">
+          <h5>Контакты</h5>
+          <a href="tel:+734****5350">+7 (347) 286-53-50</a>
+          <a href="mailto:info@ame-info.ru">info@ame-info.ru</a>
+          <a href="https://www.ame-info.ru" target="_blank">www.ame-info.ru</a>
+          <a href="../sitemap.html" style="margin-top:0.5rem;font-size:0.8125rem;color:var(--gray-500);">📋 Карта сайта</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>© <span id="year">2026</span> ООО «Автоматизация-Метрология-ЭКСПЕРТ». Все права защищены.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="../js/main.js"></script>
+</body>
+</html>

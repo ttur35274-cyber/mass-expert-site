@@ -1,0 +1,858 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Системы дозирования и смешения — Mass-EXPERT | Кориолисовые расходомеры</title>
+  <meta name="description" content="Массовые расходомеры Mass-EXPERT для точного дозирования и смешения компонентов в многостадийных процессах. Непрерывное и порционное (batch) дозирование красок, клеев, смазок, химреагентов. Прямое измерение массы. Динамический диапазон до 100:1.">
+  <meta name="keywords" content="дозирование, смешение, массовый расходомер, кориолисовый расходомер, batch-дозирование, непрерывное дозирование, микродозы, краски, клеи, смазки, химреагенты, Mass-EXPERT, DN01, DN02, DN04, DN08, ME100, ME200, U/D-тип">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <!-- Open Graph -->
+  <meta property="og:title" content="Системы дозирования и смешения — Mass-EXPERT">
+  <meta property="og:description" content="Точное дозирование компонентов в многостадийных процессах с кориолисовыми расходомерами Mass-EXPERT. Динамический диапазон до 100:1. Рекомендации: DN01-DN08, U/D-тип, ME100/ME200.">
+  <meta property="og:type" content="website">
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 40 40'><rect width='40' height='40' rx='8' fill='%23F59E0B'/><text x='20' y='26' text-anchor='middle' font-size='14' font-weight='900' fill='%230F172A' font-family='Inter'>ME</text></svg>">
+  <style>
+    /* Application page specific styles */
+    .cond-hero {
+      position: relative;
+      min-height: 70vh;
+      display: flex;
+      align-items: center;
+      background: linear-gradient(135deg, #0a1628 0%, #1a2e3f 50%, #0d2137 100%);
+      overflow: hidden;
+      padding-top: 72px;
+    }
+    .cond-hero::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background:
+        radial-gradient(ellipse at 70% 30%, rgba(245, 158, 11, 0.10) 0%, transparent 60%),
+        radial-gradient(ellipse at 30% 80%, rgba(16, 185, 129, 0.06) 0%, transparent 50%);
+      pointer-events: none;
+    }
+    .cond-hero-content {
+      position: relative;
+      z-index: 1;
+    }
+    .cond-hero-content .cond-label {
+      display: inline-block;
+      font-size: 0.75rem;
+      color: var(--gray-400);
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      font-weight: 600;
+      margin-bottom: 0.75rem;
+      background: rgba(255,255,255,0.08);
+      padding: 0.3rem 0.75rem;
+      border-radius: 999px;
+    }
+    .cond-hero-content h1 {
+      color: var(--white);
+      margin-bottom: 0.5rem;
+      font-size: 3.5rem;
+    }
+    .cond-hero-content .cond-subtitle {
+      font-size: 1.35rem;
+      color: var(--accent);
+      font-weight: 600;
+      margin-bottom: 1.5rem;
+    }
+    .cond-hero-content .cond-desc {
+      color: rgba(255,255,255,0.8);
+      font-size: 1.0625rem;
+      margin: 1.5rem 0 2rem;
+      max-width: 680px;
+    }
+    .cond-badges {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.75rem;
+      margin-top: 1.5rem;
+    }
+    .cond-badge {
+      background: rgba(255,255,255,0.1);
+      border: 1px solid rgba(255,255,255,0.15);
+      color: rgba(255,255,255,0.9);
+      padding: 0.4rem 1rem;
+      border-radius: 999px;
+      font-size: 0.8125rem;
+      font-weight: 500;
+    }
+    .cond-hero-icon {
+      font-size: 5rem;
+      color: var(--accent);
+      margin-bottom: 1rem;
+      opacity: 0.9;
+    }
+
+    /* Section standard overrides */
+    .section-header .section-icon-big {
+      font-size: 3rem;
+      color: var(--primary);
+      margin-bottom: 0.75rem;
+    }
+
+    /* Media cards grid */
+    .media-cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 1.5rem;
+      margin-top: 2rem;
+    }
+    .media-card {
+      background: var(--white);
+      border: 1px solid var(--gray-200);
+      border-radius: var(--radius-lg);
+      padding: 1.5rem;
+      transition: all var(--transition);
+    }
+    .media-card:hover {
+      border-color: var(--primary);
+      box-shadow: var(--shadow-md);
+      transform: translateY(-2px);
+    }
+    .media-card .mc-icon {
+      font-size: 2.5rem;
+      margin-bottom: 0.75rem;
+    }
+    .media-card h4 {
+      font-size: 1.0625rem;
+      color: var(--primary);
+      margin-bottom: 0.5rem;
+    }
+    .media-card p {
+      font-size: 0.9375rem;
+      color: var(--gray-500);
+      margin: 0;
+    }
+    .media-card .mc-formula {
+      display: inline-block;
+      background: var(--gray-50);
+      border: 1px solid var(--gray-200);
+      border-radius: 999px;
+      padding: 0.2rem 0.75rem;
+      font-size: 0.8125rem;
+      font-weight: 600;
+      color: var(--primary);
+      margin-top: 0.5rem;
+    }
+
+    /* Advantage cards */
+    .adv-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 1.5rem;
+      margin-top: 2rem;
+    }
+    .adv-card-app {
+      background: var(--white);
+      border: 1px solid var(--gray-200);
+      border-radius: var(--radius-lg);
+      padding: 1.5rem;
+      text-align: center;
+      transition: all var(--transition);
+    }
+    .adv-card-app:hover {
+      border-color: var(--primary);
+      box-shadow: var(--shadow-md);
+      transform: translateY(-2px);
+    }
+    .adv-card-app .adv-icon {
+      font-size: 2.5rem;
+      margin-bottom: 0.75rem;
+    }
+    .adv-card-app h4 {
+      font-size: 1.0625rem;
+      color: var(--primary);
+      margin-bottom: 0.5rem;
+    }
+    .adv-card-app p {
+      font-size: 0.9375rem;
+      color: var(--gray-500);
+      margin: 0;
+    }
+
+    /* Config cards */
+    .config-cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 1.5rem;
+      margin-top: 2rem;
+    }
+    .config-card {
+      background: var(--white);
+      border: 1px solid var(--gray-200);
+      border-radius: var(--radius-lg);
+      padding: 1.5rem;
+      border-top: 4px solid var(--primary);
+      transition: all var(--transition);
+    }
+    .config-card:hover {
+      box-shadow: var(--shadow-md);
+      transform: translateY(-2px);
+    }
+    .config-card .cfg-icon {
+      font-size: 2rem;
+      color: var(--primary);
+      margin-bottom: 0.75rem;
+    }
+    .config-card h4 {
+      font-size: 1.0625rem;
+      color: var(--primary);
+      margin-bottom: 0.5rem;
+    }
+    .config-card ul {
+      margin: 0.75rem 0 0;
+      padding: 0;
+      list-style: none;
+    }
+    .config-card ul li {
+      position: relative;
+      padding-left: 1.25rem;
+      margin-bottom: 0.35rem;
+      font-size: 0.875rem;
+      color: var(--gray-600);
+    }
+    .config-card ul li::before {
+      content: '✓';
+      position: absolute;
+      left: 0;
+      color: var(--success, #10B981);
+      font-weight: 700;
+    }
+
+    /* Materials table */
+    .materials-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 1rem;
+      margin: 1.5rem 0;
+    }
+    .material-card {
+      background: var(--gray-50);
+      border: 1px solid var(--gray-200);
+      border-radius: var(--radius);
+      padding: 1.25rem;
+      text-align: center;
+    }
+    .material-card .mat-icon {
+      font-size: 2rem;
+      margin-bottom: 0.5rem;
+    }
+    .material-card .mat-name {
+      font-weight: 700;
+      color: var(--gray-800);
+      font-size: 1rem;
+    }
+    .material-card .mat-desc {
+      font-size: 0.8125rem;
+      color: var(--gray-500);
+      margin-top: 0.25rem;
+    }
+
+    /* Highlight box */
+    .highlight-box {
+      background: linear-gradient(135deg, #F3E8FF, #E9D5FF);
+      border: 1px solid #D8B4FE;
+      border-left: 4px solid #9333EA;
+      border-radius: var(--radius-lg);
+      padding: 1.5rem 2rem;
+      margin: 2rem 0;
+    }
+    .highlight-box h3 {
+      color: #4C1D95;
+      font-size: 1.0625rem;
+      margin-bottom: 0.5rem;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+    .highlight-box p {
+      color: #4C1D95;
+      font-size: 0.9375rem;
+      margin-bottom: 0;
+    }
+
+    /* Feature list */
+    .feat-list {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1rem;
+      margin: 1.5rem 0;
+    }
+    .feat-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 0.75rem;
+      padding: 0.75rem 0;
+    }
+    .feat-item .feat-icon {
+      flex-shrink: 0;
+      width: 28px;
+      height: 28px;
+      background: rgba(139, 92, 246, 0.12);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 0.875rem;
+      color: #9333EA;
+      font-weight: 700;
+    }
+    .feat-item .feat-text {
+      font-size: 0.9375rem;
+      color: var(--gray-700);
+    }
+
+    /* Flow diagram */
+    .flow-diagram {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: center;
+      gap: 0.5rem;
+      margin: 2rem 0;
+      padding: 1.5rem;
+      background: var(--gray-50);
+      border: 1px solid var(--gray-200);
+      border-radius: var(--radius-lg);
+    }
+    .flow-step {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      padding: 1rem;
+      min-width: 120px;
+    }
+    .flow-step .fs-icon {
+      font-size: 1.75rem;
+      margin-bottom: 0.5rem;
+      color: var(--primary);
+    }
+    .flow-step .fs-label {
+      font-size: 0.8125rem;
+      font-weight: 600;
+      color: var(--gray-700);
+    }
+    .flow-arrow {
+      font-size: 1.5rem;
+      color: var(--gray-400);
+    }
+
+    .process-list {
+      margin: 1.5rem 0;
+    }
+    .process-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 0.75rem;
+      padding: 0.75rem 0;
+      border-bottom: 1px solid var(--gray-100);
+    }
+    .process-item:last-child {
+      border-bottom: none;
+    }
+    .process-item .pi-icon {
+      flex-shrink: 0;
+      font-size: 1.25rem;
+      color: var(--primary);
+      width: 32px;
+      text-align: center;
+    }
+    .process-item .pi-text {
+      font-size: 0.9375rem;
+      color: var(--gray-700);
+    }
+    .process-item .pi-text strong {
+      color: var(--gray-900);
+    }
+
+    @media (max-width: 768px) {
+      .feat-list { grid-template-columns: 1fr; }
+      .cond-hero { min-height: auto; padding: 6rem 0 3rem; }
+      .cond-hero-content h1 { font-size: 2.5rem; }
+      .flow-diagram { flex-direction: column; }
+      .flow-arrow { transform: rotate(90deg); }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ==================== NAVIGATION ==================== -->
+  <nav class="navbar" role="navigation" aria-label="Основная навигация">
+    <div class="container">
+      <a href="../index.html" class="navbar-brand">
+        <span class="brand-icon">MASS<br>EXPERT</span>
+        Mass-EXPERT
+      </a>
+      <button class="navbar-toggle" aria-label="Открыть меню">☰</button>
+      <div class="navbar-links">
+        <a href="../index.html#about">О продукте</a>
+        <a href="../index.html#advantages">Преимущества</a>
+        <a href="../index.html#principle">Принцип работы</a>
+        <a href="../index.html#product-line">Типоразмеры</a>
+        <a href="../index.html#specifications">Характеристики</a>
+        <a href="../index.html#contacts">Контакты</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ==================== HERO ==================== -->
+  <section class="cond-hero" id="hero">
+    <div class="container">
+      <div class="cond-hero-content">
+        <span class="cond-label">Область применения</span>
+        <div class="cond-hero-icon"><i class="fas fa-weight-scale"></i></div>
+        <h1>Системы дозирования и смешения</h1>
+        <div class="cond-subtitle">Точное дозирование компонентов в многостадийных процессах</div>
+        <p class="cond-desc">
+          Массовые расходомеры <strong>Mass-EXPERT</strong> обеспечивают прецизионное дозирование и смешение
+          компонентов в процессах производства красок, клеев, смазок, химических реагентов и других
+          многокомпонентных продуктов. Прямое измерение массы исключает влияние переменной плотности,
+          температуры и давления, гарантируя воспроизводимость состава от партии к партии.
+        </p>
+        <div style="display:flex;gap:1rem;flex-wrap:wrap;">
+          <a href="#modes" class="btn btn-primary">Режимы дозирования</a>
+          <a href="#recommendations" class="btn btn-outline">Рекомендации</a>
+        </div>
+        <div class="cond-badges">
+          <span class="cond-badge">⚖️ Непрерывное и batch-дозирование</span>
+          <span class="cond-badge">🎯 Точность 0,1–0,2%</span>
+          <span class="cond-badge">📊 Динамический диапазон до 100:1</span>
+          <span class="cond-badge">🧪 Микродозы DN01–DN08</span>
+          <span class="cond-badge">🔄 U/D-тип сенсоров</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== TYPICAL MEDIA ==================== -->
+  <section class="section" id="media">
+    <div class="container">
+      <div class="section-header animate-on-scroll">
+        <span class="section-badge">Дозируемые среды</span>
+        <h2>Широкий спектр компонентов для точного смешения</h2>
+        <p>Кориолисовые расходомеры Mass-EXPERT применяются для дозирования практически любых жидкостей — от маловязких растворителей до высоковязких паст и суспензий — в многостадийных рецептурных процессах.</p>
+      </div>
+
+      <div class="media-cards animate-on-scroll">
+        <div class="media-card">
+          <div class="mc-icon">🎨</div>
+          <h4>Краски и покрытия</h4>
+          <p>Дозирование пигментных паст, связующих, растворителей, отвердителей, добавок для точного воспроизведения цвета и свойств лакокрасочных материалов.</p>
+        </div>
+        <div class="media-card">
+          <div class="mc-icon">🧴</div>
+          <h4>Клеи и герметики</h4>
+          <p>Прецизионное дозирование компонентов двухкомпонентных и многокомпонентных клеевых систем, силиконов, полиуретанов, эпоксидных смол, акрилатов.</p>
+        </div>
+        <div class="media-card">
+          <div class="mc-icon">🛢️</div>
+          <h4>Смазки и консистентные среды</h4>
+          <p>Дозирование масел, присадок, загустителей при производстве пластичных и жидких смазочных материалов, СОЖ, гидравлических жидкостей.</p>
+        </div>
+        <div class="media-card">
+          <div class="mc-icon">⚗️</div>
+          <h4>Химические реагенты</h4>
+          <p>Дозирование кислот, щелочей, катализаторов, ингибиторов, ПАВ, модификаторов для синтеза и приготовления товарных химических продуктов.</p>
+        </div>
+      </div>
+
+      <div class="section-header animate-on-scroll" style="margin-top:3rem;">
+        <h3 style="font-size:1.5rem;">Типичные процессы дозирования и смешения</h3>
+        <p>Mass-EXPERT применяется на всех этапах — от подачи сырья до финишного компаундирования</p>
+      </div>
+
+      <div class="highlight-box animate-on-scroll" style="background:linear-gradient(135deg, #ECFDF5, #D1FAE5);border-color:#A7F3D0;border-left-color:#10B981;">
+        <h3 style="color:#065F46;">⚖️ Прямое измерение массы — ключевое преимущество дозирования</h3>
+        <p style="color:#065F46;">
+          Традиционные объёмные дозаторы (шестерённые насосы, поршневые дозаторы) дают погрешность при изменении
+          вязкости, температуры или плотности среды. Массовый расходомер <strong>измеряет именно массу</strong>,
+          поэтому результат <strong>не зависит</strong> от термодинамических параметров процесса. Для многостадийного
+          рецептурного дозирования это означает стабильное качество конечного продукта независимо от внешних условий.
+        </p>
+      </div>
+
+      <div class="process-list animate-on-scroll">
+        <div class="process-item">
+          <div class="pi-icon">🏭</div>
+          <div class="pi-text"><strong>Производство ЛКМ:</strong> дозирование связующих, пигментов, наполнителей, растворителей и функциональных добавок в заданной рецептурой последовательности</div>
+        </div>
+        <div class="process-item">
+          <div class="pi-icon">🧪</div>
+          <div class="pi-text"><strong>Синтез СМС и бытовой химии:</strong> подача активных веществ, ПАВ, отдушек, консервантов, загустителей с точностью до долей процента</div>
+        </div>
+        <div class="process-item">
+          <div class="pi-icon">⛽</div>
+          <div class="pi-text"><strong>Присадки к топливам и маслам:</strong> ввод противоизносных, антиокислительных, депрессорных и моющих присадок в базовые масла и топлива</div>
+        </div>
+        <div class="process-item">
+          <div class="pi-icon">🧬</div>
+          <div class="pi-text"><strong>Полимерные компаунды:</strong> смешение полиолов, изоцианатов, катализаторов, стабилизаторов, пластификаторов для производства полиуретанов и эпоксидов</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== DOSING MODES ==================== -->
+  <section class="section section-gray" id="modes">
+    <div class="container">
+      <div class="section-header animate-on-scroll">
+        <span class="section-badge">Режимы работы</span>
+        <h2>Непрерывное и порционное дозирование</h2>
+        <p>Mass-EXPERT поддерживает оба принципиальных режима дозирования, обеспечивая максимальную гибкость для любых технологических схем</p>
+      </div>
+
+      <div class="config-cards animate-on-scroll">
+        <div class="config-card" style="border-top-color:var(--accent);">
+          <div class="cfg-icon" style="color:var(--accent);"><i class="fas fa-water"></i></div>
+          <h4>Непрерывное дозирование</h4>
+          <p style="font-size:0.9375rem;color:var(--gray-500);">
+            Постоянная подача компонента с заданным массовым расходом в поток основного продукта или в реактор непрерывного действия.
+          </p>
+          <ul>
+            <li>Поддержание заданного расхода в реальном времени</li>
+            <li>Каскадное регулирование с насосом / клапаном</li>
+            <li>ПИД-регулирование через HART или Modbus</li>
+            <li>Стабильность потока ±0,1% от заданного значения</li>
+            <li>Для процессов с постоянным соотношением компонентов</li>
+          </ul>
+        </div>
+        <div class="config-card" style="border-top-color:#10B981;">
+          <div class="cfg-icon" style="color:#10B981;"><i class="fas fa-cubes"></i></div>
+          <h4>Порционное (batch) дозирование</h4>
+          <p style="font-size:0.9375rem;color:var(--gray-500);">
+            Отмеривание точной массы компонента по команде контроллера для приготовления порции продукта заданного состава.
+          </p>
+          <ul>
+            <li>Высокоточное отключение по массе (предотсечка)</li>
+            <li>Компенсация гидроудара при закрытии клапана</li>
+            <li>Цикл дозирования от 10 г до тонн</li>
+            <li>Последовательное / параллельное дозирование</li>
+            <li>Журналирование каждой порции для MES/ERP</li>
+          </ul>
+        </div>
+        <div class="config-card" style="border-top-color:#F59E0B;">
+          <div class="cfg-icon" style="color:#F59E0B;"><i class="fas fa-arrows-spin"></i></div>
+          <h4>Смешение с контролем соотношения</h4>
+          <p style="font-size:0.9375rem;color:var(--gray-500);">
+            Поддержание заданного массового соотношения нескольких компонентов (ratio control) на всём диапазоне производительности.
+          </p>
+          <ul>
+            <li>Каскад «мастер-ведомый» по массовому расходу</li>
+            <li>Динамическая коррекция соотношения</li>
+            <li>До 16 компонентов в одной рецептуре</li>
+            <li>Безударное переключение рецептур</li>
+            <li>Автоматическая архивация данных</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="flow-diagram animate-on-scroll">
+        <div class="flow-step">
+          <div class="fs-icon"><i class="fas fa-weight-scale"></i></div>
+          <div class="fs-label">Массовый расходомер</div>
+        </div>
+        <div class="flow-arrow"><i class="fas fa-arrow-right"></i></div>
+        <div class="flow-step">
+          <div class="fs-icon"><i class="fas fa-microchip"></i></div>
+          <div class="fs-label">Трансмиттер ME100/ME200</div>
+        </div>
+        <div class="flow-arrow"><i class="fas fa-arrow-right"></i></div>
+        <div class="flow-step">
+          <div class="fs-icon"><i class="fas fa-plug"></i></div>
+          <div class="fs-label">ПЛК / Система управления</div>
+        </div>
+        <div class="flow-arrow"><i class="fas fa-arrow-right"></i></div>
+        <div class="flow-step">
+          <div class="fs-icon"><i class="fas fa-faucet-drip"></i></div>
+          <div class="fs-label">Клапан / Насос</div>
+        </div>
+        <div class="flow-arrow"><i class="fas fa-arrow-left"></i></div>
+        <div class="flow-step">
+          <div class="fs-icon"><i class="fas fa-vial"></i></div>
+          <div class="fs-label">Контроль массы</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== ADVANTAGES ==================== -->
+  <section class="section" id="advantages">
+    <div class="container">
+      <div class="section-header animate-on-scroll">
+        <span class="section-badge">Преимущества</span>
+        <h2>Почему Mass-EXPERT для дозирования?</h2>
+        <p>Кориолисовая технология прямого массового измерения — оптимальное решение для задач точного дозирования и смешения</p>
+      </div>
+
+      <div class="adv-grid animate-on-scroll">
+        <div class="adv-card-app">
+          <div class="adv-icon">🎯</div>
+          <h4>Прямое измерение массы</h4>
+          <p>Исключает влияние переменной плотности, вязкости, температуры и давления среды. Результат всегда соответствует массе дозированного компонента, а не его объёму.</p>
+        </div>
+        <div class="adv-card-app">
+          <div class="adv-icon">📊</div>
+          <h4>Широкий динамический диапазон</h4>
+          <p>До 100:1 — одна и та же модель расходомера способна отмерять как малые лабораторные дозы, так и крупные товарные партии без потери точности.</p>
+        </div>
+        <div class="adv-card-app">
+          <div class="adv-icon">🔬</div>
+          <h4>Микродозирование</h4>
+          <p>Сенсоры малых типоразмеров DN01–DN08 обеспечивают стабильное измерение расходов от 0,1 кг/ч, позволяя точно дозировать дорогостоящие присадки и добавки.</p>
+        </div>
+        <div class="adv-card-app">
+          <div class="adv-icon">🔄</div>
+          <h4>Гибкость конфигурации</h4>
+          <p>Доступны U/D-тип сенсоров (компактный для встраивания в существующие установки) и L-тип (прямотрубные для вязких и абразивных сред).</p>
+        </div>
+        <div class="adv-card-app">
+          <div class="adv-icon">⚡</div>
+          <h4>Быстрая динамика</h4>
+          <p>Время отклика менее 100 мс позволяет точно отсекать подачу в batch-режиме, минимизируя перелёт и отклонение от заданной дозы.</p>
+        </div>
+        <div class="adv-card-app">
+          <div class="adv-icon">🔧</div>
+          <h4>Минимум обслуживания</h4>
+          <p>Нет подвижных частей, не требуется калибровка дозатора при смене продукта, отсутствует механический износ. Снижение эксплуатационных затрат.</p>
+        </div>
+      </div>
+
+      <div class="highlight-box animate-on-scroll" style="background:linear-gradient(135deg, #FFF7ED, #FFEDD5);border-color:#FED7AA;border-left-color:#F97316;">
+        <h3 style="color:#9A3412;">💡 Широкий динамический диапазон — меньше типоразмеров на склад</h3>
+        <p style="color:#9A3412;">
+          Благодаря динамическому диапазону до <strong>100:1</strong> один сенсор Mass-EXPERT покрывает
+          диапазон, для которого потребовалось бы 2-3 традиционных датчика расхода. Это сокращает номенклатуру
+          запасных частей, упрощает логистику и снижает общую стоимость владения.
+          Например, сенсор DN25 перекрывает расходы от 10 до 1000 кг/ч — достаточно для большинства задач
+          batch-дозирования средних объёмов.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== RECOMMENDATIONS ==================== -->
+  <section class="section section-gray" id="recommendations">
+    <div class="container">
+      <div class="section-header animate-on-scroll">
+        <span class="section-badge">Рекомендации по подбору</span>
+        <h2>Оптимальные конфигурации для задач дозирования</h2>
+        <p>Проверенные комбинации типоразмеров, типов сенсоров и трансмиттеров для типовых задач дозирования и смешения</p>
+      </div>
+
+      <div class="config-cards animate-on-scroll">
+        <div class="config-card" style="border-top-color:#10B981;">
+          <div class="cfg-icon" style="color:#10B981;"><i class="fas fa-microscope"></i></div>
+          <h4>Малые типоразмеры DN01–DN08 (микродозы)</h4>
+          <p style="font-size:0.9375rem;color:var(--gray-500);">
+            Для сверхмалых расходов — добавление присадок, катализаторов, отдушек, красителей в лабораторных и промышленных условиях.
+          </p>
+          <ul>
+            <li>Минимальный измеряемый расход от 0,1 кг/ч</li>
+            <li>Стабильность нулевой точки от 0,012 кг/ч</li>
+            <li>Идеальны для дорогостоящих и активных добавок</li>
+            <li>Компактный U/D-тип для встраивания в установки</li>
+            <li>Точность ±0,2% для сверхмалых доз</li>
+          </ul>
+        </div>
+        <div class="config-card" style="border-top-color:var(--accent);">
+          <div class="cfg-icon" style="color:var(--accent);"><i class="fas fa-arrows-turn-to-dots"></i></div>
+          <h4>Сенсоры U/D-типа</h4>
+          <p style="font-size:0.9375rem;color:var(--gray-500);">
+            Компактные двухтрубные сенсоры с U-образной формой — оптимальный баланс точности и габаритов для задач дозирования.
+          </p>
+          <ul>
+            <li>Высокая чувствительность на малых расходах</li>
+            <li>Компактная конструкция для ограниченного пространства</li>
+            <li>От DN01 до DN80 для разных диапазонов</li>
+            <li>Стандартные материалы трубок: 316L / Хастеллой</li>
+            <li>Рекомендованы для batch-дозирования</li>
+          </ul>
+        </div>
+        <div class="config-card" style="border-top-color:#F59E0B;">
+          <div class="cfg-icon" style="color:#F59E0B;"><i class="fas fa-brain"></i></div>
+          <h4>Трансмиттеры ME100 / ME200</h4>
+          <p style="font-size:0.9375rem;color:var(--gray-500);">
+            Современные двухканальные трансмиттеры с поддержкой всех режимов дозирования и смешения.
+          </p>
+          <ul>
+            <li><strong>ME100</strong> — базовая модель: 4–20 мА HART, импульсный выход, дискретные входы/выходы</li>
+            <li><strong>ME200</strong> — расширенная модель: HART, Modbus RS-485, PROFIBUS PA, Ethernet/IP</li>
+            <li>Встроенный сумматор массы для batch-режима</li>
+            <li>Функция предотсечки и компенсации перелёта</li>
+            <li>Поддержка рецептур (до 16 компонентов)</li>
+          </ul>
+        </div>
+        <div class="config-card" style="border-top-color:#8B5CF6;">
+          <div class="cfg-icon" style="color:#8B5CF6;"><i class="fas fa-weight-hanging"></i></div>
+          <h4>Комплексные решения дозирования</h4>
+          <p style="font-size:0.9375rem;color:var(--gray-500);">
+            Полный контур управления: сенсор + трансмиттер + запорно-регулирующая арматура под управлением внешнего ПЛК или встроенного контроллера ME200.
+          </p>
+          <ul>
+            <li>Готовые шкафы управления дозированием</li>
+            <li>Интеграция с АСУ ТП предприятия</li>
+            <li>Протоколирование каждой дозы с меткой времени</li>
+            <li>Визуализация процесса на SCADA-системе</li>
+            <li>Сертифицированные решения для учётных операций</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="highlight-box animate-on-scroll">
+        <h3>📋 Рекомендуемая конфигурация для batch-дозирования</h3>
+        <p>
+          Для большинства задач порционного дозирования компонентов оптимальна комбинация:
+          <strong>сенсор U/D-типа</strong> (DN08-DN25 для средних доз, DN01-DN04 для микродоз) +
+          <strong>трансмиттер ME200</strong> с поддержкой Modbus и дискретных входов/выходов.
+          При необходимости высокоточной термостабилизации среды — дополните конфигурацию
+          <strong>изотермическим кожухом</strong>.
+          Для непрерывного дозирования с ПИД-регулированием рекомендуется <strong>сенсор L-типа</strong>
+          (прямотрубный) с трансмиттером ME100/ME200 и аналоговым выходом 4–20 мА HART.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== SPECS ==================== -->
+  <section class="section" id="specs">
+    <div class="container">
+      <div class="section-header animate-on-scroll">
+        <span class="section-badge">Ключевые параметры</span>
+        <h3 style="font-size:1.5rem;">Технические возможности Mass-EXPERT для дозирования</h3>
+        <p>Характеристики, критически важные для задач точного дозирования и смешения</p>
+      </div>
+
+      <div class="feat-list animate-on-scroll">
+        <div class="feat-item">
+          <div class="feat-icon">✓</div>
+          <div class="feat-text"><strong>Массовый расход (жидкость):</strong> от 0,1 до 1 740 000 кг/ч</div>
+        </div>
+        <div class="feat-item">
+          <div class="feat-icon">✓</div>
+          <div class="feat-text"><strong>Динамический диапазон:</strong> до 100:1</div>
+        </div>
+        <div class="feat-item">
+          <div class="feat-icon">✓</div>
+          <div class="feat-text"><strong>Погрешность измерений:</strong> ±0,1 – ±0,2%</div>
+        </div>
+        <div class="feat-item">
+          <div class="feat-icon">✓</div>
+          <div class="feat-text"><strong>Стабильность нуля:</strong> от 0,012 кг/ч</div>
+        </div>
+        <div class="feat-item">
+          <div class="feat-icon">✓</div>
+          <div class="feat-text"><strong>Время отклика:</strong> &lt; 100 мс</div>
+        </div>
+        <div class="feat-item">
+          <div class="feat-icon">✓</div>
+          <div class="feat-text"><strong>Диапазон плотности:</strong> 650–2000 кг/м³</div>
+        </div>
+        <div class="feat-item">
+          <div class="feat-icon">✓</div>
+          <div class="feat-text"><strong>Температура среды:</strong> от –196 до +350 °C</div>
+        </div>
+        <div class="feat-item">
+          <div class="feat-icon">✓</div>
+          <div class="feat-text"><strong>Рабочее давление:</strong> до 96 МПа</div>
+        </div>
+        <div class="feat-item">
+          <div class="feat-icon">✓</div>
+          <div class="feat-text"><strong>Выходные сигналы:</strong> 4–20 мА HART, RS-485 Modbus, PROFIBUS PA, Ethernet/IP</div>
+        </div>
+        <div class="feat-item">
+          <div class="feat-icon">✓</div>
+          <div class="feat-text"><strong>Взрывозащита:</strong> Ex d ib IIC T6 Gb</div>
+        </div>
+        <div class="feat-item">
+          <div class="feat-icon">✓</div>
+          <div class="feat-text"><strong>Степень защиты:</strong> IP66/IP67</div>
+        </div>
+        <div class="feat-item">
+          <div class="feat-icon">✓</div>
+          <div class="feat-text"><strong>Типы сенсоров:</strong> U/D-тип, L-тип (прямотрубный)</div>
+        </div>
+      </div>
+
+      <div class="highlight-box animate-on-scroll" style="background:linear-gradient(135deg, #ECFDF5, #D1FAE5);border-color:#A7F3D0;border-left-color:#10B981;">
+        <h3 style="color:#065F46;">🔬 Микродозирование DN01–DN04</h3>
+        <p style="color:#065F46;">
+          Сенсоры типоразмеров <strong>DN01</strong> (0,1–5 кг/ч), <strong>DN02</strong> (0,5–20 кг/ч)
+          и <strong>DN04</strong> (1–50 кг/ч) специально разработаны для задач прецизионного микродозирования.
+          Высокая чувствительность и стабильность нуля позволяют отмерять граммовые дозы с точностью,
+          недостижимой для объёмных методов. Идеальное решение для ввода присадок, ароматизаторов,
+          катализаторов и других дорогостоящих компонентов в малых количествах.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== CTA ==================== -->
+  <section class="section section-gray" style="text-align:center;">
+    <div class="container">
+      <div class="animate-on-scroll">
+        <span class="section-badge">Готовы к внедрению?</span>
+        <h2>Подберём конфигурацию для вашей задачи дозирования</h2>
+        <p style="max-width:600px;margin:1rem auto 2rem;">
+          Наши инженеры помогут выбрать оптимальный типоразмер сенсора (DN01–DN80), тип (U/D-тип или L-тип)
+          и трансмиттер (ME100/ME200) для вашей задачи — от лабораторного микродозирования до
+          промышленных многостадийных систем смешения. Предложим готовое решение «под ключ».
+        </p>
+        <a href="../index.html#contacts" class="btn btn-primary btn-lg">Связаться с нами</a>
+        <a href="../index.html" class="btn btn-outline" style="margin-left:0.75rem;">На главную</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== FOOTER ==================== -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <h4>Mass-EXPERT</h4>
+          <p>Счетчики-расходомеры массовые кориолисового типа.</p>
+          <p>Госреестр № 98506-26. ТУ 26.51.52-016-88090790-2024.</p>
+          <p style="margin-top:0.75rem;font-size:0.8125rem;">
+            Разработка и производство:<br>
+            ООО «Автоматизация-Метрология-ЭКСПЕРТ», г. Уфа
+          </p>
+        </div>
+        <div class="footer-links">
+          <h5>Продукт</h5>
+          <a href="../index.html#specifications">Характеристики</a>
+          <a href="../index.html#product-line">Типоразмеры</a>
+          <a href="../index.html#options">Модификации</a>
+          <a href="../index.html#transmitters">Трансмиттеры</a>
+        </div>
+        <div class="footer-links">
+          <h5>Документация</h5>
+          <a href="../index.html#certificates">Сертификаты</a>
+          <a href="../docs/ОПИСАНИЕ_ТИПА_2026-98506-26.pdf" target="_blank">Описание типа</a>
+          <a href="../docs/РЭ_Масс_Эксперт_v09.pdf" target="_blank">Руководство по эксплуатации</a>
+          <a href="../docs/2026-МП_98506-26_compressed.pdf" target="_blank">Методика поверки</a>
+        </div>
+        <div class="footer-links">
+          <h5>Контакты</h5>
+          <a href="tel:+734****5350">+7 (347) 286-53-50</a>
+          <a href="mailto:info@ame-info.ru">info@ame-info.ru</a>
+          <a href="https://www.ame-info.ru" target="_blank">www.ame-info.ru</a>
+          <a href="../sitemap.html" style="margin-top:0.5rem;font-size:0.8125rem;color:var(--gray-500);">📋 Карта сайта</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>© <span id="year">2026</span> ООО «Автоматизация-Метрология-ЭКСПЕРТ». Все права защищены.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="../js/main.js"></script>
+</body>
+</html>

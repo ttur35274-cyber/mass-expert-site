@@ -1,0 +1,952 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Производство полимеров — Mass-EXPERT | Кориолисовые расходомеры</title>
+  <meta name="description" content="Кориолисовые расходомеры Mass-EXPERT для производства и переработки полимеров. Точное дозирование мономеров, катализаторов, инициаторов и присадок. Измерение вязких расплавов полимеров (полиэтилен, полипропилен, ПВХ). Рекомендуемые конфигурации: L-тип, изотермический кожух.">
+  <meta name="keywords" content="расходомер для полимеров, кориолисовый расходомер, полимеры, полиэтилен, полипропилен, ПВХ, дозирование мономеров, катализаторы, вязкие расплавы, L-тип, изотермический кожух, Mass-EXPERT, 316L, Хастеллой">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="../css/style.css">
+  <!-- Open Graph -->
+  <meta property="og:title" content="Производство полимеров — Mass-EXPERT">
+  <meta property="og:description" content="Кориолисовые расходомеры для точного дозирования мономеров, катализаторов, инициаторов и присадок в производстве полимеров. Измерение вязких расплавов. L-тип, изотермический кожух.">
+  <meta property="og:type" content="website">
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 40 40'><rect width='40' height='40' rx='8' fill='%23F59E0B'/><text x='20' y='26' text-anchor='middle' font-size='14' font-weight='900' fill='%230F172A' font-family='Inter'>ME</text></svg>">
+  <style>
+    /* Additional styles specific to Polymers page */
+    .poly-hero {
+      position: relative;
+      min-height: 70vh;
+      display: flex;
+      align-items: center;
+      background: linear-gradient(135deg, #0a2a3a 0%, #1B6B4A 50%, #0d3b2e 100%);
+      overflow: hidden;
+      padding-top: 72px;
+    }
+    .poly-hero::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background:
+        radial-gradient(ellipse at 70% 30%, rgba(16, 185, 129, 0.10) 0%, transparent 60%),
+        radial-gradient(ellipse at 30% 80%, rgba(255,255,255,0.03) 0%, transparent 50%);
+      pointer-events: none;
+    }
+    .poly-hero-content {
+      position: relative;
+      z-index: 1;
+    }
+    .poly-hero-content .poly-label {
+      display: inline-block;
+      font-size: 0.75rem;
+      color: var(--gray-400);
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      font-weight: 600;
+      margin-bottom: 0.75rem;
+      background: rgba(255,255,255,0.08);
+      padding: 0.3rem 0.75rem;
+      border-radius: 999px;
+    }
+    .poly-hero-content .hero-icon-wrap {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      margin-bottom: 0.75rem;
+    }
+    .poly-hero-content .hero-icon-wrap .poly-hero-icon {
+      font-size: 2.5rem;
+      color: var(--accent);
+      background: rgba(245, 158, 11, 0.12);
+      width: 64px;
+      height: 64px;
+      border-radius: 16px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .poly-hero-content h1 {
+      color: var(--white);
+      margin-bottom: 0.5rem;
+    }
+    .poly-hero-content .poly-subtitle {
+      font-size: 1.35rem;
+      color: var(--accent);
+      font-weight: 600;
+      margin-bottom: 1.5rem;
+    }
+    .poly-hero-content .poly-desc {
+      color: rgba(255,255,255,0.8);
+      font-size: 1.0625rem;
+      margin: 1.5rem 0 2rem;
+      max-width: 680px;
+    }
+    .poly-badges {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.75rem;
+      margin-top: 1.5rem;
+    }
+    .poly-badge {
+      background: rgba(255,255,255,0.1);
+      border: 1px solid rgba(255,255,255,0.15);
+      color: rgba(255,255,255,0.9);
+      padding: 0.4rem 1rem;
+      border-radius: 999px;
+      font-size: 0.8125rem;
+      font-weight: 500;
+    }
+
+    /* Feature cards */
+    .app-feature-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 1.5rem;
+      margin-top: 2rem;
+    }
+    .app-feature-card {
+      background: var(--white);
+      border: 1px solid var(--gray-200);
+      border-radius: var(--radius-lg);
+      padding: 1.75rem;
+      transition: all var(--transition);
+    }
+    .app-feature-card:hover {
+      border-color: var(--primary);
+      box-shadow: var(--shadow-md);
+      transform: translateY(-2px);
+    }
+    .app-feature-card .af-icon {
+      font-size: 2rem;
+      color: var(--primary);
+      margin-bottom: 0.75rem;
+    }
+    .app-feature-card h4 {
+      font-size: 1.0625rem;
+      color: var(--primary);
+      margin-bottom: 0.5rem;
+    }
+    .app-feature-card p {
+      font-size: 0.9375rem;
+      color: var(--gray-500);
+      margin: 0;
+    }
+
+    /* Media table */
+    .media-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 1rem;
+      margin: 1.5rem 0;
+    }
+    .media-card {
+      background: var(--gray-50);
+      border: 1px solid var(--gray-200);
+      border-radius: var(--radius);
+      padding: 1.25rem;
+      text-align: center;
+      transition: all var(--transition);
+    }
+    .media-card:hover {
+      border-color: var(--primary);
+      background: var(--white);
+    }
+    .media-card .media-icon {
+      font-size: 1.5rem;
+      color: var(--primary);
+      margin-bottom: 0.5rem;
+    }
+    .media-card .media-name {
+      font-size: 0.9375rem;
+      font-weight: 600;
+      color: var(--gray-800);
+      margin-bottom: 0.25rem;
+    }
+    .media-card .media-desc {
+      font-size: 0.8125rem;
+      color: var(--gray-500);
+      margin: 0;
+    }
+
+    /* Config cards */
+    .config-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 1.5rem;
+      margin-top: 2rem;
+    }
+    .config-card {
+      background: var(--white);
+      border: 1px solid var(--gray-200);
+      border-radius: var(--radius-lg);
+      padding: 1.5rem;
+      transition: all var(--transition);
+    }
+    .config-card:hover {
+      border-color: var(--accent);
+      box-shadow: var(--shadow-md);
+      transform: translateY(-2px);
+    }
+    .config-card .cfg-icon {
+      font-size: 2rem;
+      margin-bottom: 0.75rem;
+    }
+    .config-card h4 {
+      font-size: 1.0625rem;
+      color: var(--primary);
+      margin-bottom: 0.5rem;
+    }
+    .config-card p {
+      font-size: 0.9375rem;
+      color: var(--gray-500);
+      margin: 0;
+    }
+    .config-card .cfg-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.4rem;
+      margin-top: 0.75rem;
+    }
+    .config-card .cfg-tag {
+      background: var(--accent-light);
+      color: #92400E;
+      font-size: 0.75rem;
+      font-weight: 600;
+      padding: 0.2rem 0.6rem;
+      border-radius: 4px;
+    }
+
+    /* Challenge / solution pairs */
+    .cs-grid {
+      display: grid;
+      gap: 1.5rem;
+      margin: 2rem 0;
+    }
+    .cs-pair {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1.5rem;
+      align-items: start;
+    }
+    .cs-challenge,
+    .cs-solution {
+      border-radius: var(--radius-lg);
+      padding: 1.5rem;
+    }
+    .cs-challenge {
+      background: #FEF2F2;
+      border: 1px solid #FECACA;
+      border-left: 4px solid #EF4444;
+    }
+    .cs-solution {
+      background: #ECFDF5;
+      border: 1px solid #A7F3D0;
+      border-left: 4px solid #10B981;
+    }
+    .cs-challenge h4,
+    .cs-solution h4 {
+      font-size: 0.9375rem;
+      margin-bottom: 0.5rem;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+    .cs-challenge h4 { color: #991B1B; }
+    .cs-solution h4 { color: #065F46; }
+    .cs-challenge p,
+    .cs-solution p {
+      font-size: 0.875rem;
+      margin: 0;
+      color: var(--gray-700);
+    }
+
+    /* Info highlight box */
+    .info-box {
+      background: linear-gradient(135deg, #ECFDF5, #D1FAE5);
+      border: 1px solid #6EE7B7;
+      border-left: 4px solid #10B981;
+      border-radius: var(--radius-lg);
+      padding: 1.5rem 2rem;
+      margin: 2rem 0;
+    }
+    .info-box h3 {
+      color: #065F46;
+      font-size: 1.0625rem;
+      margin-bottom: 0.5rem;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+    .info-box p {
+      color: #064E3B;
+      font-size: 0.9375rem;
+      margin-bottom: 0;
+    }
+
+    @media (max-width: 768px) {
+      .cs-pair { grid-template-columns: 1fr; }
+      .poly-hero { min-height: auto; padding: 6rem 0 3rem; }
+    }
+
+    /* Accuracy highlight strip */
+    .acc-strip {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: center;
+      gap: 2rem;
+      padding: 2rem;
+      background: var(--gray-50);
+      border: 1px solid var(--gray-200);
+      border-radius: var(--radius-lg);
+      margin: 1.5rem 0;
+    }
+    .acc-item {
+      text-align: center;
+    }
+    .acc-item .acc-value {
+      font-size: 2rem;
+      font-weight: 800;
+      color: var(--primary);
+    }
+    .acc-item .acc-label {
+      font-size: 0.8125rem;
+      color: var(--gray-500);
+      margin-top: 0.25rem;
+    }
+
+    /* Process flow */
+    .process-flow {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+      justify-content: center;
+      margin: 2rem 0;
+    }
+    .process-step {
+      background: var(--white);
+      border: 1px solid var(--gray-200);
+      border-radius: var(--radius);
+      padding: 0.75rem 1.25rem;
+      font-size: 0.875rem;
+      font-weight: 500;
+      color: var(--gray-700);
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+    .process-step .ps-icon {
+      color: var(--primary);
+    }
+    .process-arrow {
+      color: var(--gray-400);
+      font-size: 1.25rem;
+      display: flex;
+      align-items: center;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ==================== NAVIGATION ==================== -->
+  <nav class="navbar" role="navigation" aria-label="Основная навигация">
+    <div class="container">
+      <a href="../index.html" class="navbar-brand">
+        <span class="brand-icon">MASS<br>EXPERT</span>
+        Mass-EXPERT
+      </a>
+      <button class="navbar-toggle" aria-label="Открыть меню">☰</button>
+      <div class="navbar-links">
+        <a href="../index.html#about">О продукте</a>
+        <a href="../index.html#advantages">Преимущества</a>
+        <a href="../index.html#principle">Принцип работы</a>
+        <a href="../index.html#applications">Применение</a>
+        <a href="../index.html#product-line">Типоразмеры</a>
+        <a href="../index.html#specifications">Характеристики</a>
+        <a href="../index.html#contacts">Контакты</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ==================== HERO ==================== -->
+  <section class="poly-hero" id="hero">
+    <div class="container">
+      <div class="poly-hero-content">
+        <span class="poly-label">Отраслевое применение</span>
+        <div class="hero-icon-wrap">
+          <div class="poly-hero-icon"><i class="fas fa-dna"></i></div>
+        </div>
+        <h1>Производство полимеров</h1>
+        <div class="poly-subtitle">Точное дозирование для полимеризации</div>
+        <p class="poly-desc">
+          Производство и переработка полимеров требует <strong>предельной точности дозирования</strong>
+          мономеров, катализаторов, инициаторов и технологических присадок. Кориолисовые расходомеры
+          Mass-EXPERT обеспечивают прямое измерение массового расхода независимо от вязкости,
+          температуры и плотности среды — ключевое преимущество для высоковязких полимерных расплавов.
+        </p>
+        <div style="display:flex;gap:1rem;flex-wrap:wrap;">
+          <a href="#configurations" class="btn btn-primary">Рекомендуемые конфигурации</a>
+          <a href="../index.html#contacts" class="btn btn-outline">Запросить КП</a>
+        </div>
+        <div class="poly-badges">
+          <span class="poly-badge"><i class="fas fa-vial"></i> Точность 0,1–0,15%</span>
+          <span class="poly-badge"><i class="fas fa-tachometer-alt"></i> До 350 °C / 10 МПа</span>
+          <span class="poly-badge"><i class="fas fa-tint"></i> Независимость от вязкости</span>
+          <span class="poly-badge"><i class="fas fa-flask"></i> Полиэтилен, ПП, ПВХ</span>
+          <span class="poly-badge"><i class="fas fa-cogs"></i> L-тип для расплавов</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== OVERVIEW ==================== -->
+  <section class="section" id="overview">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-badge">Обзор</span>
+        <h2>Кориолисовые расходомеры в полимерной промышленности</h2>
+        <p>
+          Полимерная индустрия предъявляет одни из самых жёстких требований к дозирующему
+          оборудованию. Кориолисовые расходомеры Mass-EXPERT решают ключевые задачи: от
+          подачи газообразных мономеров до измерения расплавов с вязкостью в тысячи сП.
+        </p>
+      </div>
+
+      <!-- Process flow -->
+      <div class="process-flow">
+        <span class="process-step"><span class="ps-icon"><i class="fas fa-gas-pump"></i></span> Мономеры</span>
+        <span class="process-arrow"><i class="fas fa-arrow-right"></i></span>
+        <span class="process-step"><span class="ps-icon"><i class="fas fa-flask"></i></span> Полимеризация</span>
+        <span class="process-arrow"><i class="fas fa-arrow-right"></i></span>
+        <span class="process-step"><span class="ps-icon"><i class="fas fa-fire"></i></span> Экструзия / Грануляция</span>
+        <span class="process-arrow"><i class="fas fa-arrow-right"></i></span>
+        <span class="process-step"><span class="ps-icon"><i class="fas fa-weight"></i></span> Дозирование присадок</span>
+      </div>
+
+      <!-- Accuracy highlights -->
+      <div class="acc-strip">
+        <div class="acc-item">
+          <div class="acc-value">0,1–0,15%</div>
+          <div class="acc-label">Базовая точность</div>
+        </div>
+        <div class="acc-item">
+          <div class="acc-value">0,05%</div>
+          <div class="acc-label">Опциональная точность (калибровка)</div>
+        </div>
+        <div class="acc-item">
+          <div class="acc-value">10 000:1</div>
+          <div class="acc-label">Диапазон измерения (turndown)</div>
+        </div>
+        <div class="acc-item">
+          <div class="acc-value">Без дрейфа</div>
+          <div class="acc-label">Долговременная стабильность</div>
+        </div>
+      </div>
+
+      <h3 style="color:var(--primary);margin-bottom:1rem;">Ключевые преимущества для полимерного производства</h3>
+      <div class="app-feature-grid">
+        <div class="app-feature-card">
+          <div class="af-icon"><i class="fas fa-weight"></i></div>
+          <h4>Прямое измерение массы</h4>
+          <p>Кориолисовы расходомеры измеряют массу непосредственно, без зависимости от вязкости, температуры, плотности, проводимости или профиля потока среды.</p>
+        </div>
+        <div class="app-feature-card">
+          <div class="af-icon"><i class="fas fa-stoichiometry"></i></div>
+          <h4>Поддержание стехиометрии</h4>
+          <p>Точное соотношение мономеров, катализаторов и сомономеров — основа качества полимера. Расходомеры Mass-EXPERT обеспечивают повторяемость &lt;0,05%.</p>
+        </div>
+        <div class="app-feature-card">
+          <div class="af-icon"><i class="fas fa-tachometer-alt"></i></div>
+          <h4>Измерение вязких расплавов</h4>
+          <p>Полиэтилен, полипропилен, ПВХ и другие расплавы с вязкостью до десятков тысяч сП измеряются без потери точности — масса не зависит от вязкости.</p>
+        </div>
+        <div class="app-feature-card">
+          <div class="af-icon"><i class="fas fa-thermometer-half"></i></div>
+          <h4>Высокие температуры</h4>
+          <p>Исполнение до +350 °C для горячих расплавов и высокотемпературных процессов полимеризации. Опциональный изотермический кожух.</p>
+        </div>
+        <div class="app-feature-card">
+          <div class="af-icon"><i class="fas fa-shield-alt"></i></div>
+          <h4>Коррозионная стойкость</h4>
+          <p>Материалы 316L / Хастеллой для агрессивных мономеров, катализаторов и хлорсодержащих сред. Полная совместимость с технологической средой.</p>
+        </div>
+        <div class="app-feature-card">
+          <div class="af-icon"><i class="fas fa-sync-alt"></i></div>
+          <h4>Многофазные потоки</h4>
+          <p>Измерение массового расхода и газосодержания в газожидкостных потоках при полимеризации в реакторах с перемешиванием.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== TYPICAL MEDIA ==================== -->
+  <section class="section section-gray" id="media">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-badge">Типичные среды</span>
+        <h2>Измеряемые среды в полимерном производстве</h2>
+        <p>
+          Кориолисовые расходомеры Mass-EXPERT работают с широким спектром жидких,
+          газообразных и высоковязких сред, характерных для производства полимеров.
+        </p>
+      </div>
+
+      <div class="media-grid">
+        <div class="media-card">
+          <div class="media-icon"><i class="fas fa-gas-pump"></i></div>
+          <div class="media-name">Мономеры</div>
+          <p class="media-desc">Стирол, этилен, пропилен, винилхлорид, бутадиен, акрилонитрил — газообразные и жидкие мономеры на всех этапах подачи.</p>
+        </div>
+        <div class="media-card">
+          <div class="media-icon"><i class="fas fa-flask"></i></div>
+          <div class="media-name">Катализаторы</div>
+          <p class="media-desc">Циглера-Натта, металлоценовые, хроморганические — микродозирование с точностью до долей грамма в минуту.</p>
+        </div>
+        <div class="media-card">
+          <div class="media-icon"><i class="fas fa-bolt"></i></div>
+          <div class="media-name">Инициаторы</div>
+          <p class="media-desc">Пероксиды, азосоединения, инициаторы радикальной полимеризации — критически важное точное дозирование для запуска реакции.</p>
+        </div>
+        <div class="media-card">
+          <div class="media-icon"><i class="fas fa-adjust"></i></div>
+          <div class="media-name">Присадки</div>
+          <p class="media-desc">Стабилизаторы, пластификаторы, антиоксиданты, красители, пигменты, наполнители — многокомпонентное дозирование.</p>
+        </div>
+        <div class="media-card">
+          <div class="media-icon"><i class="fas fa-oil-can"></i></div>
+          <div class="media-name">Полимерные расплавы</div>
+          <p class="media-desc">Полиэтилен (ПЭ), полипропилен (ПП), поливинилхлорид (ПВХ), полистирол (ПС), полиэтилентерефталат (ПЭТФ) в расплавленном состоянии.</p>
+        </div>
+        <div class="media-card">
+          <div class="media-icon"><i class="fas fa-tint"></i></div>
+          <div class="media-name">Пластификаторы</div>
+          <p class="media-desc">Фталаты, эфиры, масла-наполнители — дозирование в процессе компаундирования для придания эластичности.</p>
+        </div>
+        <div class="media-card">
+          <div class="media-icon"><i class="fas fa-water"></i></div>
+          <div class="media-name">Суспензии / эмульсии</div>
+          <p class="media-desc">Водные дисперсии полимеров, латексы, суспензии ПВХ — надёжное измерение без засорения измерительных трубок.</p>
+        </div>
+        <div class="media-card">
+          <div class="media-icon"><i class="fas fa-compress-arrows-alt"></i></div>
+          <div class="media-name">Сомономеры / модификаторы</div>
+          <p class="media-desc">Акрилаты, малеиновый ангидрид, метилметакрилат — точное поддержание состава сополимеров.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== CHALLENGES & SOLUTIONS ==================== -->
+  <section class="section" id="challenges">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-badge">Задачи и решения</span>
+        <h2>Технологические вызовы и решения Mass-EXPERT</h2>
+        <p>
+          Производство полимеров — один из самых требовательных процессов с точки зрения
+          точности дозирования и надёжности измерительного оборудования.
+        </p>
+      </div>
+
+      <div class="cs-grid">
+        <div class="cs-pair">
+          <div class="cs-challenge">
+            <h4><i class="fas fa-exclamation-triangle"></i> Высокая вязкость расплавов</h4>
+            <p>Расплавы полиэтилена, полипропилена и ПВХ имеют вязкость от 1 000 до 50 000 сП.
+              Объёмные и электромагнитные расходомеры дают недопустимую погрешность
+              или непригодны для таких сред.</p>
+          </div>
+          <div class="cs-solution">
+            <h4><i class="fas fa-check-circle"></i> Решение — кориолисовый принцип</h4>
+            <p>Кориолисовы расходомеры Mass-EXPERT измеряют массу непосредственно,
+              независимо от вязкости среды. Прямотрубные конфигурации L-типа
+              минимизируют гидравлическое сопротивление и исключают зоны застоя.</p>
+          </div>
+        </div>
+
+        <div class="cs-pair">
+          <div class="cs-challenge">
+            <h4><i class="fas fa-exclamation-triangle"></i> Стехиометрия реакции</h4>
+            <p>Соотношение мономеров, катализатора и инициатора — ключевой параметр,
+              определяющий молекулярную массу и свойства полимера.
+              Даже 0,5% отклонения ведут к браку.</p>
+          </div>
+          <div class="cs-solution">
+            <h4><i class="fas fa-check-circle"></i> Решение — прецизионное дозирование</h4>
+            <p>Расходомеры Mass-EXPERT с точностью от 0,1% и повторяемостью &lt;0,05%
+              обеспечивают стабильное поддержание стехиометрии. Встроенный сумматор
+              позволяет контролировать дозу катализатора с точностью до грамма.</p>
+          </div>
+        </div>
+
+        <div class="cs-pair">
+          <div class="cs-challenge">
+            <h4><i class="fas fa-exclamation-triangle"></i> Высокая температура полимеров</h4>
+            <p>Расплавы полимеров и процессы полимеризации часто протекают при
+              температурах +200…+350 °C. Стандартные сенсоры не рассчитаны
+              на такие термические нагрузки.</p>
+          </div>
+          <div class="cs-solution">
+            <h4><i class="fas fa-check-circle"></i> Решение — изотермический кожух + C-исполнение</h4>
+            <p>Исполнение C (до +350 °C) с изотермическим кожухом для поддержания
+              стабильной температуры рабочей среды. Терморазвязка и раздельное
+              размещение электроники (до 30 м от сенсора).</p>
+          </div>
+        </div>
+
+        <div class="cs-pair">
+          <div class="cs-challenge">
+            <h4><i class="fas fa-exclamation-triangle"></i> Агрессивные мономеры и катализаторы</h4>
+            <p>Хлорсодержащие мономеры (винилхлорид), кислотные катализаторы
+              и коррозионно-активные инициаторы разрушают стандартные
+              материалы измерительных трубок.</p>
+          </div>
+          <div class="cs-solution">
+            <h4><i class="fas fa-check-circle"></i> Решение — 316L / Хастеллой</h4>
+            <p>Измерительные трубки из нержавеющей стали 316L или сплавов
+              Hastelloy C-276 обеспечивают полную коррозионную стойкость
+              в агрессивных средах. Опционально — тантал, титан и другие материалы.</p>
+          </div>
+        </div>
+
+        <div class="cs-pair">
+          <div class="cs-challenge">
+            <h4><i class="fas fa-exclamation-triangle"></i> Застывание и кристаллизация</h4>
+            <p>При остановках процесса полимерные расплавы могут застывать
+              внутри измерительных трубок, что приводит к повреждению сенсора
+              при повторном запуске.</p>
+          </div>
+          <div class="cs-solution">
+            <h4><i class="fas fa-check-circle"></i> Решение — обогрев и пароспутники</h4>
+            <p>Модели с изотермическим кожухом и возможностью парового/электрического
+              обогрева. Специальные дренажные конфигурации для полного опорожнения
+              сенсора перед остановкой.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="info-box">
+        <h3><i class="fas fa-lightbulb"></i> Ключевой фактор: независимость от вязкости</h3>
+        <p>
+          В отличие от объёмных (вихревых, турбинных, электромагнитных) расходомеров,
+          кориолисовые счётчики Mass-EXPERT измеряют <strong>непосредственно массу</strong>,
+      а не объём или скорость. Это означает, что изменение вязкости полимерного расплава
+      (в десятки раз при разогреве или смене марки полимера) <strong>не влияет</strong>
+      на точность измерения. Комбинированное измерение массы и плотности позволяет
+      также контролировать индекс расплава (MFI) в реальном времени.
+    </p>
+  </div>
+</div>
+</section>
+
+  <!-- ==================== RECOMMENDED CONFIGURATIONS ==================== -->
+  <section class="section section-gray" id="configurations">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-badge">Рекомендации по подбору</span>
+        <h2>Рекомендуемые конфигурации Mass-EXPERT</h2>
+        <p>
+          Для каждого этапа полимерного производства подбирается оптимальная конфигурация
+          расходомера — по типу трубок, материалам, термостабилизации и точности.
+        </p>
+      </div>
+
+      <div class="config-grid">
+        <div class="config-card">
+          <div class="cfg-icon"><i class="fas fa-grip-lines"></i></div>
+          <h4>L-тип (прямотрубный)</h4>
+          <p>
+            Рекомендован для вязких полимерных расплавов. Прямые измерительные
+            трубки без изгибов минимизируют гидравлическое сопротивление и
+            исключают зоны застоя. Легко дренируются и промываются.
+          </p>
+          <div class="cfg-tags">
+            <span class="cfg-tag">PE / PP расплавы</span>
+            <span class="cfg-tag">Высокая вязкость</span>
+            <span class="cfg-tag">Лёгкое дренирование</span>
+          </div>
+        </div>
+        <div class="config-card">
+          <div class="cfg-icon"><i class="fas fa-thermometer-half"></i></div>
+          <h4>Изотермический кожух</h4>
+          <p>
+            Термоизолированный кожух с системой поддержания температуры.
+            Необходим для сохранения стабильной вязкости расплава
+            и предотвращения застывания полимера при остановках.
+          </p>
+          <div class="cfg-tags">
+            <span class="cfg-tag">+150…+350 °C</span>
+            <span class="cfg-tag">Эл. обогрев / пар</span>
+            <span class="cfg-tag">Термостабильность</span>
+          </div>
+        </div>
+        <div class="config-card">
+          <div class="cfg-icon"><i class="fas fa-microscope"></i></div>
+          <h4>Высокоточное исполнение</h4>
+          <p>
+            Калибровка с точностью 0,1–0,15% для критического дозирования
+            катализаторов и инициаторов. Опциональная индивидуальная калибровка
+            до 0,05% для микродозирования.
+          </p>
+          <div class="cfg-tags">
+            <span class="cfg-tag">0,1% точность</span>
+            <span class="cfg-tag">Микродозирование</span>
+            <span class="cfg-tag">Стехиометрия</span>
+          </div>
+        </div>
+        <div class="config-card">
+          <div class="cfg-icon"><i class="fas fa-shield-alt"></i></div>
+          <h4>316L / Хастеллой</h4>
+          <p>
+            Материалы измерительных трубок: стандартная нержавеющая сталь 316L
+            или коррозионностойкий Hastelloy C-276 для работы с агрессивными
+            мономерами и катализаторами.
+          </p>
+          <div class="cfg-tags">
+            <span class="cfg-tag">316L (стандарт)</span>
+            <span class="cfg-tag">Hastelloy C-276</span>
+            <span class="cfg-tag">Химстойкость</span>
+          </div>
+        </div>
+        <div class="config-card">
+          <div class="cfg-icon"><i class="fas fa-fire"></i></div>
+          <h4>Исполнение C (до +350 °C)</h4>
+          <p>
+            Высокотемпературное исполнение для горячих расплавов полимеров.
+            Обязательное раздельное исполнение электроники. Кабель-удлинитель
+            до 30 м. Терморазвязка и жаропрочные сплавы.
+          </p>
+          <div class="cfg-tags">
+            <span class="cfg-tag">+350 °C</span>
+            <span class="cfg-tag">Раздельное</span>
+            <span class="cfg-tag">Терморазвязка</span>
+          </div>
+        </div>
+        <div class="config-card">
+          <div class="cfg-icon"><i class="fas fa-compress-alt"></i></div>
+          <h4>Компактное / гигиеничное</h4>
+          <p>
+            Для пищевых и фармацевтических полимеров (ПЭТФ, ПС, ПВХ-компаунды) —
+            компактные конфигурации с гигиеническими присоединениями
+            (Clamp, DIN 11851) и финишной обработкой поверхности.
+          </p>
+          <div class="cfg-tags">
+            <span class="cfg-tag">Food-grade</span>
+            <span class="cfg-tag">Hybrid connections</span>
+            <span class="cfg-tag">Ra &lt; 0,8 мкм</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== SPECIFICATIONS TABLE ==================== -->
+  <section class="section" id="specifications">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-badge">Технические характеристики</span>
+        <h2>Параметры расходомеров для полимеров</h2>
+        <p>
+          Базовые характеристики кориолисовых расходомеров Mass-EXPERT,
+          рекомендуемых для задач полимерной промышленности.
+        </p>
+      </div>
+
+      <div class="table-wrap">
+        <table>
+          <thead>
+            <tr>
+              <th>Параметр</th>
+              <th>Значение / Диапазон</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Точность (массовый расход)</td>
+              <td>от ±0,1% до ±0,15% (опционально ±0,05%)</td>
+            </tr>
+            <tr>
+              <td>Повторяемость</td>
+              <td>&lt; 0,05%</td>
+            </tr>
+            <tr>
+              <td>Диапазон измерения (turndown)</td>
+              <td>10 000:1 (опционально 100 000:1)</td>
+            </tr>
+            <tr>
+              <td>Точность (плотность)</td>
+              <td>±0,001 г/см³</td>
+            </tr>
+            <tr>
+              <td>Точность (температура)</td>
+              <td>±0,5 °C</td>
+            </tr>
+            <tr>
+              <td>Диапазон температур среды</td>
+              <td>от −50 до +350 °C (в зависимости от исполнения)</td>
+            </tr>
+            <tr>
+              <td>Максимальное давление</td>
+              <td>до 10 МПа (стандарт); выше — по запросу</td>
+            </tr>
+            <tr>
+              <td>Динамическая вязкость среды</td>
+              <td>без ограничений (независимость от вязкости)</td>
+            </tr>
+            <tr>
+              <td>Материал измерительных трубок</td>
+              <td>316L, Hastelloy C-276, опционально: тантал, титан</td>
+            </tr>
+            <tr>
+              <td>Типы измерительных трубок</td>
+              <td>U, K, W, L (прямотрубный), Δ, D</td>
+            </tr>
+            <tr>
+              <td>Рекомендуемый тип для расплавов</td>
+              <td><strong>L-тип</strong> (прямотрубный) — мин. гидросопротивление</td>
+            </tr>
+            <tr>
+              <td>Изотермический кожух</td>
+              <td>Опционально: паровой / электрический обогрев, теплоизоляция</td>
+            </tr>
+            <tr>
+              <td>Условный диаметр (DN)</td>
+              <td>от 1 до 250</td>
+            </tr>
+            <tr>
+              <td>Взрывозащита</td>
+              <td>Ex d ib IIC T6 Gb; Ex db ia IIC T6 Gb; Ex tb ia IIIC T80°C Db</td>
+            </tr>
+            <tr>
+              <td>Степень защиты (сенсор)</td>
+              <td>IP66, IP67</td>
+            </tr>
+            <tr>
+              <td>Выходные сигналы</td>
+              <td>4–20 мА (HART), RS-485 (Modbus RTU), Profibus PA, CAN, импульсный, частотный, дискретный</td>
+            </tr>
+            <tr>
+              <td>Трансмиттеры</td>
+              <td>ME100, ME200, ME300 (интегрированные / выносные)</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="info-box">
+        <h3><i class="fas fa-chart-line"></i> Контроль показателя текучести расплава (MFI)</h3>
+        <p>
+          Кориолисовые расходомеры Mass-EXPERT позволяют в реальном времени оценивать
+          индекс расплава (Melt Flow Index, MFI) полимеров по комбинированному измерению
+          массового расхода, плотности и перепада давления. Это обеспечивает непрерывный
+          контроль качества полимера непосредственно в процессе экструзии или грануляции
+          без отбора проб и лабораторных анализов.
+        </p>
+        <p style="margin-top:0.75rem;font-size:0.875rem;color:#064E3B;">
+          <i class="fas fa-check-circle"></i> Онлайн-мониторинг MFI — снижение времени контроля качества с часов до секунд.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== APPLICATION TAGS ==================== -->
+  <section class="section section-gray" id="applications-tags">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-badge">Области применения</span>
+        <h2>Процессы и отрасли применения</h2>
+        <p>
+          Расходомеры Mass-EXPERT применяются на всех этапах производства полимеров —
+          от синтеза мономеров до компаундирования готовых гранул.
+        </p>
+      </div>
+
+      <div style="display:flex;flex-wrap:wrap;gap:0.75rem;justify-content:center;margin-top:1.5rem;">
+        <span class="app-tag"><i class="fas fa-industry"></i> Полимеризация этилена (ПЭВД, ПЭНД, ЛПЭНП)</span>
+        <span class="app-tag"><i class="fas fa-industry"></i> Полимеризация пропилена (ПП-гомо, ПП-блок, ПП-рандом)</span>
+        <span class="app-tag"><i class="fas fa-industry"></i> Производство ПВХ (суспензионный, эмульсионный)</span>
+        <span class="app-tag"><i class="fas fa-industry"></i> Производство полистирола (ПС, УПС, АБС)</span>
+        <span class="app-tag"><i class="fas fa-industry"></i> Полиэтилентерефталат (ПЭТФ, ПЭТ-гранулы)</span>
+        <span class="app-tag"><i class="fas fa-industry"></i> Производство синтетических каучуков</span>
+        <span class="app-tag"><i class="fas fa-industry"></i> Компаундирование полимеров (мастербатчи)</span>
+        <span class="app-tag"><i class="fas fa-industry"></i> Экструзия полимерных плёнок и листов</span>
+        <span class="app-tag"><i class="fas fa-industry"></i> Литьё под давлением (дозирование красителей)</span>
+        <span class="app-tag"><i class="fas fa-industry"></i> Производство полимерных волокон</span>
+        <span class="app-tag"><i class="fas fa-industry"></i> Нефтехимические комбинаты (мономеры)</span>
+        <span class="app-tag"><i class="fas fa-industry"></i> Рециклинг полимеров (вторичная грануляция)</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== NAVIGATION HELP ==================== -->
+  <section class="section" id="more">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-badge">Дополнительная информация</span>
+        <h2>Больше о применении Mass-EXPERT</h2>
+        <p>Вернуться к каталогу или посмотреть другие отраслевые решения</p>
+      </div>
+      <div style="text-align:center;">
+        <a href="../index.html" class="btn btn-primary">← На главную</a>
+        <a href="../index.html#applications" class="btn btn-outline-dark" style="margin-left:0.75rem;"><i class="fas fa-th"></i> Все применения</a>
+        <a href="../sitemap.html" class="btn btn-outline-dark" style="margin-left:0.75rem;"><i class="fas fa-sitemap"></i> Карта сайта</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== FOOTER ==================== -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <h4>Mass-EXPERT</h4>
+          <p>Счетчики-расходомеры массовые кориолисового типа.</p>
+          <p>Госреестр № 98506-26. ТУ 26.51.52-016-88090790-2024.</p>
+          <p style="margin-top:0.75rem;font-size:0.8125rem;">
+            Разработка и производство:<br>
+            ООО «Автоматизация-Метрология-ЭКСПЕРТ», г. Уфа
+          </p>
+        </div>
+        <div class="footer-links">
+          <h5>Продукт</h5>
+          <a href="../index.html#specifications">Характеристики</a>
+          <a href="../index.html#product-line">Типоразмеры</a>
+          <a href="../index.html#options">Модификации</a>
+        </div>
+        <div class="footer-links">
+          <h5>Документация</h5>
+          <a href="../index.html#certificates">Сертификаты</a>
+          <a href="../docs/ОПИСАНИЕ_ТИПА_2026-98506-26.pdf" target="_blank">Описание типа</a>
+          <a href="../docs/РЭ_Масс_Эксперт_v09.pdf" target="_blank">Руководство по эксплуатации</a>
+        </div>
+        <div class="footer-links">
+          <h5>Контакты</h5>
+          <a href="tel:+734****5350">+7 (347) 286-53-50</a>
+          <a href="mailto:info@ame-info.ru">info@ame-info.ru</a>
+          <a href="https://www.ame-info.ru" target="_blank">www.ame-info.ru</a>
+          <a href="../sitemap.html" style="margin-top:0.5rem;font-size:0.8125rem;color:var(--gray-500);"><i class="fas fa-sitemap"></i> Карта сайта</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>© <span id="year">2026</span> ООО «Автоматизация-Метрология-ЭКСПЕРТ». Все права защищены.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="../js/main.js"></script>
+  <script>
+    // Set current year in footer
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    // Mobile nav toggle
+    document.querySelector('.navbar-toggle')?.addEventListener('click', function() {
+      document.querySelector('.navbar-links')?.classList.toggle('open');
+    });
+  </script>
+
+</body>
+</html>

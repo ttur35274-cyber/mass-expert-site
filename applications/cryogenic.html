@@ -1,0 +1,928 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Криогенные технологии — Mass-EXPERT | Кориолисовые расходомеры</title>
+  <meta name="description" content="Массовые расходомеры Mass-EXPERT для криогенных технологий: измерение сжиженных газов при сверхнизких температурах — LN₂, LO₂, LAr, LNG. Исполнение L (−200 °C). Трубки U и Δ-типа. DN08–DN80. Высокая чувствительность при малых расходах.">
+  <meta name="keywords" content="криогенные технологии, криогенные жидкости, жидкий азот, LN₂, LO₂, LAr, LNG, СПГ, расходомер, кориолисовый расходомер, Mass-EXPERT, криогенное исполнение L, низкие температуры, −200°C, U-трубка, Δ-трубка, DN08, DN80, изотермический кожух, ME100, ME200">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <!-- Open Graph -->
+  <meta property="og:title" content="Криогенные технологии — Mass-EXPERT">
+  <meta property="og:description" content="Измерение сжиженных газов при сверхнизких температурах — LN₂, LO₂, LAr, LNG с кориолисовыми расходомерами Mass-EXPERT. Исполнение L, трубки U/Δ, DN08–DN80.">
+  <meta property="og:type" content="website">
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 40 40'><rect width='40' height='40' rx='8' fill='%23F59E0B'/><text x='20' y='26' text-anchor='middle' font-size='14' font-weight='900' fill='%230F172A' font-family='Inter'>ME</text></svg>">
+  <style>
+    /* Application page specific styles */
+    .cond-hero {
+      position: relative;
+      min-height: 70vh;
+      display: flex;
+      align-items: center;
+      background: linear-gradient(135deg, #0a1f3a 0%, #0B3D6B 50%, #1a5276 100%);
+      overflow: hidden;
+      padding-top: 72px;
+    }
+    .cond-hero::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background:
+        radial-gradient(ellipse at 70% 30%, rgba(56, 189, 248, 0.10) 0%, transparent 60%),
+        radial-gradient(ellipse at 30% 80%, rgba(255,255,255,0.03) 0%, transparent 50%);
+      pointer-events: none;
+    }
+    .cond-hero-content {
+      position: relative;
+      z-index: 1;
+    }
+    .cond-hero-content .cond-label {
+      display: inline-block;
+      font-size: 0.75rem;
+      color: var(--gray-400);
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      font-weight: 600;
+      margin-bottom: 0.75rem;
+      background: rgba(255,255,255,0.08);
+      padding: 0.3rem 0.75rem;
+      border-radius: 999px;
+    }
+    .cond-hero-content h1 {
+      color: var(--white);
+      margin-bottom: 0.5rem;
+      font-size: 3.5rem;
+    }
+    .cond-hero-content .cond-subtitle {
+      font-size: 1.35rem;
+      color: var(--accent);
+      font-weight: 600;
+      margin-bottom: 1.5rem;
+    }
+    .cond-hero-content .cond-desc {
+      color: rgba(255,255,255,0.8);
+      font-size: 1.0625rem;
+      margin: 1.5rem 0 2rem;
+      max-width: 680px;
+    }
+    .cond-badges {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.75rem;
+      margin-top: 1.5rem;
+    }
+    .cond-badge {
+      background: rgba(255,255,255,0.1);
+      border: 1px solid rgba(255,255,255,0.15);
+      color: rgba(255,255,255,0.9);
+      padding: 0.4rem 1rem;
+      border-radius: 999px;
+      font-size: 0.8125rem;
+      font-weight: 500;
+    }
+    .cond-hero-icon {
+      font-size: 5rem;
+      color: var(--accent);
+      margin-bottom: 1rem;
+      opacity: 0.9;
+    }
+
+    /* Section standard overrides */
+    .section-header .section-icon-big {
+      font-size: 3rem;
+      color: var(--primary);
+      margin-bottom: 0.75rem;
+    }
+
+    /* Media cards grid */
+    .media-cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 1.5rem;
+      margin-top: 2rem;
+    }
+    .media-card {
+      background: var(--white);
+      border: 1px solid var(--gray-200);
+      border-radius: var(--radius-lg);
+      padding: 1.5rem;
+      transition: all var(--transition);
+    }
+    .media-card:hover {
+      border-color: var(--primary);
+      box-shadow: var(--shadow-md);
+      transform: translateY(-2px);
+    }
+    .media-card .mc-icon {
+      font-size: 2.5rem;
+      margin-bottom: 0.75rem;
+    }
+    .media-card h4 {
+      font-size: 1.0625rem;
+      color: var(--primary);
+      margin-bottom: 0.5rem;
+    }
+    .media-card p {
+      font-size: 0.9375rem;
+      color: var(--gray-500);
+      margin: 0;
+    }
+    .media-card .mc-formula {
+      display: inline-block;
+      background: var(--gray-50);
+      border: 1px solid var(--gray-200);
+      border-radius: 999px;
+      padding: 0.2rem 0.75rem;
+      font-size: 0.8125rem;
+      font-weight: 600;
+      color: var(--primary);
+      margin-top: 0.5rem;
+    }
+
+    /* Advantage cards */
+    .adv-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 1.5rem;
+      margin-top: 2rem;
+    }
+    .adv-card-app {
+      background: var(--white);
+      border: 1px solid var(--gray-200);
+      border-radius: var(--radius-lg);
+      padding: 1.5rem;
+      text-align: center;
+      transition: all var(--transition);
+    }
+    .adv-card-app:hover {
+      border-color: var(--primary);
+      box-shadow: var(--shadow-md);
+      transform: translateY(-2px);
+    }
+    .adv-card-app .adv-icon {
+      font-size: 2.5rem;
+      margin-bottom: 0.75rem;
+    }
+    .adv-card-app h4 {
+      font-size: 1.0625rem;
+      color: var(--primary);
+      margin-bottom: 0.5rem;
+    }
+    .adv-card-app p {
+      font-size: 0.9375rem;
+      color: var(--gray-500);
+      margin: 0;
+    }
+
+    /* Config cards */
+    .config-cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 1.5rem;
+      margin-top: 2rem;
+    }
+    .config-card {
+      background: var(--white);
+      border: 1px solid var(--gray-200);
+      border-radius: var(--radius-lg);
+      padding: 1.5rem;
+      border-top: 4px solid var(--primary);
+      transition: all var(--transition);
+    }
+    .config-card:hover {
+      box-shadow: var(--shadow-md);
+      transform: translateY(-2px);
+    }
+    .config-card .cfg-icon {
+      font-size: 2rem;
+      color: var(--primary);
+      margin-bottom: 0.75rem;
+    }
+    .config-card h4 {
+      font-size: 1.0625rem;
+      color: var(--primary);
+      margin-bottom: 0.5rem;
+    }
+    .config-card ul {
+      margin: 0.75rem 0 0;
+      padding: 0;
+      list-style: none;
+    }
+    .config-card ul li {
+      position: relative;
+      padding-left: 1.25rem;
+      margin-bottom: 0.35rem;
+      font-size: 0.875rem;
+      color: var(--gray-600);
+    }
+    .config-card ul li::before {
+      content: '✓';
+      position: absolute;
+      left: 0;
+      color: var(--success, #10B981);
+      font-weight: 700;
+    }
+
+    /* Highlight box */
+    .highlight-box {
+      background: linear-gradient(135deg, #E0F2FE, #BAE6FD);
+      border: 1px solid #7DD3FC;
+      border-left: 4px solid #0284C7;
+      border-radius: var(--radius-lg);
+      padding: 1.5rem 2rem;
+      margin: 2rem 0;
+    }
+    .highlight-box h3 {
+      color: #0C4A6E;
+      font-size: 1.0625rem;
+      margin-bottom: 0.5rem;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+    .highlight-box p {
+      color: #0C4A6E;
+      font-size: 0.9375rem;
+      margin-bottom: 0;
+    }
+
+    /* Feature list */
+    .feat-list {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1rem;
+      margin: 1.5rem 0;
+    }
+    .feat-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 0.75rem;
+      padding: 0.75rem 0;
+    }
+    .feat-item .feat-icon {
+      flex-shrink: 0;
+      width: 28px;
+      height: 28px;
+      background: rgba(56, 189, 248, 0.15);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 0.875rem;
+      color: #0284C7;
+      font-weight: 700;
+    }
+    .feat-item .feat-text {
+      font-size: 0.9375rem;
+      color: var(--gray-700);
+    }
+
+    /* DN size chips for hero */
+    .dn-chips {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+      margin-bottom: 1.5rem;
+    }
+    .dn-chip {
+      background: rgba(255,255,255,0.1);
+      border: 1px solid rgba(255,255,255,0.2);
+      color: var(--white);
+      padding: 0.3rem 1rem;
+      border-radius: 999px;
+      font-size: 0.8125rem;
+      font-weight: 600;
+    }
+
+    /* Tube type indicator */
+    .tube-indicator {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      margin: 1.5rem 0;
+    }
+    .tube-indicator .tube-type {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      background: rgba(255,255,255,0.08);
+      border: 1px solid rgba(255,255,255,0.15);
+      border-radius: var(--radius);
+      padding: 0.6rem 1.2rem;
+      color: var(--white);
+      font-weight: 600;
+      font-size: 0.9375rem;
+    }
+    .tube-indicator .tube-type .tube-symbol {
+      font-size: 1.25rem;
+      color: var(--accent);
+    }
+
+    /* Spec highlight grid */
+    .spec-highlight-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 1rem;
+      margin: 2rem 0;
+    }
+    .spec-highlight-card {
+      background: var(--gray-50);
+      border: 1px solid var(--gray-200);
+      border-radius: var(--radius);
+      padding: 1.25rem;
+      text-align: center;
+    }
+    .spec-highlight-card .spec-hl-value {
+      font-size: 1.75rem;
+      font-weight: 800;
+      color: var(--primary);
+    }
+    .spec-highlight-card .spec-hl-label {
+      font-size: 0.8125rem;
+      color: var(--gray-500);
+      margin-top: 0.25rem;
+    }
+
+    /* Materials grid */
+    .materials-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 1rem;
+      margin: 1.5rem 0;
+    }
+    .material-card {
+      background: var(--gray-50);
+      border: 1px solid var(--gray-200);
+      border-radius: var(--radius);
+      padding: 1.25rem;
+      text-align: center;
+    }
+    .material-card .mat-icon {
+      font-size: 2rem;
+      margin-bottom: 0.5rem;
+    }
+    .material-card .mat-name {
+      font-weight: 700;
+      color: var(--gray-800);
+      font-size: 1rem;
+    }
+    .material-card .mat-desc {
+      font-size: 0.8125rem;
+      color: var(--gray-500);
+      margin-top: 0.25rem;
+    }
+
+    @media (max-width: 768px) {
+      .feat-list { grid-template-columns: 1fr; }
+      .cond-hero { min-height: auto; padding: 6rem 0 3rem; }
+      .cond-hero-content h1 { font-size: 2.5rem; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ==================== NAVIGATION ==================== -->
+  <nav class="navbar" role="navigation" aria-label="Основная навигация">
+    <div class="container">
+      <a href="../index.html" class="navbar-brand">
+        <span class="brand-icon">MASS<br>EXPERT</span>
+        Mass-EXPERT
+      </a>
+      <button class="navbar-toggle" aria-label="Открыть меню">☰</button>
+      <div class="navbar-links">
+        <a href="../index.html#about">О продукте</a>
+        <a href="../index.html#advantages">Преимущества</a>
+        <a href="../index.html#principle">Принцип работы</a>
+        <a href="../index.html#product-line">Типоразмеры</a>
+        <a href="../index.html#specifications">Характеристики</a>
+        <a href="../index.html#contacts">Контакты</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ==================== HERO ==================== -->
+  <section class="cond-hero" id="hero">
+    <div class="container">
+      <div class="cond-hero-content">
+        <span class="cond-label">Отрасль применения</span>
+        <div class="cond-hero-icon"><i class="fas fa-snowflake"></i></div>
+        <h1>Криогенные технологии</h1>
+        <div class="cond-subtitle">Точные измерения сжиженных газов при сверхнизких температурах</div>
+        <p class="cond-desc">
+          Массовые расходомеры <strong>Mass-EXPERT</strong> для измерения расхода сжиженных газов
+          при криогенных температурах — жидкого азота (LN₂), кислорода (LO₂), аргона (LAr)
+          и сжиженного природного газа (LNG/СПГ). Исполнение <strong>L</strong> для криогенных
+          условий (−200 °C) обеспечивает стабильную работу, высокую чувствительность при малых
+          расходах и длительный срок службы в самых холодных средах.
+        </p>
+        <div class="dn-chips">
+          <span class="dn-chip"><i class="fas fa-ruler"></i> DN08</span>
+          <span class="dn-chip"><i class="fas fa-ruler"></i> DN25</span>
+          <span class="dn-chip"><i class="fas fa-ruler"></i> DN40</span>
+          <span class="dn-chip"><i class="fas fa-ruler"></i> DN50</span>
+          <span class="dn-chip"><i class="fas fa-ruler"></i> DN80</span>
+        </div>
+        <div style="display:flex;gap:1rem;flex-wrap:wrap;">
+          <a href="#media" class="btn btn-primary">Типичные среды</a>
+          <a href="#advantages" class="btn btn-outline">Преимущества</a>
+        </div>
+        <div class="cond-badges">
+          <span class="cond-badge"><i class="fas fa-snowflake" style="margin-right:4px;"></i> −200 °C</span>
+          <span class="cond-badge"><i class="fas fa-tint" style="margin-right:4px;"></i> LN₂ / LO₂ / LAr / LNG</span>
+          <span class="cond-badge"><i class="fas fa-bullseye" style="margin-right:4px;"></i> Высокая чувствительность</span>
+          <span class="cond-badge"><i class="fas fa-shapes" style="margin-right:4px;"></i> U / Δ сенсоры</span>
+          <span class="cond-badge"><i class="fas fa-layer-group" style="margin-right:4px;"></i> Изотермический кожух</span>
+          <span class="cond-badge"><i class="fas fa-microchip" style="margin-right:4px;"></i> ME100 / ME200</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== TYPICAL MEDIA ==================== -->
+  <section class="section" id="media">
+    <div class="container">
+      <div class="section-header animate-on-scroll">
+        <span class="section-badge">Типичные среды</span>
+        <h2>Измерение криогенных жидкостей</h2>
+        <p>Кориолисовые расходомеры Mass-EXPERT в исполнении L обеспечивают прямое измерение массового расхода сжиженных газов при экстремально низких температурах — от −200 °C до +150 °C.</p>
+      </div>
+
+      <div class="media-cards animate-on-scroll">
+        <div class="media-card">
+          <div class="mc-icon">❄️</div>
+          <h4>Жидкий азот (LN₂)</h4>
+          <p>Измерение расхода жидкого азота при криогенном хранении, транспортировке и дозировании. Применяется в металлургии, пищевой промышленности, медицине, электронике и криогенной технике.</p>
+          <div>
+            <span class="mc-formula">LN₂</span>
+            <span class="mc-formula">−196 °C</span>
+          </div>
+        </div>
+        <div class="media-card">
+          <div class="mc-icon">💨</div>
+          <h4>Жидкий кислород (LO₂)</h4>
+          <p>Прецизионный учёт жидкого кислорода на установках разделения воздуха, линиях газификации и заправочных станциях медицинского и промышленного кислорода.</p>
+          <div>
+            <span class="mc-formula">LO₂</span>
+            <span class="mc-formula">−183 °C</span>
+          </div>
+        </div>
+        <div class="media-card">
+          <div class="mc-icon">🔵</div>
+          <h4>Жидкий аргон (LAr)</h4>
+          <p>Измерение расхода жидкого аргона для сварочного производства, металлургии (инертные атмосферы), электронной промышленности и аналитического оборудования.</p>
+          <div>
+            <span class="mc-formula">LAr</span>
+            <span class="mc-formula">−186 °C</span>
+          </div>
+        </div>
+        <div class="media-card">
+          <div class="mc-icon">🔥</div>
+          <h4>Сжиженный природный газ (LNG / СПГ)</h4>
+          <p>Коммерческий учёт и технологическое дозирование сжиженного метана и СПГ на терминалах приёма, хранения, регазификации и бункеровки морских и речных судов.</p>
+          <div>
+            <span class="mc-formula">LNG (CH₄)</span>
+            <span class="mc-formula">−162 °C</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== KEY CHALLENGES ==================== -->
+  <section class="section section-gray" id="challenges">
+    <div class="container">
+      <div class="section-header animate-on-scroll">
+        <span class="section-badge">Вызовы криогенных измерений</span>
+        <h2>Почему Mass-EXPERT для криогенных сред?</h2>
+        <p>Измерение расхода криогенных жидкостей — одна из самых сложных задач в расходометрии. Mass-EXPERT решает её благодаря специальным конструктивным и материаловедческим решениям.</p>
+      </div>
+
+      <div class="adv-grid animate-on-scroll">
+        <div class="adv-card-app">
+          <div class="adv-icon">🧊</div>
+          <h4>Работа до −200 °C</h4>
+          <p>Исполнение L обеспечивает надёжную работу при температурах среды от −200 °C до +150 °C. Специальные криогенные материалы корпуса и сенсора исключают хрупкость и деформацию при экстремальном холоде.</p>
+        </div>
+        <div class="adv-card-app">
+          <div class="adv-icon">🎯</div>
+          <h4>Высокая чувствительность при малых расходах</h4>
+          <p>Увеличенная амплитуда колебаний трубок U и Δ-типа в сочетании с прецизионной электроникой обеспечивает стабильные показания даже при минимальных расходах криогенных жидкостей — идеально для дозирования.</p>
+        </div>
+        <div class="adv-card-app">
+          <div class="adv-icon">🛡️</div>
+          <h4>Изотермический кожух</h4>
+          <p>Специальная криогенная изоляция сенсора — изотермический кожух — минимизирует теплопритоки из окружающей среды, предотвращает обледенение и обеспечивает стабильность измерений.</p>
+        </div>
+        <div class="adv-card-app">
+          <div class="adv-icon">🔩</div>
+          <h4>U и Δ-тип сенсоров</h4>
+          <p>Проверенная U-образная и Δ-образная геометрия измерительных трубок. Максимальная чувствительность к массовому расходу, минимальное гидравлическое сопротивление и устойчивость к двухфазным потокам.</p>
+        </div>
+        <div class="adv-card-app">
+          <div class="adv-icon">⚙️</div>
+          <h4>DN08–DN80 — гибкость выбора</h4>
+          <p>Широкий диапазон типоразмеров перекрывает расходы от лабораторного дозирования (DN08) до крупных технологических потоков СПГ (DN80). Оптимальное решение для любой криогенной задачи.</p>
+        </div>
+        <div class="adv-card-app">
+          <div class="adv-icon">📊</div>
+          <h4>Мониторинг плотности и температуры</h4>
+          <p>Одновременное измерение массового расхода, плотности и температуры криогенной среды — в одном приборе. Контроль качества продукта и параметров процесса в реальном времени.</p>
+        </div>
+      </div>
+
+      <div class="highlight-box animate-on-scroll">
+        <h3>❄️ Криогенные температуры — главный вызов для расходомеров</h3>
+        <p>
+          При температурах ниже −150 °C большинство конструкционных материалов теряют пластичность
+          и становятся хрупкими. Расходомеры <strong>Mass-EXPERT в исполнении L</strong>
+          используют специальные криогенные сплавы и конструктивные решения, прошедшие
+          циклические испытания при −200 °C. Изотермический кожух защищает сенсор от
+          обледенения и тепловых ударов, а U и Δ-образные трубки обеспечивают высокую
+          чувствительность даже при малых расходах криогенных жидкостей — вплоть до
+          минимальных расходов лабораторного дозирования LN₂ и LO₂.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== ADVANTAGES ==================== -->
+  <section class="section" id="advantages">
+    <div class="container">
+      <div class="section-header animate-on-scroll">
+        <span class="section-badge">Преимущества</span>
+        <h2>Преимущества Mass-EXPERT в криогенных технологиях</h2>
+        <p>Кориолисовая технология прямого массового измерения — оптимальное решение для криогенных сред</p>
+      </div>
+
+      <div class="adv-grid animate-on-scroll">
+        <div class="adv-card-app">
+          <div class="adv-icon">🧊</div>
+          <h4>Исполнение L для криогенных условий</h4>
+          <p>Специальное исполнение L разработано для работы с криогенными жидкостями при температурах до −200 °C. Криогенная стойкость материалов, изотермическая изоляция и компактная конструкция.</p>
+        </div>
+        <div class="adv-card-app">
+          <div class="adv-icon">🎯</div>
+          <h4>Прямое измерение массы</h4>
+          <p>Исключает влияние переменной плотности и температуры криогенной среды. При кипении, испарении или изменении фазового состава показания остаются точными — в отличие от объёмных расходомеров.</p>
+        </div>
+        <div class="adv-card-app">
+          <div class="adv-icon">📈</div>
+          <h4>Высокая точность во всём диапазоне</h4>
+          <p>Динамический диапазон 100:1 с сохранением заявленной точности. От прецизионного дозирования (DN08) до максимальных потоков СПГ (DN80) — стабильная погрешность 0,1–0,5%.</p>
+        </div>
+        <div class="adv-card-app">
+          <div class="adv-icon">🔋</div>
+          <h4>Минимум обслуживания</h4>
+          <p>Отсутствие подвижных частей — нет изнашиваемых элементов. Криогенное исполнение не требует регулярной замены уплотнений или подтяжки соединений. Средний срок службы — 20 лет.</p>
+        </div>
+        <div class="adv-card-app">
+          <div class="adv-icon">🌡️</div>
+          <h4>Изотермическая защита</h4>
+          <p>Изотермический кожух сенсора предотвращает обледенение внешних поверхностей, снижает теплопритоки и исключает влияние градиента температур на точность измерений.</p>
+        </div>
+        <div class="adv-card-app">
+          <div class="adv-icon">📊</div>
+          <h4>Многофункциональность</h4>
+          <p>Одновременное измерение массового расхода, плотности и температуры среды. Один прибор заменяет несколько, упрощая систему КИПиА и снижая стоимость владения.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== L EXECUTION DETAILS ==================== -->
+  <section class="section section-gray" id="l-execution">
+    <div class="container">
+      <div class="section-header animate-on-scroll">
+        <span class="section-badge">Исполнение L</span>
+        <h2>Криогенное исполнение L — специально для сверхнизких температур</h2>
+        <p>Модификация L (Low temperature / Криогенное исполнение) разработана специально для работы со сжиженными газами и криогенными жидкостями при экстремально низких температурах.</p>
+      </div>
+
+      <div class="tube-indicator" style="justify-content:center;margin-bottom:2rem;">
+        <span class="tube-type" style="background:rgba(255,255,255,0.12);border-color:rgba(255,255,255,0.25);color:#fff;"><span class="tube-symbol">U</span> U-образный сенсор</span>
+        <span class="tube-type" style="background:rgba(255,255,255,0.12);border-color:rgba(255,255,255,0.25);color:#fff;"><span class="tube-symbol">Δ</span> Δ-образный сенсор (дельта)</span>
+      </div>
+
+      <div class="spec-highlight-grid">
+        <div class="spec-highlight-card">
+          <div class="spec-hl-value">−200…+150</div>
+          <div class="spec-hl-label">°C диапазон температур среды</div>
+        </div>
+        <div class="spec-highlight-card">
+          <div class="spec-hl-value">U / Δ</div>
+          <div class="spec-hl-label">Типы измерительных трубок</div>
+        </div>
+        <div class="spec-highlight-card">
+          <div class="spec-hl-value">DN08–DN80</div>
+          <div class="spec-hl-label">Доступные типоразмеры</div>
+        </div>
+        <div class="spec-highlight-card">
+          <div class="spec-hl-value">LN₂ / LO₂ / LAr / LNG</div>
+          <div class="spec-hl-label">Криогенные среды</div>
+        </div>
+      </div>
+
+      <div class="media-cards animate-on-scroll" style="margin-top:2rem;">
+        <div class="media-card">
+          <div class="mc-icon">🧊</div>
+          <h4>Диапазон температур −200…+150 °C</h4>
+          <p>Специальные криогенные сплавы измерительных трубок и корпуса сохраняют прочность и пластичность при температурах до −200 °C. Исключены хрупкое разрушение и деформация при циклических нагрузках.</p>
+        </div>
+        <div class="media-card">
+          <div class="mc-icon"><i class="fas fa-shapes" style="font-size:2.5rem;"></i></div>
+          <h4>U / Δ-тип сенсора</h4>
+          <p>Только U-образная и Δ-образная геометрия трубок. Обеспечивают максимальную чувствительность при малых расходах криогенных жидкостей и устойчивость к двухфазным потокам (жидкость + газ).</p>
+        </div>
+        <div class="media-card">
+          <div class="mc-icon"><i class="fas fa-layer-group" style="font-size:2.5rem;"></i></div>
+          <h4>Изотермический кожух</h4>
+          <p>Вакуумная или многослойная изоляция сенсора. Минимизация теплопритоков извне, предотвращение обледенения и конденсации влаги. Стабильность работы при длительной эксплуатации.</p>
+        </div>
+        <div class="media-card">
+          <div class="mc-icon"><i class="fas fa-microchip" style="font-size:2.5rem;"></i></div>
+          <h4>Трансмиттеры ME100 / ME200</h4>
+          <p>Прецизионная электроника для работы в криогенных контурах. ME100 — базовый трансмиттер, ME200 — расширенный с HART/Modbus. Цифровая обработка сигнала, высокая помехоустойчивость.</p>
+        </div>
+      </div>
+
+      <div class="table-wrap animate-on-scroll" style="margin-top:2rem;">
+        <table>
+          <thead>
+            <tr>
+              <th>Типоразмер (L)</th>
+              <th>Тип трубок</th>
+              <th>Температура среды</th>
+              <th>Рекомендуемые среды</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>DN08..L</strong></td>
+              <td>U / Δ</td>
+              <td>−200…+150 °C</td>
+              <td>LN₂, LO₂, LAr — дозирование, лаборатории</td>
+            </tr>
+            <tr>
+              <td><strong>DN25..L</strong></td>
+              <td>U / Δ</td>
+              <td>−200…+150 °C</td>
+              <td>LN₂, LO₂, LNG — учёт, технологические линии</td>
+            </tr>
+            <tr>
+              <td><strong>DN40..L</strong></td>
+              <td>U / Δ</td>
+              <td>−200…+150 °C</td>
+              <td>LNG (СПГ), LN₂ — крупные потоки</td>
+            </tr>
+            <tr>
+              <td><strong>DN50..L</strong></td>
+              <td>U / Δ</td>
+              <td>−200…+150 °C</td>
+              <td>СПГ, LO₂, криогенные смеси — транспорт</td>
+            </tr>
+            <tr>
+              <td><strong>DN80..L</strong></td>
+              <td>U / Δ</td>
+              <td>−200…+150 °C</td>
+              <td>СПГ — бункеровка, терминалы регазификации</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <p style="font-size:0.875rem;color:var(--gray-500);margin-top:1rem;">
+        * Указаны диапазоны температур среды на входе в расходомер. Конкретные параметры
+        зависят от исполнения, материала уплотнений и типа присоединений.
+        Уточняйте при заказе.
+      </p>
+    </div>
+  </section>
+
+  <!-- ==================== MATERIALS ==================== -->
+  <section class="section" id="materials">
+    <div class="container">
+      <div class="section-header animate-on-scroll">
+        <span class="section-badge">Материалы</span>
+        <h2>Криогенные материалы и конструктивные решения</h2>
+        <p>Для работы при сверхнизких температурах Mass-EXPERT в исполнении L применяет специальные криогенные сплавы и конструктивные элементы, исключающие хрупкость и обеспечивающие долговечность.</p>
+      </div>
+
+      <div class="materials-grid animate-on-scroll">
+        <div class="material-card">
+          <div class="mat-icon">🧊</div>
+          <div class="mat-name">Криогенная сталь</div>
+          <div class="mat-desc">Специальные низкотемпературные сплавы (9% Ni, 36% Ni-Invar) с высокой ударной вязкостью при −200 °C. Исключают хрупкое разрушение.</div>
+        </div>
+        <div class="material-card">
+          <div class="mat-icon">🔩</div>
+          <div class="mat-name">Нержавеющая сталь 316L</div>
+          <div class="mat-desc">Аустенитная нержавейка, сохраняющая пластичность в криогенном диапазоне. Базовый материал для трубок и корпуса исполнения L.</div>
+        </div>
+        <div class="material-card">
+          <div class="mat-icon">🛡️</div>
+          <div class="mat-name">Хастеллой C276</div>
+          <div class="mat-desc">Никелевый сплав с отличной низкотемпературной стойкостью. Рекомендован для криогенных сред с примесями и агрессивными компонентами.</div>
+        </div>
+        <div class="material-card">
+          <div class="mat-icon">🔬</div>
+          <div class="mat-name">Изотермическая изоляция</div>
+          <div class="mat-desc">Многослойная вакуумная изоляция сенсора. Снижение теплопритоков до минимума, предотвращение обледенения и конденсации.</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== RECOMMENDED CONFIGURATIONS ==================== -->
+  <section class="section section-gray" id="configurations">
+    <div class="container">
+      <div class="section-header animate-on-scroll">
+        <span class="section-badge">Рекомендуемые конфигурации</span>
+        <h2>Оптимальные решения для криогенных задач</h2>
+        <p>Проверенные комбинации исполнений, типов сенсоров и трансмиттеров для типовых задач криогенной промышленности</p>
+      </div>
+
+      <div class="config-cards animate-on-scroll">
+        <div class="config-card" style="border-top-color:var(--accent);">
+          <div class="cfg-icon" style="color:var(--accent);"><i class="fas fa-snowflake"></i></div>
+          <h4>L-исполнение (криогенное)</h4>
+          <p style="font-size:0.9375rem;color:var(--gray-500);">
+            Базовое решение для всех криогенных сред. Специализированная конструкция для сверхнизких температур.
+          </p>
+          <ul>
+            <li>Температура среды от −200 до +150 °C</li>
+            <li>Только трубки U и Δ-типа</li>
+            <li>Криогенные сплавы корпуса и сенсора</li>
+            <li>Изотермическая изоляция</li>
+            <li>Высокая чувствительность при малых расходах</li>
+          </ul>
+        </div>
+        <div class="config-card" style="border-top-color:#10B981;">
+          <div class="cfg-icon" style="color:#10B981;"><i class="fas fa-shapes"></i></div>
+          <h4>U / Δ-тип сенсора</h4>
+          <p style="font-size:0.9375rem;color:var(--gray-500);">
+            Геометрия измерительных трубок, обеспечивающая максимальную точность в криогенных условиях.
+          </p>
+          <ul>
+            <li>U-образные трубки — высокая чувствительность</li>
+            <li>Δ-образные трубки — устойчивость к вибрациям</li>
+            <li>Устойчивость к двухфазным потокам</li>
+            <li>Минимальное гидравлическое сопротивление</li>
+            <li>Проверенная конструкция для LN₂, LO₂, LNG</li>
+          </ul>
+        </div>
+        <div class="config-card" style="border-top-color:#8B5CF6;">
+          <div class="cfg-icon" style="color:#8B5CF6;"><i class="fas fa-layer-group"></i></div>
+          <h4>Изотермический кожух</h4>
+          <p style="font-size:0.9375rem;color:var(--gray-500);">
+            Специальная криогенная изоляция сенсора для стабильной работы при длительной эксплуатации.
+          </p>
+          <ul>
+            <li>Вакуумная / многослойная изоляция</li>
+            <li>Предотвращение обледенения корпуса</li>
+            <li>Снижение теплопритоков из окружающей среды</li>
+            <li>Стабильность нулевой точки</li>
+            <li>Увеличенный срок службы</li>
+          </ul>
+        </div>
+        <div class="config-card" style="border-top-color:#F59E0B;">
+          <div class="cfg-icon" style="color:#F59E0B;"><i class="fas fa-microchip"></i></div>
+          <h4>Трансмиттеры ME100 / ME200</h4>
+          <p style="font-size:0.9375rem;color:var(--gray-500);">
+            Прецизионная электроника для сбора и передачи данных криогенного расхода.
+          </p>
+          <ul>
+            <li>ME100 — базовый, до 4 выходов 4–20 мА</li>
+            <li>ME200 — расширенный, HART/RS-485 Modbus</li>
+            <li>Цифровая обработка сигнала</li>
+            <li>Диагностика и самодиагностика</li>
+            <li>Интеграция в АСУ ТП</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="highlight-box animate-on-scroll">
+        <h3>❄️ Рекомендация: криогенный учёт СПГ / LN₂</h3>
+        <p>
+          Для коммерческого учёта сжиженного природного газа (LNG) на терминалах приёма
+          и регазификации выбирайте комбинацию: <strong>Mass-EXPERT в исполнении L</strong>
+          + <strong>U-образный сенсор</strong> + <strong>изотермический кожух</strong>
+          + <strong>трансмиттер ME200</strong> (HART/Modbus).
+          Для лабораторного дозирования жидкого азота и кислорода — <strong>DN08..L</strong>
+          с Δ-образным сенсором и трансмиттером ME100.
+          Для бункеровки СПГ — <strong>DN50..L / DN80..L</strong> с U-образным сенсором
+          и полной изотермической изоляцией.
+        </p>
+      </div>
+
+      <div class="animate-on-scroll" style="margin-top:2rem;">
+        <div class="section-header">
+          <span class="section-badge">Ключевые параметры</span>
+          <h3 style="font-size:1.25rem;">Технические возможности Mass-EXPERT для криогенных сред</h3>
+        </div>
+        <div class="feat-list">
+          <div class="feat-item">
+            <div class="feat-icon">✓</div>
+            <div class="feat-text"><strong>Температура среды:</strong> от −200 до +150 °C</div>
+          </div>
+          <div class="feat-item">
+            <div class="feat-icon">✓</div>
+            <div class="feat-text"><strong>Типы трубок:</strong> U и Δ (только для L-исполнения)</div>
+          </div>
+          <div class="feat-item">
+            <div class="feat-icon">✓</div>
+            <div class="feat-text"><strong>Типоразмеры:</strong> DN08 / DN25 / DN40 / DN50 / DN80</div>
+          </div>
+          <div class="feat-item">
+            <div class="feat-icon">✓</div>
+            <div class="feat-text"><strong>Криогенные среды:</strong> LN₂, LO₂, LAr, LNG (СПГ)</div>
+          </div>
+          <div class="feat-item">
+            <div class="feat-icon">✓</div>
+            <div class="feat-text"><strong>Погрешность для жидкости:</strong> ±0,1–0,5%</div>
+          </div>
+          <div class="feat-item">
+            <div class="feat-icon">✓</div>
+            <div class="feat-text"><strong>Трансмиттеры:</strong> ME100 (базовый), ME200 (расширенный)</div>
+          </div>
+          <div class="feat-item">
+            <div class="feat-icon">✓</div>
+            <div class="feat-text"><strong>Выходные сигналы:</strong> 4–20 мА HART, RS-485 Modbus, PROFIBUS PA</div>
+          </div>
+          <div class="feat-item">
+            <div class="feat-icon">✓</div>
+            <div class="feat-text"><strong>Изоляция:</strong> изотермический кожух (вакуумная / многослойная)</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== CTA ==================== -->
+  <section class="section section-blue" style="text-align:center;">
+    <div class="container">
+      <div class="animate-on-scroll">
+        <h2 style="margin-bottom:1rem;">Готовы решить задачу криогенного измерения?</h2>
+        <p style="font-size:1.125rem;color:rgba(255,255,255,0.8);max-width:640px;margin:0 auto 2rem;">
+          Подберём оптимальную конфигурацию Mass-EXPERT для вашей криогенной среды —
+          от лабораторного дозирования жидкого азота до коммерческого учёта СПГ на терминале.
+        </p>
+        <div style="display:flex;gap:1rem;flex-wrap:wrap;justify-content:center;">
+          <a href="../index.html#contacts" class="btn btn-primary" style="font-size:1rem;padding:0.875rem 2.25rem;">
+            <i class="fas fa-envelope"></i> Связаться с нами
+          </a>
+          <a href="../index.html" class="btn btn-outline" style="font-size:1rem;padding:0.875rem 2.25rem;">
+            <i class="fas fa-home"></i> На главную
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== FOOTER ==================== -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <h4>Mass-EXPERT</h4>
+          <p>Счетчики-расходомеры массовые кориолисового типа.</p>
+          <p>Госреестр № 98506-26. ТУ 26.51.52-016-88090790-2024.</p>
+          <p style="margin-top:0.75rem;font-size:0.8125rem;">
+            Разработка и производство:<br>
+            ООО «Автоматизация-Метрология-ЭКСПЕРТ», г. Уфа
+          </p>
+        </div>
+        <div class="footer-links">
+          <h5>Продукт</h5>
+          <a href="../index.html#specifications">Характеристики</a>
+          <a href="../index.html#product-line">Типоразмеры</a>
+          <a href="../index.html#options">Модификации</a>
+          <a href="../index.html#transmitters">Трансмиттеры</a>
+        </div>
+        <div class="footer-links">
+          <h5>Документация</h5>
+          <a href="../index.html#certificates">Сертификаты</a>
+          <a href="../docs/ОПИСАНИЕ_ТИПА_2026-98506-26.pdf" target="_blank">Описание типа</a>
+          <a href="../docs/РЭ_Масс_Эксперт_v09.pdf" target="_blank">Руководство по эксплуатации</a>
+          <a href="../docs/2026-МП_98506-26_compressed.pdf" target="_blank">Методика поверки</a>
+        </div>
+        <div class="footer-links">
+          <h5>Контакты</h5>
+          <a href="tel:+734****5350">+7 (347) 286-53-50</a>
+          <a href="mailto:info@ame-info.ru">info@ame-info.ru</a>
+          <a href="https://www.ame-info.ru" target="_blank">www.ame-info.ru</a>
+          <a href="../sitemap.html" style="margin-top:0.5rem;font-size:0.8125rem;color:var(--gray-500);">📋 Карта сайта</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>© <span id="year">2026</span> ООО «Автоматизация-Метрология-ЭКСПЕРТ». Все права защищены.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="../js/main.js"></script>
+</body>
+</html>

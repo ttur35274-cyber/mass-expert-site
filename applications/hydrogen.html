@@ -1,0 +1,725 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Водородная энергетика — Mass-EXPERT | Кориолисовые расходомеры</title>
+  <meta name="description" content="Массовые расходомеры Mass-EXPERT для водородной энергетики: измерение водорода под высоким давлением (до 96 МПа), заправка H2, дозирование для топливных элементов. Стойкость к водородному охрупчиванию — спецматериалы. Исполнение PK для сверхвысокого давления.">
+  <meta name="keywords" content="водородная энергетика, водород H2, массовый расходомер, высокое давление, 96 МПа, заправка водородом, топливные элементы, водородное охрупчивание, PK исполнение, кориолисовый расходомер, Mass-EXPERT, UNF, VCO, VCR">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <!-- Open Graph -->
+  <meta property="og:title" content="Водородная энергетика — Mass-EXPERT">
+  <meta property="og:description" content="Измерение водорода под высоким давлением (до 96 МПа) с кориолисовыми расходомерами Mass-EXPERT. Исполнение PK, стойкость к H₂-охрупчиванию.">
+  <meta property="og:type" content="website">
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 40 40'><rect width='40' height='40' rx='8' fill='%23F59E0B'/><text x='20' y='26' text-anchor='middle' font-size='14' font-weight='900' fill='%230F172A' font-family='Inter'>ME</text></svg>">
+  <style>
+    /* Application page specific styles */
+    .cond-hero {
+      position: relative;
+      min-height: 70vh;
+      display: flex;
+      align-items: center;
+      background: linear-gradient(135deg, #0a1628 0%, #1a3a4a 50%, #0d2137 100%);
+      overflow: hidden;
+      padding-top: 72px;
+    }
+    .cond-hero::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background:
+        radial-gradient(ellipse at 70% 30%, rgba(251, 191, 36, 0.10) 0%, transparent 60%),
+        radial-gradient(ellipse at 30% 80%, rgba(255,255,255,0.03) 0%, transparent 50%);
+      pointer-events: none;
+    }
+    .cond-hero-content {
+      position: relative;
+      z-index: 1;
+    }
+    .cond-hero-content .cond-label {
+      display: inline-block;
+      font-size: 0.75rem;
+      color: var(--gray-400);
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      font-weight: 600;
+      margin-bottom: 0.75rem;
+      background: rgba(255,255,255,0.08);
+      padding: 0.3rem 0.75rem;
+      border-radius: 999px;
+    }
+    .cond-hero-content h1 {
+      color: var(--white);
+      margin-bottom: 0.5rem;
+      font-size: 3.5rem;
+    }
+    .cond-hero-content .cond-subtitle {
+      font-size: 1.35rem;
+      color: var(--accent);
+      font-weight: 600;
+      margin-bottom: 1.5rem;
+    }
+    .cond-hero-content .cond-desc {
+      color: rgba(255,255,255,0.8);
+      font-size: 1.0625rem;
+      margin: 1.5rem 0 2rem;
+      max-width: 680px;
+    }
+    .cond-badges {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.75rem;
+      margin-top: 1.5rem;
+    }
+    .cond-badge {
+      background: rgba(255,255,255,0.1);
+      border: 1px solid rgba(255,255,255,0.15);
+      color: rgba(255,255,255,0.9);
+      padding: 0.4rem 1rem;
+      border-radius: 999px;
+      font-size: 0.8125rem;
+      font-weight: 500;
+    }
+    .cond-hero-icon {
+      font-size: 5rem;
+      color: var(--accent);
+      margin-bottom: 1rem;
+      opacity: 0.9;
+    }
+
+    /* Section standard overrides */
+    .section-header .section-icon-big {
+      font-size: 3rem;
+      color: var(--primary);
+      margin-bottom: 0.75rem;
+    }
+
+    /* Media cards grid */
+    .media-cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 1.5rem;
+      margin-top: 2rem;
+    }
+    .media-card {
+      background: var(--white);
+      border: 1px solid var(--gray-200);
+      border-radius: var(--radius-lg);
+      padding: 1.5rem;
+      transition: all var(--transition);
+    }
+    .media-card:hover {
+      border-color: var(--primary);
+      box-shadow: var(--shadow-md);
+      transform: translateY(-2px);
+    }
+    .media-card .mc-icon {
+      font-size: 2.5rem;
+      margin-bottom: 0.75rem;
+    }
+    .media-card h4 {
+      font-size: 1.0625rem;
+      color: var(--primary);
+      margin-bottom: 0.5rem;
+    }
+    .media-card p {
+      font-size: 0.9375rem;
+      color: var(--gray-500);
+      margin: 0;
+    }
+
+    /* Advantage cards */
+    .adv-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 1.5rem;
+      margin-top: 2rem;
+    }
+    .adv-card-app {
+      background: var(--white);
+      border: 1px solid var(--gray-200);
+      border-radius: var(--radius-lg);
+      padding: 1.5rem;
+      text-align: center;
+      transition: all var(--transition);
+    }
+    .adv-card-app:hover {
+      border-color: var(--primary);
+      box-shadow: var(--shadow-md);
+      transform: translateY(-2px);
+    }
+    .adv-card-app .adv-icon {
+      font-size: 2.5rem;
+      margin-bottom: 0.75rem;
+    }
+    .adv-card-app h4 {
+      font-size: 1.0625rem;
+      color: var(--primary);
+      margin-bottom: 0.5rem;
+    }
+    .adv-card-app p {
+      font-size: 0.9375rem;
+      color: var(--gray-500);
+      margin: 0;
+    }
+
+    /* Config cards */
+    .config-cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 1.5rem;
+      margin-top: 2rem;
+    }
+    .config-card {
+      background: var(--white);
+      border: 1px solid var(--gray-200);
+      border-radius: var(--radius-lg);
+      padding: 1.5rem;
+      border-top: 4px solid var(--primary);
+      transition: all var(--transition);
+    }
+    .config-card:hover {
+      box-shadow: var(--shadow-md);
+      transform: translateY(-2px);
+    }
+    .config-card .cfg-icon {
+      font-size: 2rem;
+      color: var(--primary);
+      margin-bottom: 0.75rem;
+    }
+    .config-card h4 {
+      font-size: 1.0625rem;
+      color: var(--primary);
+      margin-bottom: 0.5rem;
+    }
+    .config-card ul {
+      margin: 0.75rem 0 0;
+      padding: 0;
+      list-style: none;
+    }
+    .config-card ul li {
+      position: relative;
+      padding-left: 1.25rem;
+      margin-bottom: 0.35rem;
+      font-size: 0.875rem;
+      color: var(--gray-600);
+    }
+    .config-card ul li::before {
+      content: '✓';
+      position: absolute;
+      left: 0;
+      color: var(--success, #10B981);
+      font-weight: 700;
+    }
+
+    /* Materials table */
+    .materials-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 1rem;
+      margin: 1.5rem 0;
+    }
+    .material-card {
+      background: var(--gray-50);
+      border: 1px solid var(--gray-200);
+      border-radius: var(--radius);
+      padding: 1.25rem;
+      text-align: center;
+    }
+    .material-card .mat-icon {
+      font-size: 2rem;
+      margin-bottom: 0.5rem;
+    }
+    .material-card .mat-name {
+      font-weight: 700;
+      color: var(--gray-800);
+      font-size: 1rem;
+    }
+    .material-card .mat-desc {
+      font-size: 0.8125rem;
+      color: var(--gray-500);
+      margin-top: 0.25rem;
+    }
+
+    /* Highlight box */
+    .highlight-box {
+      background: linear-gradient(135deg, #FEF3C7, #FDE68A);
+      border: 1px solid #FCD34D;
+      border-left: 4px solid #D97706;
+      border-radius: var(--radius-lg);
+      padding: 1.5rem 2rem;
+      margin: 2rem 0;
+    }
+    .highlight-box h3 {
+      color: #92400E;
+      font-size: 1.0625rem;
+      margin-bottom: 0.5rem;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+    .highlight-box p {
+      color: #92400E;
+      font-size: 0.9375rem;
+      margin-bottom: 0;
+    }
+
+    /* Feature list */
+    .feat-list {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1rem;
+      margin: 1.5rem 0;
+    }
+    .feat-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 0.75rem;
+      padding: 0.75rem 0;
+    }
+    .feat-item .feat-icon {
+      flex-shrink: 0;
+      width: 28px;
+      height: 28px;
+      background: rgba(251, 191, 36, 0.15);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 0.875rem;
+      color: #B45309;
+      font-weight: 700;
+    }
+    .feat-item .feat-text {
+      font-size: 0.9375rem;
+      color: var(--gray-700);
+    }
+
+    @media (max-width: 768px) {
+      .feat-list { grid-template-columns: 1fr; }
+      .cond-hero { min-height: auto; padding: 6rem 0 3rem; }
+      .cond-hero-content h1 { font-size: 2.5rem; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ==================== NAVIGATION ==================== -->
+  <nav class="navbar" role="navigation" aria-label="Основная навигация">
+    <div class="container">
+      <a href="../index.html" class="navbar-brand">
+        <span class="brand-icon">MASS<br>EXPERT</span>
+        Mass-EXPERT
+      </a>
+      <button class="navbar-toggle" aria-label="Открыть меню">☰</button>
+      <div class="navbar-links">
+        <a href="../index.html#about">О продукте</a>
+        <a href="../index.html#advantages">Преимущества</a>
+        <a href="../index.html#principle">Принцип работы</a>
+        <a href="../index.html#product-line">Типоразмеры</a>
+        <a href="../index.html#specifications">Характеристики</a>
+        <a href="../index.html#contacts">Контакты</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ==================== HERO ==================== -->
+  <section class="cond-hero" id="hero">
+    <div class="container">
+      <div class="cond-hero-content">
+        <span class="cond-label">Отрасль применения</span>
+        <div class="cond-hero-icon"><i class="fas fa-sun"></i></div>
+        <h1>Водородная энергетика</h1>
+        <div class="cond-subtitle">Точные измерения H₂ под сверхвысоким давлением</div>
+        <p class="cond-desc">
+          Массовые расходомеры <strong>Mass-EXPERT</strong> для измерения водорода под высоким
+          и сверхвысоким давлением (до 96 МПа). Оптимальное решение для заправочных станций H₂,
+          дозирования водорода в топливные элементы и систем учёта водородной инфраструктуры.
+          Специальные материалы, стойкие к водородному охрупчиванию, и исполнение PK
+          гарантируют безопасную и точную работу в самых жёстких условиях.
+        </p>
+        <div style="display:flex;gap:1rem;flex-wrap:wrap;">
+          <a href="#media" class="btn btn-primary">Типичные среды</a>
+          <a href="#advantages" class="btn btn-outline">Преимущества</a>
+        </div>
+        <div class="cond-badges">
+          <span class="cond-badge"><i class="fas fa-sun" style="margin-right:4px;"></i> Водород H₂ до 96 МПа</span>
+          <span class="cond-badge"><i class="fas fa-charging-station" style="margin-right:4px;"></i> Заправка H₂</span>
+          <span class="cond-badge"><i class="fas fa-bolt" style="margin-right:4px;"></i> Топливные элементы</span>
+          <span class="cond-badge"><i class="fas fa-shield-halved" style="margin-right:4px;"></i> Стойкость к H₂-охрупчиванию</span>
+          <span class="cond-badge"><i class="fas fa-gauge-high" style="margin-right:4px;"></i> Исполнение PK</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== TYPICAL MEDIA ==================== -->
+  <section class="section" id="media">
+    <div class="container">
+      <div class="section-header animate-on-scroll">
+        <span class="section-badge">Типичные среды</span>
+        <h2>Измерение водорода и водородсодержащих смесей</h2>
+        <p>Кориолисовые расходомеры Mass-EXPERT обеспечивают прямое измерение массового расхода газообразного водорода (H₂) и водородсодержащих газовых смесей в широком диапазоне давлений — от десятков бар до сверхвысоких 96 МПа (960 бар).</p>
+      </div>
+
+      <div class="media-cards animate-on-scroll">
+        <div class="media-card">
+          <div class="mc-icon">💨</div>
+          <h4>Газообразный водород (H₂)</h4>
+          <p>Измерение массового расхода газообразного водорода высокой чистоты (99,9–99,999%) на линиях заправки, хранения и распределения. Прямое массовое измерение исключает погрешности, связанные со сжимаемостью газа.</p>
+        </div>
+        <div class="media-card">
+          <div class="mc-icon">⛽</div>
+          <h4>Заправка H₂ под давлением</h4>
+          <p>Расходомеры для водородных заправочных станций (HRS) с рабочим давлением 35–96 МПа. Сертифицированные решения для коммерческого учёта водорода при заправке пассажирского и коммерческого транспорта.</p>
+        </div>
+        <div class="media-card">
+          <div class="mc-icon">🔋</div>
+          <h4>Дозирование для топливных элементов</h4>
+          <p>Прецизионное дозирование водорода в топливные элементы и энергоустановки. Высокая точность при малых расходах — оптимальное решение для лабораторных стендов и промышленных систем.</p>
+        </div>
+        <div class="media-card">
+          <div class="mc-icon">🏭</div>
+          <h4>Водородсодержащие смеси</h4>
+          <p>Измерение синтез-газа (H₂ + CO), смесей водорода с метаном (H₂ + CH₄), продувочных газов и других водородсодержащих композиций в нефтехимии, металлургии и энергетике.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== KEY CHALLENGES ==================== -->
+  <section class="section section-gray" id="challenges">
+    <div class="container">
+      <div class="section-header animate-on-scroll">
+        <span class="section-badge">Вызовы водородной энергетики</span>
+        <h2>Почему Mass-EXPERT для водорода?</h2>
+        <p>Измерение водорода — одна из самых сложных задач в расходометрии. Mass-EXPERT решает её благодаря специальным конструктивным и материаловедческим решениям.</p>
+      </div>
+
+      <div class="adv-grid animate-on-scroll">
+        <div class="adv-card-app">
+          <div class="adv-icon">🛡️</div>
+          <h4>Стойкость к водородному охрупчиванию</h4>
+          <p>Специальные композитные металлы и сплавы, прошедшие испытания на стойкость к водородному охрупчиванию (hydrogen embrittlement). Материалы трубок и корпуса исключают риск разрушения под действием H₂.</p>
+        </div>
+        <div class="adv-card-app">
+          <div class="adv-icon"><i class="fas fa-gauge-high" style="font-size:2.5rem;"></i></div>
+          <h4>Рабочее давление до 96 МПа</h4>
+          <p>Исполнение PK (сверхвысокое давление) обеспечивает надёжную работу при давлении до 96 МПа. Усиленная конструкция сенсора и специальные уплотнения гарантируют герметичность и безопасность.</p>
+        </div>
+        <div class="adv-card-app">
+          <div class="adv-icon">🎯</div>
+          <h4>Высокая точность при малых расходах газа</h4>
+          <p>Увеличенная амплитуда колебаний трубок и прецизионная электроника обеспечивают стабильные показания даже при минимальных расходах водорода, характерных для дозирования в топливные элементы.</p>
+        </div>
+        <div class="adv-card-app">
+          <div class="adv-icon">🔗</div>
+          <h4>Специальные присоединения</h4>
+          <p>Поддержка высоконапорных стандартов: UNF (Unified Fine Thread), VCO (O‑Ring Face Seal), VCR (Metal Gasket Face Seal). Герметичные соединения для сверхвысокого давления без утечек.</p>
+        </div>
+        <div class="adv-card-app">
+          <div class="adv-icon">⚙️</div>
+          <h4>U-образный сенсор PK</h4>
+          <p>Широкий U-образный тип трубок (модификация PK) оптимизирован для газов высокого давления. Минимальное гидравлическое сопротивление и максимальная чувствительность к массовому расходу.</p>
+        </div>
+        <div class="adv-card-app">
+          <div class="adv-icon">📊</div>
+          <h4>Полный мониторинг параметров</h4>
+          <p>Одновременное измерение массового расхода, плотности, температуры и давления — в одном приборе. Полный контроль состояния водородной системы в реальном времени.</p>
+        </div>
+      </div>
+
+      <div class="highlight-box animate-on-scroll">
+        <h3>☀️ Водородное охрупчивание — главный вызов для расходомеров</h3>
+        <p>
+          Молекулярный водород при высоких давлениях проникает в кристаллическую решётку металлов,
+          вызывая потерю пластичности и образование трещин (водородное охрупчивание).
+          Расходомеры <strong>Mass-EXPERT</strong> используют специальные сплавы с низкой
+          восприимчивостью к H₂ — композитные металлы, прошедшие циклические испытания
+          при давлении до 96 МПа в среде водорода. Это гарантирует целостность
+          измерительных трубок и безопасность эксплуатации в течение всего срока службы.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== PK EXECUTION DETAILS ==================== -->
+  <section class="section" id="pk-execution">
+    <div class="container">
+      <div class="section-header animate-on-scroll">
+        <span class="section-badge">Исполнение PK</span>
+        <h2>Расходомеры PK для сверхвысокого давления</h2>
+        <p>Модификация PK (Pressure — высокое давление, K — широкая U-образная трубка) разработана специально для работы с водородом и другими газами при сверхвысоких давлениях.</p>
+      </div>
+
+      <div class="media-cards animate-on-scroll">
+        <div class="media-card">
+          <div class="mc-icon">⚡</div>
+          <h4>Давление до 96 МПа</h4>
+          <p>Максимальное рабочее давление до 96 МПа — рекордный показатель среди кориолисовых расходомеров. Превышает заявленный номинал в 1,5 раза для обеспечения запаса прочности.</p>
+        </div>
+        <div class="media-card">
+          <div class="mc-icon">🔬</div>
+          <h4>Специальный композитный металл</h4>
+          <p>Измерительные трубки из композитного металла, стойкого к водородному охрупчиванию. Гладкая внутренняя поверхность — минимальное гидравлическое сопротивление.</p>
+        </div>
+        <div class="media-card">
+          <div class="mc-icon">📈</div>
+          <h4>Высокая точность при малых расходах</h4>
+          <p>Увеличенная амплитуда колебаний U-образных трубок обеспечивает высокое отношение сигнал/шум даже при минимальных расходах водорода — идеально для дозирования.</p>
+        </div>
+        <div class="media-card">
+          <div class="mc-icon">🔩</div>
+          <h4>UNF / VCO / VCR присоединения</h4>
+          <p>Поддержка стандартных высоконапорных соединений: UNF-резьба для прямых фитингов, VCO (уплотнение O-кольцом) и VCR (металлическое уплотнение) для максимальной герметичности.</p>
+        </div>
+      </div>
+
+      <div class="table-wrap animate-on-scroll" style="margin-top:2rem;">
+        <table>
+          <thead>
+            <tr><th>Модель</th><th>Макс. рабочее давление</th><th>Тип сенсора</th><th>Присоединения</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>Mass-EXPERT-003..PK</td><td>≤ 96 МПа / ≤ 50 МПа / ≤ 40 МПа</td><td>U-образный (широкий)</td><td>UNF, VCO, VCR</td></tr>
+            <tr><td>Mass-EXPERT-004..PK</td><td>≤ 35 МПа</td><td>U-образный (широкий)</td><td>UNF, VCO, VCR</td></tr>
+            <tr><td>Mass-EXPERT-008..PK</td><td>≤ 30 МПа / ≤ 45 МПа</td><td>U-образный (широкий)</td><td>UNF, VCO, VCR</td></tr>
+            <tr><td>Mass-EXPERT-015..PK</td><td>≤ 30 МПа / ≤ 45 МПа</td><td>U-образный (широкий)</td><td>UNF, VCO, VCR</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="highlight-box animate-on-scroll" style="background:linear-gradient(135deg, #E0F2FE, #BAE6FD);border-color:#7DD3FC;border-left-color:#0284C7;">
+        <h3 style="color:#0C4A6E;">💡 PK-исполнение — стандарт для водородной инфраструктуры</h3>
+        <p style="color:#0C4A6E;">
+          Массовые расходомеры <strong>Mass-EXPERT в исполнении PK</strong> рекомендованы для
+          водородных заправочных станций (HRS) с давлением 70 МПа (700 бар) и 96 МПа (960 бар),
+          дозирования H₂ в топливные элементы на транспорте и стационарных энергоустановках,
+          а также для коммерческого учёта водорода в распределительных сетях.
+          Сочетание стойкости к H₂-охрупчиванию, сверхвысокого давления и прецизионной точности
+          делает PK-исполнение отраслевым стандартом для водородной энергетики.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== MATERIALS ==================== -->
+  <section class="section section-gray" id="materials">
+    <div class="container">
+      <div class="section-header animate-on-scroll">
+        <span class="section-badge">Материалы</span>
+        <h2>Спецматериалы, стойкие к водородному охрупчиванию</h2>
+        <p>Для безопасной работы с водородом под высоким давлением Mass-EXPERT применяет материалы, прошедшие специальные испытания на стойкость к водородному охрупчиванию (hydrogen embrittlement resistance).</p>
+      </div>
+
+      <div class="materials-grid animate-on-scroll">
+        <div class="material-card">
+          <div class="mat-icon">🛡️</div>
+          <div class="mat-name">Композитный металл PK</div>
+          <div class="mat-desc">Специальный сплав для трубок PK-исполнения. Максимальная стойкость к H₂-охрупчиванию при 96 МПа. Протестирован циклическими нагрузками.</div>
+        </div>
+        <div class="material-card">
+          <div class="mat-icon">⚙️</div>
+          <div class="mat-name">Хастеллой C276 / C4</div>
+          <div class="mat-desc">Никелевый сплав с высокой стойкостью к водородной коррозии. Рекомендован для сред с примесями H₂S и влажного водорода.</div>
+        </div>
+        <div class="material-card">
+          <div class="mat-icon">🔩</div>
+          <div class="mat-name">Нержавеющая сталь 316L</div>
+          <div class="mat-desc">Аустенитная нержавейка с низким содержанием углерода. Подходит для умеренных давлений H₂. Дополнительная обработка для снижения восприимчивости.</div>
+        </div>
+        <div class="material-card">
+          <div class="mat-icon">🔬</div>
+          <div class="mat-name">Специальные уплотнения</div>
+          <div class="mat-desc">Металлические и полимерные уплотнения, стойкие к дегазации в среде H₂. Исключают микроутечки при сверхвысоких давлениях.</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== RECOMMENDED CONFIGURATIONS ==================== -->
+  <section class="section" id="configurations">
+    <div class="container">
+      <div class="section-header animate-on-scroll">
+        <span class="section-badge">Рекомендуемые конфигурации</span>
+        <h2>Оптимальные решения для водородной энергетики</h2>
+        <p>Проверенные комбинации типов сенсоров, материалов и присоединений для типовых задач водородной инфраструктуры</p>
+      </div>
+
+      <div class="config-cards animate-on-scroll">
+        <div class="config-card" style="border-top-color:var(--accent);">
+          <div class="cfg-icon" style="color:var(--accent);"><i class="fas fa-gauge-high"></i></div>
+          <h4>PK-тип (сверхвысокое давление)</h4>
+          <p style="font-size:0.9375rem;color:var(--gray-500);">
+            Базовое решение для водородных заправочных станций и линий высокого давления H₂.
+          </p>
+          <ul>
+            <li>Рабочее давление до 96 МПа</li>
+            <li>U-образный сенсор (широкий тип K)</li>
+            <li>Композитный металл, стойкий к H₂-охрупчиванию</li>
+            <li>Запас прочности 1,5× от номинала</li>
+            <li>Точность ±0,5% для газов</li>
+          </ul>
+        </div>
+        <div class="config-card" style="border-top-color:#10B981;">
+          <div class="cfg-icon" style="color:#10B981;"><i class="fas fa-shield-halved"></i></div>
+          <h4>Материалы, стойкие к H₂</h4>
+          <p style="font-size:0.9375rem;color:var(--gray-500);">
+            Специальные сплавы и покрытия, исключающие водородное охрупчивание.
+          </p>
+          <ul>
+            <li>Композитный металл PK для 96 МПа</li>
+            <li>Хастеллой C276/C4 для H₂ с примесями</li>
+            <li>316L с анти-H₂ обработкой</li>
+            <li>Металлические уплотнения VCR</li>
+            <li>Циклические испытания в среде H₂</li>
+          </ul>
+        </div>
+        <div class="config-card" style="border-top-color:#8B5CF6;">
+          <div class="cfg-icon" style="color:#8B5CF6;"><i class="fas fa-link"></i></div>
+          <h4>UNF / VCO / VCR соединения</h4>
+          <p style="font-size:0.9375rem;color:var(--gray-500);">
+            Высоконапорные присоединения для герметичной работы с водородом.
+          </p>
+          <ul>
+            <li>UNF — унифицированная мелкая резьба</li>
+            <li>VCO — уплотнение O-кольцом (до 35 МПа)</li>
+            <li>VCR — металлическое уплотнение (до 96 МПа)</li>
+            <li>Минимальный риск утечек H₂</li>
+            <li>Совместимость с международными стандартами</li>
+          </ul>
+        </div>
+        <div class="config-card" style="border-top-color:#F59E0B;">
+          <div class="cfg-icon" style="color:#F59E0B;"><i class="fas fa-bolt"></i></div>
+          <h4>Дозирование для топливных элементов</h4>
+          <p style="font-size:0.9375rem;color:var(--gray-500);">
+            Прецизионная конфигурация для подачи H₂ в топливные ячейки.
+          </p>
+          <ul>
+            <li>Сенсор PK малого DN (DN03–DN08)</li>
+            <li>Высокая точность при малых расходах</li>
+            <li>Стабильность нулевой точки от 0,06 кг/ч</li>
+            <li>Быстрый отклик на изменение расхода</li>
+            <li>Компактное исполнение для встраивания</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="highlight-box animate-on-scroll" style="background:linear-gradient(135deg, #ECFDF5, #D1FAE5);border-color:#A7F3D0;border-left-color:#059669;">
+        <h3 style="color:#065F46;">💡 Рекомендация для водородной заправочной станции (HRS)</h3>
+        <p style="color:#065F46;">
+          Для коммерческого учёта водорода на заправочной станции выбирайте комбинацию:
+          <strong>Mass-EXPERT-003..PK</strong> (до 96 МПа) + <strong>композитный металл PK</strong>
+          + <strong>присоединения VCR</strong> + <strong>трансмиттер ME200</strong> с HART/Modbus.
+          При необходимости измерений на нескольких линиях — multi-drop конфигурация по RS-485.
+          Для лабораторных стендов дозирования — <strong>Mass-EXPERT-003..PK</strong> с UNF-соединениями.
+        </p>
+      </div>
+
+      <div class="animate-on-scroll" style="margin-top:2rem;">
+        <div class="section-header">
+          <span class="section-badge">Ключевые параметры</span>
+          <h3 style="font-size:1.25rem;">Технические возможности Mass-EXPERT для водорода</h3>
+        </div>
+        <div class="feat-list">
+          <div class="feat-item">
+            <div class="feat-icon">✓</div>
+            <div class="feat-text"><strong>Массовый расход H₂ (газ):</strong> от 0,06 до 1 740 000 кг/ч</div>
+          </div>
+          <div class="feat-item">
+            <div class="feat-icon">✓</div>
+            <div class="feat-text"><strong>Погрешность для газа:</strong> ±0,5% – ±1,0%</div>
+          </div>
+          <div class="feat-item">
+            <div class="feat-icon">✓</div>
+            <div class="feat-text"><strong>Максимальное давление:</strong> до 96 МПа (исп. PK)</div>
+          </div>
+          <div class="feat-item">
+            <div class="feat-icon">✓</div>
+            <div class="feat-text"><strong>Температура среды:</strong> от –196 до +350 °C</div>
+          </div>
+          <div class="feat-item">
+            <div class="feat-icon">✓</div>
+            <div class="feat-text"><strong>Материалы трубок:</strong> композит. металл PK / Хастеллой / 316L</div>
+          </div>
+          <div class="feat-item">
+            <div class="feat-icon">✓</div>
+            <div class="feat-text"><strong>Присоединения:</strong> UNF / VCO / VCR</div>
+          </div>
+          <div class="feat-item">
+            <div class="feat-icon">✓</div>
+            <div class="feat-text"><strong>Выходные сигналы:</strong> 4–20 мА HART, RS-485 Modbus, PROFIBUS PA</div>
+          </div>
+          <div class="feat-item">
+            <div class="feat-icon">✓</div>
+            <div class="feat-text"><strong>Взрывозащита:</strong> Ex d ib IIC T6 Gb</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== CTA ==================== -->
+  <section class="section section-gray" style="text-align:center;">
+    <div class="container">
+      <div class="animate-on-scroll">
+        <span class="section-badge">Готовы к внедрению?</span>
+        <h2>Подберём конфигурацию для водородной задачи</h2>
+        <p style="max-width:600px;margin:1rem auto 2rem;">
+          Наши инженеры помогут выбрать оптимальный типоразмер, материал трубок и тип присоединения
+          для вашей задачи — от лабораторного дозирования H₂ до заправочной станции на 96 МПа.
+        </p>
+        <a href="../index.html#contacts" class="btn btn-primary btn-lg">Связаться с нами</a>
+        <a href="../index.html" class="btn btn-outline" style="margin-left:0.75rem;">На главную</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== FOOTER ==================== -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <h4>Mass-EXPERT</h4>
+          <p>Счетчики-расходомеры массовые кориолисового типа.</p>
+          <p>Госреестр № 98506-26. ТУ 26.51.52-016-88090790-2024.</p>
+          <p style="margin-top:0.75rem;font-size:0.8125rem;">
+            Разработка и производство:<br>
+            ООО «Автоматизация-Метрология-ЭКСПЕРТ», г. Уфа
+          </p>
+        </div>
+        <div class="footer-links">
+          <h5>Продукт</h5>
+          <a href="../index.html#specifications">Характеристики</a>
+          <a href="../index.html#product-line">Типоразмеры</a>
+          <a href="../index.html#options">Модификации</a>
+          <a href="../index.html#transmitters">Трансмиттеры</a>
+        </div>
+        <div class="footer-links">
+          <h5>Документация</h5>
+          <a href="../index.html#certificates">Сертификаты</a>
+          <a href="../docs/ОПИСАНИЕ_ТИПА_2026-98506-26.pdf" target="_blank">Описание типа</a>
+          <a href="../docs/РЭ_Масс_Эксперт_v09.pdf" target="_blank">Руководство по эксплуатации</a>
+          <a href="../docs/2026-МП_98506-26_compressed.pdf" target="_blank">Методика поверки</a>
+        </div>
+        <div class="footer-links">
+          <h5>Контакты</h5>
+          <a href="tel:+734****5350">+7 (347) 286-53-50</a>
+          <a href="mailto:info@ame-info.ru">info@ame-info.ru</a>
+          <a href="https://www.ame-info.ru" target="_blank">www.ame-info.ru</a>
+          <a href="../sitemap.html" style="margin-top:0.5rem;font-size:0.8125rem;color:var(--gray-500);">📋 Карта сайта</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>© <span id="year">2026</span> ООО «Автоматизация-Метрология-ЭКСПЕРТ». Все права защищены.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="../js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,829 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Биотехнологии и Life Sciences — Mass-EXPERT | Кориолисовые расходомеры</title>
+  <meta name="description" content="Кориолисовые расходомеры Mass-EXPERT для биотехнологии и Life Sciences: ферментация, дозирование питательных сред, pH-корректоров, пеногасителей. Стерильность SIP-совместимость, D-тип (Δ) DN01-DN02 для микрорасходов, CIP/SIP, гигиенический дизайн 3-A, Ra ≤ 0,8 мкм.">
+  <meta name="keywords" content="биотехнологии, life sciences, ферментация, питательные среды, pH-корректоры, пеногасители, стерильность, SIP, CIP, кориолисовый расходомер, Mass-EXPERT, D-тип, Δ-образный, DN01, DN02, микрорасходы, гигиенический дизайн, 3-A, Tri-clamp, Ra 0.8 мкм, ME100, дозирование">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <!-- Open Graph -->
+  <meta property="og:title" content="Биотехнологии и Life Sciences — Mass-EXPERT">
+  <meta property="og:description" content="Ферментация, дозирование питательных сред, pH-корректоров, пеногасителей. Стерильность SIP-совместимость. D-тип (Δ) DN01-DN02 для микрорасходов. CIP/SIP, гигиенический дизайн 3-A.">
+  <meta property="og:type" content="website">
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 40 40'><rect width='40' height='40' rx='8' fill='%23F59E0B'/><text x='20' y='26' text-anchor='middle' font-size='14' font-weight='900' fill='%230F172A' font-family='Inter'>ME</text></svg>">
+  <style>
+    /* Biotech page specific styles */
+    .bio-hero {
+      position: relative;
+      min-height: 70vh;
+      display: flex;
+      align-items: center;
+      background: linear-gradient(135deg, #0d1b2a 0%, #1b4332 50%, #0d2137 100%);
+      overflow: hidden;
+      padding-top: 72px;
+    }
+    .bio-hero::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background:
+        radial-gradient(ellipse at 70% 30%, rgba(16, 185, 129, 0.12) 0%, transparent 60%),
+        radial-gradient(ellipse at 30% 80%, rgba(52, 211, 153, 0.05) 0%, transparent 50%);
+      pointer-events: none;
+    }
+    .bio-hero-content {
+      position: relative;
+      z-index: 1;
+    }
+    .bio-hero-content .bio-label {
+      display: inline-block;
+      font-size: 0.75rem;
+      color: var(--gray-400);
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      font-weight: 600;
+      margin-bottom: 0.75rem;
+      background: rgba(255,255,255,0.08);
+      padding: 0.3rem 0.75rem;
+      border-radius: 999px;
+    }
+    .bio-hero-content h1 {
+      color: var(--white);
+      margin-bottom: 0.5rem;
+      font-size: 3.5rem;
+    }
+    .bio-hero-content .bio-subtitle {
+      font-size: 1.35rem;
+      color: #34D399;
+      font-weight: 600;
+      margin-bottom: 1.5rem;
+    }
+    .bio-hero-content .bio-desc {
+      color: rgba(255,255,255,0.8);
+      font-size: 1.0625rem;
+      margin: 1.5rem 0 2rem;
+      max-width: 680px;
+    }
+    .bio-badges {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.75rem;
+      margin-top: 1.5rem;
+    }
+    .bio-badge {
+      background: rgba(255,255,255,0.1);
+      border: 1px solid rgba(255,255,255,0.15);
+      color: rgba(255,255,255,0.9);
+      padding: 0.4rem 1rem;
+      border-radius: 999px;
+      font-size: 0.8125rem;
+      font-weight: 500;
+    }
+    .bio-hero-icon {
+      font-size: 5rem;
+      color: #34D399;
+      margin-bottom: 1rem;
+      opacity: 0.9;
+    }
+
+    /* Section standard overrides */
+    .section-header .section-icon-big {
+      font-size: 3rem;
+      color: var(--primary);
+      margin-bottom: 0.75rem;
+    }
+
+    /* Media cards */
+    .bio-media-cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 1.5rem;
+      margin-top: 2rem;
+    }
+    .bio-media-card {
+      background: var(--white);
+      border: 1px solid var(--gray-200);
+      border-radius: var(--radius-lg);
+      padding: 1.5rem;
+      transition: all var(--transition);
+    }
+    .bio-media-card:hover {
+      border-color: #10B981;
+      box-shadow: var(--shadow-md);
+      transform: translateY(-2px);
+    }
+    .bio-media-card .bmc-icon {
+      font-size: 2.5rem;
+      margin-bottom: 0.75rem;
+    }
+    .bio-media-card h4 {
+      font-size: 1.0625rem;
+      color: #065F46;
+      margin-bottom: 0.5rem;
+    }
+    .bio-media-card p {
+      font-size: 0.9375rem;
+      color: var(--gray-500);
+      margin: 0;
+    }
+    .bio-media-card .bmc-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.4rem;
+      margin-top: 0.75rem;
+    }
+    .bio-media-card .bmc-tag {
+      background: var(--gray-50);
+      border: 1px solid var(--gray-200);
+      border-radius: 999px;
+      padding: 0.2rem 0.75rem;
+      font-size: 0.75rem;
+      font-weight: 600;
+      color: #065F46;
+    }
+
+    /* Advantage cards */
+    .bio-adv-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 1.5rem;
+      margin-top: 2rem;
+    }
+    .bio-adv-card {
+      background: var(--white);
+      border: 1px solid var(--gray-200);
+      border-radius: var(--radius-lg);
+      padding: 1.5rem;
+      text-align: center;
+      transition: all var(--transition);
+    }
+    .bio-adv-card:hover {
+      border-color: #10B981;
+      box-shadow: var(--shadow-md);
+      transform: translateY(-2px);
+    }
+    .bio-adv-card .bio-adv-icon {
+      font-size: 2.5rem;
+      margin-bottom: 0.75rem;
+    }
+    .bio-adv-card h4 {
+      font-size: 1.0625rem;
+      color: #065F46;
+      margin-bottom: 0.5rem;
+    }
+    .bio-adv-card p {
+      font-size: 0.9375rem;
+      color: var(--gray-500);
+      margin: 0;
+    }
+
+    /* Config cards */
+    .bio-config-cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 1.5rem;
+      margin-top: 2rem;
+    }
+    .bio-config-card {
+      background: var(--white);
+      border: 1px solid var(--gray-200);
+      border-radius: var(--radius-lg);
+      padding: 1.5rem;
+      border-top: 4px solid #10B981;
+      transition: all var(--transition);
+    }
+    .bio-config-card:hover {
+      box-shadow: var(--shadow-md);
+      transform: translateY(-2px);
+    }
+    .bio-config-card .bcfg-icon {
+      font-size: 2rem;
+      color: #10B981;
+      margin-bottom: 0.75rem;
+    }
+    .bio-config-card h4 {
+      font-size: 1.0625rem;
+      color: #065F46;
+      margin-bottom: 0.5rem;
+    }
+    .bio-config-card ul {
+      margin: 0.75rem 0 0;
+      padding: 0;
+      list-style: none;
+    }
+    .bio-config-card ul li {
+      position: relative;
+      padding-left: 1.25rem;
+      margin-bottom: 0.35rem;
+      font-size: 0.875rem;
+      color: var(--gray-600);
+    }
+    .bio-config-card ul li::before {
+      content: '✓';
+      position: absolute;
+      left: 0;
+      color: #10B981;
+      font-weight: 700;
+    }
+
+    /* Specs table */
+    .specs-table-wrap {
+      overflow-x: auto;
+      margin: 1.5rem 0;
+    }
+    .specs-table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 0.9375rem;
+    }
+    .specs-table th {
+      background: #065F46;
+      color: var(--white);
+      padding: 0.75rem 1rem;
+      text-align: left;
+      font-weight: 600;
+    }
+    .specs-table th:first-child {
+      border-radius: var(--radius) 0 0 0;
+    }
+    .specs-table th:last-child {
+      border-radius: 0 var(--radius) 0 0;
+    }
+    .specs-table td {
+      padding: 0.7rem 1rem;
+      border-bottom: 1px solid var(--gray-200);
+    }
+    .specs-table tr:nth-child(even) td {
+      background: var(--gray-50);
+    }
+    .specs-table tr:hover td {
+      background: #ECFDF5;
+    }
+
+    /* Highlight box */
+    .bio-highlight {
+      background: linear-gradient(135deg, #ECFDF5, #D1FAE5);
+      border: 1px solid #A7F3D0;
+      border-left: 4px solid #059669;
+      border-radius: var(--radius-lg);
+      padding: 1.5rem 2rem;
+      margin: 2rem 0;
+    }
+    .bio-highlight h3 {
+      color: #065F46;
+      font-size: 1.0625rem;
+      margin-bottom: 0.5rem;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+    .bio-highlight p {
+      color: #065F46;
+      font-size: 0.9375rem;
+      margin-bottom: 0;
+    }
+
+    /* Feature list */
+    .bio-feat-list {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1rem;
+      margin: 1.5rem 0;
+    }
+    .bio-feat-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 0.75rem;
+      padding: 0.75rem 0;
+    }
+    .bio-feat-item .bfeat-icon {
+      flex-shrink: 0;
+      width: 28px;
+      height: 28px;
+      background: rgba(16, 185, 129, 0.12);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 0.875rem;
+      color: #059669;
+      font-weight: 700;
+    }
+    .bio-feat-item .bfeat-text {
+      font-size: 0.9375rem;
+      color: var(--gray-700);
+    }
+
+    /* Standards grid */
+    .bio-standards-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 1rem;
+      margin: 1.5rem 0;
+    }
+    .bio-standard-card {
+      background: var(--white);
+      border: 1px solid var(--gray-200);
+      border-radius: var(--radius);
+      padding: 1.25rem;
+      text-align: center;
+    }
+    .bio-standard-card .bstd-icon {
+      font-size: 2rem;
+      margin-bottom: 0.5rem;
+    }
+    .bio-standard-card .bstd-name {
+      font-weight: 700;
+      color: var(--gray-800);
+      font-size: 1rem;
+    }
+    .bio-standard-card .bstd-desc {
+      font-size: 0.8125rem;
+      color: var(--gray-500);
+      margin-top: 0.25rem;
+    }
+
+    @media (max-width: 768px) {
+      .bio-feat-list { grid-template-columns: 1fr; }
+      .bio-hero { min-height: auto; padding: 6rem 0 3rem; }
+      .bio-hero-content h1 { font-size: 2.5rem; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ==================== NAVIGATION ==================== -->
+  <nav class="navbar" role="navigation" aria-label="Основная навигация">
+    <div class="container">
+      <a href="../index.html" class="navbar-brand">
+        <span class="brand-icon">MASS<br>EXPERT</span>
+        Mass-EXPERT
+      </a>
+      <button class="navbar-toggle" aria-label="Открыть меню">☰</button>
+      <div class="navbar-links">
+        <a href="../index.html#about">О продукте</a>
+        <a href="../index.html#advantages">Преимущества</a>
+        <a href="../index.html#principle">Принцип работы</a>
+        <a href="../index.html#product-line">Типоразмеры</a>
+        <a href="../index.html#specifications">Характеристики</a>
+        <a href="../index.html#contacts">Контакты</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ==================== HERO ==================== -->
+  <section class="bio-hero" id="hero">
+    <div class="container">
+      <div class="bio-hero-content">
+        <span class="bio-label">Отрасль применения</span>
+        <div class="bio-hero-icon"><i class="fas fa-vial"></i></div>
+        <h1>Биотехнологии и Life Sciences</h1>
+        <div class="bio-subtitle">Прецизионное дозирование для ферментации и культивирования</div>
+        <p class="bio-desc">
+          Массовые расходомеры <strong>Mass-EXPERT</strong> для высокоточного дозирования
+          питательных сред, pH-корректоров и пеногасителей в процессах ферментации
+          и клеточного культивирования. Сверхмалые расходы (доли кг/ч) — <strong>D-тип (Δ)
+          DN01–DN02</strong>. Полная <strong>SIP-совместимость</strong>, гигиенический дизайн
+          <strong>3-A</strong> с шероховатостью <strong>Ra ≤ 0,8 мкм</strong> гарантируют
+          стерильность и чистоту в строгих биотехнологических процессах.
+        </p>
+        <div style="display:flex;gap:1rem;flex-wrap:wrap;">
+          <a href="#media" class="btn btn-primary">Типичные среды</a>
+          <a href="#advantages" class="btn btn-outline">Преимущества</a>
+        </div>
+        <div class="bio-badges">
+          <span class="bio-badge"><i class="fas fa-vial"></i> Ферментация</span>
+          <span class="bio-badge"><i class="fas fa-weight-scale"></i> Микрорасходы DN01–DN02</span>
+          <span class="bio-badge"><i class="fas fa-sterling-sign"></i> SIP-совместимость</span>
+          <span class="bio-badge"><i class="fas fa-hand-sparkles"></i> Гигиенический дизайн 3-A</span>
+          <span class="bio-badge"><i class="fas fa-ruler-combined"></i> Ra ≤ 0,8 мкм</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== TYPICAL MEDIA ==================== -->
+  <section class="section" id="media">
+    <div class="container">
+      <div class="section-header animate-on-scroll">
+        <span class="section-badge">Типичные среды</span>
+        <h2>Измерение биотехнологических сред</h2>
+        <p>Кориолисовые расходомеры Mass-EXPERT обеспечивают высокоточное измерение и дозирование широкого спектра биотехнологических жидкостей — от стерильных питательных сред до агрессивных pH-корректоров и пеногасителей.</p>
+      </div>
+
+      <div class="bio-media-cards animate-on-scroll">
+        <div class="bio-media-card">
+          <div class="bmc-icon"><i class="fas fa-flask"></i></div>
+          <h4>Питательные среды</h4>
+          <p>Дозирование стерильных питательных сред для ферментации, клеточного культивирования и микробиологических процессов. Точность объёмного дозирования критична для роста биомассы и выхода целевого продукта.</p>
+          <div class="bmc-tags">
+            <span class="bmc-tag">LB-бульон</span>
+            <span class="bmc-tag">SOC-среда</span>
+            <span class="bmc-tag">RPMI-1640</span>
+            <span class="bmc-tag">DMEM</span>
+          </div>
+        </div>
+        <div class="bio-media-card">
+          <div class="bmc-icon"><i class="fas fa-flask"></i></div>
+          <h4>pH-корректоры</h4>
+          <p>Дозирование кислот и щелочей для поддержания pH в заданном диапазоне в процессе ферментации. Сверхмалые расходы (доли кг/ч) требуют сенсоров D-типа DN01–DN02 с максимальной чувствительностью.</p>
+          <div class="bmc-tags">
+            <span class="bmc-tag">HCl</span>
+            <span class="bmc-tag">H₂SO₄</span>
+            <span class="bmc-tag">NaOH</span>
+            <span class="bmc-tag">KOH</span>
+          </div>
+        </div>
+        <div class="bio-media-card">
+          <div class="bmc-icon"><i class="fas fa-bubbles"></i></div>
+          <h4>Пеногасители</h4>
+          <p>Автоматическая подача пеногасителей (Antifoam) по сигналу датчика пены для предотвращения переполнения ферментеров. Микроимпульсное дозирование — идеальная задача для Δ-образных сенсоров малого диаметра.</p>
+          <div class="bmc-tags">
+            <span class="bmc-tag">Silicone AF</span>
+            <span class="bmc-tag">Pluronic</span>
+            <span class="bmc-tag">PPG</span>
+            <span class="bmc-tag">SAG-серии</span>
+          </div>
+        </div>
+        <div class="bio-media-card">
+          <div class="bmc-icon"><i class="fas fa-droplet"></i></div>
+          <h4>Субстраты и прекурсоры</h4>
+          <p>Добавление глюкозы, лактозы, аминокислот, витаминных добавок и целевых прекурсоров в процессе ферментации. Контроль каждого микролитра — залог воспроизводимости и качества био-продукта.</p>
+          <div class="bmc-tags">
+            <span class="bmc-tag">Глюкоза</span>
+            <span class="bmc-tag">Лактоза</span>
+            <span class="bmc-tag">Аминокислоты</span>
+            <span class="bmc-tag">Витамины</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="section-header animate-on-scroll" style="margin-top:3rem;">
+        <h3 style="font-size:1.5rem;">Стандарты стерильности и гигиенические требования</h3>
+        <p>Биотехнологическое производство предъявляет высочайшие требования к стерильности, санитарии и прослеживаемости. Mass-EXPERT соответствует ключевым отраслевым стандартам и регламентам.</p>
+      </div>
+
+      <div class="bio-standards-grid animate-on-scroll">
+        <div class="bio-standard-card">
+          <div class="bstd-icon"><i class="fas fa-sterling-sign"></i></div>
+          <div class="bstd-name">SIP-совместимость</div>
+          <div class="bstd-desc">Сенсоры выдерживают стерилизацию паром на месте (Steam-in-Place) при температурах до 150 °C без демонтажа.</div>
+        </div>
+        <div class="bio-standard-card">
+          <div class="bstd-icon"><i class="fas fa-certificate"></i></div>
+          <div class="bstd-name">Гигиенический дизайн 3-A</div>
+          <div class="bstd-desc">Сенсоры L-типа (прямотрубные) с гладкими поверхностями без застойных зон обеспечивают полный дренаж.</div>
+        </div>
+        <div class="bio-standard-card">
+          <div class="bstd-icon"><i class="fas fa-ruler-combined"></i></div>
+          <div class="bstd-name">Ra ≤ 0,8 мкм</div>
+          <div class="bstd-desc">Зеркальная полировка контактных поверхностей предотвращает адгезию микроорганизмов и облегчает CIP/SIP-мойку.</div>
+        </div>
+        <div class="bio-standard-card">
+          <div class="bstd-icon"><i class="fas fa-link"></i></div>
+          <div class="bstd-name">Tri-clamp соединения</div>
+          <div class="bstd-desc">Гигиенические хомутовые соединения для быстрой установки, демонтажа и стерилизации без специального инструмента.</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== ADVANTAGES ==================== -->
+  <section class="section section-gray" id="advantages">
+    <div class="container">
+      <div class="section-header animate-on-scroll">
+        <span class="section-badge">Преимущества</span>
+        <h2>Почему Mass-EXPERT для биотехнологий?</h2>
+        <p>Кориолисовая технология прямого массового измерения — идеальное решение для прецизионных биотехнологических процессов, где цена ошибки — потеря целевого продукта</p>
+      </div>
+
+      <div class="bio-adv-grid animate-on-scroll">
+        <div class="bio-adv-card">
+          <div class="bio-adv-icon"><i class="fas fa-weight-scale"></i></div>
+          <h4>Микрорасходы D-тип (Δ) DN01–DN02</h4>
+          <p>Специализированные Δ-образные сенсоры для расходов от долей кг/ч. Идеальны для дозирования pH-корректоров, пеногасителей и микроэлементов в лабораторных и пилотных ферментерах.</p>
+        </div>
+        <div class="bio-adv-card">
+          <div class="bio-adv-icon"><i class="fas fa-sterling-sign"></i></div>
+          <h4>Полная SIP-совместимость</h4>
+          <p>Сенсоры выдерживают многократные циклы стерилизации паром без потери метрологических характеристик. Конструкция без застойных зон исключает риск контаминации.</p>
+        </div>
+        <div class="bio-adv-card">
+          <div class="bio-adv-icon"><i class="fas fa-hand-sparkles"></i></div>
+          <h4>Гигиенический дизайн 3-A</h4>
+          <p>Прямотрубные сенсоры L-типа или Δ-образные сенсоры D-типа в гигиеническом исполнении с зеркальной полировкой Ra ≤ 0,8 мкм обеспечивают бескомпромиссную чистоту.</p>
+        </div>
+        <div class="bio-adv-card">
+          <div class="bio-adv-icon"><i class="fas fa-bullseye"></i></div>
+          <h4>Сверхвысокая точность 0,1%</h4>
+          <p>Дозирование с точностью до 0,1% от расхода гарантирует строгое соблюдение рецептуры и максимальный выход биомассы. Перерасход питательной среды или корректора — прямые убытки.</p>
+        </div>
+        <div class="bio-adv-card">
+          <div class="bio-adv-icon"><i class="fas fa-flask"></i></div>
+          <h4>Независимость от свойств среды</h4>
+          <p>Кориолисовое измерение напрямую определяет массу, а не объём. Плотность, вязкость, газовыделение или твёрдые взвеси не искажают результат — критично для пенящихся и неоднородных сред.</p>
+        </div>
+        <div class="bio-adv-card">
+          <div class="bio-adv-icon"><i class="fas fa-link"></i></div>
+          <h4>Tri-clamp соединения</h4>
+          <p>Хомутовые соединения Tri-clamp медицинского класса — стандарт биотехнологического оборудования. Быстрая установка и снятие, полная стерилизация в сборе, отсутствие резьбовых щелей.</p>
+        </div>
+      </div>
+
+      <div class="bio-highlight animate-on-scroll">
+        <h3><i class="fas fa-vial"></i> Δ-образный D-тип — специализированное решение для микрорасходов</h3>
+        <p>
+          В биотехнологических процессах критически важна точность дозирования малых количеств реагентов.
+          <strong>Δ-образные сенсоры D-типа DN01–DN02</strong> специально спроектированы для измерения
+          сверхмалых массовых расходов — от долей до единиц кг/ч. Компактная Δ-образная конфигурация
+          трубок обеспечивает максимальную чувствительность при минимальном внутреннем объёме, а гигиеническое
+          исполнение с Tri-clamp соединениями позволяет интегрировать сенсор непосредственно в стерильный
+          контур ферментера или биореактора без дополнительных переходников.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== RECOMMENDED CONFIGURATIONS ==================== -->
+  <section class="section" id="configurations">
+    <div class="container">
+      <div class="section-header animate-on-scroll">
+        <span class="section-badge">Рекомендуемые конфигурации</span>
+        <h2>Оптимальные решения для биотехнологий</h2>
+        <p>Проверенные комбинации сенсоров, материалов и опций для типовых задач биотехнологических производств и лабораторий</p>
+      </div>
+
+      <div class="bio-config-cards animate-on-scroll">
+        <div class="bio-config-card" style="border-top-color:#059669;">
+          <div class="bcfg-icon" style="color:#059669;"><i class="fas fa-delta"></i></div>
+          <h4>D-тип (Δ) для микрорасходов</h4>
+          <p style="font-size:0.9375rem;color:var(--gray-500);">
+            Специализированный Δ-образный сенсор для сверхмалых расходов — сердце точного дозирования в биотехнологиях.
+          </p>
+          <ul>
+            <li>Диапазон: доли кг/ч – единицы кг/ч</li>
+            <li>DN01–DN02 — минимальный объём</li>
+            <li>Δ-образная конфигурация — макс. чувствительность</li>
+            <li>Полная SIP-совместимость</li>
+          </ul>
+        </div>
+        <div class="bio-config-card" style="border-top-color:#10B981;">
+          <div class="bcfg-icon" style="color:#10B981;"><i class="fas fa-tube"></i></div>
+          <h4>L-тип — прямые трубки</h4>
+          <p style="font-size:0.9375rem;color:var(--gray-500);">
+            Прямотрубные сенсоры без изгибов — стандарт гигиенического исполнения для стерильных сред.
+          </p>
+          <ul>
+            <li>Полный дренаж — нет застойных зон</li>
+            <li>эффективная CIP/SIP-мойка</li>
+            <li>Минимальное гидравлическое сопротивление</li>
+            <li>DN08–DN25 для типовых расходов</li>
+          </ul>
+        </div>
+        <div class="bio-config-card" style="border-top-color:#34D399;">
+          <div class="bcfg-icon" style="color:#34D399;"><i class="fas fa-link"></i></div>
+          <h4>Tri-clamp гигиенические соединения</h4>
+          <p style="font-size:0.9375rem;color:var(--gray-500);">
+            Биотехнологический стандарт соединений — хомуты Tri-clamp для стерильных контуров.
+          </p>
+          <ul>
+            <li>Tri-clamp — универсальный гигиенический стандарт</li>
+            <li>Стерилизация в сборе без демонтажа</li>
+            <li>Быстросъёмные — без специального инструмента</li>
+            <li>Безрезьбовая конструкция — нет щелей</li>
+          </ul>
+        </div>
+        <div class="bio-config-card" style="border-top-color:#6EE7B7;">
+          <div class="bcfg-icon" style="color:#059669;"><i class="fas fa-microscope"></i></div>
+          <h4>Зеркальная полировка Ra ≤ 0,8 мкм</h4>
+          <p style="font-size:0.9375rem;color:var(--gray-500);">
+            Класс чистоты поверхности для контакта со стерильными биотехнологическими средами.
+          </p>
+          <ul>
+            <li>Ra ≤ 0,8 мкм — стандарт для биотехнологий</li>
+            <li>Опционально Ra ≤ 0,4 мкм</li>
+            <li>Электрополировка — пассивный слой</li>
+            <li>Сертификация чистоты поверхности</li>
+          </ul>
+        </div>
+        <div class="bio-config-card" style="border-top-color:#F59E0B;">
+          <div class="bcfg-icon" style="color:#F59E0B;"><i class="fas fa-microchip"></i></div>
+          <h4>Трансмиттер ME100</h4>
+          <p style="font-size:0.9375rem;color:var(--gray-500);">
+            Надёжный и компактный электронный блок для интеграции в системы управления биореакторами.
+          </p>
+          <ul>
+            <li>4–20 мА HART, Modbus RTU</li>
+            <li>Интеграция с SCADA биореактора</li>
+            <li>Отображение расхода и дозы</li>
+            <li>Защита настроек от несанкц. доступа</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="bio-highlight animate-on-scroll">
+        <h3>💡 Рекомендованная конфигурация для ферментации</h3>
+        <p>
+          Для прецизионного дозирования в биотехнологическом процессе оптимальна комбинация:
+          <strong>сенсор D-типа (Δ) DN01–DN02</strong> для микрорасходов pH-корректоров и пеногасителей
+          + <strong>L-тип (прямотрубный) DN08–DN15</strong> для питательных сред и субстратов
+          + <strong>зеркальная полировка Ra ≤ 0,8 мкм</strong>
+          + <strong>соединения Tri-clamp</strong>
+          + <strong>трансмиттер ME100</strong> с Modbus для интеграции в систему управления биореактором.
+          Точность 0,1% гарантирует строгое соблюдение параметров ферментации при минимальных потерях
+          дорогостоящих компонентов.
+        </p>
+      </div>
+
+      <div class="animate-on-scroll" style="margin-top:2rem;">
+        <div class="section-header">
+          <span class="section-badge">Ключевые параметры</span>
+          <h3 style="font-size:1.25rem;">Технические возможности Mass-EXPERT для биотехнологий</h3>
+        </div>
+        <div class="bio-feat-list">
+          <div class="bio-feat-item">
+            <div class="bfeat-icon">✓</div>
+            <div class="bfeat-text"><strong>Массовый расход жидкости:</strong> от 0,1 до 18 000 кг/ч</div>
+          </div>
+          <div class="bio-feat-item">
+            <div class="bfeat-icon">✓</div>
+            <div class="bfeat-text"><strong>Погрешность измерений:</strong> ±0,1% – ±0,2%</div>
+          </div>
+          <div class="bio-feat-item">
+            <div class="bfeat-icon">✓</div>
+            <div class="bfeat-text"><strong>Повторяемость:</strong> ±0,05%</div>
+          </div>
+          <div class="bio-feat-item">
+            <div class="bfeat-icon">✓</div>
+            <div class="bfeat-text"><strong>Температура среды:</strong> от –50 до +250 °C</div>
+          </div>
+          <div class="bio-feat-item">
+            <div class="bfeat-icon">✓</div>
+            <div class="bfeat-text"><strong>Сенсор D-тип (Δ):</strong> DN01–DN02, от 0,1 кг/ч</div>
+          </div>
+          <div class="bio-feat-item">
+            <div class="bfeat-icon">✓</div>
+            <div class="bfeat-text"><strong>Сенсор L-тип (прямотрубный):</strong> DN08–DN50</div>
+          </div>
+          <div class="bio-feat-item">
+            <div class="bfeat-icon">✓</div>
+            <div class="bfeat-text"><strong>Шероховатость поверхности:</strong> Ra ≤ 0,8 мкм</div>
+          </div>
+          <div class="bio-feat-item">
+            <div class="bfeat-icon">✓</div>
+            <div class="bfeat-text"><strong>SIP-совместимость:</strong> до 150 °C пар</div>
+          </div>
+          <div class="bio-feat-item">
+            <div class="bfeat-icon">✓</div>
+            <div class="bfeat-text"><strong>Гигиенические соединения:</strong> Tri-clamp</div>
+          </div>
+          <div class="bio-feat-item">
+            <div class="bfeat-icon">✓</div>
+            <div class="bfeat-text"><strong>Гигиенический дизайн:</strong> 3-A Sanitary Standards</div>
+          </div>
+          <div class="bio-feat-item">
+            <div class="bfeat-icon">✓</div>
+            <div class="bfeat-text"><strong>Выходные сигналы:</strong> 4–20 мА HART, Modbus RTU/RS-485</div>
+          </div>
+          <div class="bio-feat-item">
+            <div class="bfeat-icon">✓</div>
+            <div class="bfeat-text"><strong>Степень защиты:</strong> IP66/IP67, нержавеющая сталь</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== SPECS ==================== -->
+  <section class="section section-gray" id="specs">
+    <div class="container">
+      <div class="section-header animate-on-scroll">
+        <span class="section-badge">Спецификация</span>
+        <h2>Биотехнологические сенсоры Mass-EXPERT</h2>
+        <p>Сводная таблица типоразмеров D-типа (Δ) и L-типа (прямотрубных) сенсоров, рекомендованных для биотехнологии и Life Sciences.</p>
+      </div>
+
+      <div class="specs-table-wrap animate-on-scroll">
+        <table class="specs-table">
+          <thead>
+            <tr>
+              <th>Модель сенсора</th>
+              <th>Тип</th>
+              <th>DN</th>
+              <th>Диапазон расхода (кг/ч)</th>
+              <th>Макс. давление (МПа)</th>
+              <th>Применение</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>D-01</td>
+              <td>Δ-образный</td>
+              <td>DN01</td>
+              <td>0,1 – 18</td>
+              <td>25</td>
+              <td>pH-корректоры, пеногасители</td>
+            </tr>
+            <tr>
+              <td>D-02</td>
+              <td>Δ-образный</td>
+              <td>DN02</td>
+              <td>0,2 – 40</td>
+              <td>25</td>
+              <td>Микродозирование реагентов</td>
+            </tr>
+            <tr>
+              <td>L-08</td>
+              <td>Прямотрубный</td>
+              <td>DN08</td>
+              <td>1 – 180</td>
+              <td>25</td>
+              <td>Питательные среды, субстраты</td>
+            </tr>
+            <tr>
+              <td>L-15</td>
+              <td>Прямотрубный</td>
+              <td>DN15</td>
+              <td>2 – 600</td>
+              <td>25</td>
+              <td>Питательные среды, добавки</td>
+            </tr>
+            <tr>
+              <td>L-25</td>
+              <td>Прямотрубный</td>
+              <td>DN25</td>
+              <td>10 – 3 000</td>
+              <td>16</td>
+              <td>Основные потоки в ферментерах</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== CTA ==================== -->
+  <section class="section" style="text-align:center;">
+    <div class="container">
+      <div class="animate-on-scroll">
+        <span class="section-badge">Готовы к внедрению?</span>
+        <h2>Подберём конфигурацию для вашего биореактора</h2>
+        <p style="max-width:600px;margin:1rem auto 2rem;">
+          Наши инженеры помогут подобрать оптимальный сенсор — D-тип для микрорасходов или L-тип для основных потоков,
+          тип соединений Tri-clamp и класс полировки для вашей биотехнологической задачи.
+        </p>
+        <a href="../index.html#contacts" class="btn btn-primary btn-lg">Связаться с нами</a>
+        <a href="../index.html" class="btn btn-outline" style="margin-left:0.75rem;">На главную</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== FOOTER ==================== -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <h4>Mass-EXPERT</h4>
+          <p>Счетчики-расходомеры массовые кориолисового типа.</p>
+          <p>Госреестр № 98506-26. ТУ 26.51.52-016-88090790-2024.</p>
+          <p style="margin-top:0.75rem;font-size:0.8125rem;">
+            Разработка и производство:<br>
+            ООО «Автоматизация-Метрология-ЭКСПЕРТ», г. Уфа
+          </p>
+        </div>
+        <div class="footer-links">
+          <h5>Продукт</h5>
+          <a href="../index.html#specifications">Характеристики</a>
+          <a href="../index.html#product-line">Типоразмеры</a>
+          <a href="../index.html#options">Модификации</a>
+          <a href="../index.html#transmitters">Трансмиттеры</a>
+        </div>
+        <div class="footer-links">
+          <h5>Документация</h5>
+          <a href="../index.html#certificates">Сертификаты</a>
+          <a href="../docs/ОПИСАНИЕ_ТИПА_2026-98506-26.pdf" target="_blank">Описание типа</a>
+          <a href="../docs/РЭ_Масс_Эксперт_v09.pdf" target="_blank">Руководство по эксплуатации</a>
+          <a href="../docs/2026-МП_98506-26_compressed.pdf" target="_blank">Методика поверки</a>
+        </div>
+        <div class="footer-links">
+          <h5>Контакты</h5>
+          <a href="tel:+734****5350">+7 (347) 286-53-50</a>
+          <a href="mailto:info@ame-info.ru">info@ame-info.ru</a>
+          <a href="https://www.ame-info.ru" target="_blank">www.ame-info.ru</a>
+          <a href="../sitemap.html" style="margin-top:0.5rem;font-size:0.8125rem;color:var(--gray-500);">📋 Карта сайта</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>© <span id="year">2026</span> ООО «Автоматизация-Метрология-ЭКСПЕРТ». Все права защищены.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="../js/main.js"></script>
+</body>
+</html>

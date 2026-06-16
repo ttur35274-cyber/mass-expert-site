@@ -1,0 +1,822 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Лаборатории и испытательные стенды — Mass-EXPERT | Кориолисовые расходомеры</title>
+  <meta name="description" content="Массовые расходомеры Mass-EXPERT для лабораторий и испытательных стендов: измерение малых расходов (доли г/ч) для НИОКР, калибровочные стенды для поверки расходомеров. D-тип (Δ) DN01-DN02 для микрорасходов. Высокая точность и повторяемость.">
+  <meta name="keywords" content="лаборатория, испытательный стенд, НИОКР, микрорасход, малые расходы, калибровочный стенд, поверка расходомеров, кориолисовый расходомер, Mass-EXPERT, D-тип, DN01, DN02, ME100, высокая точность, повторяемость, доли г/ч">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <!-- Open Graph -->
+  <meta property="og:title" content="Лаборатории и испытательные стенды — Mass-EXPERT">
+  <meta property="og:description" content="Прецизионное измерение микрорасходов (доли г/ч) для НИОКР и калибровочных стендов. D-тип DN01-DN02. Точность 0,1–0,2%.">
+  <meta property="og:type" content="website">
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 40 40'><rect width='40' height='40' rx='8' fill='%23F59E0B'/><text x='20' y='26' text-anchor='middle' font-size='14' font-weight='900' fill='%230F172A' font-family='Inter'>ME</text></svg>">
+  <style>
+    /* Laboratories / Test Stands page specific styles */
+    .lab-hero {
+      position: relative;
+      min-height: 70vh;
+      display: flex;
+      align-items: center;
+      background: linear-gradient(135deg, #0a1628 0%, #1b2a4a 50%, #162238 100%);
+      overflow: hidden;
+      padding-top: 72px;
+    }
+    .lab-hero::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background:
+        radial-gradient(ellipse at 70% 30%, rgba(147, 197, 253, 0.10) 0%, transparent 60%),
+        radial-gradient(ellipse at 30% 80%, rgba(96, 165, 250, 0.05) 0%, transparent 50%);
+      pointer-events: none;
+    }
+    .lab-hero-content {
+      position: relative;
+      z-index: 1;
+    }
+    .lab-hero-content .lab-label {
+      display: inline-block;
+      font-size: 0.75rem;
+      color: var(--gray-400);
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      font-weight: 600;
+      margin-bottom: 0.75rem;
+      background: rgba(255,255,255,0.08);
+      padding: 0.3rem 0.75rem;
+      border-radius: 999px;
+    }
+    .lab-hero-content h1 {
+      color: var(--white);
+      margin-bottom: 0.5rem;
+      font-size: 3.5rem;
+    }
+    .lab-hero-content .lab-subtitle {
+      font-size: 1.35rem;
+      color: var(--accent);
+      font-weight: 600;
+      margin-bottom: 1.5rem;
+    }
+    .lab-hero-content .lab-desc {
+      color: rgba(255,255,255,0.8);
+      font-size: 1.0625rem;
+      margin: 1.5rem 0 2rem;
+      max-width: 680px;
+    }
+    .lab-badges {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.75rem;
+      margin-top: 1.5rem;
+    }
+    .lab-badge {
+      background: rgba(255,255,255,0.1);
+      border: 1px solid rgba(255,255,255,0.15);
+      color: rgba(255,255,255,0.9);
+      padding: 0.4rem 1rem;
+      border-radius: 999px;
+      font-size: 0.8125rem;
+      font-weight: 500;
+    }
+    .lab-hero-icon {
+      font-size: 5rem;
+      color: var(--accent);
+      margin-bottom: 1rem;
+      opacity: 0.9;
+    }
+
+    /* Section standard overrides */
+    .section-header .section-icon-big {
+      font-size: 3rem;
+      color: var(--primary);
+      margin-bottom: 0.75rem;
+    }
+
+    /* Media cards grid */
+    .media-cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 1.5rem;
+      margin-top: 2rem;
+    }
+    .media-card {
+      background: var(--white);
+      border: 1px solid var(--gray-200);
+      border-radius: var(--radius-lg);
+      padding: 1.5rem;
+      transition: all var(--transition);
+    }
+    .media-card:hover {
+      border-color: var(--primary);
+      box-shadow: var(--shadow-md);
+      transform: translateY(-2px);
+    }
+    .media-card .mc-icon {
+      font-size: 2.5rem;
+      margin-bottom: 0.75rem;
+    }
+    .media-card h4 {
+      font-size: 1.0625rem;
+      color: var(--primary);
+      margin-bottom: 0.5rem;
+    }
+    .media-card p {
+      font-size: 0.9375rem;
+      color: var(--gray-500);
+      margin: 0;
+    }
+    .media-card .mc-formula {
+      display: inline-block;
+      background: var(--gray-50);
+      border: 1px solid var(--gray-200);
+      border-radius: 999px;
+      padding: 0.2rem 0.75rem;
+      font-size: 0.8125rem;
+      font-weight: 600;
+      color: var(--primary);
+      margin-top: 0.5rem;
+    }
+
+    /* Advantage cards */
+    .adv-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 1.5rem;
+      margin-top: 2rem;
+    }
+    .adv-card-app {
+      background: var(--white);
+      border: 1px solid var(--gray-200);
+      border-radius: var(--radius-lg);
+      padding: 1.5rem;
+      text-align: center;
+      transition: all var(--transition);
+    }
+    .adv-card-app:hover {
+      border-color: var(--primary);
+      box-shadow: var(--shadow-md);
+      transform: translateY(-2px);
+    }
+    .adv-card-app .adv-icon {
+      font-size: 2.5rem;
+      margin-bottom: 0.75rem;
+    }
+    .adv-card-app h4 {
+      font-size: 1.0625rem;
+      color: var(--primary);
+      margin-bottom: 0.5rem;
+    }
+    .adv-card-app p {
+      font-size: 0.9375rem;
+      color: var(--gray-500);
+      margin: 0;
+    }
+
+    /* Config cards */
+    .config-cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 1.5rem;
+      margin-top: 2rem;
+    }
+    .config-card {
+      background: var(--white);
+      border: 1px solid var(--gray-200);
+      border-radius: var(--radius-lg);
+      padding: 1.5rem;
+      border-top: 4px solid var(--primary);
+      transition: all var(--transition);
+    }
+    .config-card:hover {
+      box-shadow: var(--shadow-md);
+      transform: translateY(-2px);
+    }
+    .config-card .cfg-icon {
+      font-size: 2rem;
+      color: var(--primary);
+      margin-bottom: 0.75rem;
+    }
+    .config-card h4 {
+      font-size: 1.0625rem;
+      color: var(--primary);
+      margin-bottom: 0.5rem;
+    }
+    .config-card ul {
+      margin: 0.75rem 0 0;
+      padding: 0;
+      list-style: none;
+    }
+    .config-card ul li {
+      position: relative;
+      padding-left: 1.25rem;
+      margin-bottom: 0.35rem;
+      font-size: 0.875rem;
+      color: var(--gray-600);
+    }
+    .config-card ul li::before {
+      content: '✓';
+      position: absolute;
+      left: 0;
+      color: var(--success, #10B981);
+      font-weight: 700;
+    }
+
+    /* Materials table */
+    .materials-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 1rem;
+      margin: 1.5rem 0;
+    }
+    .material-card {
+      background: var(--gray-50);
+      border: 1px solid var(--gray-200);
+      border-radius: var(--radius);
+      padding: 1.25rem;
+      text-align: center;
+    }
+    .material-card .mat-icon {
+      font-size: 2rem;
+      margin-bottom: 0.5rem;
+    }
+    .material-card .mat-name {
+      font-weight: 700;
+      color: var(--gray-800);
+      font-size: 1rem;
+    }
+    .material-card .mat-desc {
+      font-size: 0.8125rem;
+      color: var(--gray-500);
+      margin-top: 0.25rem;
+    }
+
+    /* Highlight box */
+    .highlight-box {
+      background: linear-gradient(135deg, #DBEAFE, #BFDBFE);
+      border: 1px solid #93C5FD;
+      border-left: 4px solid #3B82F6;
+      border-radius: var(--radius-lg);
+      padding: 1.5rem 2rem;
+      margin: 2rem 0;
+    }
+    .highlight-box h3 {
+      color: #1E3A5F;
+      font-size: 1.0625rem;
+      margin-bottom: 0.5rem;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+    .highlight-box p {
+      color: #1E3A5F;
+      font-size: 0.9375rem;
+      margin-bottom: 0;
+    }
+
+    /* Feature list */
+    .feat-list {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1rem;
+      margin: 1.5rem 0;
+    }
+    .feat-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 0.75rem;
+      padding: 0.75rem 0;
+    }
+    .feat-item .feat-icon {
+      flex-shrink: 0;
+      width: 28px;
+      height: 28px;
+      background: rgba(59, 130, 246, 0.12);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 0.875rem;
+      color: #2563EB;
+      font-weight: 700;
+    }
+    .feat-item .feat-text {
+      font-size: 0.9375rem;
+      color: var(--gray-700);
+    }
+
+    /* Range table */
+    .range-table-wrap {
+      overflow-x: auto;
+      margin: 1.5rem 0;
+    }
+    .range-table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 0.875rem;
+      background: var(--white);
+      border-radius: var(--radius-lg);
+      overflow: hidden;
+      box-shadow: var(--shadow-sm);
+    }
+    .range-table thead {
+      background: var(--primary);
+      color: var(--white);
+    }
+    .range-table th,
+    .range-table td {
+      padding: 0.75rem 1rem;
+      text-align: left;
+      border-bottom: 1px solid var(--gray-200);
+    }
+    .range-table tbody tr:hover {
+      background: var(--gray-50);
+    }
+    .range-table .highlight-row {
+      background: rgba(59, 130, 246, 0.06);
+      font-weight: 600;
+    }
+    .range-table .highlight-row td {
+      color: var(--primary-dark);
+    }
+
+    @media (max-width: 768px) {
+      .feat-list { grid-template-columns: 1fr; }
+      .lab-hero { min-height: auto; padding: 6rem 0 3rem; }
+      .lab-hero-content h1 { font-size: 2.5rem; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ==================== NAVIGATION ==================== -->
+  <nav class="navbar" role="navigation" aria-label="Основная навигация">
+    <div class="container">
+      <a href="../index.html" class="navbar-brand">
+        <span class="brand-icon">MASS<br>EXPERT</span>
+        Mass-EXPERT
+      </a>
+      <button class="navbar-toggle" aria-label="Открыть меню">☰</button>
+      <div class="navbar-links">
+        <a href="../index.html#about">О продукте</a>
+        <a href="../index.html#advantages">Преимущества</a>
+        <a href="../index.html#principle">Принцип работы</a>
+        <a href="../index.html#product-line">Типоразмеры</a>
+        <a href="../index.html#specifications">Характеристики</a>
+        <a href="../index.html#contacts">Контакты</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ==================== HERO ==================== -->
+  <section class="lab-hero" id="hero">
+    <div class="container">
+      <div class="lab-hero-content">
+        <span class="lab-label">Отрасль применения</span>
+        <div class="lab-hero-icon"><i class="fas fa-flask"></i></div>
+        <h1>Лаборатории и испытательные стенды</h1>
+        <div class="lab-subtitle">Прецизионное измерение микрорасходов для НИОКР и метрологии</div>
+        <p class="lab-desc">
+          Массовые расходомеры <strong>Mass-EXPERT</strong> для измерения сверхмалых расходов
+          жидкости — от долей г/ч до единиц кг/ч. Оптимальное решение для лабораторных
+          исследований, научно-исследовательских и опытно-конструкторских работ (НИОКР),
+          а также для построения калибровочных стендов и установок поверки других расходомеров.
+          D-тип (Δ) с DN01–DN02 обеспечивает исключительную точность и повторяемость
+          на микрорасходах.
+        </p>
+        <div style="display:flex;gap:1rem;flex-wrap:wrap;">
+          <a href="#media" class="btn btn-primary">Типичные среды</a>
+          <a href="#advantages" class="btn btn-outline">Преимущества</a>
+        </div>
+        <div class="lab-badges">
+          <span class="lab-badge">🔬 Микрорасходы от 0,1 г/ч</span>
+          <span class="lab-badge">📐 D-тип (Δ) DN01–DN02</span>
+          <span class="lab-badge">📏 ME100 — метрология</span>
+          <span class="lab-badge">🎯 Точность 0,1–0,2%</span>
+          <span class="lab-badge">🔄 Калибровочные стенды</span>
+          <span class="lab-badge">📊 Повторяемость 0,05%</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== TYPICAL MEDIA ==================== -->
+  <section class="section" id="media">
+    <div class="container">
+      <div class="section-header animate-on-scroll">
+        <span class="section-badge">Типичные среды</span>
+        <h2>Среды для лабораторных и калибровочных задач</h2>
+        <p>Кориолисовые расходомеры Mass-EXPERT работают с широким спектром жидкостей, используемых в лабораторной практике, научных исследованиях и на калибровочных стендах — от эталонных жидкостей до рабочих сред с переменными свойствами.</p>
+      </div>
+
+      <div class="media-cards animate-on-scroll">
+        <div class="media-card">
+          <div class="mc-icon">💧</div>
+          <h4>Эталонные жидкости для поверки</h4>
+          <p>Дистиллированная и деионизированная вода, калибровочные масла, силиконовые жидкости с эталонной вязкостью. Используются в качестве рабочих эталонов при поверке и градуировке других типов расходомеров (турбинных, электромагнитных, ультразвуковых).</p>
+          <div>
+            <span class="mc-formula">H₂O (DI)</span>
+            <span class="mc-formula">Калибр. масла</span>
+            <span class="mc-formula">Силикон</span>
+          </div>
+        </div>
+        <div class="media-card">
+          <div class="mc-icon">🧪</div>
+          <h4>Реагенты для НИОКР</h4>
+          <p>Химические реагенты и прекурсоры в малых объёмах — органические растворители, кислоты, щёлочи, мономеры для полимеризации, катализаторные растворы. Прецизионное дозирование с погрешностью менее 1% критически для воспроизводимости научных экспериментов.</p>
+          <div>
+            <span class="mc-formula">Растворители</span>
+            <span class="mc-formula">Мономеры</span>
+            <span class="mc-formula">Катализаторы</span>
+          </div>
+        </div>
+        <div class="media-card">
+          <div class="mc-icon">🛢️</div>
+          <h4>Нефтепродукты и топливо</h4>
+          <p>Эталонные нефтепродукты для поверки топливораздаточных колонок и счётчиков нефтепродуктов: бензин, дизельное топливо, керосин, масла. Измерение малых расходов на испытательных стендах топливной аппаратуры.</p>
+          <div>
+            <span class="mc-formula">Бензин</span>
+            <span class="mc-formula">ДТ</span>
+            <span class="mc-formula">Масла</span>
+          </div>
+        </div>
+        <div class="media-card">
+          <div class="mc-icon">🔬</div>
+          <h4>Специальные лабораторные жидкости</h4>
+          <p>Биологические буферные растворы, растворы полимеров, эмульсии, суспензии наночастиц, магнитные жидкости. Mass-EXPERT обеспечивает прямое измерение массового расхода без калибровки по плотности — важно для сред с переменным составом.</p>
+          <div>
+            <span class="mc-formula">Буферы</span>
+            <span class="mc-formula">Полимеры</span>
+            <span class="mc-formula">Эмульсии</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="section-header animate-on-scroll" style="margin-top:3rem;">
+        <h3 style="font-size:1.5rem;">Требования к точности и чистоте</h3>
+        <p>Лабораторные и калибровочные задачи предъявляют особые требования к измерительному оборудованию — от высочайшей точности и стабильности нулевой точки до чистоты контактирующих поверхностей и минимального влияния на измеряемую среду.</p>
+      </div>
+
+      <div class="media-cards animate-on-scroll" style="grid-template-columns:repeat(auto-fit, minmax(240px, 1fr));">
+        <div class="media-card" style="text-align:center;">
+          <div class="mc-icon">🎯</div>
+          <h4>Точность 0,1–0,2%</h4>
+          <p>Высочайшая точность измерения массового расхода даже на сверхмалых расходах. Стабильность нулевой точки от 0,006 кг/ч (DN01) обеспечивает уверенный результат на расходах 0,1–10 г/ч.</p>
+        </div>
+        <div class="media-card" style="text-align:center;">
+          <div class="mc-icon">📊</div>
+          <h4>Повторяемость &lt; 0,05%</h4>
+          <p>Исключительная повторяемость результатов — ключевое требование для калибровочных стендов и метрологических лабораторий. Mass-EXPERT гарантирует стабильность показаний от измерения к измерению.</p>
+        </div>
+        <div class="media-card" style="text-align:center;">
+          <div class="mc-icon">🔄</div>
+          <h4>Динамический диапазон до 100:1</h4>
+          <p>Широкий диапазон измерений без потери точности — один сенсор перекрывает диапазон от долей г/ч до сотен кг/ч, что сокращает парк эталонных средств измерений на стенде.</p>
+        </div>
+        <div class="media-card" style="text-align:center;">
+          <div class="mc-icon">🧼</div>
+          <h4>Химическая инертность</h4>
+          <p>Материалы трубок 316L / Хастеллой C4/C276 обеспечивают минимальное взаимодействие с измеряемой средой. Возможна внутренняя пассивация Ra ≤ 0,4 мкм для критических применений.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== ADVANTAGES ==================== -->
+  <section class="section section-gray" id="advantages">
+    <div class="container">
+      <div class="section-header animate-on-scroll">
+        <span class="section-badge">Преимущества</span>
+        <h2>Почему Mass-EXPERT для лабораторий и стендов?</h2>
+        <p>Кориолисовая технология прямого массового измерения — эталон точности для лабораторных и калибровочных применений</p>
+      </div>
+
+      <div class="adv-grid animate-on-scroll">
+        <div class="adv-card-app">
+          <div class="adv-icon">🎯</div>
+          <h4>Прямое измерение массы</h4>
+          <p>Измерение массового расхода без косвенных пересчётов и калибровок по плотности. Результат не зависит от изменений температуры, давления, вязкости или состава среды — критически важно для воспроизводимости НИОКР.</p>
+        </div>
+        <div class="adv-card-app">
+          <div class="adv-icon">🔬</div>
+          <h4>Сверхмалые расходы — от 0,1 г/ч</h4>
+          <p>Сенсоры D-типа (Δ) с DN01–DN02 обеспечивают уверенное измерение и дозирование в диапазоне от долей грамма до нескольких килограммов в час — недостижимый рубеж для традиционных объёмных расходомеров.</p>
+        </div>
+        <div class="adv-card-app">
+          <div class="adv-icon">📊</div>
+          <h4>Высокая повторяемость</h4>
+          <p>Повторяемость измерений менее 0,05% делает Mass-EXPERT идеальным эталоном для калибровочных стендов и метрологических лабораторий, где требуется стабильность показаний при многократных поверках.</p>
+        </div>
+        <div class="adv-card-app">
+          <div class="adv-icon">⚛️</div>
+          <h4>Минимальный объём сенсора</h4>
+          <p>Малый внутренний объём измерительных трубок D-типа исключает потери дорогостоящих реагентов и обеспечивает быстрое время отклика — ценно при дозировании микрообъёмов в лабораторных установках.</p>
+        </div>
+        <div class="adv-card-app">
+          <div class="adv-icon">🔧</div>
+          <h4>Компактность и простота интеграции</h4>
+          <p>Миниатюрные размеры сенсоров D-типа позволяют легко встраивать их в существующие лабораторные установки, испытательные стенды и пилотные технологические линии без значительной перекомпоновки.</p>
+        </div>
+        <div class="adv-card-app">
+          <div class="adv-icon">📡</div>
+          <h4>Цифровые интерфейсы</h4>
+          <p>Поддержка HART, Modbus RTU, PROFIBUS PA, EtherNet/IP для интеграции в автоматизированные системы сбора данных стенда. Возможность удалённого мониторинга и управления с ПК.</p>
+        </div>
+      </div>
+
+      <div class="highlight-box animate-on-scroll">
+        <h3>🔬 D-тип (Δ) — эталон для микрорасходов</h3>
+        <p>
+          <strong>D-тип</strong> (дельта-конфигурация) — специальная геометрия измерительных трубок,
+          разработанная для измерения <strong>сверхмалых расходов</strong>. DN01 (трубка Ø1 мм)
+          обеспечивает уверенное измерение от <strong>0,1 г/ч</strong>, DN02 (Ø2 мм) — от <strong>1 г/ч</strong>.
+          Высокая жёсткость конструкции в сочетании с чувствительными датчиками даёт исключительную
+          стабильность нуля и минимальный дрейф. В паре с трансмиттером <strong>ME100</strong> достигается
+          полная метрологическая прослеживаемость для построения эталонных калибровочных стендов.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== RANGE TABLE ==================== -->
+  <section class="section" id="range">
+    <div class="container">
+      <div class="section-header animate-on-scroll">
+        <span class="section-badge">Диапазоны расходов</span>
+        <h2>Сенсоры D-типа для микрорасходов</h2>
+        <p>Специализированные сенсоры Mass-EXPERT D-типа (Δ-конфигурация) разработаны для прецизионного измерения малых и сверхмалых расходов в лабораторных и калибровочных приложениях.</p>
+      </div>
+
+      <div class="range-table-wrap animate-on-scroll">
+        <table class="range-table">
+          <thead>
+            <tr>
+              <th>Тип сенсора</th>
+              <th>DN</th>
+              <th>Мин. расход (г/ч)</th>
+              <th>Макс. расход (кг/ч)</th>
+              <th>Стабильность нуля (кг/ч)</th>
+              <th>Точность</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr class="highlight-row">
+              <td><strong>D-тип (Δ) Micro</strong></td>
+              <td>DN01</td>
+              <td>0,1</td>
+              <td>1</td>
+              <td>0,000006</td>
+              <td>±0,1%</td>
+            </tr>
+            <tr>
+              <td><strong>D-тип (Δ) Mini</strong></td>
+              <td>DN02</td>
+              <td>1</td>
+              <td>5</td>
+              <td>0,000025</td>
+              <td>±0,1%</td>
+            </tr>
+            <tr>
+              <td><strong>D-тип (Δ) Midi</strong></td>
+              <td>DN04</td>
+              <td>10</td>
+              <td>20</td>
+              <td>0,0001</td>
+              <td>±0,1%</td>
+            </tr>
+            <tr>
+              <td><strong>D-тип (Δ) Standard</strong></td>
+              <td>DN06</td>
+              <td>50</td>
+              <td>100</td>
+              <td>0,0005</td>
+              <td>±0,1%</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="section-header animate-on-scroll" style="margin-top:3rem;">
+        <h3 style="font-size:1.5rem;">Материалы трубок для лабораторных сенсоров</h3>
+        <p>Выбор материала трубок D-типа определяется требованиями к чистоте, химической совместимости и условиям эксплуатации лабораторного стенда.</p>
+      </div>
+
+      <div class="materials-grid animate-on-scroll">
+        <div class="material-card">
+          <div class="mat-icon">⚙️</div>
+          <div class="mat-name">Нержавеющая сталь 316L</div>
+          <div class="mat-desc">Базовый материал для большинства лабораторных и калибровочных задач. Химическая стойкость, низкое выщелачивание, доступная цена.</div>
+        </div>
+        <div class="material-card">
+          <div class="mat-icon">🛡️</div>
+          <div class="mat-name">Хастеллой C4/C276</div>
+          <div class="mat-desc">Рекомендован для коррозионных реагентов и кислот в лабораторных условиях. Максимальная стойкость к хлоридам и окислителям.</div>
+        </div>
+        <div class="material-card">
+          <div class="mat-icon">💎</div>
+          <div class="mat-name">316L с DLC-покрытием</div>
+          <div class="mat-desc">Алмазоподобное покрытие для сред с повышенными требованиями к чистоте. Минимальная адгезия и выщелачивание.</div>
+        </div>
+        <div class="material-card">
+          <div class="mat-icon">🔬</div>
+          <div class="mat-name">Электрополировка Ra ≤ 0,4 мкм</div>
+          <div class="mat-desc">Финишная обработка контактной поверхности для критических применений — биофармацевтика, микроэлектроника, аналитическая химия.</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== RECOMMENDED CONFIGURATIONS ==================== -->
+  <section class="section section-gray" id="configurations">
+    <div class="container">
+      <div class="section-header animate-on-scroll">
+        <span class="section-badge">Рекомендуемые конфигурации</span>
+        <h2>Оптимальные решения для лабораторий и стендов</h2>
+        <p>Проверенные комбинации сенсоров, материалов и трансмиттеров для типовых задач лабораторных и калибровочных применений</p>
+      </div>
+
+      <div class="config-cards animate-on-scroll">
+        <div class="config-card" style="border-top-color:#3B82F6;">
+          <div class="cfg-icon" style="color:#3B82F6;"><i class="fas fa-compact-disc"></i></div>
+          <h4>D-тип (Δ) DN01 — для микрорасходов</h4>
+          <p style="font-size:0.9375rem;color:var(--gray-500);">
+            Специализированный сенсор с трубкой Ø1 мм для измерения сверхмалых расходов от 0,1 г/ч. Идеален для лабораторных дозирующих установок и микрокалориметров.
+          </p>
+          <ul>
+            <li>Измерение от 0,1 г/ч</li>
+            <li>Стабильность нуля 0,000006 кг/ч</li>
+            <li>Минимальный внутренний объём</li>
+            <li>Компактный корпус для встраивания</li>
+          </ul>
+        </div>
+        <div class="config-card" style="border-top-color:var(--accent);">
+          <div class="cfg-icon" style="color:var(--accent);"><i class="fas fa-microchip"></i></div>
+          <h4>Трансмиттер ME100 — метрологический класс</h4>
+          <p style="font-size:0.9375rem;color:var(--gray-500);">
+            Прецизионный трансмиттер для лабораторных и калибровочных задач. Высокоскоростной АЦП, цифровая обработка сигнала, полная метрологическая прослеживаемость.
+          </p>
+          <ul>
+            <li>Частота опроса до 100 Гц</li>
+            <li>Многоточечная калибровка по эталонам</li>
+            <li>HART, Modbus RTU, PROFIBUS PA</li>
+            <li>Архив калибровок на 100 точек</li>
+          </ul>
+        </div>
+        <div class="config-card" style="border-top-color:#10B981;">
+          <div class="cfg-icon" style="color:#10B981;"><i class="fas fa-balance-scale"></i></div>
+          <h4>Эталонный калибровочный стенд</h4>
+          <p style="font-size:0.9375rem;color:var(--gray-500);">
+            Комплексное решение для построения калибровочных установок поверки расходомеров: сенсор D-типа + ME100 + термостатирование.
+          </p>
+          <ul>
+            <li>Точность эталона ±0,05% (с коррекцией)</li>
+            <li>Диапазон калибровки до 100:1</li>
+            <li>Автоматизированный сбор данных</li>
+            <li>Протокол по ГОСТ Р 8.618</li>
+          </ul>
+        </div>
+        <div class="config-card" style="border-top-color:#F59E0B;">
+          <div class="cfg-icon" style="color:#F59E0B;"><i class="fas fa-temperature-low"></i></div>
+          <h4>Изотермический кожух (опция)</h4>
+          <p style="font-size:0.9375rem;color:var(--gray-500);">
+            Опция термостатирования сенсора для калибровочных стендов высшей точности. Исключает влияние флуктуаций температуры окружающей среды.
+          </p>
+          <ul>
+            <li>Стабилизация температуры сенсора ±0,1 °C</li>
+            <li>Дополнительное снижение дрейфа нуля</li>
+            <li>Для государственных эталонных стендов</li>
+            <li>Совместимость с D-типом DN01–DN06</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="highlight-box animate-on-scroll" style="background:linear-gradient(135deg, #FFF7ED, #FFEDD5);border-color:#FED7AA;border-left-color:#F97316;">
+        <h3 style="color:#9A3412;">💡 Рекомендация для лабораторных и калибровочных задач</h3>
+        <p style="color:#9A3412;">
+          Для построения <strong>калибровочного стенда</strong> поверки расходомеров выбирайте:
+          <strong>сенсор D-типа (Δ) DN01/DN02</strong> + <strong>трансмиттер ME100</strong>
+          с поддержкой HART/Modbus. Для максимальной точности дополните конфигурацию
+          <strong>изотермическим кожухом</strong>. Для лабораторного дозирования микрообъёмов
+          (0,1–50 г/ч) оптимален <strong>D-тип DN01</strong> с трубками 316L или Хастеллой
+          в зависимости от химической активности среды. Все конфигурации обеспечивают
+          <strong>точность 0,1%</strong> и <strong>повторяемость &lt; 0,05%</strong>.
+        </p>
+      </div>
+
+      <div class="animate-on-scroll" style="margin-top:2rem;">
+        <div class="section-header">
+          <span class="section-badge">Ключевые параметры</span>
+          <h3 style="font-size:1.25rem;">Технические возможности Mass-EXPERT для лабораторий</h3>
+        </div>
+        <div class="feat-list">
+          <div class="feat-item">
+            <div class="feat-icon">✓</div>
+            <div class="feat-text"><strong>Минимальный массовый расход:</strong> от 0,1 г/ч (DN01)</div>
+          </div>
+          <div class="feat-item">
+            <div class="feat-icon">✓</div>
+            <div class="feat-text"><strong>Погрешность измерений:</strong> ±0,1% – ±0,2%</div>
+          </div>
+          <div class="feat-item">
+            <div class="feat-icon">✓</div>
+            <div class="feat-text"><strong>Повторяемость:</strong> &lt; 0,05%</div>
+          </div>
+          <div class="feat-item">
+            <div class="feat-icon">✓</div>
+            <div class="feat-text"><strong>Динамический диапазон:</strong> до 100:1</div>
+          </div>
+          <div class="feat-item">
+            <div class="feat-icon">✓</div>
+            <div class="feat-text"><strong>Температура среды:</strong> от –196 до +350 °C</div>
+          </div>
+          <div class="feat-item">
+            <div class="feat-icon">✓</div>
+            <div class="feat-text"><strong>Рабочее давление:</strong> до 96 МПа</div>
+          </div>
+          <div class="feat-item">
+            <div class="feat-icon">✓</div>
+            <div class="feat-text"><strong>Выходные сигналы:</strong> 4–20 мА HART, RS-485 Modbus, PROFIBUS PA</div>
+          </div>
+          <div class="feat-item">
+            <div class="feat-icon">✓</div>
+            <div class="feat-text"><strong>Диапазон плотности:</strong> 650–2000 кг/м³</div>
+          </div>
+          <div class="feat-item">
+            <div class="feat-icon">✓</div>
+            <div class="feat-text"><strong>Материалы трубок:</strong> 316L / Хастеллой / DLC-покрытие</div>
+          </div>
+          <div class="feat-item">
+            <div class="feat-icon">✓</div>
+            <div class="feat-text"><strong>Степень защиты:</strong> IP66/IP67</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== CTA ==================== -->
+  <section class="section section-gray" style="text-align:center;">
+    <div class="container">
+      <div class="animate-on-scroll">
+        <span class="section-badge">Готовы к внедрению?</span>
+        <h2>Подберём конфигурацию для вашей задачи</h2>
+        <p style="max-width:600px;margin:1rem auto 2rem;">
+          Наши инженеры помогут выбрать оптимальный тип сенсора и трансмиттера для вашей
+          лабораторной установки или калибровочного стенда — от единичных микрорасходомеров
+          до комплексных метрологических решений.
+        </p>
+        <a href="../index.html#contacts" class="btn btn-primary btn-lg">Связаться с нами</a>
+        <a href="../index.html" class="btn btn-outline" style="margin-left:0.75rem;">На главную</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== FOOTER ==================== -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <h4>Mass-EXPERT</h4>
+          <p>Счетчики-расходомеры массовые кориолисового типа.</p>
+          <p>Госреестр № 98506-26. ТУ 26.51.52-016-88090790-2024.</p>
+          <p style="margin-top:0.75rem;font-size:0.8125rem;">
+            Разработка и производство:<br>
+            ООО «Автоматизация-Метрология-ЭКСПЕРТ», г. Уфа
+          </p>
+        </div>
+        <div class="footer-links">
+          <h5>Продукт</h5>
+          <a href="../index.html#specifications">Характеристики</a>
+          <a href="../index.html#product-line">Типоразмеры</a>
+          <a href="../index.html#options">Модификации</a>
+          <a href="../index.html#transmitters">Трансмиттеры</a>
+        </div>
+        <div class="footer-links">
+          <h5>Документация</h5>
+          <a href="../index.html#certificates">Сертификаты</a>
+          <a href="../docs/ОПИСАНИЕ_ТИПА_2026-98506-26.pdf" target="_blank">Описание типа</a>
+          <a href="../docs/РЭ_Масс_Эксперт_v09.pdf" target="_blank">Руководство по эксплуатации</a>
+          <a href="../docs/2026-МП_98506-26_compressed.pdf" target="_blank">Методика поверки</a>
+        </div>
+        <div class="footer-links">
+          <h5>Контакты</h5>
+          <a href="tel:+734****5350">+7 (347) 286-53-50</a>
+          <a href="mailto:info@ame-info.ru">info@ame-info.ru</a>
+          <a href="https://www.ame-info.ru" target="_blank">www.ame-info.ru</a>
+          <a href="../sitemap.html" style="margin-top:0.5rem;font-size:0.8125rem;color:var(--gray-500);">📋 Карта сайта</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>© <span id="year">2026</span> ООО «Автоматизация-Метрология-ЭКСПЕРТ». Все права защищены.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="../js/main.js"></script>
+</body>
+</html>

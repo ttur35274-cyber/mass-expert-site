@@ -1,0 +1,772 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Фармацевтика — Mass-EXPERT | Кориолисовые расходомеры</title>
+  <meta name="description" content="Кориолисовые расходомеры Mass-EXPERT для фармацевтической промышленности: дозирование API, точность 0,1%, CIP/SIP-совместимость, гигиенический дизайн 3-A, Ra ≤ 0,8 мкм.">
+  <meta name="keywords" content="фармацевтика, массовый расходомер, API, активные фармацевтические субстанции, WFI, вода очищенная, CIP, SIP, гигиенический дизайн, 3-A, кориолисовый расходомер, Mass-EXPERT, дозирование, L-тип, Tri-clamp, SMS">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <!-- Open Graph -->
+  <meta property="og:title" content="Фармацевтика — Mass-EXPERT">
+  <meta property="og:description" content="Дозирование активных фармацевтических субстанций (API) с точностью до 0,1%. CIP/SIP-совместимость, гигиенический дизайн 3-A, Ra ≤ 0,8 мкм.">
+  <meta property="og:type" content="website">
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 40 40'><rect width='40' height='40' rx='8' fill='%23F59E0B'/><text x='20' y='26' text-anchor='middle' font-size='14' font-weight='900' fill='%230F172A' font-family='Inter'>ME</text></svg>">
+  <style>
+    /* Application page specific styles */
+    .cond-hero {
+      position: relative;
+      min-height: 70vh;
+      display: flex;
+      align-items: center;
+      background: linear-gradient(135deg, #0a1628 0%, #1b3a4e 50%, #0d2137 100%);
+      overflow: hidden;
+      padding-top: 72px;
+    }
+    .cond-hero::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background:
+        radial-gradient(ellipse at 70% 30%, rgba(16, 185, 129, 0.10) 0%, transparent 60%),
+        radial-gradient(ellipse at 30% 80%, rgba(255,255,255,0.03) 0%, transparent 50%);
+      pointer-events: none;
+    }
+    .cond-hero-content {
+      position: relative;
+      z-index: 1;
+    }
+    .cond-hero-content .cond-label {
+      display: inline-block;
+      font-size: 0.75rem;
+      color: var(--gray-400);
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      font-weight: 600;
+      margin-bottom: 0.75rem;
+      background: rgba(255,255,255,0.08);
+      padding: 0.3rem 0.75rem;
+      border-radius: 999px;
+    }
+    .cond-hero-content h1 {
+      color: var(--white);
+      margin-bottom: 0.5rem;
+      font-size: 3.5rem;
+    }
+    .cond-hero-content .cond-subtitle {
+      font-size: 1.35rem;
+      color: var(--accent);
+      font-weight: 600;
+      margin-bottom: 1.5rem;
+    }
+    .cond-hero-content .cond-desc {
+      color: rgba(255,255,255,0.8);
+      font-size: 1.0625rem;
+      margin: 1.5rem 0 2rem;
+      max-width: 680px;
+    }
+    .cond-badges {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.75rem;
+      margin-top: 1.5rem;
+    }
+    .cond-badge {
+      background: rgba(255,255,255,0.1);
+      border: 1px solid rgba(255,255,255,0.15);
+      color: rgba(255,255,255,0.9);
+      padding: 0.4rem 1rem;
+      border-radius: 999px;
+      font-size: 0.8125rem;
+      font-weight: 500;
+    }
+    .cond-hero-icon {
+      font-size: 5rem;
+      color: var(--accent);
+      margin-bottom: 1rem;
+      opacity: 0.9;
+    }
+
+    /* Section standard overrides */
+    .section-header .section-icon-big {
+      font-size: 3rem;
+      color: var(--primary);
+      margin-bottom: 0.75rem;
+    }
+
+    /* Media cards grid */
+    .media-cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 1.5rem;
+      margin-top: 2rem;
+    }
+    .media-card {
+      background: var(--white);
+      border: 1px solid var(--gray-200);
+      border-radius: var(--radius-lg);
+      padding: 1.5rem;
+      transition: all var(--transition);
+    }
+    .media-card:hover {
+      border-color: var(--primary);
+      box-shadow: var(--shadow-md);
+      transform: translateY(-2px);
+    }
+    .media-card .mc-icon {
+      font-size: 2.5rem;
+      margin-bottom: 0.75rem;
+    }
+    .media-card h4 {
+      font-size: 1.0625rem;
+      color: var(--primary);
+      margin-bottom: 0.5rem;
+    }
+    .media-card p {
+      font-size: 0.9375rem;
+      color: var(--gray-500);
+      margin: 0;
+    }
+    .media-card .mc-formula {
+      display: inline-block;
+      background: var(--gray-50);
+      border: 1px solid var(--gray-200);
+      border-radius: 999px;
+      padding: 0.2rem 0.75rem;
+      font-size: 0.8125rem;
+      font-weight: 600;
+      color: var(--primary);
+      margin-top: 0.5rem;
+    }
+
+    /* Advantage cards */
+    .adv-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 1.5rem;
+      margin-top: 2rem;
+    }
+    .adv-card-app {
+      background: var(--white);
+      border: 1px solid var(--gray-200);
+      border-radius: var(--radius-lg);
+      padding: 1.5rem;
+      text-align: center;
+      transition: all var(--transition);
+    }
+    .adv-card-app:hover {
+      border-color: var(--primary);
+      box-shadow: var(--shadow-md);
+      transform: translateY(-2px);
+    }
+    .adv-card-app .adv-icon {
+      font-size: 2.5rem;
+      margin-bottom: 0.75rem;
+    }
+    .adv-card-app h4 {
+      font-size: 1.0625rem;
+      color: var(--primary);
+      margin-bottom: 0.5rem;
+    }
+    .adv-card-app p {
+      font-size: 0.9375rem;
+      color: var(--gray-500);
+      margin: 0;
+    }
+
+    /* Config cards */
+    .config-cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 1.5rem;
+      margin-top: 2rem;
+    }
+    .config-card {
+      background: var(--white);
+      border: 1px solid var(--gray-200);
+      border-radius: var(--radius-lg);
+      padding: 1.5rem;
+      border-top: 4px solid var(--primary);
+      transition: all var(--transition);
+    }
+    .config-card:hover {
+      box-shadow: var(--shadow-md);
+      transform: translateY(-2px);
+    }
+    .config-card .cfg-icon {
+      font-size: 2rem;
+      color: var(--primary);
+      margin-bottom: 0.75rem;
+    }
+    .config-card h4 {
+      font-size: 1.0625rem;
+      color: var(--primary);
+      margin-bottom: 0.5rem;
+    }
+    .config-card ul {
+      margin: 0.75rem 0 0;
+      padding: 0;
+      list-style: none;
+    }
+    .config-card ul li {
+      position: relative;
+      padding-left: 1.25rem;
+      margin-bottom: 0.35rem;
+      font-size: 0.875rem;
+      color: var(--gray-600);
+    }
+    .config-card ul li::before {
+      content: '✓';
+      position: absolute;
+      left: 0;
+      color: var(--success, #10B981);
+      font-weight: 700;
+    }
+
+    /* Specs table */
+    .specs-table-wrap {
+      overflow-x: auto;
+      margin: 1.5rem 0;
+    }
+    .specs-table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 0.9375rem;
+    }
+    .specs-table th {
+      background: var(--primary);
+      color: var(--white);
+      padding: 0.75rem 1rem;
+      text-align: left;
+      font-weight: 600;
+    }
+    .specs-table th:first-child {
+      border-radius: var(--radius) 0 0 0;
+    }
+    .specs-table th:last-child {
+      border-radius: 0 var(--radius) 0 0;
+    }
+    .specs-table td {
+      padding: 0.7rem 1rem;
+      border-bottom: 1px solid var(--gray-200);
+    }
+    .specs-table tr:nth-child(even) td {
+      background: var(--gray-50);
+    }
+    .specs-table tr:hover td {
+      background: var(--gray-100);
+    }
+
+    /* Highlight box */
+    .highlight-box {
+      background: linear-gradient(135deg, #E8F5E9, #C8E6C9);
+      border: 1px solid #A5D6A7;
+      border-left: 4px solid #2E7D32;
+      border-radius: var(--radius-lg);
+      padding: 1.5rem 2rem;
+      margin: 2rem 0;
+    }
+    .highlight-box h3 {
+      color: #1B5E20;
+      font-size: 1.0625rem;
+      margin-bottom: 0.5rem;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+    .highlight-box p {
+      color: #1B5E20;
+      font-size: 0.9375rem;
+      margin-bottom: 0;
+    }
+
+    /* Feature list */
+    .feat-list {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1rem;
+      margin: 1.5rem 0;
+    }
+    .feat-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 0.75rem;
+      padding: 0.75rem 0;
+    }
+    .feat-item .feat-icon {
+      flex-shrink: 0;
+      width: 28px;
+      height: 28px;
+      background: rgba(16, 185, 129, 0.12);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 0.875rem;
+      color: #059669;
+      font-weight: 700;
+    }
+    .feat-item .feat-text {
+      font-size: 0.9375rem;
+      color: var(--gray-700);
+    }
+
+    /* Standards list */
+    .standards-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 1rem;
+      margin: 1.5rem 0;
+    }
+    .standard-card {
+      background: var(--white);
+      border: 1px solid var(--gray-200);
+      border-radius: var(--radius);
+      padding: 1.25rem;
+      text-align: center;
+    }
+    .standard-card .std-icon {
+      font-size: 2rem;
+      margin-bottom: 0.5rem;
+    }
+    .standard-card .std-name {
+      font-weight: 700;
+      color: var(--gray-800);
+      font-size: 1rem;
+    }
+    .standard-card .std-desc {
+      font-size: 0.8125rem;
+      color: var(--gray-500);
+      margin-top: 0.25rem;
+    }
+
+    @media (max-width: 768px) {
+      .feat-list { grid-template-columns: 1fr; }
+      .cond-hero { min-height: auto; padding: 6rem 0 3rem; }
+      .cond-hero-content h1 { font-size: 2.5rem; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ==================== NAVIGATION ==================== -->
+  <nav class="navbar" role="navigation" aria-label="Основная навигация">
+    <div class="container">
+      <a href="../index.html" class="navbar-brand">
+        <span class="brand-icon">MASS<br>EXPERT</span>
+        Mass-EXPERT
+      </a>
+      <button class="navbar-toggle" aria-label="Открыть меню">☰</button>
+      <div class="navbar-links">
+        <a href="../index.html#about">О продукте</a>
+        <a href="../index.html#advantages">Преимущества</a>
+        <a href="../index.html#principle">Принцип работы</a>
+        <a href="../index.html#product-line">Типоразмеры</a>
+        <a href="../index.html#specifications">Характеристики</a>
+        <a href="../index.html#contacts">Контакты</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ==================== HERO ==================== -->
+  <section class="cond-hero" id="hero">
+    <div class="container">
+      <div class="cond-hero-content">
+        <span class="cond-label">Отрасль применения</span>
+        <div class="cond-hero-icon"><i class="fas fa-pills"></i></div>
+        <h1>Фармацевтика</h1>
+        <div class="cond-subtitle">Прецизионное дозирование API и вспомогательных веществ</div>
+        <p class="cond-desc">
+          Массовые расходомеры <strong>Mass-EXPERT</strong> для дозирования активных фармацевтических
+          субстанций (API), вспомогательных веществ и технологических жидкостей.
+          Точность до <strong>0,1%</strong> критична для соблюдения рецептуры. CIP/SIP-совместимость
+          и гигиенический дизайн 3-A с шероховатостью Ra ≤ 0,8 мкм гарантируют
+          соответствие строгим требованиям GMP.
+        </p>
+        <div style="display:flex;gap:1rem;flex-wrap:wrap;">
+          <a href="#media" class="btn btn-primary">Типичные среды</a>
+          <a href="#advantages" class="btn btn-outline">Преимущества</a>
+        </div>
+        <div class="cond-badges">
+          <span class="cond-badge">💊 API</span>
+          <span class="cond-badge">💧 WFI / Вода очищенная</span>
+          <span class="cond-badge">🧪 Спирты / Буферы</span>
+          <span class="cond-badge">🧹 CIP/SIP-совместимость</span>
+          <span class="cond-badge">🎯 Точность 0,1%</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== TYPICAL MEDIA ==================== -->
+  <section class="section" id="media">
+    <div class="container">
+      <div class="section-header animate-on-scroll">
+        <span class="section-badge">Типичные среды</span>
+        <h2>Измерение фармацевтических сред</h2>
+        <p>Кориолисовые расходомеры Mass-EXPERT обеспечивают высокоточное измерение широкого спектра фармацевтических жидкостей — от высоковязких субстанций до очищенных растворителей.</p>
+      </div>
+
+      <div class="media-cards animate-on-scroll">
+        <div class="media-card">
+          <div class="mc-icon">💊</div>
+          <h4>Активные фармацевтические субстанции (API)</h4>
+          <p>Дозирование активных ингредиентов в строгом соответствии с рецептурой. Высокая вязкость и склонность к кристаллизации не влияют на точность кориолисового измерения.</p>
+        </div>
+        <div class="media-card">
+          <div class="mc-icon">💧</div>
+          <h4>Вода очищенная (WFI / Purified Water)</h4>
+          <p>Измерение воды для инъекций (WFI) и очищенной воды на всех этапах фармацевтического производства — от приготовления сред до финального ополаскивания оборудования.</p>
+          <div>
+            <span class="mc-formula">WFI</span>
+            <span class="mc-formula">Purified Water</span>
+          </div>
+        </div>
+        <div class="media-card">
+          <div class="mc-icon">🧪</div>
+          <h4>Растворители и реагенты</h4>
+          <p>Этанол, изопропанол, ацетон, метанол и другие органические растворители, используемые в синтезе API, экстракции и очистке. Точное дозирование минимизирует потери дорогих реагентов.</p>
+        </div>
+        <div class="media-card">
+          <div class="mc-icon">🧴</div>
+          <h4>Буферные растворы и вспомогательные вещества</h4>
+          <p>Фосфатные буферы, физиологические растворы, лактоза, крахмал, ПЭГ, глицерин, суспензии и эмульсии. Измерение не зависит от колебаний плотности и вязкости.</p>
+        </div>
+      </div>
+
+      <div class="section-header animate-on-scroll" style="margin-top:3rem;">
+        <h3 style="font-size:1.5rem;">Стандарты и гигиенические требования</h3>
+        <p>Фармацевтическое производство предъявляет высочайшие требования к чистоте, санитарии и прослеживаемости. Mass-EXPERT соответствует ключевым отраслевым стандартам.</p>
+      </div>
+
+      <div class="standards-grid animate-on-scroll">
+        <div class="standard-card">
+          <div class="std-icon">🧹</div>
+          <div class="std-name">Гигиенический дизайн 3-A</div>
+          <div class="std-desc">Сенсоры L-типа (прямотрубные) с гладкими поверхностями без застойных зон. Полный дренаж и отсутствие щелей.</div>
+        </div>
+        <div class="standard-card">
+          <div class="std-icon">✨</div>
+          <div class="std-name">Ra ≤ 0,8 мкм</div>
+          <div class="std-desc">Зеркальная полировка контактных поверхностей предотвращает адгезию микроорганизмов и облегчает CIP/SIP-мойку.</div>
+        </div>
+        <div class="standard-card">
+          <div class="std-icon">🧽</div>
+          <div class="std-name">CIP/SIP-совместимость</div>
+          <div class="std-desc">Прямотрубная конструкция без изгибов обеспечивает эффективную циркуляцию моющих и стерилизующих сред.</div>
+        </div>
+        <div class="standard-card">
+          <div class="std-icon">🔗</div>
+          <div class="std-name">Tri-clamp / SMS</div>
+          <div class="std-desc">Гигиенические соединения для быстрой установки, демонтажа и стерилизации без специального инструмента.</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== ADVANTAGES ==================== -->
+  <section class="section section-gray" id="advantages">
+    <div class="container">
+      <div class="section-header animate-on-scroll">
+        <span class="section-badge">Преимущества</span>
+        <h2>Почему Mass-EXPERT для фармацевтики?</h2>
+        <p>Кориолисовая технология прямого массового измерения — идеальное решение для строго регламентированных фармацевтических процессов</p>
+      </div>
+
+      <div class="adv-grid animate-on-scroll">
+        <div class="adv-card-app">
+          <div class="adv-icon">🎯</div>
+          <h4>Точность дозирования 0,1%</h4>
+          <p>Отклонение состава готового продукта минимизировано. Критически важно для дорогостоящих API: перерасход вещества всего на 0,5% — миллионные потери в масштабе партии.</p>
+        </div>
+        <div class="adv-card-app">
+          <div class="adv-icon">🧹</div>
+          <h4>CIP/SIP-совместимость</h4>
+          <p>Прямотрубные сенсоры L-типа без застойных зон полностью дренируются и легко очищаются паром и моющими растворами. Никаких скрытых полостей.</p>
+        </div>
+        <div class="adv-card-app">
+          <div class="adv-icon">✨</div>
+          <h4>Гигиенический дизайн</h4>
+          <p>Соответствие стандартам 3-A. Шероховатость контактных поверхностей Ra ≤ 0,8 мкм (зеркальная полировка). Полный дренаж и отсутствие мёртвых зон.</p>
+        </div>
+        <div class="adv-card-app">
+          <div class="adv-icon">⚖️</div>
+          <h4>Независимость от свойств среды</h4>
+          <p>Кориолисовое измерение напрямую определяет массу, а не объём. Плотность, вязкость, температура, пузырьки газа или твёрдые включения не искажают результат.</p>
+        </div>
+        <div class="adv-card-app">
+          <div class="adv-icon">📜</div>
+          <h4>Соответствие GMP</h4>
+          <p>Полная прослеживаемость измерений, электронные журналы, защита от несанкционированного доступа к настройкам. Аудит Trail-ready.</p>
+        </div>
+        <div class="adv-card-app">
+          <div class="adv-icon">🔗</div>
+          <h4>Гигиенические соединения</h4>
+          <p>Tri-clamp, SMS, DIN 11851 — любые фармацевтические коннекторы для интеграции в технологические линии без дополнительных переходников.</p>
+        </div>
+      </div>
+
+      <div class="highlight-box animate-on-scroll">
+        <h3>💊 Прямотрубный L-тип — стандарт для фармацевтики</h3>
+        <p>
+          В фармацевтическом производстве неприемлемы застойные зоны, где может развиваться микрофлора.
+          <strong>Прямотрубные сенсоры L-типа</strong> не имеют изгибов — жидкость протекает через
+          прямую трубу без турбулентных завихрений и скрытых полостей. Это обеспечивает полный дренаж,
+          эффективную CIP/SIP-мойку и бескомпромиссную чистоту. В сочетании с зеркальной полировкой
+          (Ra ≤ 0,8 мкм) и гигиеническими соединениями Tri-clamp сенсоры L-типа полностью соответствуют
+          требованиям FDA и GMP для контакта с API и WFI.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== RECOMMENDED CONFIGURATIONS ==================== -->
+  <section class="section" id="configurations">
+    <div class="container">
+      <div class="section-header animate-on-scroll">
+        <span class="section-badge">Рекомендуемые конфигурации</span>
+        <h2>Оптимальные решения для фармацевтики</h2>
+        <p>Проверенные комбинации сенсоров, материалов и опций для типовых задач фармацевтических производств</p>
+      </div>
+
+      <div class="config-cards animate-on-scroll">
+        <div class="config-card" style="border-top-color:#10B981;">
+          <div class="cfg-icon" style="color:#10B981;"><i class="fas fa-tube"></i></div>
+          <h4>Сенсор L-тип (прямотрубный)</h4>
+          <p style="font-size:0.9375rem;color:var(--gray-500);">
+            Прямая труба без изгибов — идеальный выбор для гигиенических фармацевтических применений.
+          </p>
+          <ul>
+            <li>Полный дренаж — нет застойных зон</li>
+            <li>Эффективная CIP/SIP-мойка</li>
+            <li>Минимальное гидравлическое сопротивление</li>
+            <li>DN08–DN50 для всех типовых расходов</li>
+          </ul>
+        </div>
+        <div class="config-card" style="border-top-color:var(--accent);">
+          <div class="cfg-icon" style="color:var(--accent);"><i class="fas fa-hand-sparkles"></i></div>
+          <h4>Гигиенические соединения</h4>
+          <p style="font-size:0.9375rem;color:var(--gray-500);">
+            Специализированные фитинги для фармацевтической и пищевой промышленности.
+          </p>
+          <ul>
+            <li>Tri-clamp — универсальный гигиенический стандарт</li>
+            <li>SMS — шведский фармацевтический стандарт</li>
+            <li>DIN 11851 — молочная резьба</li>
+            <li>Быстросъёмные — без инструмента для CIP/SIP</li>
+          </ul>
+        </div>
+        <div class="config-card" style="border-top-color:#8B5CF6;">
+          <div class="cfg-icon" style="color:#8B5CF6;"><i class="fas fa-microscope"></i></div>
+          <h4>Зеркальная полировка</h4>
+          <p style="font-size:0.9375rem;color:var(--gray-500);">
+            Класс чистоты поверхности для контакта с фармацевтическими средами.
+          </p>
+          <ul>
+            <li>Ra ≤ 0,8 мкм — стандарт для API/WFI</li>
+            <li>Опционально Ra ≤ 0,4 мкм для критических сред</li>
+            <li>Электрополировка — пассивный слой нержавейки</li>
+            <li>Сертификация чистоты поверхности</li>
+          </ul>
+        </div>
+        <div class="config-card" style="border-top-color:#F59E0B;">
+          <div class="cfg-icon" style="color:#F59E0B;"><i class="fas fa-microchip"></i></div>
+          <h4>Трансмиттеры ME100 / ME200</h4>
+          <p style="font-size:0.9375rem;color:var(--gray-500);">
+            Современные электронные блоки управления для интеграции в фармацевтические SCADA/ERP.
+          </p>
+          <ul>
+            <li>ME100 — базовый, 4–20 мА HART, Modbus</li>
+            <li>ME200 — расширенный, PROFIBUS PA, Ethernet/IP</li>
+            <li>Защита настроек паролем (21 CFR Part 11)</li>
+            <li>Электронный журнал событий</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="highlight-box animate-on-scroll">
+        <h3>💡 Рекомендованная конфигурация для дозирования API</h3>
+        <p>
+          Для прецизионного дозирования активных фармацевтических субстанций оптимальна комбинация:
+          <strong>сенсор L-типа</strong> (прямотрубный, DN08–DN15) + <strong>зеркальная полировка Ra ≤ 0,8 мкм</strong>
+          + <strong>соединения Tri-clamp DN25/DN40</strong> + <strong>трансмиттер ME200</strong>
+          с поддержкой Modbus TCP для интеграции в MES/ERP. Точность 0,1% гарантирует строгое
+          соблюдение рецептуры при минимальных потерях дорогостоящего API.
+        </p>
+      </div>
+
+      <div class="animate-on-scroll" style="margin-top:2rem;">
+        <div class="section-header">
+          <span class="section-badge">Ключевые параметры</span>
+          <h3 style="font-size:1.25rem;">Технические возможности Mass-EXPERT для фармацевтики</h3>
+        </div>
+        <div class="feat-list">
+          <div class="feat-item">
+            <div class="feat-icon">✓</div>
+            <div class="feat-text"><strong>Массовый расход жидкости:</strong> от 1 до 1 740 000 кг/ч</div>
+          </div>
+          <div class="feat-item">
+            <div class="feat-icon">✓</div>
+            <div class="feat-text"><strong>Погрешность измерений:</strong> ±0,1% – ±0,2%</div>
+          </div>
+          <div class="feat-item">
+            <div class="feat-icon">✓</div>
+            <div class="feat-text"><strong>Повторяемость:</strong> ±0,05%</div>
+          </div>
+          <div class="feat-item">
+            <div class="feat-icon">✓</div>
+            <div class="feat-text"><strong>Температура среды:</strong> от –50 до +250 °C</div>
+          </div>
+          <div class="feat-item">
+            <div class="feat-icon">✓</div>
+            <div class="feat-text"><strong>Шероховатость поверхности:</strong> Ra ≤ 0,8 мкм (опционально 0,4 мкм)</div>
+          </div>
+          <div class="feat-item">
+            <div class="feat-icon">✓</div>
+            <div class="feat-text"><strong>Гигиенические соединения:</strong> Tri-clamp, SMS, DIN 11851</div>
+          </div>
+          <div class="feat-item">
+            <div class="feat-icon">✓</div>
+            <div class="feat-text"><strong>Выходные сигналы:</strong> 4–20 мА HART, RS-485 Modbus, PROFIBUS PA, Ethernet/IP</div>
+          </div>
+          <div class="feat-item">
+            <div class="feat-icon">✓</div>
+            <div class="feat-text"><strong>Степень защиты:</strong> IP66/IP67, корпус из нержавеющей стали</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== SPECS ==================== -->
+  <section class="section section-gray" id="specs">
+    <div class="container">
+      <div class="section-header animate-on-scroll">
+        <span class="section-badge">Спецификация</span>
+        <h2>Фармацевтические сенсоры Mass-EXPERT</h2>
+        <p>Сводная таблица типоразмеров и характеристик сенсоров, рекомендованных для фармацевтической промышленности.</p>
+      </div>
+
+      <div class="specs-table-wrap animate-on-scroll">
+        <table class="specs-table">
+          <thead>
+            <tr>
+              <th>Модель сенсора</th>
+              <th>Тип</th>
+              <th>DN</th>
+              <th>Диапазон расхода (кг/ч)</th>
+              <th>Макс. давление (МПа)</th>
+              <th>Применение</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>L-08</td>
+              <td>Прямотрубный</td>
+              <td>DN08</td>
+              <td>1 – 180</td>
+              <td>25</td>
+              <td>Микродозирование API</td>
+            </tr>
+            <tr>
+              <td>L-15</td>
+              <td>Прямотрубный</td>
+              <td>DN15</td>
+              <td>2 – 600</td>
+              <td>25</td>
+              <td>Дозирование API, добавок</td>
+            </tr>
+            <tr>
+              <td>L-25</td>
+              <td>Прямотрубный</td>
+              <td>DN25</td>
+              <td>10 – 3 000</td>
+              <td>16</td>
+              <td>WFI, буферы, растворители</td>
+            </tr>
+            <tr>
+              <td>L-40</td>
+              <td>Прямотрубный</td>
+              <td>DN40</td>
+              <td>30 – 9 000</td>
+              <td>16</td>
+              <td>Магистральные потоки WFI</td>
+            </tr>
+            <tr>
+              <td>L-50</td>
+              <td>Прямотрубный</td>
+              <td>DN50</td>
+              <td>60 – 18 000</td>
+              <td>16</td>
+              <td>Основные технологические потоки</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== CTA ==================== -->
+  <section class="section" style="text-align:center;">
+    <div class="container">
+      <div class="animate-on-scroll">
+        <span class="section-badge">Готовы к внедрению?</span>
+        <h2>Подберём конфигурацию для вашего производства</h2>
+        <p style="max-width:600px;margin:1rem auto 2rem;">
+          Наши инженеры помогут подобрать оптимальный сенсор, тип соединений и класс полировки
+          для вашей фармацевтической задачи — от лабораторного стенда до промышленного реактора.
+        </p>
+        <a href="../index.html#contacts" class="btn btn-primary btn-lg">Связаться с нами</a>
+        <a href="../index.html" class="btn btn-outline" style="margin-left:0.75rem;">На главную</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== FOOTER ==================== -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <h4>Mass-EXPERT</h4>
+          <p>Счетчики-расходомеры массовые кориолисового типа.</p>
+          <p>Госреестр № 98506-26. ТУ 26.51.52-016-88090790-2024.</p>
+          <p style="margin-top:0.75rem;font-size:0.8125rem;">
+            Разработка и производство:<br>
+            ООО «Автоматизация-Метрология-ЭКСПЕРТ», г. Уфа
+          </p>
+        </div>
+        <div class="footer-links">
+          <h5>Продукт</h5>
+          <a href="../index.html#specifications">Характеристики</a>
+          <a href="../index.html#product-line">Типоразмеры</a>
+          <a href="../index.html#options">Модификации</a>
+          <a href="../index.html#transmitters">Трансмиттеры</a>
+        </div>
+        <div class="footer-links">
+          <h5>Документация</h5>
+          <a href="../index.html#certificates">Сертификаты</a>
+          <a href="../docs/ОПИСАНИЕ_ТИПА_2026-98506-26.pdf" target="_blank">Описание типа</a>
+          <a href="../docs/РЭ_Масс_Эксперт_v09.pdf" target="_blank">Руководство по эксплуатации</a>
+          <a href="../docs/2026-МП_98506-26_compressed.pdf" target="_blank">Методика поверки</a>
+        </div>
+        <div class="footer-links">
+          <h5>Контакты</h5>
+          <a href="tel:+734****5350">+7 (347) 286-53-50</a>
+          <a href="mailto:info@ame-info.ru">info@ame-info.ru</a>
+          <a href="https://www.ame-info.ru" target="_blank">www.ame-info.ru</a>
+          <a href="../sitemap.html" style="margin-top:0.5rem;font-size:0.8125rem;color:var(--gray-500);">📋 Карта сайта</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>© <span id="year">2026</span> ООО «Автоматизация-Метрология-ЭКСПЕРТ». Все права защищены.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="../js/main.js"></script>
+</body>
+</html>

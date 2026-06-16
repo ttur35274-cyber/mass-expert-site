@@ -1,0 +1,747 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Электроника и полупроводники — Mass-EXPERT | Кориолисовые расходомеры</title>
+  <meta name="description" content="Кориолисовые расходомеры Mass-EXPERT для полупроводниковой промышленности: дозирование фоторезистов, растворителей, CMP-суспензий, кислот высокой чистоты (H2SO4 96%, HCl 37%), UPW. Материалы Хастеллой, PTFE-футеровка, Тантал. Точность до 0,1%, отсутствие генерации частиц.">
+  <meta name="keywords" content="полупроводники, электроника, фоторезист, CMP-суспензия, UPW, сверхчистая вода, дозирование, кориолисовый расходомер, Mass-EXPERT, хастеллой, тантал, PTFE, DN01, DN08, ME100, чистота, без генерации частиц">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <!-- Open Graph -->
+  <meta property="og:title" content="Электроника и полупроводники — Mass-EXPERT">
+  <meta property="og:description" content="Прецизионное дозирование для полупроводниковой промышленности: фоторезисты, CMP-суспензии, кислоты высокой чистоты, UPW. Без генерации частиц. Точность до 0,1%.">
+  <meta property="og:type" content="website">
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 40 40'><rect width='40' height='40' rx='8' fill='%23F59E0B'/><text x='20' y='26' text-anchor='middle' font-size='14' font-weight='900' fill='%230F172A' font-family='Inter'>ME</text></svg>">
+  <style>
+    /* Electronics / Semiconductors page specific styles */
+    .elec-hero {
+      position: relative;
+      min-height: 70vh;
+      display: flex;
+      align-items: center;
+      background: linear-gradient(135deg, #0a1628 0%, #1a2a5e 50%, #0d1f3f 100%);
+      overflow: hidden;
+      padding-top: 72px;
+    }
+    .elec-hero::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background:
+        radial-gradient(ellipse at 70% 30%, rgba(99, 102, 241, 0.12) 0%, transparent 60%),
+        radial-gradient(ellipse at 30% 80%, rgba(56, 189, 248, 0.06) 0%, transparent 50%);
+      pointer-events: none;
+    }
+    .elec-hero-content {
+      position: relative;
+      z-index: 1;
+    }
+    .elec-hero-content .elec-label {
+      display: inline-block;
+      font-size: 0.75rem;
+      color: var(--gray-400);
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      font-weight: 600;
+      margin-bottom: 0.75rem;
+      background: rgba(255,255,255,0.08);
+      padding: 0.3rem 0.75rem;
+      border-radius: 999px;
+    }
+    .elec-hero-content h1 {
+      color: var(--white);
+      margin-bottom: 0.5rem;
+      font-size: 3.5rem;
+    }
+    .elec-hero-content .elec-subtitle {
+      font-size: 1.35rem;
+      color: var(--accent);
+      font-weight: 600;
+      margin-bottom: 1.5rem;
+    }
+    .elec-hero-content .elec-desc {
+      color: rgba(255,255,255,0.8);
+      font-size: 1.0625rem;
+      margin: 1.5rem 0 2rem;
+      max-width: 680px;
+    }
+    .elec-badges {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.75rem;
+      margin-top: 1.5rem;
+    }
+    .elec-badge {
+      background: rgba(255,255,255,0.1);
+      border: 1px solid rgba(255,255,255,0.15);
+      color: rgba(255,255,255,0.9);
+      padding: 0.4rem 1rem;
+      border-radius: 999px;
+      font-size: 0.8125rem;
+      font-weight: 500;
+    }
+    .elec-hero-icon {
+      font-size: 5rem;
+      color: var(--accent);
+      margin-bottom: 1rem;
+      opacity: 0.9;
+    }
+
+    /* Section standard overrides */
+    .section-header .section-icon-big {
+      font-size: 3rem;
+      color: var(--primary);
+      margin-bottom: 0.75rem;
+    }
+
+    /* Media cards grid */
+    .media-cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 1.5rem;
+      margin-top: 2rem;
+    }
+    .media-card {
+      background: var(--white);
+      border: 1px solid var(--gray-200);
+      border-radius: var(--radius-lg);
+      padding: 1.5rem;
+      transition: all var(--transition);
+    }
+    .media-card:hover {
+      border-color: var(--primary);
+      box-shadow: var(--shadow-md);
+      transform: translateY(-2px);
+    }
+    .media-card .mc-icon {
+      font-size: 2.5rem;
+      margin-bottom: 0.75rem;
+    }
+    .media-card h4 {
+      font-size: 1.0625rem;
+      color: var(--primary);
+      margin-bottom: 0.5rem;
+    }
+    .media-card p {
+      font-size: 0.9375rem;
+      color: var(--gray-500);
+      margin: 0;
+    }
+    .media-card .mc-formula {
+      display: inline-block;
+      background: var(--gray-50);
+      border: 1px solid var(--gray-200);
+      border-radius: 999px;
+      padding: 0.2rem 0.75rem;
+      font-size: 0.8125rem;
+      font-weight: 600;
+      color: var(--primary);
+      margin-top: 0.5rem;
+    }
+
+    /* Advantage cards */
+    .adv-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 1.5rem;
+      margin-top: 2rem;
+    }
+    .adv-card-app {
+      background: var(--white);
+      border: 1px solid var(--gray-200);
+      border-radius: var(--radius-lg);
+      padding: 1.5rem;
+      text-align: center;
+      transition: all var(--transition);
+    }
+    .adv-card-app:hover {
+      border-color: var(--primary);
+      box-shadow: var(--shadow-md);
+      transform: translateY(-2px);
+    }
+    .adv-card-app .adv-icon {
+      font-size: 2.5rem;
+      margin-bottom: 0.75rem;
+    }
+    .adv-card-app h4 {
+      font-size: 1.0625rem;
+      color: var(--primary);
+      margin-bottom: 0.5rem;
+    }
+    .adv-card-app p {
+      font-size: 0.9375rem;
+      color: var(--gray-500);
+      margin: 0;
+    }
+
+    /* Config cards */
+    .config-cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 1.5rem;
+      margin-top: 2rem;
+    }
+    .config-card {
+      background: var(--white);
+      border: 1px solid var(--gray-200);
+      border-radius: var(--radius-lg);
+      padding: 1.5rem;
+      border-top: 4px solid var(--primary);
+      transition: all var(--transition);
+    }
+    .config-card:hover {
+      box-shadow: var(--shadow-md);
+      transform: translateY(-2px);
+    }
+    .config-card .cfg-icon {
+      font-size: 2rem;
+      color: var(--primary);
+      margin-bottom: 0.75rem;
+    }
+    .config-card h4 {
+      font-size: 1.0625rem;
+      color: var(--primary);
+      margin-bottom: 0.5rem;
+    }
+    .config-card ul {
+      margin: 0.75rem 0 0;
+      padding: 0;
+      list-style: none;
+    }
+    .config-card ul li {
+      position: relative;
+      padding-left: 1.25rem;
+      margin-bottom: 0.35rem;
+      font-size: 0.875rem;
+      color: var(--gray-600);
+    }
+    .config-card ul li::before {
+      content: '✓';
+      position: absolute;
+      left: 0;
+      color: var(--success, #10B981);
+      font-weight: 700;
+    }
+
+    /* Materials table */
+    .materials-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 1rem;
+      margin: 1.5rem 0;
+    }
+    .material-card {
+      background: var(--gray-50);
+      border: 1px solid var(--gray-200);
+      border-radius: var(--radius);
+      padding: 1.25rem;
+      text-align: center;
+    }
+    .material-card .mat-icon {
+      font-size: 2rem;
+      margin-bottom: 0.5rem;
+    }
+    .material-card .mat-name {
+      font-weight: 700;
+      color: var(--gray-800);
+      font-size: 1rem;
+    }
+    .material-card .mat-desc {
+      font-size: 0.8125rem;
+      color: var(--gray-500);
+      margin-top: 0.25rem;
+    }
+
+    /* Highlight box */
+    .highlight-box {
+      background: linear-gradient(135deg, #E0F2FE, #BAE6FD);
+      border: 1px solid #7DD3FC;
+      border-left: 4px solid #0284C7;
+      border-radius: var(--radius-lg);
+      padding: 1.5rem 2rem;
+      margin: 2rem 0;
+    }
+    .highlight-box h3 {
+      color: #0C4A6E;
+      font-size: 1.0625rem;
+      margin-bottom: 0.5rem;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+    .highlight-box p {
+      color: #0C4A6E;
+      font-size: 0.9375rem;
+      margin-bottom: 0;
+    }
+
+    /* Particle-free highlight */
+    .highlight-box.particle-free {
+      background: linear-gradient(135deg, #F3E8FF, #E9D5FF);
+      border-color: #D8B4FE;
+      border-left-color: #9333EA;
+    }
+    .highlight-box.particle-free h3,
+    .highlight-box.particle-free p {
+      color: #4C1D95;
+    }
+
+    /* Feature list */
+    .feat-list {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1rem;
+      margin: 1.5rem 0;
+    }
+    .feat-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 0.75rem;
+      padding: 0.75rem 0;
+    }
+    .feat-item .feat-icon {
+      flex-shrink: 0;
+      width: 28px;
+      height: 28px;
+      background: rgba(99, 102, 241, 0.12);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 0.875rem;
+      color: #6366F1;
+      font-weight: 700;
+    }
+    .feat-item .feat-text {
+      font-size: 0.9375rem;
+      color: var(--gray-700);
+    }
+
+    /* Gas media chips */
+    .gas-chips {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+      margin-top: 0.75rem;
+    }
+    .gas-chip {
+      background: var(--gray-50);
+      border: 1px solid var(--gray-200);
+      border-radius: 999px;
+      padding: 0.2rem 0.65rem;
+      font-size: 0.8125rem;
+      font-weight: 500;
+      color: var(--gray-600);
+      font-family: var(--font-mono, monospace);
+    }
+
+    @media (max-width: 768px) {
+      .feat-list { grid-template-columns: 1fr; }
+      .elec-hero { min-height: auto; padding: 6rem 0 3rem; }
+      .elec-hero-content h1 { font-size: 2.5rem; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ==================== NAVIGATION ==================== -->
+  <nav class="navbar" role="navigation" aria-label="Основная навигация">
+    <div class="container">
+      <a href="../index.html" class="navbar-brand">
+        <span class="brand-icon">MASS<br>EXPERT</span>
+        Mass-EXPERT
+      </a>
+      <button class="navbar-toggle" aria-label="Открыть меню">☰</button>
+      <div class="navbar-links">
+        <a href="../index.html#about">О продукте</a>
+        <a href="../index.html#advantages">Преимущества</a>
+        <a href="../index.html#principle">Принцип работы</a>
+        <a href="../index.html#product-line">Типоразмеры</a>
+        <a href="../index.html#specifications">Характеристики</a>
+        <a href="../index.html#contacts">Контакты</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ==================== HERO ==================== -->
+  <section class="elec-hero" id="hero">
+    <div class="container">
+      <div class="elec-hero-content">
+        <span class="elec-label">Отрасль применения</span>
+        <div class="elec-hero-icon"><i class="fas fa-microchip"></i></div>
+        <h1>Электроника и полупроводники</h1>
+        <div class="elec-subtitle">Прецизионное дозирование в производстве микроэлектроники</div>
+        <p class="elec-desc">
+          Массовые расходомеры <strong>Mass-EXPERT</strong> для дозирования химических материалов
+          в полупроводниковой промышленности — фоторезистов, растворителей, CMP-суспензий,
+          кислот высокой чистоты и сверхчистой воды (UPW). Отсутствие подвижных частей
+          исключает генерацию частиц, обеспечивая безупречную чистоту процесса.
+        </p>
+        <div style="display:flex;gap:1rem;flex-wrap:wrap;">
+          <a href="#media" class="btn btn-primary">Типичные среды</a>
+          <a href="#advantages" class="btn btn-outline">Преимущества</a>
+        </div>
+        <div class="elec-badges">
+          <span class="elec-badge">🔬 Фоторезисты</span>
+          <span class="elec-badge">💧 CMP-суспензии</span>
+          <span class="elec-badge">🧪 Кислоты высокой чистоты</span>
+          <span class="elec-badge">💎 UPW</span>
+          <span class="elec-badge">🛡️ Без генерации частиц</span>
+          <span class="elec-badge">🎯 Точность 0,1%</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== TYPICAL MEDIA ==================== -->
+  <section class="section" id="media">
+    <div class="container">
+      <div class="section-header animate-on-scroll">
+        <span class="section-badge">Типичные среды</span>
+        <h2>Материалы для производства микроэлектроники</h2>
+        <p>Кориолисовые расходомеры Mass-EXPERT обеспечивают прецизионное дозирование жидкостей и газов, используемых в полупроводниковых технологических процессах — от фотолитографии до химико-механической planarизации и очистки пластин.</p>
+      </div>
+
+      <div class="media-cards animate-on-scroll">
+        <div class="media-card">
+          <div class="mc-icon">🧪</div>
+          <h4>Кислоты высокой чистоты</h4>
+          <p>Серная кислота 96% (H₂SO₄), соляная кислота 37% (HCl), азотная кислота (HNO₃), фтороводородная кислота (HF), ортофосфорная кислота (H₃PO₄) — все в спецификации высокой чистоты (SEMI) для мокрых процессов травления и очистки пластин.</p>
+          <div>
+            <span class="mc-formula">H₂SO₄ 96%</span>
+            <span class="mc-formula">HCl 37%</span>
+            <span class="mc-formula">HF</span>
+            <span class="mc-formula">HNO₃</span>
+          </div>
+        </div>
+        <div class="media-card">
+          <div class="mc-icon">🔬</div>
+          <h4>Фоторезисты</h4>
+          <p>Позитивные и негативные фоторезисты (i-line, KrF, ArF, EUV), антиотражающие покрытия (BARC, TARC), проявители и промывочные растворы. Точное дозирование объёмов от микролитров обеспечивает равномерность нанесения на пластину.</p>
+        </div>
+        <div class="media-card">
+          <div class="mc-icon">💎</div>
+          <h4>CMP-суспензии</h4>
+          <p>Абразивные суспензии на основе коллоидного кремнезёма (SiO₂), оксида церия (CeO₂), глинозёма (Al₂O₃) для химико-механической planarизации. Устойчивость к абразивному износу и высокая точность поддержания расхода.</p>
+        </div>
+        <div class="media-card">
+          <div class="mc-icon">💧</div>
+          <h4>UPW и растворители</h4>
+          <p>Сверхчистая вода (UPW, 18,2 МО·см), изопропанол (IPA), ацетон, N-метилпирролидон (NMP), пропиленгликольмонометиловый эфир (PGME), EBR-растворители для удаления фоторезиста.</p>
+          <div>
+            <span class="mc-formula">UPW</span>
+            <span class="mc-formula">IPA</span>
+            <span class="mc-formula">NMP</span>
+            <span class="mc-formula">PGME</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="section-header animate-on-scroll" style="margin-top:3rem;">
+        <span class="section-badge">Специальные газы</span>
+        <h3 style="font-size:1.5rem;">Газообразные среды для полупроводниковых процессов</h3>
+        <p>Помимо жидкостей, Mass-EXPERT применяется для дозирования специальных газов, используемых в CVD, PVD, травлении и других технологических этапах.</p>
+      </div>
+
+      <div class="media-cards animate-on-scroll">
+        <div class="media-card">
+          <div class="mc-icon">💨</div>
+          <h4>Инертные и защитные газы</h4>
+          <p>Азот (N₂), аргон (Ar), гелий (He) — для создания инертной атмосферы, продувки линий, барботирования химических растворов и пневматического транспорта.</p>
+          <div class="gas-chips">
+            <span class="gas-chip">N₂</span>
+            <span class="gas-chip">Ar</span>
+            <span class="gas-chip">He</span>
+          </div>
+        </div>
+        <div class="media-card">
+          <div class="mc-icon">⚛️</div>
+          <h4>Процессные газы</h4>
+          <p>Тетрафторметан (CF₄), трифторид азота (NF₃), гексафторид вольфрама (WF₆), моносилан (SiH₄), аммиак (NH₃), закись азота (N₂O) и другие, используемые в CVD-осаждении и плазменном травлении.</p>
+          <div class="gas-chips">
+            <span class="gas-chip">CF₄</span>
+            <span class="gas-chip">NF₃</span>
+            <span class="gas-chip">SiH₄</span>
+            <span class="gas-chip">NH₃</span>
+            <span class="gas-chip">WF₆</span>
+          </div>
+        </div>
+        <div class="media-card">
+          <div class="mc-icon">🌡️</div>
+          <h4>Криогенные и сжатые газы</h4>
+          <p>Сжиженные газы (LN₂, LAr) при низких температурах, а также сжатые газы высокого давления для процессов ионной имплантации и молекулярно-лучевой эпитаксии.</p>
+          <div class="gas-chips">
+            <span class="gas-chip">LN₂</span>
+            <span class="gas-chip">LAr</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="section-header animate-on-scroll" style="margin-top:3rem;">
+        <h3 style="font-size:1.5rem;">Материалы трубок для полупроводниковой чистоты</h3>
+        <p>Выбор материала измерительных трубок критичен для сохранения высокой чистоты технологических сред и предотвращения загрязнения пластин.</p>
+      </div>
+
+      <div class="materials-grid animate-on-scroll">
+        <div class="material-card">
+          <div class="mat-icon">🛡️</div>
+          <div class="mat-name">Хастеллой (C4/C276)</div>
+          <div class="mat-desc">Высокая стойкость к кислотам и галогенам. Рекомендован для горячей H₂SO₄, HCl, фторсодержащих сред.</div>
+        </div>
+        <div class="material-card">
+          <div class="mat-icon">🧪</div>
+          <div class="mat-name">PTFE-футеровка</div>
+          <div class="mat-desc">Химическая инертность и минимальное загрязнение среды. Идеальна для UPW и кислот высокой чистоты. Без выщелачивания.</div>
+        </div>
+        <div class="material-card">
+          <div class="mat-icon">🔩</div>
+          <div class="mat-name">Тантал</div>
+          <div class="mat-desc">Максимальная коррозионная стойкость к самым агрессивным средам. Подходит для HF, царской водки, горячих концентрированных кислот.</div>
+        </div>
+        <div class="material-card">
+          <div class="mat-icon">🔬</div>
+          <div class="mat-name">Нержавеющая сталь 316L</div>
+          <div class="mat-desc">Базовый материал для UPW, растворителей и менее агрессивных сред. Электрополированная поверхность снижает риск загрязнения.</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== ADVANTAGES ==================== -->
+  <section class="section section-gray" id="advantages">
+    <div class="container">
+      <div class="section-header animate-on-scroll">
+        <span class="section-badge">Преимущества</span>
+        <h2>Почему Mass-EXPERT для полупроводников?</h2>
+        <p>Кориолисовая технология прямого массового измерения — оптимальное решение для требований микроэлектронного производства</p>
+      </div>
+
+      <div class="adv-grid animate-on-scroll">
+        <div class="adv-card-app">
+          <div class="adv-icon">🧹</div>
+          <h4>Отсутствие генерации частиц</h4>
+          <p>В конструкции нет подвижных частей, уплотнений, застойных зон и вращающихся элементов. Нулевой риск загрязнения технологических сред частицами износа.</p>
+        </div>
+        <div class="adv-card-app">
+          <div class="adv-icon">🎯</div>
+          <h4>Точность до 0,1%</h4>
+          <p>Прецизионное дозирование с погрешностью не более 0,1% обеспечивает воспроизводимость нанесения фоторезиста, CMP-суспензий и кислот при обработке каждой пластины.</p>
+        </div>
+        <div class="adv-card-app">
+          <div class="adv-icon">🛡️</div>
+          <h4>Материалы высокой чистоты</h4>
+          <p>Хастеллой, PTFE-футеровка, тантал — материалы, исключающие выщелачивание примесей и соответствующее SEMI-стандартам для контакта с технологическими жидкостями.</p>
+        </div>
+        <div class="adv-card-app">
+          <div class="adv-icon">📏</div>
+          <h4>Компактные малые DN</h4>
+          <p>Сенсоры DN01–DN08 для сверхмалых расходов — от 0,1 г/мин. Идеальны для дозирования дорогостоящих фоторезистов и фотохимикатов, минимизируя потери материала.</p>
+        </div>
+        <div class="adv-card-app">
+          <div class="adv-icon">🚫</div>
+          <h4>Независимость от вязкости</h4>
+          <p>Прямое измерение массы не зависит от изменений вязкости и плотности среды. Стабильная точность при дозировании CMP-суспензий, меняющих вязкость с температурой.</p>
+        </div>
+        <div class="adv-card-app">
+          <div class="adv-icon">🔄</div>
+          <h4>Чистовая промывка (CIP/SIP)</h4>
+          <p>Гладкая проточная часть без застойных зон обеспечивает эффективную CIP/SIP-мойку. Минимальное время замены продукта и исключение перекрёстного загрязнения.</p>
+        </div>
+      </div>
+
+      <div class="highlight-box particle-free animate-on-scroll">
+        <h3>🧹 Нулевая генерация частиц — ключевое преимущество в микроэлектронике</h3>
+        <p>
+          В полупроводниковом производстве каждая посторонняя частица может стать причиной брака микросхемы.
+          Расходомеры Mass-EXPERT не имеют подвижных частей, трущихся уплотнений или подшипников —
+          <strong>единственным движущимся элементом является сама среда</strong>, колеблющаяся в измерительных трубках.
+          Это полностью исключает генерацию частиц износа, гарантируя соответствие
+          самым строгим требованиям класса чистоты ISO 1–3 и SEMI F57.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== RECOMMENDED CONFIGURATIONS ==================== -->
+  <section class="section" id="configurations">
+    <div class="container">
+      <div class="section-header animate-on-scroll">
+        <span class="section-badge">Рекомендуемые конфигурации</span>
+        <h2>Оптимальные решения для полупроводниковой промышленности</h2>
+        <p>Проверенные комбинации сенсоров, материалов и опций для типовых задач микроэлектронного производства</p>
+      </div>
+
+      <div class="config-cards animate-on-scroll">
+        <div class="config-card" style="border-top-color:#6366F1;">
+          <div class="cfg-icon" style="color:#6366F1;"><i class="fas fa-compress-alt"></i></div>
+          <h4>Малые сенсоры DN01–DN08</h4>
+          <p style="font-size:0.9375rem;color:var(--gray-500);">
+            Компактные сенсоры с минимальным внутренним объёмом для прецизионного дозирования микролитровых объёмов дорогостоящих химикатов.
+          </p>
+          <ul>
+            <li>Диапазон расходов от 0,1 г/мин (DN01)</li>
+            <li>Минимальный мёртвый объём — снижение потерь реагента</li>
+            <li>Идеальны для фоторезистов и фотохимикатов</li>
+            <li>Компактная конструкция для встраивания в оборудование</li>
+          </ul>
+        </div>
+        <div class="config-card" style="border-top-color:#0284C7;">
+          <div class="cfg-icon" style="color:#0284C7;"><i class="fas fa-shield-halved"></i></div>
+          <h4>Хастеллой / Тантал / PTFE</h4>
+          <p style="font-size:0.9375rem;color:var(--gray-500);">
+            Коррозионностойкие материалы, обеспечивающие максимальную чистоту среды и устойчивость к агрессивным технологическим жидкостям.
+          </p>
+          <ul>
+            <li>Хастеллой C4/C276 — для кислот и галогенсодержащих сред</li>
+            <li>PTFE-футеровка — для UPW и кислот высокой чистоты</li>
+            <li>Тантал — для экстремально агрессивных сред (HF, царская водка)</li>
+            <li>Полное соответствие стандартам SEMI</li>
+          </ul>
+        </div>
+        <div class="config-card" style="border-top-color:var(--accent);">
+          <div class="cfg-icon" style="color:var(--accent);"><i class="fas fa-microchip"></i></div>
+          <h4>Трансмиттер ME100</h4>
+          <p style="font-size:0.9375rem;color:var(--gray-500);">
+            Компактный интеллектуальный трансмиттер для встраивания в полупроводниковое технологическое оборудование.
+          </p>
+          <ul>
+            <li>Поддержка Modbus RTU — интеграция с PLC/SCADA</li>
+            <li>Аналоговый выход 4–20 мА с HART-протоколом</li>
+            <li>Локальная регистрация данных и событий</li>
+            <li>Автоматическая диагностика состояния сенсора</li>
+          </ul>
+        </div>
+        <div class="config-card" style="border-top-color:#10B981;">
+          <div class="cfg-icon" style="color:#10B981;"><i class="fas fa-bullseye"></i></div>
+          <h4>Точность 0,1% для прецизионного дозирования</h4>
+          <p style="font-size:0.9375rem;color:var(--gray-500);">
+            Высочайший класс точности для ответственных задач дозирования, где каждая капля реагента влияет на выход годных кристаллов.
+          </p>
+          <ul>
+            <li>Основная погрешность ±0,1% от измеряемого расхода</li>
+            <li>Повторяемость ±0,05%</li>
+            <li>Стабильность нулевой точки от 0,008 кг/ч</li>
+            <li>Динамический диапазон до 100:1</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="highlight-box animate-on-scroll" style="background:linear-gradient(135deg, #F0FDF4, #DCFCE7);border-color:#86EFAC;border-left-color:#16A34A;">
+        <h3 style="color:#14532D;">💡 Рекомендация для дозирования фоторезистов</h3>
+        <p style="color:#14532D;">
+          Для прецизионного дозирования фоторезистов на пластины выбирайте комбинацию:
+          <strong>сенсор DN01–DN04</strong> из <strong>Хастеллоя C276</strong> или с <strong>PTFE-футеровкой</strong>
+          + <strong>трансмиттер ME100</strong> с Modbus RTU. Такая конфигурация обеспечивает точность 0,1%,
+          нулевое загрязнение среды и минимальный мёртвый объём — экономию дорогостоящих фотохимикатов
+          при каждой смене продукта.
+        </p>
+      </div>
+
+      <div class="animate-on-scroll" style="margin-top:2rem;">
+        <div class="section-header">
+          <span class="section-badge">Ключевые параметры</span>
+          <h3 style="font-size:1.25rem;">Технические возможности Mass-EXPERT для электроники</h3>
+        </div>
+        <div class="feat-list">
+          <div class="feat-item">
+            <div class="feat-icon">✓</div>
+            <div class="feat-text"><strong>Массовый расход жидкостей:</strong> от 0,001 до 87 000 кг/ч (DN01–DN50)</div>
+          </div>
+          <div class="feat-item">
+            <div class="feat-icon">✓</div>
+            <div class="feat-text"><strong>Погрешность измерений:</strong> ±0,1% – ±0,2%</div>
+          </div>
+          <div class="feat-item">
+            <div class="feat-icon">✓</div>
+            <div class="feat-text"><strong>Диапазон плотности:</strong> 650–2000 кг/м³</div>
+          </div>
+          <div class="feat-item">
+            <div class="feat-icon">✓</div>
+            <div class="feat-text"><strong>Температура среды:</strong> от –196 до +350 °C</div>
+          </div>
+          <div class="feat-item">
+            <div class="feat-icon">✓</div>
+            <div class="feat-text"><strong>Рабочее давление:</strong> до 96 МПа</div>
+          </div>
+          <div class="feat-item">
+            <div class="feat-icon">✓</div>
+            <div class="feat-text"><strong>Выходные сигналы:</strong> 4–20 мА HART, RS-485 Modbus, PROFIBUS PA</div>
+          </div>
+          <div class="feat-item">
+            <div class="feat-icon">✓</div>
+            <div class="feat-text"><strong>Температура окружающей среды:</strong> –40 до +60 °C</div>
+          </div>
+          <div class="feat-item">
+            <div class="feat-icon">✓</div>
+            <div class="feat-text"><strong>Степень защиты:</strong> IP66/IP67</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== CTA ==================== -->
+  <section class="section section-gray" style="text-align:center;">
+    <div class="container">
+      <div class="animate-on-scroll">
+        <span class="section-badge">Готовы к внедрению?</span>
+        <h2>Подберём конфигурацию для вашего процесса</h2>
+        <p style="max-width:600px;margin:1rem auto 2rem;">
+          Наши инженеры помогут выбрать оптимальный тип сенсора, материал трубок и дополнительное
+          оснащение для вашей задачи в полупроводниковом производстве — от лабораторного стенда
+          до промышленной линии обработки 300-мм пластин.
+        </p>
+        <a href="../index.html#contacts" class="btn btn-primary btn-lg">Связаться с нами</a>
+        <a href="../index.html" class="btn btn-outline" style="margin-left:0.75rem;">На главную</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== FOOTER ==================== -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <h4>Mass-EXPERT</h4>
+          <p>Счетчики-расходомеры массовые кориолисового типа.</p>
+          <p>Госреестр № 98506-26. ТУ 26.51.52-016-88090790-2024.</p>
+          <p style="margin-top:0.75rem;font-size:0.8125rem;">
+            Разработка и производство:<br>
+            ООО «Автоматизация-Метрология-ЭКСПЕРТ», г. Уфа
+          </p>
+        </div>
+        <div class="footer-links">
+          <h5>Продукт</h5>
+          <a href="../index.html#specifications">Характеристики</a>
+          <a href="../index.html#product-line">Типоразмеры</a>
+          <a href="../index.html#options">Модификации</a>
+          <a href="../index.html#transmitters">Трансмиттеры</a>
+        </div>
+        <div class="footer-links">
+          <h5>Документация</h5>
+          <a href="../index.html#certificates">Сертификаты</a>
+          <a href="../docs/ОПИСАНИЕ_ТИПА_2026-98506-26.pdf" target="_blank">Описание типа</a>
+          <a href="../docs/РЭ_Масс_Эксперт_v09.pdf" target="_blank">Руководство по эксплуатации</a>
+          <a href="../docs/2026-МП_98506-26_compressed.pdf" target="_blank">Методика поверки</a>
+        </div>
+        <div class="footer-links">
+          <h5>Контакты</h5>
+          <a href="tel:+734****5350">+7 (347) 286-53-50</a>
+          <a href="mailto:info@ame-info.ru">info@ame-info.ru</a>
+          <a href="https://www.ame-info.ru" target="_blank">www.ame-info.ru</a>
+          <a href="../sitemap.html" style="margin-top:0.5rem;font-size:0.8125rem;color:var(--gray-500);">📋 Карта сайта</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>© <span id="year">2026</span> ООО «Автоматизация-Метрология-ЭКСПЕРТ». Все права защищены.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="../js/main.js"></script>
+</body>
+</html>

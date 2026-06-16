@@ -1,0 +1,613 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Коммерческий учёт — Mass-EXPERT | Кориолисовые расходомеры</title>
+  <meta name="description" content="Кориолисовые расходомеры Mass-EXPERT для коммерческого учёта нефти, нефтепродуктов, газа и СУГ. Финансовые расчёты между поставщиком и потребителем. Госреестр СИ № 98506-26. Точность 0,1–0,15%. Интеграция в АСУ ТП и СИКН.">
+  <meta name="keywords" content="коммерческий учёт, кориолисовый расходомер, Mass-EXPERT, учёт нефти, нефтепродукты, газ, СУГ, Госреестр, 98506-26, точность 0.1%, СИКН, АСУ ТП, поверка, метрологическое обеспечение, финансовые расчёты, поставщик, потребитель, U-тип, ME200 Ex, ответные фланцы">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <!-- Open Graph -->
+  <meta property="og:title" content="Коммерческий учёт — Mass-EXPERT">
+  <meta property="og:description" content="Кориолисовые расходомеры Mass-EXPERT для финансовых расчётов между поставщиком и потребителем. Госреестр № 98506-26. Точность 0,1–0,15%.">
+  <meta property="og:type" content="website">
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 40 40'><rect width='40' height='40' rx='8' fill='%23F59E0B'/><text x='20' y='26' text-anchor='middle' font-size='14' font-weight='900' fill='%230F172A' font-family='Inter'>ME</text></svg>">
+  <style>
+    /* Page-specific styling */
+    .industry-hero-icon {
+      font-size: 3.5rem;
+      color: var(--accent);
+      margin-bottom: 1rem;
+    }
+    .media-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+      margin-top: 0.5rem;
+    }
+    .media-tag {
+      background: rgba(255,255,255,0.1);
+      border: 1px solid rgba(255,255,255,0.15);
+      color: rgba(255,255,255,0.9);
+      padding: 0.35rem 0.9rem;
+      border-radius: 999px;
+      font-size: 0.8125rem;
+      font-weight: 500;
+    }
+    .config-list {
+      list-style: none;
+      padding: 0;
+      margin: 1rem 0;
+    }
+    .config-list li {
+      padding: 0.5rem 0;
+      padding-left: 1.75rem;
+      position: relative;
+      font-size: 0.9375rem;
+      color: var(--gray-700);
+    }
+    .config-list li::before {
+      content: '▸';
+      position: absolute;
+      left: 0;
+      color: var(--accent);
+      font-weight: 700;
+    }
+    .config-card {
+      background: var(--gray-50);
+      border: 1px solid var(--gray-200);
+      border-radius: var(--radius-lg);
+      padding: 1.5rem;
+      margin: 1.5rem 0;
+    }
+    .config-card h4 {
+      color: var(--primary);
+      margin-bottom: 0.75rem;
+      font-size: 1rem;
+    }
+    .advantages-list {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+      max-width: 800px;
+      margin: 0 auto;
+    }
+    .adv-list-item {
+      display: flex;
+      gap: 1rem;
+      align-items: flex-start;
+      background: var(--white);
+      border: 1px solid var(--gray-200);
+      border-radius: var(--radius);
+      padding: 1.25rem 1.5rem;
+      transition: all var(--transition);
+    }
+    .adv-list-item:hover {
+      border-color: var(--accent);
+      box-shadow: var(--shadow-md);
+      transform: translateX(4px);
+    }
+    .adv-list-icon {
+      flex-shrink: 0;
+      width: 44px;
+      height: 44px;
+      background: var(--accent-light);
+      border-radius: var(--radius);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.25rem;
+      color: var(--accent-hover);
+    }
+    .adv-list-text h4 {
+      font-size: 1rem;
+      margin-bottom: 0.25rem;
+      color: var(--gray-900);
+    }
+    .adv-list-text p {
+      font-size: 0.875rem;
+      color: var(--gray-500);
+      margin: 0;
+    }
+    .nav-back {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      font-size: 0.875rem;
+      color: var(--gray-500);
+      margin-bottom: 1rem;
+    }
+    .nav-back:hover { color: var(--primary); }
+    .btn-group {
+      display: flex;
+      gap: 1rem;
+      flex-wrap: wrap;
+      margin-top: 2rem;
+    }
+    /* Highlight box */
+    .highlight-box {
+      background: linear-gradient(135deg, #FEF3C7, #FDE68A);
+      border: 1px solid #FCD34D;
+      border-left: 4px solid #D97706;
+      border-radius: var(--radius-lg);
+      padding: 1.5rem 2rem;
+      margin: 2rem 0;
+    }
+    .highlight-box h3 {
+      color: #92400E;
+      font-size: 1.0625rem;
+      margin-bottom: 0.5rem;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+    .highlight-box p {
+      color: #92400E;
+      font-size: 0.9375rem;
+      margin-bottom: 0;
+    }
+    /* Feature list */
+    .feat-list {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1rem;
+      margin: 1.5rem 0;
+    }
+    .feat-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 0.75rem;
+      padding: 0.75rem 0;
+    }
+    .feat-item .feat-icon {
+      flex-shrink: 0;
+      width: 28px;
+      height: 28px;
+      background: rgba(245, 158, 11, 0.15);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 0.875rem;
+      color: #B45309;
+      font-weight: 700;
+    }
+    .feat-item .feat-text {
+      font-size: 0.9375rem;
+      color: var(--gray-700);
+    }
+    /* Config cards grid */
+    .config-cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 1.5rem;
+      margin-top: 2rem;
+    }
+    .cfg-card {
+      background: var(--white);
+      border: 1px solid var(--gray-200);
+      border-radius: var(--radius-lg);
+      padding: 1.5rem;
+      border-top: 4px solid var(--primary);
+      transition: all var(--transition);
+    }
+    .cfg-card:hover {
+      box-shadow: var(--shadow-md);
+      transform: translateY(-2px);
+    }
+    .cfg-card .cfg-icon {
+      font-size: 2rem;
+      color: var(--primary);
+      margin-bottom: 0.75rem;
+    }
+    .cfg-card h4 {
+      font-size: 1.0625rem;
+      color: var(--primary);
+      margin-bottom: 0.5rem;
+    }
+    .cfg-card ul {
+      margin: 0.75rem 0 0;
+      padding: 0;
+      list-style: none;
+    }
+    .cfg-card ul li {
+      position: relative;
+      padding-left: 1.25rem;
+      margin-bottom: 0.35rem;
+      font-size: 0.875rem;
+      color: var(--gray-600);
+    }
+    .cfg-card ul li::before {
+      content: '✓';
+      position: absolute;
+      left: 0;
+      color: var(--success, #10B981);
+      font-weight: 700;
+    }
+    @media (max-width: 768px) {
+      .feat-list { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ==================== NAVIGATION ==================== -->
+  <nav class="navbar" role="navigation" aria-label="Основная навигация">
+    <div class="container">
+      <a href="../index.html" class="navbar-brand">
+        <span class="brand-icon">MASS<br>EXPERT</span>
+        Mass-EXPERT
+      </a>
+      <button class="navbar-toggle" aria-label="Открыть меню">☰</button>
+      <div class="navbar-links">
+        <a href="../index.html#about">О продукте</a>
+        <a href="../index.html#advantages">Преимущества</a>
+        <a href="../index.html#principle">Принцип работы</a>
+        <a href="../index.html#applications" class="active">Применение</a>
+        <a href="../index.html#product-line">Типоразмеры</a>
+        <a href="../index.html#specifications">Характеристики</a>
+        <a href="../index.html#options">Модификации</a>
+        <a href="../index.html#certificates">Сертификаты</a>
+        <a href="../index.html#contacts">Контакты</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ==================== HERO ==================== -->
+  <section class="hero" id="hero">
+    <div class="container">
+      <div class="hero-grid">
+        <div class="hero-content">
+          <a href="../index.html#applications" class="nav-back">
+            <i class="fas fa-arrow-left"></i> Все отрасли
+          </a>
+          <div class="industry-hero-icon">
+            <i class="fas fa-chart-line"></i>
+          </div>
+          <span class="hero-label">Применение</span>
+          <h1>Коммерческий учёт</h1>
+          <p class="hero-desc">
+            Учёт нефти, нефтепродуктов, газа и СУГ для финансовых расчётов между поставщиком и потребителем.
+            Кориолисовые расходомеры <strong>Mass-EXPERT</strong> внесены в <strong>Госреестр СИ № 98506-26</strong>
+            и являются законным средством измерений для узлов коммерческого учёта (УУУ, УКУ, СИКН).
+            Высокая точность <strong>0,1–0,15%</strong> позволяет минимизировать потери
+            при отпуске и приёмке углеводородов.
+          </p>
+          <div style="display:flex;gap:1rem;flex-wrap:wrap;">
+            <a href="../index.html#contacts" class="btn btn-primary"><i class="fas fa-envelope"></i> Запросить КП</a>
+            <a href="../index.html" class="btn btn-outline"><i class="fas fa-home"></i> На главную</a>
+          </div>
+
+          <div class="hero-badges">
+            <span class="hero-badge">✓ Госреестр СИ № 98506-26</span>
+            <span class="hero-badge">✓ Точность 0,1–0,15%</span>
+            <span class="hero-badge">✓ Коммерческий учёт</span>
+            <span class="hero-badge">✓ Метрологическое обеспечение</span>
+            <span class="hero-badge">✓ Интеграция АСУ ТП / СИКН</span>
+          </div>
+        </div>
+        <div class="hero-visual">
+          <div class="hero-device-card">
+            <div class="device-svg">
+              <img src="../images/Mass-EXPERT_familyphoto.png" alt="Семейство кориолисовых расходомеров Mass-EXPERT для коммерческого учёта" style="width:100%;height:auto;border-radius:4px;">
+            </div>
+            <div class="hero-stats">
+              <div>
+                <div class="hero-stat-value">±0,1–0,15%</div>
+                <div class="hero-stat-label">Точность учёта</div>
+              </div>
+              <div>
+                <div class="hero-stat-value">№ 98506-26</div>
+                <div class="hero-stat-label">Госреестр СИ</div>
+              </div>
+              <div>
+                <div class="hero-stat-value">100:1</div>
+                <div class="hero-stat-label">Динамический диапазон</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== TYPICAL MEDIA ==================== -->
+  <section class="section section-gray" id="media">
+    <div class="container">
+      <div class="section-header animate-on-scroll">
+        <span class="section-badge">Измеряемые среды</span>
+        <h2>Учёт углеводородов для взаиморасчётов</h2>
+        <p>Расходомеры Mass-EXPERT применяются для коммерческого учёта широкого спектра углеводородных сред — от сырой нефти до сжиженных газов — на узлах приёма и отпуска продукции</p>
+      </div>
+      <div class="animate-on-scroll" style="max-width:800px;margin:0 auto;">
+        <div class="config-card">
+          <h4><i class="fas fa-oil-can" style="color:var(--accent);margin-right:0.5rem;"></i>Нефть и нефтепродукты</h4>
+          <div class="media-tags">
+            <span class="hero-badge" style="background:var(--gray-100);color:var(--gray-700);border-color:var(--gray-300);">Сырая нефть</span>
+            <span class="hero-badge" style="background:var(--gray-100);color:var(--gray-700);border-color:var(--gray-300);">Товарная нефть</span>
+            <span class="hero-badge" style="background:var(--gray-100);color:var(--gray-700);border-color:var(--gray-300);">Дизельное топливо</span>
+            <span class="hero-badge" style="background:var(--gray-100);color:var(--gray-700);border-color:var(--gray-300);">Бензин</span>
+            <span class="hero-badge" style="background:var(--gray-100);color:var(--gray-700);border-color:var(--gray-300);">Керосин</span>
+            <span class="hero-badge" style="background:var(--gray-100);color:var(--gray-700);border-color:var(--gray-300);">Мазут</span>
+            <span class="hero-badge" style="background:var(--gray-100);color:var(--gray-700);border-color:var(--gray-300);">Масла</span>
+          </div>
+        </div>
+        <div class="config-card">
+          <h4><i class="fas fa-wind" style="color:var(--accent);margin-right:0.5rem;"></i>Газ и СУГ</h4>
+          <div class="media-tags">
+            <span class="hero-badge" style="background:var(--gray-100);color:var(--gray-700);border-color:var(--gray-300);">Природный газ</span>
+            <span class="hero-badge" style="background:var(--gray-100);color:var(--gray-700);border-color:var(--gray-300);">Газовый конденсат</span>
+            <span class="hero-badge" style="background:var(--gray-100);color:var(--gray-700);border-color:var(--gray-300);">Пропан-бутан (СУГ)</span>
+            <span class="hero-badge" style="background:var(--gray-100);color:var(--gray-700);border-color:var(--gray-300);">СПГ (метан)</span>
+            <span class="hero-badge" style="background:var(--gray-100);color:var(--gray-700);border-color:var(--gray-300);">Стабильный газовый бензин</span>
+            <span class="hero-badge" style="background:var(--gray-100);color:var(--gray-700);border-color:var(--gray-300);">Этилен / пропилен</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== KEY ADVANTAGES ==================== -->
+  <section class="section" id="advantages">
+    <div class="container">
+      <div class="section-header animate-on-scroll">
+        <span class="section-badge">Преимущества</span>
+        <h2>Преимущества для коммерческого учёта</h2>
+        <p>Почему Mass-EXPERT выбирают для финансовых расчётов между поставщиком и потребителем</p>
+      </div>
+      <div class="advantages-list">
+        <div class="adv-list-item animate-on-scroll">
+          <div class="adv-list-icon"><i class="fas fa-book"></i></div>
+          <div class="adv-list-text">
+            <h4>Госреестр СИ № 98506-26 — законное средство измерений</h4>
+            <p>Счётчики-расходомеры массовые кориолисового типа Mass-EXPERT внесены в Государственный реестр средств измерений Российской Федерации (№ 98506-26). Сертификат об утверждении типа СИ — основание для применения в узлах коммерческого учёта, подлежащих государственному метрологическому контролю.</p>
+          </div>
+        </div>
+        <div class="adv-list-item animate-on-scroll">
+          <div class="adv-list-icon"><i class="fas fa-bullseye"></i></div>
+          <div class="adv-list-text">
+            <h4>Высокая точность 0,1–0,15% — минимизация потерь</h4>
+            <p>Пределы допускаемой относительной погрешности измерений массового расхода и массы жидкости: ±0,10% (для жидкостей) и ±0,15% (для газов). Высокая точность прямого массового измерения без коррекции на плотность и температуру — минимальные потери при отпуске и приёмке углеводородов.</p>
+          </div>
+        </div>
+        <div class="adv-list-item animate-on-scroll">
+          <div class="adv-list-icon"><i class="fas fa-clipboard-check"></i></div>
+          <div class="adv-list-text">
+            <h4>Метрологическое обеспечение и поверка</h4>
+            <p>Полная метрологическая документация: свидетельство об утверждении типа, методика поверки (МП 98506-26), руководство по эксплуатации. Межповерочный интервал — 4 года. Поверка проводится по утверждённой методике на проливных установках с эталонными расходомерами.</p>
+          </div>
+        </div>
+        <div class="adv-list-item animate-on-scroll">
+          <div class="adv-list-icon"><i class="fas fa-network-wired"></i></div>
+          <div class="adv-list-text">
+            <h4>Интеграция в АСУ ТП и СИКН</h4>
+            <p>Цифровые интерфейсы RS-485 Modbus (RTU/ASCII) и HART-протокол для интеграции с системами автоматизации (АСУ ТП) и системами измерения количества и качества нефти (СИКН). Двунаправленная связь, передача массового расхода, суммарного количества, плотности и температуры в реальном времени.</p>
+          </div>
+        </div>
+        <div class="adv-list-item animate-on-scroll">
+          <div class="adv-list-icon"><i class="fas fa-shield-alt"></i></div>
+          <div class="adv-list-text">
+            <h4>Взрывозащищённое исполнение Ex</h4>
+            <p>Трансмиттеры ME200 Ex и ME200 CE Ex со взрывозащитой Ex d ib IIC T6 Gb для узлов коммерческого учёта во взрывоопасных зонах (нефтебазы, ГНС, резервуарные парки). Сертификат соответствия ТР ТС 012/2011.</p>
+          </div>
+        </div>
+        <div class="adv-list-item animate-on-scroll">
+          <div class="adv-list-icon"><i class="fas fa-tools"></i></div>
+          <div class="adv-list-text">
+            <h4>Ответные фланцы в комплекте — быстрый монтаж</h4>
+            <p>Все расходомеры Mass-EXPERT поставляются с ответными фланцами (углеродистая или нержавеющая сталь), прокладками и крепежом. Монтаж на трубопроводе выполняется без дополнительных заказов и ожидания поставки комплектующих.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== RECOMMENDED CONFIGURATIONS ==================== -->
+  <section class="section section-gray" id="configurations">
+    <div class="container">
+      <div class="section-header animate-on-scroll">
+        <span class="section-badge">Конфигурации</span>
+        <h2>Рекомендуемые конфигурации</h2>
+        <p>Оптимальные решения для узлов коммерческого учёта углеводородов</p>
+      </div>
+
+      <div class="config-cards animate-on-scroll">
+        <div class="cfg-card" style="border-top-color:var(--accent);">
+          <div class="cfg-icon" style="color:var(--accent);"><i class="fas fa-shapes"></i></div>
+          <h4>U-тип (универсальный сенсор)</h4>
+          <p style="font-size:0.9375rem;color:var(--gray-500);">
+            Базовая конфигурация для коммерческого учёта жидкостей и газов. U-образная геометрия трубок обеспечивает высокую чувствительность, стабильность нулевой точки и надёжность в непрерывной эксплуатации.
+          </p>
+          <ul>
+            <li>U-образный сенсор — классическая кориолисова геометрия</li>
+            <li>Диаметр DN10–DN250 под любые расходы</li>
+            <li>Точность ±0,1% для жидкостей, ±0,15% для газов</li>
+            <li>Трубки из нержавеющей стали 316L / Хастеллой</li>
+            <li>Фланцевые присоединения ГОСТ 33259, ANSI, DIN</li>
+          </ul>
+        </div>
+        <div class="cfg-card" style="border-top-color:#10B981;">
+          <div class="cfg-icon" style="color:#10B981;"><i class="fas fa-microchip"></i></div>
+          <h4>ME200 Ex (взрывозащита)</h4>
+          <p style="font-size:0.9375rem;color:var(--gray-500);">
+            Расширенный трансмиттер во взрывозащищённом исполнении для узлов коммерческого учёта во взрывоопасных зонах. Обеспечивает высокую точность измерений и полный набор цифровых интерфейсов.
+          </p>
+          <ul>
+            <li>Трансмиттер ME200 Ex (Ex d ib IIC T6 Gb)</li>
+            <li>Цветной дисплей: массовый расход, сумма, плотность, температура</li>
+            <li>Два токовых выхода 4–20 мА + HART</li>
+            <li>Интерфейс RS-485 Modbus RTU / ASCII</li>
+            <li>Импульсный выход и дискретный вход/выход</li>
+          </ul>
+        </div>
+        <div class="cfg-card" style="border-top-color:#8B5CF6;">
+          <div class="cfg-icon" style="color:#8B5CF6;"><i class="fas fa-bullseye"></i></div>
+          <h4>Точность 0,1%</h4>
+          <p style="font-size:0.9375rem;color:var(--gray-500);">
+            Прецизионная настройка для узлов коммерческого учёта, где требуется максимальная точность — финансовые расчёты с нефтью и нефтепродуктами с погрешностью не выше ±0,1%.
+          </p>
+          <ul>
+            <li>Погрешность измерения массы жидкости: ±0,10%</li>
+            <li>Индивидуальная калибровка на проливной установке</li>
+            <li>Динамический диапазон 100:1</li>
+            <li>Прямое измерение массы — без поправок на плотность</li>
+            <li>Двунаправленное измерение потока</li>
+          </ul>
+        </div>
+        <div class="cfg-card" style="border-top-color:#F59E0B;">
+          <div class="cfg-icon" style="color:#F59E0B;"><i class="fas fa-tools"></i></div>
+          <h4>Ответные фланцы в комплекте</h4>
+          <p style="font-size:0.9375rem;color:var(--gray-500);">
+            Все конфигурации Mass-EXPERT для коммерческого учёта поставляются с ответными фланцами, прокладками и крепежом. Выбор материала фланцев — углеродистая или нержавеющая сталь.
+          </p>
+          <ul>
+            <li>Ответные фланцы входят в комплект поставки</li>
+            <li>Материал: углеродистая сталь / нержавеющая сталь</li>
+            <li>Прокладки и крепёж в комплекте</li>
+            <li>Монтаж без дополнительных заказов</li>
+            <li>Присоединения под ГОСТ 33259 / ANSI / DIN</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="highlight-box animate-on-scroll">
+        <h3>📋 Типовой узел коммерческого учёта (УКУ) на базе Mass-EXPERT</h3>
+        <p>
+          Для типового узла коммерческого учёта нефти или нефтепродуктов рекомендуется
+          комбинация: <strong>Mass-EXPERT с U-образным сенсором</strong> (DN40–DN250,
+          точность ±0,1%) + <strong>трансмиттер ME200 Ex</strong> (взрывозащита,
+          RS-485 Modbus + HART) + <strong>ответные фланцы</strong> (нерж. сталь).
+          Полная метрологическая документация (описание типа, методика поверки, РЭ)
+          предоставляется с каждым прибором. Интеграция с СИКН и АСУ ТП — через
+          цифровой интерфейс RS-485 Modbus с передачей массового расхода,
+          суммарного количества, плотности, температуры и диагностических данных.
+        </p>
+      </div>
+
+      <div class="animate-on-scroll" style="margin-top:2rem;">
+        <div class="section-header">
+          <span class="section-badge">Ключевые параметры</span>
+          <h3 style="font-size:1.25rem;">Технические возможности Mass-EXPERT для коммерческого учёта</h3>
+        </div>
+        <div class="feat-list">
+          <div class="feat-item">
+            <div class="feat-icon">✓</div>
+            <div class="feat-text"><strong>Госреестр СИ:</strong> № 98506-26</div>
+          </div>
+          <div class="feat-item">
+            <div class="feat-icon">✓</div>
+            <div class="feat-text"><strong>Погрешность для жидкости:</strong> ±0,1%</div>
+          </div>
+          <div class="feat-item">
+            <div class="feat-icon">✓</div>
+            <div class="feat-text"><strong>Погрешность для газов:</strong> ±0,15%</div>
+          </div>
+          <div class="feat-item">
+            <div class="feat-icon">✓</div>
+            <div class="feat-text"><strong>Динамический диапазон:</strong> 100:1</div>
+          </div>
+          <div class="feat-item">
+            <div class="feat-icon">✓</div>
+            <div class="feat-text"><strong>Диаметры:</strong> DN10–DN250</div>
+          </div>
+          <div class="feat-item">
+            <div class="feat-icon">✓</div>
+            <div class="feat-text"><strong>Массовый расход:</strong> от 6 до 280 000 кг/ч</div>
+          </div>
+          <div class="feat-item">
+            <div class="feat-icon">✓</div>
+            <div class="feat-text"><strong>Типы сенсоров:</strong> U-образный (основной)</div>
+          </div>
+          <div class="feat-item">
+            <div class="feat-icon">✓</div>
+            <div class="feat-text"><strong>Материалы трубок:</strong> 316L / Хастеллой C276 / C4</div>
+          </div>
+          <div class="feat-item">
+            <div class="feat-icon">✓</div>
+            <div class="feat-text"><strong>Интерфейсы:</strong> 4–20 мА HART, RS-485 Modbus</div>
+          </div>
+          <div class="feat-item">
+            <div class="feat-icon">✓</div>
+            <div class="feat-text"><strong>Взрывозащита:</strong> Ex d ib IIC T6 Gb</div>
+          </div>
+          <div class="feat-item">
+            <div class="feat-icon">✓</div>
+            <div class="feat-text"><strong>Температура среды:</strong> от –196 до +350 °C</div>
+          </div>
+          <div class="feat-item">
+            <div class="feat-icon">✓</div>
+            <div class="feat-text"><strong>Межповерочный интервал:</strong> 4 года</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== CTA BANNER ==================== -->
+  <section class="section section-blue" id="cta">
+    <div class="container" style="text-align:center;">
+      <div class="animate-on-scroll">
+        <h2 style="margin-bottom:1rem;">Готовы оснастить узел коммерческого учёта?</h2>
+        <p style="font-size:1.125rem;color:rgba(255,255,255,0.8);max-width:640px;margin:0 auto 2rem;">
+          Подберём оптимальную конфигурацию Mass-EXPERT для вашего узла учёта — нефть, нефтепродукты, газ или СУГ. Предоставим полный комплект метрологической документации.
+        </p>
+        <div class="btn-group" style="justify-content:center;">
+          <a href="../index.html#contacts" class="btn btn-primary" style="font-size:1rem;padding:0.875rem 2.25rem;">
+            <i class="fas fa-envelope"></i> Связаться с нами
+          </a>
+          <a href="../index.html" class="btn btn-outline" style="font-size:1rem;padding:0.875rem 2.25rem;">
+            <i class="fas fa-home"></i> На главную
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== FOOTER ==================== -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <h4>Mass-EXPERT</h4>
+          <p>Счетчики-расходомеры массовые кориолисового типа.</p>
+          <p>Госреестр № 98506-26. ТУ 26.51.52-016-88090790-2024.</p>
+          <p style="margin-top:0.75rem;font-size:0.8125rem;">
+            Разработка и производство:<br>
+            ООО «Автоматизация-Метрология-ЭКСПЕРТ», г. Уфа
+          </p>
+        </div>
+        <div class="footer-links">
+          <h5>Продукт</h5>
+          <a href="../index.html#specifications">Характеристики</a>
+          <a href="../index.html#product-line">Типоразмеры</a>
+          <a href="../index.html#options">Модификации</a>
+          <a href="../index.html#transmitters">Трансмиттеры</a>
+        </div>
+        <div class="footer-links">
+          <h5>Документация</h5>
+          <a href="../index.html#certificates">Сертификаты</a>
+          <a href="../docs/ОПИСАНИЕ_ТИПА_2026-98506-26.pdf" target="_blank">Описание типа</a>
+          <a href="../docs/РЭ_Масс_Эксперт_v09.pdf" target="_blank">Руководство по эксплуатации</a>
+          <a href="../docs/2026-МП_98506-26_compressed.pdf" target="_blank">Методика поверки</a>
+        </div>
+        <div class="footer-links">
+          <h5>Контакты</h5>
+          <a href="tel:+734****5350">+7 (347) 286-53-50</a>
+          <a href="mailto:info@ame-info.ru">info@ame-info.ru</a>
+          <a href="https://www.ame-info.ru" target="_blank">www.ame-info.ru</a>
+          <a href="../sitemap.html" style="margin-top:0.5rem;font-size:0.8125rem;color:var(--gray-500);">📋 Карта сайта</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>© <span id="year">2026</span> ООО «Автоматизация-Метрология-ЭКСПЕРТ». Все права защищены.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="../js/main.js"></script>
+</body>
+</html>

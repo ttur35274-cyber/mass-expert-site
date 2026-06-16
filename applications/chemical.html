@@ -1,0 +1,673 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Химическая промышленность — Mass-EXPERT | Кориолисовые расходомеры</title>
+  <meta name="description" content="Массовые расходомеры Mass-EXPERT для химической промышленности: измерение агрессивных сред (H2SO4, HCl, HNO3, NaOH, KOH), дозирование реагентов. Материалы Хастеллой, Тантал, Титан. Сенсоры L-типа.">
+  <meta name="keywords" content="химическая промышленность, массовый расходомер, агрессивные среды, кислоты, щёлочи, растворители, кориолисовый расходомер, Mass-EXPERT, дозирование реагентов, хастеллой, тантал, титан, L-тип">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <!-- Open Graph -->
+  <meta property="og:title" content="Химическая промышленность — Mass-EXPERT">
+  <meta property="og:description" content="Измерение агрессивных сред и дозирование реагентов с кориолисовыми расходомерами Mass-EXPERT. Материалы: Хастеллой, Тантал, Титан.">
+  <meta property="og:type" content="website">
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 40 40'><rect width='40' height='40' rx='8' fill='%23F59E0B'/><text x='20' y='26' text-anchor='middle' font-size='14' font-weight='900' fill='%230F172A' font-family='Inter'>ME</text></svg>">
+  <style>
+    /* Application page specific styles */
+    .cond-hero {
+      position: relative;
+      min-height: 70vh;
+      display: flex;
+      align-items: center;
+      background: linear-gradient(135deg, #0a1628 0%, #2d1b4e 50%, #0d2137 100%);
+      overflow: hidden;
+      padding-top: 72px;
+    }
+    .cond-hero::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background:
+        radial-gradient(ellipse at 70% 30%, rgba(139, 92, 246, 0.12) 0%, transparent 60%),
+        radial-gradient(ellipse at 30% 80%, rgba(255,255,255,0.03) 0%, transparent 50%);
+      pointer-events: none;
+    }
+    .cond-hero-content {
+      position: relative;
+      z-index: 1;
+    }
+    .cond-hero-content .cond-label {
+      display: inline-block;
+      font-size: 0.75rem;
+      color: var(--gray-400);
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      font-weight: 600;
+      margin-bottom: 0.75rem;
+      background: rgba(255,255,255,0.08);
+      padding: 0.3rem 0.75rem;
+      border-radius: 999px;
+    }
+    .cond-hero-content h1 {
+      color: var(--white);
+      margin-bottom: 0.5rem;
+      font-size: 3.5rem;
+    }
+    .cond-hero-content .cond-subtitle {
+      font-size: 1.35rem;
+      color: var(--accent);
+      font-weight: 600;
+      margin-bottom: 1.5rem;
+    }
+    .cond-hero-content .cond-desc {
+      color: rgba(255,255,255,0.8);
+      font-size: 1.0625rem;
+      margin: 1.5rem 0 2rem;
+      max-width: 680px;
+    }
+    .cond-badges {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.75rem;
+      margin-top: 1.5rem;
+    }
+    .cond-badge {
+      background: rgba(255,255,255,0.1);
+      border: 1px solid rgba(255,255,255,0.15);
+      color: rgba(255,255,255,0.9);
+      padding: 0.4rem 1rem;
+      border-radius: 999px;
+      font-size: 0.8125rem;
+      font-weight: 500;
+    }
+    .cond-hero-icon {
+      font-size: 5rem;
+      color: var(--accent);
+      margin-bottom: 1rem;
+      opacity: 0.9;
+    }
+
+    /* Section standard overrides */
+    .section-header .section-icon-big {
+      font-size: 3rem;
+      color: var(--primary);
+      margin-bottom: 0.75rem;
+    }
+
+    /* Media cards grid */
+    .media-cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 1.5rem;
+      margin-top: 2rem;
+    }
+    .media-card {
+      background: var(--white);
+      border: 1px solid var(--gray-200);
+      border-radius: var(--radius-lg);
+      padding: 1.5rem;
+      transition: all var(--transition);
+    }
+    .media-card:hover {
+      border-color: var(--primary);
+      box-shadow: var(--shadow-md);
+      transform: translateY(-2px);
+    }
+    .media-card .mc-icon {
+      font-size: 2.5rem;
+      margin-bottom: 0.75rem;
+    }
+    .media-card h4 {
+      font-size: 1.0625rem;
+      color: var(--primary);
+      margin-bottom: 0.5rem;
+    }
+    .media-card p {
+      font-size: 0.9375rem;
+      color: var(--gray-500);
+      margin: 0;
+    }
+    .media-card .mc-formula {
+      display: inline-block;
+      background: var(--gray-50);
+      border: 1px solid var(--gray-200);
+      border-radius: 999px;
+      padding: 0.2rem 0.75rem;
+      font-size: 0.8125rem;
+      font-weight: 600;
+      color: var(--primary);
+      margin-top: 0.5rem;
+    }
+
+    /* Advantage cards */
+    .adv-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 1.5rem;
+      margin-top: 2rem;
+    }
+    .adv-card-app {
+      background: var(--white);
+      border: 1px solid var(--gray-200);
+      border-radius: var(--radius-lg);
+      padding: 1.5rem;
+      text-align: center;
+      transition: all var(--transition);
+    }
+    .adv-card-app:hover {
+      border-color: var(--primary);
+      box-shadow: var(--shadow-md);
+      transform: translateY(-2px);
+    }
+    .adv-card-app .adv-icon {
+      font-size: 2.5rem;
+      margin-bottom: 0.75rem;
+    }
+    .adv-card-app h4 {
+      font-size: 1.0625rem;
+      color: var(--primary);
+      margin-bottom: 0.5rem;
+    }
+    .adv-card-app p {
+      font-size: 0.9375rem;
+      color: var(--gray-500);
+      margin: 0;
+    }
+
+    /* Config cards */
+    .config-cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 1.5rem;
+      margin-top: 2rem;
+    }
+    .config-card {
+      background: var(--white);
+      border: 1px solid var(--gray-200);
+      border-radius: var(--radius-lg);
+      padding: 1.5rem;
+      border-top: 4px solid var(--primary);
+      transition: all var(--transition);
+    }
+    .config-card:hover {
+      box-shadow: var(--shadow-md);
+      transform: translateY(-2px);
+    }
+    .config-card .cfg-icon {
+      font-size: 2rem;
+      color: var(--primary);
+      margin-bottom: 0.75rem;
+    }
+    .config-card h4 {
+      font-size: 1.0625rem;
+      color: var(--primary);
+      margin-bottom: 0.5rem;
+    }
+    .config-card ul {
+      margin: 0.75rem 0 0;
+      padding: 0;
+      list-style: none;
+    }
+    .config-card ul li {
+      position: relative;
+      padding-left: 1.25rem;
+      margin-bottom: 0.35rem;
+      font-size: 0.875rem;
+      color: var(--gray-600);
+    }
+    .config-card ul li::before {
+      content: '✓';
+      position: absolute;
+      left: 0;
+      color: var(--success, #10B981);
+      font-weight: 700;
+    }
+
+    /* Materials table */
+    .materials-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 1rem;
+      margin: 1.5rem 0;
+    }
+    .material-card {
+      background: var(--gray-50);
+      border: 1px solid var(--gray-200);
+      border-radius: var(--radius);
+      padding: 1.25rem;
+      text-align: center;
+    }
+    .material-card .mat-icon {
+      font-size: 2rem;
+      margin-bottom: 0.5rem;
+    }
+    .material-card .mat-name {
+      font-weight: 700;
+      color: var(--gray-800);
+      font-size: 1rem;
+    }
+    .material-card .mat-desc {
+      font-size: 0.8125rem;
+      color: var(--gray-500);
+      margin-top: 0.25rem;
+    }
+
+    /* Highlight box */
+    .highlight-box {
+      background: linear-gradient(135deg, #F3E8FF, #E9D5FF);
+      border: 1px solid #D8B4FE;
+      border-left: 4px solid #9333EA;
+      border-radius: var(--radius-lg);
+      padding: 1.5rem 2rem;
+      margin: 2rem 0;
+    }
+    .highlight-box h3 {
+      color: #4C1D95;
+      font-size: 1.0625rem;
+      margin-bottom: 0.5rem;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+    .highlight-box p {
+      color: #4C1D95;
+      font-size: 0.9375rem;
+      margin-bottom: 0;
+    }
+
+    /* Feature list */
+    .feat-list {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1rem;
+      margin: 1.5rem 0;
+    }
+    .feat-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 0.75rem;
+      padding: 0.75rem 0;
+    }
+    .feat-item .feat-icon {
+      flex-shrink: 0;
+      width: 28px;
+      height: 28px;
+      background: rgba(139, 92, 246, 0.12);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 0.875rem;
+      color: #9333EA;
+      font-weight: 700;
+    }
+    .feat-item .feat-text {
+      font-size: 0.9375rem;
+      color: var(--gray-700);
+    }
+
+    @media (max-width: 768px) {
+      .feat-list { grid-template-columns: 1fr; }
+      .cond-hero { min-height: auto; padding: 6rem 0 3rem; }
+      .cond-hero-content h1 { font-size: 2.5rem; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ==================== NAVIGATION ==================== -->
+  <nav class="navbar" role="navigation" aria-label="Основная навигация">
+    <div class="container">
+      <a href="../index.html" class="navbar-brand">
+        <span class="brand-icon">MASS<br>EXPERT</span>
+        Mass-EXPERT
+      </a>
+      <button class="navbar-toggle" aria-label="Открыть меню">☰</button>
+      <div class="navbar-links">
+        <a href="../index.html#about">О продукте</a>
+        <a href="../index.html#advantages">Преимущества</a>
+        <a href="../index.html#principle">Принцип работы</a>
+        <a href="../index.html#product-line">Типоразмеры</a>
+        <a href="../index.html#specifications">Характеристики</a>
+        <a href="../index.html#contacts">Контакты</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ==================== HERO ==================== -->
+  <section class="cond-hero" id="hero">
+    <div class="container">
+      <div class="cond-hero-content">
+        <span class="cond-label">Отрасль применения</span>
+        <div class="cond-hero-icon"><i class="fas fa-flask"></i></div>
+        <h1>Химическая промышленность</h1>
+        <div class="cond-subtitle">Точные измерения в агрессивных средах</div>
+        <p class="cond-desc">
+          Массовые расходомеры <strong>Mass-EXPERT</strong> для измерения и дозирования
+          агрессивных химических сред — кислот, щелочей и растворителей.
+          Прямое измерение массового расхода исключает влияние переменной плотности
+          и температуры, обеспечивая высочайшую точность в непрерывных технологических процессах.
+        </p>
+        <div style="display:flex;gap:1rem;flex-wrap:wrap;">
+          <a href="#media" class="btn btn-primary">Типичные среды</a>
+          <a href="#advantages" class="btn btn-outline">Преимущества</a>
+        </div>
+        <div class="cond-badges">
+          <span class="cond-badge">🧪 Кислоты H₂SO₄ / HCl / HNO₃</span>
+          <span class="cond-badge">🧴 Щёлочи NaOH / KOH</span>
+          <span class="cond-badge">💧 Растворители</span>
+          <span class="cond-badge">🛡️ Хастеллой / Тантал / Титан</span>
+          <span class="cond-badge">🎯 Точность 0,1–0,2%</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== TYPICAL MEDIA ==================== -->
+  <section class="section" id="media">
+    <div class="container">
+      <div class="section-header animate-on-scroll">
+        <span class="section-badge">Типичные среды</span>
+        <h2>Измерение агрессивных химических сред</h2>
+        <p>Кориолисовые расходомеры Mass-EXPERT способны работать с широким спектром химически активных веществ благодаря специальным материалам измерительных трубок и корпуса.</p>
+      </div>
+
+      <div class="media-cards animate-on-scroll">
+        <div class="media-card">
+          <div class="mc-icon">🧪</div>
+          <h4>Кислоты</h4>
+          <p>Концентрированная и разбавленная серная кислота (H₂SO₄), соляная кислота (HCl), азотная кислота (HNO₃), фосфорная кислота (H₃PO₄), плавиковая кислота (HF) и другие.</p>
+          <div>
+            <span class="mc-formula">H₂SO₄</span>
+            <span class="mc-formula">HCl</span>
+            <span class="mc-formula">HNO₃</span>
+          </div>
+        </div>
+        <div class="media-card">
+          <div class="mc-icon">🧴</div>
+          <h4>Щёлочи</h4>
+          <p>Едкий натр (NaOH), гидроксид калия (KOH), растворы аммиака (NH₄OH) и другие щелочные соединения, требующие коррозионностойких материалов контактных частей.</p>
+          <div>
+            <span class="mc-formula">NaOH</span>
+            <span class="mc-formula">KOH</span>
+            <span class="mc-formula">NH₄OH</span>
+          </div>
+        </div>
+        <div class="media-card">
+          <div class="mc-icon">💧</div>
+          <h4>Растворители</h4>
+          <p>Ацетон, метанол, этанол, изопропанол, толуол, ксилол, этилацетат, метилэтилкетон (MEK) и другие органические растворители, используемые в химическом синтезе.</p>
+        </div>
+        <div class="media-card">
+          <div class="mc-icon">⚗️</div>
+          <h4>Реагенты и полупродукты</h4>
+          <p>Хлорное железо, сульфаты, нитраты, хлораты, перекись водорода (H₂O₂), хлорорганические соединения и другие жидкие химические реагенты и промежуточные продукты.</p>
+        </div>
+      </div>
+
+      <div class="section-header animate-on-scroll" style="margin-top:3rem;">
+        <h3 style="font-size:1.5rem;">Материалы трубок для агрессивных сред</h3>
+        <p>Для обеспечения коррозионной стойкости и долговечности в условиях химического производства Mass-EXPERT предлагает специальные материалы измерительных трубок.</p>
+      </div>
+
+      <div class="materials-grid animate-on-scroll">
+        <div class="material-card">
+          <div class="mat-icon">🛡️</div>
+          <div class="mat-name">Хастеллой (C4/C276)</div>
+          <div class="mat-desc">Высокая стойкость к кислотам и хлоридам. Рекомендован для HCl, H₂SO₄, влажного хлора.</div>
+        </div>
+        <div class="material-card">
+          <div class="mat-icon">🔩</div>
+          <div class="mat-name">Тантал</div>
+          <div class="mat-desc">Максимальная коррозионная стойкость к агрессивным средам. Идеален для HF, царской водки.</div>
+        </div>
+        <div class="material-card">
+          <div class="mat-icon">⚙️</div>
+          <div class="mat-name">Титан (Grade 2/5)</div>
+          <div class="mat-desc">Лёгкий и прочный. Стойкость к хлоридным средам, окислителям, HNO₃.</div>
+        </div>
+        <div class="material-card">
+          <div class="mat-icon">🔬</div>
+          <div class="mat-name">Нержавеющая сталь 316L</div>
+          <div class="mat-desc">Базовый материал для умеренно агрессивных сред. Подходит для большинства растворителей и щелочей.</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== ADVANTAGES ==================== -->
+  <section class="section section-gray" id="advantages">
+    <div class="container">
+      <div class="section-header animate-on-scroll">
+        <span class="section-badge">Преимущества</span>
+        <h2>Почему Mass-EXPERT для химии?</h2>
+        <p>Кориолисовая технология прямого массового измерения — оптимальное решение для химической промышленности</p>
+      </div>
+
+      <div class="adv-grid animate-on-scroll">
+        <div class="adv-card-app">
+          <div class="adv-icon">🎯</div>
+          <h4>Прямое измерение массы</h4>
+          <p>Исключает влияние переменной плотности и температуры среды, характерное для химических процессов с изменяющимся составом и нагревом/охлаждением.</p>
+        </div>
+        <div class="adv-card-app">
+          <div class="adv-icon">🛡️</div>
+          <h4>Коррозионная стойкость</h4>
+          <p>Специальные материалы трубок (Хастеллой, Тантал, Титан) обеспечивают надёжную работу в самых агрессивных средах и максимальный срок службы.</p>
+        </div>
+        <div class="adv-card-app">
+          <div class="adv-icon">⚖️</div>
+          <h4>Высокая точность дозирования</h4>
+          <p>Точность измерений 0,1–0,2% позволяет точно дозировать реагенты в реакторах непрерывного действия, минимизируя отклонения состава продукта.</p>
+        </div>
+        <div class="adv-card-app">
+          <div class="adv-icon">🌡️</div>
+          <h4>Независимость от температуры</h4>
+          <p>Измерение массового расхода не требует коррекции по температуре. Даже при экзотермических/эндотермических реакциях результат остаётся точным.</p>
+        </div>
+        <div class="adv-card-app">
+          <div class="adv-icon">🔋</div>
+          <h4>Минимум обслуживания</h4>
+          <p>Нет подвижных частей, не требуется замена уплотнений или калибровка. Снижение эксплуатационных затрат и времени простоев.</p>
+        </div>
+        <div class="adv-card-app">
+          <div class="adv-icon">📊</div>
+          <h4>Многофункциональность</h4>
+          <p>Одновременное измерение массового расхода, плотности и температуры. Один прибор заменяет несколько, упрощая систему КИПиА.</p>
+        </div>
+      </div>
+
+      <div class="highlight-box animate-on-scroll">
+        <h3>🧪 Прямое измерение массы — ключевое преимущество в химии</h3>
+        <p>
+          В химической технологии плотность реагентов часто меняется в ходе процесса — из-за изменения температуры, концентрации или фазового состава.
+          Массовый расходомер измеряет именно <strong>массу</strong>, а не объём, поэтому
+          результаты не зависят от этих факторов. Это особенно важно при дозировании дорогостоящих
+          реагентов и при учёте продуктов с переменной плотностью.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== RECOMMENDED CONFIGURATIONS ==================== -->
+  <section class="section" id="configurations">
+    <div class="container">
+      <div class="section-header animate-on-scroll">
+        <span class="section-badge">Рекомендуемые конфигурации</span>
+        <h2>Оптимальные решения для химической промышленности</h2>
+        <p>Проверенные комбинации сенсоров, материалов и опций для типовых задач химических производств</p>
+      </div>
+
+      <div class="config-cards animate-on-scroll">
+        <div class="config-card">
+          <div class="cfg-icon"><i class="fas fa-tube"></i></div>
+          <h4>Сенсоры L-типа (прямотрубные)</h4>
+          <p style="font-size:0.9375rem;color:var(--gray-500);">
+            Рекомендованы для вязких и абразивных химических сред. Отсутствие изгибов исключает застойные зоны и упрощает очистку.
+          </p>
+          <ul>
+            <li>Конструкция без изгибов — нет застойных зон</li>
+            <li>Минимальное гидравлическое сопротивление</li>
+            <li>Возможность CIP/SIP-мойки</li>
+            <li>DN08–DN50 для широкого диапазона расходов</li>
+          </ul>
+        </div>
+        <div class="config-card" style="border-top-color:var(--accent);">
+          <div class="cfg-icon" style="color:var(--accent);"><i class="fas fa-shield-halved"></i></div>
+          <h4>Материалы C4 / Hastelloy / Тантал</h4>
+          <p style="font-size:0.9375rem;color:var(--gray-500);">
+            Коррозионностойкие сплавы для контакта с агрессивными химическими средами.
+          </p>
+          <ul>
+            <li>Хастеллой C4/C276 — стойкость к кислотам и хлоридам</li>
+            <li>Тантал — максимальная химическая стойкость</li>
+            <li>Титан — оптимальное сочетание массы и прочности</li>
+            <li>316L — для умеренно агрессивных сред</li>
+          </ul>
+        </div>
+        <div class="config-card" style="border-top-color:#10B981;">
+          <div class="cfg-icon" style="color:#10B981;"><i class="fas fa-bullseye"></i></div>
+          <h4>Точность 0,1–0,2%</h4>
+          <p style="font-size:0.9375rem;color:var(--gray-500);">
+            Высокоточное измерение для ответственных задач дозирования и учёта.
+          </p>
+          <ul>
+            <li>Класс точности 0,1% для жидкостей</li>
+            <li>Стабильность нулевой точки от 0,012 кг/ч</li>
+            <li>Динамический диапазон до 100:1</li>
+            <li>Метрологическая прослеживаемость</li>
+          </ul>
+        </div>
+        <div class="config-card" style="border-top-color:#F59E0B;">
+          <div class="cfg-icon" style="color:#F59E0B;"><i class="fas fa-temperature-high"></i></div>
+          <h4>Изотермический кожух</h4>
+          <p style="font-size:0.9375rem;color:var(--gray-500);">
+            Опция для процессов с критическими требованиями к стабильности температуры среды.
+          </p>
+          <ul>
+            <li>Поддержание постоянной температуры сенсора</li>
+            <li>Исключение влияния внешней температуры</li>
+            <li>Для высокоточного дозирования</li>
+            <li>Для сред, склонных к кристаллизации</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="highlight-box animate-on-scroll" style="background:linear-gradient(135deg, #FFF7ED, #FFEDD5);border-color:#FED7AA;border-left-color:#F97316;">
+        <h3 style="color:#9A3412;">💡 Рекомендация для дозирования реагентов</h3>
+        <p style="color:#9A3412;">
+          Для точного дозирования реагентов в реакторах непрерывного действия выбирайте
+          комбинацию: <strong>сенсор L-типа</strong> + <strong>трубки из Хастеллоя C276 или Тантала</strong>
+          + <strong>трансмиттер ME200</strong> с поддержкой HART/Modbus. При необходимости
+          высокой термостабильности — дополните конфигурацию <strong>изотермическим кожухом</strong>.
+          Точность 0,1% гарантирует минимальное отклонение состава готового продукта.
+        </p>
+      </div>
+
+      <div class="animate-on-scroll" style="margin-top:2rem;">
+        <div class="section-header">
+          <span class="section-badge">Ключевые параметры</span>
+          <h3 style="font-size:1.25rem;">Технические возможности Mass-EXPERT для химии</h3>
+        </div>
+        <div class="feat-list">
+          <div class="feat-item">
+            <div class="feat-icon">✓</div>
+            <div class="feat-text"><strong>Массовый расход жидкости:</strong> от 1 до 1 740 000 кг/ч</div>
+          </div>
+          <div class="feat-item">
+            <div class="feat-icon">✓</div>
+            <div class="feat-text"><strong>Погрешность измерений:</strong> ±0,1% – ±0,2%</div>
+          </div>
+          <div class="feat-item">
+            <div class="feat-icon">✓</div>
+            <div class="feat-text"><strong>Диапазон плотности:</strong> 650–2000 кг/м³</div>
+          </div>
+          <div class="feat-item">
+            <div class="feat-icon">✓</div>
+            <div class="feat-text"><strong>Температура среды:</strong> от –196 до +350 °C</div>
+          </div>
+          <div class="feat-item">
+            <div class="feat-icon">✓</div>
+            <div class="feat-text"><strong>Рабочее давление:</strong> до 96 МПа</div>
+          </div>
+          <div class="feat-item">
+            <div class="feat-icon">✓</div>
+            <div class="feat-text"><strong>Выходные сигналы:</strong> 4–20 мА HART, RS-485 Modbus, PROFIBUS PA</div>
+          </div>
+          <div class="feat-item">
+            <div class="feat-icon">✓</div>
+            <div class="feat-text"><strong>Взрывозащита:</strong> Ex d ib IIC T6 Gb</div>
+          </div>
+          <div class="feat-item">
+            <div class="feat-icon">✓</div>
+            <div class="feat-text"><strong>Степень защиты:</strong> IP66/IP67</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== CTA ==================== -->
+  <section class="section section-gray" style="text-align:center;">
+    <div class="container">
+      <div class="animate-on-scroll">
+        <span class="section-badge">Готовы к внедрению?</span>
+        <h2>Подберём конфигурацию для вашего процесса</h2>
+        <p style="max-width:600px;margin:1rem auto 2rem;">
+          Наши инженеры помогут выбрать оптимальный тип сенсора, материал трубок и дополнительное
+          оснащение для вашей химической задачи — от лабораторного стенда до крупнотоннажного производства.
+        </p>
+        <a href="../index.html#contacts" class="btn btn-primary btn-lg">Связаться с нами</a>
+        <a href="../index.html" class="btn btn-outline" style="margin-left:0.75rem;">На главную</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== FOOTER ==================== -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <h4>Mass-EXPERT</h4>
+          <p>Счетчики-расходомеры массовые кориолисового типа.</p>
+          <p>Госреестр № 98506-26. ТУ 26.51.52-016-88090790-2024.</p>
+          <p style="margin-top:0.75rem;font-size:0.8125rem;">
+            Разработка и производство:<br>
+            ООО «Автоматизация-Метрология-ЭКСПЕРТ», г. Уфа
+          </p>
+        </div>
+        <div class="footer-links">
+          <h5>Продукт</h5>
+          <a href="../index.html#specifications">Характеристики</a>
+          <a href="../index.html#product-line">Типоразмеры</a>
+          <a href="../index.html#options">Модификации</a>
+          <a href="../index.html#transmitters">Трансмиттеры</a>
+        </div>
+        <div class="footer-links">
+          <h5>Документация</h5>
+          <a href="../index.html#certificates">Сертификаты</a>
+          <a href="../docs/ОПИСАНИЕ_ТИПА_2026-98506-26.pdf" target="_blank">Описание типа</a>
+          <a href="../docs/РЭ_Масс_Эксперт_v09.pdf" target="_blank">Руководство по эксплуатации</a>
+          <a href="../docs/2026-МП_98506-26_compressed.pdf" target="_blank">Методика поверки</a>
+        </div>
+        <div class="footer-links">
+          <h5>Контакты</h5>
+          <a href="tel:+734****5350">+7 (347) 286-53-50</a>
+          <a href="mailto:info@ame-info.ru">info@ame-info.ru</a>
+          <a href="https://www.ame-info.ru" target="_blank">www.ame-info.ru</a>
+          <a href="../sitemap.html" style="margin-top:0.5rem;font-size:0.8125rem;color:var(--gray-500);">📋 Карта сайта</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>© <span id="year">2026</span> ООО «Автоматизация-Метрология-ЭКСПЕРТ». Все права защищены.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="../js/main.js"></script>
+</body>
+</html>

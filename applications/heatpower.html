@@ -1,0 +1,656 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Теплоэнергетика и ЖКХ — Mass-EXPERT | Кориолисовые расходомеры</title>
+  <meta name="description" content="Кориолисовые расходомеры Mass-EXPERT для теплоэнергетики и ЖКХ: учёт дорогостоящих теплоносителей, реагентов для водоподготовки, контроль подачи мазута и топлива на ТЭЦ, коммерческий учёт тепла (массовый расход + температура). Рекомендации: U-тип DN15-DN100, ME200 Ex, изотермический кожух для мазута.">
+  <meta name="keywords" content="теплоэнергетика, ЖКХ, теплоснабжение, кориолисовый расходомер, Mass-EXPERT, учёт тепла, теплоноситель, водоподготовка, мазут, ТЭЦ, коммерческий учёт, тепловая энергия, массовый расход, температура, U-тип, ME200 Ex, изотермический кожух">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <!-- Open Graph -->
+  <meta property="og:title" content="Теплоэнергетика и ЖКХ — Mass-EXPERT">
+  <meta property="og:description" content="Учёт дорогостоящих теплоносителей, реагентов для водоподготовки. Контроль подачи мазута, топлива на ТЭЦ. Коммерческий учёт тепла (массовый расход + температура).">
+  <meta property="og:type" content="website">
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 40 40'><rect width='40' height='40' rx='8' fill='%23F59E0B'/><text x='20' y='26' text-anchor='middle' font-size='14' font-weight='900' fill='%230F172A' font-family='Inter'>ME</text></svg>">
+  <style>
+    /* Page-specific styles */
+    .cond-hero {
+      position: relative;
+      min-height: 70vh;
+      display: flex;
+      align-items: center;
+      background: linear-gradient(135deg, #1a0a0a 0%, #3d1f1a 35%, #0a1628 70%);
+      overflow: hidden;
+      padding-top: 72px;
+    }
+    .cond-hero::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background:
+        radial-gradient(ellipse at 60% 20%, rgba(245, 158, 11, 0.10) 0%, transparent 60%),
+        radial-gradient(ellipse at 40% 80%, rgba(239, 68, 68, 0.08) 0%, transparent 50%);
+      pointer-events: none;
+    }
+    .cond-hero-content {
+      position: relative;
+      z-index: 1;
+    }
+    .cond-hero-content .cond-label {
+      display: inline-block;
+      font-size: 0.75rem;
+      color: var(--gray-400);
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      font-weight: 600;
+      margin-bottom: 0.75rem;
+      background: rgba(255,255,255,0.08);
+      padding: 0.3rem 0.75rem;
+      border-radius: 999px;
+    }
+    .cond-hero-content h1 {
+      color: var(--white);
+      margin-bottom: 0.5rem;
+      font-size: 3.5rem;
+    }
+    .cond-hero-content .cond-subtitle {
+      font-size: 1.35rem;
+      color: var(--accent);
+      font-weight: 600;
+      margin-bottom: 1.5rem;
+    }
+    .cond-hero-content .cond-desc {
+      color: rgba(255,255,255,0.8);
+      font-size: 1.0625rem;
+      margin: 1.5rem 0 2rem;
+      max-width: 680px;
+    }
+    .cond-badges {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.75rem;
+      margin-top: 1.5rem;
+    }
+    .cond-badge {
+      background: rgba(255,255,255,0.1);
+      border: 1px solid rgba(255,255,255,0.15);
+      color: rgba(255,255,255,0.9);
+      padding: 0.4rem 1rem;
+      border-radius: 999px;
+      font-size: 0.8125rem;
+      font-weight: 500;
+    }
+    .cond-hero-icon {
+      font-size: 5rem;
+      color: var(--accent);
+      margin-bottom: 1rem;
+      opacity: 0.9;
+    }
+
+    /* Cards grid */
+    .media-cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 1.5rem;
+      margin-top: 2rem;
+    }
+    .media-card {
+      background: var(--white);
+      border: 1px solid var(--gray-200);
+      border-radius: var(--radius-lg);
+      padding: 1.5rem;
+      transition: all var(--transition);
+    }
+    .media-card:hover {
+      border-color: var(--accent);
+      box-shadow: var(--shadow-md);
+      transform: translateY(-2px);
+    }
+    .media-card .mc-icon {
+      font-size: 2.5rem;
+      margin-bottom: 0.75rem;
+    }
+    .media-card h4 {
+      font-size: 1.0625rem;
+      color: var(--primary);
+      margin-bottom: 0.5rem;
+    }
+    .media-card p {
+      font-size: 0.9375rem;
+      color: var(--gray-500);
+      margin: 0;
+    }
+    .media-card .mc-tag {
+      display: inline-block;
+      background: var(--gray-50);
+      border: 1px solid var(--gray-200);
+      border-radius: 999px;
+      padding: 0.2rem 0.75rem;
+      font-size: 0.8125rem;
+      font-weight: 600;
+      color: var(--primary);
+      margin-top: 0.5rem;
+      margin-right: 0.35rem;
+    }
+
+    /* Advantage cards */
+    .adv-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 1.5rem;
+      margin-top: 2rem;
+    }
+    .adv-card-app {
+      background: var(--white);
+      border: 1px solid var(--gray-200);
+      border-radius: var(--radius-lg);
+      padding: 1.5rem;
+      text-align: center;
+      transition: all var(--transition);
+    }
+    .adv-card-app:hover {
+      border-color: var(--accent);
+      box-shadow: var(--shadow-md);
+      transform: translateY(-2px);
+    }
+    .adv-card-app .adv-icon {
+      font-size: 2.5rem;
+      margin-bottom: 0.75rem;
+    }
+    .adv-card-app h4 {
+      font-size: 1.0625rem;
+      color: var(--primary);
+      margin-bottom: 0.5rem;
+    }
+    .adv-card-app p {
+      font-size: 0.9375rem;
+      color: var(--gray-500);
+      margin: 0;
+    }
+
+    /* Config cards */
+    .config-cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 1.5rem;
+      margin-top: 2rem;
+    }
+    .config-card {
+      background: var(--white);
+      border: 1px solid var(--gray-200);
+      border-radius: var(--radius-lg);
+      padding: 1.5rem;
+      border-top: 4px solid var(--accent);
+      transition: all var(--transition);
+    }
+    .config-card:hover {
+      box-shadow: var(--shadow-md);
+      transform: translateY(-2px);
+    }
+    .config-card .cfg-icon {
+      font-size: 2rem;
+      color: var(--accent);
+      margin-bottom: 0.75rem;
+    }
+    .config-card h4 {
+      font-size: 1.0625rem;
+      color: var(--primary);
+      margin-bottom: 0.5rem;
+    }
+    .config-card ul {
+      margin: 0.75rem 0 0;
+      padding: 0;
+      list-style: none;
+    }
+    .config-card ul li {
+      position: relative;
+      padding-left: 1.25rem;
+      margin-bottom: 0.35rem;
+      font-size: 0.875rem;
+      color: var(--gray-600);
+    }
+    .config-card ul li::before {
+      content: '✓';
+      position: absolute;
+      left: 0;
+      color: var(--accent);
+      font-weight: 700;
+    }
+
+    /* Highlight box */
+    .highlight-box {
+      background: linear-gradient(135deg, #FFF7ED, #FFEDD5);
+      border: 1px solid #FED7AA;
+      border-left: 4px solid var(--accent);
+      border-radius: var(--radius-lg);
+      padding: 1.5rem 2rem;
+      margin: 2rem 0;
+    }
+    .highlight-box h3 {
+      color: #9A3412;
+      font-size: 1.0625rem;
+      margin-bottom: 0.5rem;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+    .highlight-box p {
+      color: #9A3412;
+      font-size: 0.9375rem;
+      margin-bottom: 0;
+    }
+
+    /* Feature list */
+    .feat-list {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1rem;
+      margin: 1.5rem 0;
+    }
+    .feat-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 0.75rem;
+      padding: 0.75rem 0;
+    }
+    .feat-item .feat-icon {
+      flex-shrink: 0;
+      width: 28px;
+      height: 28px;
+      background: rgba(245, 158, 11, 0.12);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 0.875rem;
+      color: var(--accent-hover);
+      font-weight: 700;
+    }
+    .feat-item .feat-text {
+      font-size: 0.9375rem;
+      color: var(--gray-700);
+    }
+
+    @media (max-width: 768px) {
+      .feat-list { grid-template-columns: 1fr; }
+      .cond-hero { min-height: auto; padding: 6rem 0 3rem; }
+      .cond-hero-content h1 { font-size: 2.5rem; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ==================== NAVIGATION ==================== -->
+  <nav class="navbar" role="navigation" aria-label="Основная навигация">
+    <div class="container">
+      <a href="../index.html" class="navbar-brand">
+        <span class="brand-icon">MASS<br>EXPERT</span>
+        Mass-EXPERT
+      </a>
+      <button class="navbar-toggle" aria-label="Открыть меню">☰</button>
+      <div class="navbar-links">
+        <a href="../index.html#about">О продукте</a>
+        <a href="../index.html#advantages">Преимущества</a>
+        <a href="../index.html#principle">Принцип работы</a>
+        <a href="../index.html#product-line">Типоразмеры</a>
+        <a href="../index.html#specifications">Характеристики</a>
+        <a href="../index.html#contacts">Контакты</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ==================== HERO ==================== -->
+  <section class="cond-hero" id="hero">
+    <div class="container">
+      <div class="cond-hero-content">
+        <span class="cond-label">Отрасль применения</span>
+        <div class="cond-hero-icon"><i class="fas fa-fire"></i></div>
+        <h1>Теплоэнергетика и ЖКХ</h1>
+        <div class="cond-subtitle">Точный учёт тепла, теплоносителей и топлива</div>
+        <p class="cond-desc">
+          Кориолисовые массовые расходомеры <strong>Mass-EXPERT</strong> для учёта
+          дорогостоящих теплоносителей, реагентов для водоподготовки, контроля подачи
+          мазута и топлива на ТЭЦ. Реализация коммерческого учёта тепловой энергии
+          по массовому расходу и температуре с высокой точностью.
+        </p>
+        <div style="display:flex;gap:1rem;flex-wrap:wrap;">
+          <a href="#media" class="btn btn-primary">Измеряемые среды</a>
+          <a href="#configurations" class="btn btn-outline">Рекомендации</a>
+        </div>
+        <div class="cond-badges">
+          <span class="cond-badge">🔥 Теплоносители</span>
+          <span class="cond-badge">💧 Водоподготовка</span>
+          <span class="cond-badge">🛢️ Мазут / Топливо</span>
+          <span class="cond-badge">📊 Коммерческий учёт</span>
+          <span class="cond-badge">🎯 Точность 0,1–0,15%</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== TYPICAL MEDIA ==================== -->
+  <section class="section" id="media">
+    <div class="container">
+      <div class="section-header animate-on-scroll">
+        <span class="section-badge">Измеряемые среды</span>
+        <h2>Типичные среды в теплоэнергетике и ЖКХ</h2>
+        <p>Расходомеры Mass-EXPERT работают с широким спектром жидких и газообразных сред, используемых на объектах теплоснабжения и энергетики</p>
+      </div>
+
+      <div class="media-cards animate-on-scroll">
+        <div class="media-card">
+          <div class="mc-icon">🔥</div>
+          <h4>Теплоносители систем отопления</h4>
+          <p>Сетевая вода, перегретая вода с температурой до 200 °C, водяной пар низкого и среднего давления. Прямое измерение массового расхода для точного определения тепловой энергии.</p>
+          <div>
+            <span class="mc-tag">Сетевая вода</span>
+            <span class="mc-tag">Перегретая вода</span>
+            <span class="mc-tag">Водяной пар</span>
+          </div>
+        </div>
+        <div class="media-card">
+          <div class="mc-icon">💧</div>
+          <h4>Реагенты водоподготовки</h4>
+          <p>Дорогостоящие химические реагенты для химводоподготовки на ТЭЦ и котельных: ингибиторы коррозии, антинакипины, флокулянты, растворы кислот для регенерации ионообменных фильтров.</p>
+          <div>
+            <span class="mc-tag">Ингибиторы</span>
+            <span class="mc-tag">Антинакипины</span>
+            <span class="mc-tag">Кислоты</span>
+            <span class="mc-tag">Флокулянты</span>
+          </div>
+        </div>
+        <div class="media-card">
+          <div class="mc-icon">🛢️</div>
+          <h4>Мазут и жидкое топливо</h4>
+          <p>Топочный мазут (М-40, М-100), печное бытовое топливо, дизельное топливо для пусковых и растопочных операций. Вязкие среды, требующие подогрева и изотермических условий измерения.</p>
+          <div>
+            <span class="mc-tag">Мазут М-40</span>
+            <span class="mc-tag">Мазут М-100</span>
+            <span class="mc-tag">Печное топливо</span>
+          </div>
+        </div>
+        <div class="media-card">
+          <div class="mc-icon">📊</div>
+          <h4>Коммерческий учёт тепловой энергии</h4>
+          <p>Измерение массового расхода и температуры теплоносителя для расчёта тепловой энергии на вводах ЦТП, индивидуальных тепловых пунктах (ИТП) и границах балансовой принадлежности.</p>
+          <div>
+            <span class="mc-tag">Подающий трубопровод</span>
+            <span class="mc-tag">Обратный трубопровод</span>
+            <span class="mc-tag">ΔT измерение</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== HOW IT WORKS ==================== -->
+  <section class="section section-gray" id="principle">
+    <div class="container">
+      <div class="section-header animate-on-scroll">
+        <span class="section-badge">Принцип измерения</span>
+        <h2>Коммерческий учёт тепла: массовый расход + температура</h2>
+        <p>Точное определение количества тепловой энергии требует измерения двух параметров — массового расхода и разности температур</p>
+      </div>
+
+      <div class="highlight-box animate-on-scroll" style="max-width:800px;margin:0 auto 2rem;">
+        <h3><i class="fas fa-calculator"></i> Расчёт тепловой энергии</h3>
+        <p>
+          <strong>Q = m × c × (T<sub>под</sub> – T<sub>обр</sub>)</strong>
+          <br><br>
+          где <strong>Q</strong> — количество тепловой энергии (Гкал или кВт·ч),<br>
+          <strong>m</strong> — масса теплоносителя (кг), измеренная кориолисовым расходомером,<br>
+          <strong>c</strong> — удельная теплоёмкость теплоносителя (кДж/(кг·°C)),<br>
+          <strong>T<sub>под</sub></strong> — температура в подающем трубопроводе,<br>
+          <strong>T<sub>обр</sub></strong> — температура в обратном трубопроводе.
+        </p>
+      </div>
+
+      <div class="feat-list animate-on-scroll" style="max-width:800px;margin:0 auto;">
+        <div class="feat-item">
+          <div class="feat-icon">1</div>
+          <div class="feat-text"><strong>Массовый расход — напрямую</strong><br>Кориолисовый расходомер измеряет массу, а не объём. Исключена погрешность, связанная с изменением плотности теплоносителя при разных температурах.</div>
+        </div>
+        <div class="feat-item">
+          <div class="feat-icon">2</div>
+          <div class="feat-text"><strong>Встроенное измерение температуры</strong><br>Трансмиттер ME200 (Ex) принимает сигнал от внешних термопреобразователей сопротивления (Pt100/500/1000) для измерения T<sub>под</sub> и T<sub>обр</sub>.</div>
+        </div>
+        <div class="feat-item">
+          <div class="feat-icon">3</div>
+          <div class="feat-text"><strong>Вычисление тепловой энергии</strong><br>Встроенный тепловычислитель рассчитывает количество теплоты по массовому расходу и разности температур, передавая результат по цифровым интерфейсам.</div>
+        </div>
+        <div class="feat-item">
+          <div class="feat-icon">4</div>
+          <div class="feat-text"><strong>Архивация и передача данных</strong><br>Часовые и суточные архивы теплопотребления с защитой от несанкционированного доступа — соответствие требованиям коммерческого учёта.</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== ADVANTAGES ==================== -->
+  <section class="section" id="advantages">
+    <div class="container">
+      <div class="section-header animate-on-scroll">
+        <span class="section-badge">Преимущества</span>
+        <h2>Почему Mass-EXPERT в теплоэнергетике?</h2>
+        <p>Кориолисовая технология прямого массового измерения — оптимальное решение для задач теплоснабжения и энергетики</p>
+      </div>
+
+      <div class="adv-grid animate-on-scroll">
+        <div class="adv-card-app">
+          <div class="adv-icon">🎯</div>
+          <h4>Прямое измерение массы</h4>
+          <p>Исключает погрешность от переменной плотности теплоносителя при изменении температуры. Классические объёмные счётчики требуют коррекции — кориолисовый метод даёт точный результат сразу.</p>
+        </div>
+        <div class="adv-card-app">
+          <div class="adv-icon">🔥</div>
+          <h4>Работа с высокотемпературными средами</h4>
+          <p>Специальное высокотемпературное исполнение до +350 °C для перегретой воды и пара. Устойчивость к тепловым расширениям без потери точности.</p>
+        </div>
+        <div class="adv-card-app">
+          <div class="adv-icon">🛡️</div>
+          <h4>Взрывозащита Ex</h4>
+          <p>Трансмиттеры ME200 (Ex) со взрывозащитой Ex d ib IIC T6 Gb для работы в котельных и на топливном хозяйстве ТЭЦ. Сертификат ТР ТС 012.</p>
+        </div>
+        <div class="adv-card-app">
+          <div class="adv-icon">⚙️</div>
+          <h4>Низкие потери давления</h4>
+          <p>Сенсоры U-типа создают минимальное гидравлическое сопротивление — важно для систем теплоснабжения с ограниченным располагаемым напором.</p>
+        </div>
+        <div class="adv-card-app">
+          <div class="adv-icon">📊</div>
+          <h4>Коммерческий учёт тепла</h4>
+          <p>Встроенная функция тепловычислителя (параметры теплоносителя, ΔT, массовый расход). Часовые и суточные архивы. Внесён в Госреестр СИ (№ 98506-26).</p>
+        </div>
+        <div class="adv-card-app">
+          <div class="adv-icon">🔧</div>
+          <h4>Минимум обслуживания</h4>
+          <p>Нет подвижных частей — не требуется замена уплотнений, нет изнашиваемых элементов. Средний срок службы 20 лет. Снижение эксплуатационных затрат на узлах учёта.</p>
+        </div>
+      </div>
+
+      <div class="highlight-box animate-on-scroll">
+        <h3>🔥 Почему кориолисовый расходомер лучше для коммерческого учёта тепла?</h3>
+        <p>
+          Традиционные теплосчётчики с объёмными расходомерами (электромагнитными, ультразвуковыми, тахометрическими) вносят дополнительную погрешность при пересчёте объёма в массу.
+          <strong>Mass-EXPERT измеряет массу напрямую</strong> — это исключает погрешность температурного расширения и даёт
+          максимально точный результат для коммерческих расчётов между поставщиком и потребителем тепловой энергии.
+          Особенно это важно в переходные периоды (осень, весна), когда температура теплоносителя сильно варьируется.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== RECOMMENDED CONFIGURATIONS ==================== -->
+  <section class="section section-gray" id="configurations">
+    <div class="container">
+      <div class="section-header animate-on-scroll">
+        <span class="section-badge">Рекомендуемые конфигурации</span>
+        <h2>Оптимальные решения для теплоэнергетики и ЖКХ</h2>
+        <p>Проверенные комбинации сенсоров и трансмиттеров для типовых задач отрасли</p>
+      </div>
+
+      <div class="config-cards animate-on-scroll">
+        <div class="config-card">
+          <div class="cfg-icon"><i class="fas fa-ruler"></i></div>
+          <h4>Сенсор U-тип DN15–DN100</h4>
+          <p>U-образная геометрия измерительных трубок для задач теплоэнергетики. Диапазон диаметров от DN15 до DN100 перекрывает типовые расходы:</p>
+          <ul>
+            <li>DN15–DN25 — дозирование реагентов водоподготовки</li>
+            <li>DN32–DN50 — узлы учёта ЦТП и ИТП (подача/обратка)</li>
+            <li>DN65–DN100 — магистральные тепловые вводы, подача мазута</li>
+            <li>Высокая чувствительность при малых расходах (ночные режимы)</li>
+          </ul>
+        </div>
+        <div class="config-card">
+          <div class="cfg-icon"><i class="fas fa-microchip"></i></div>
+          <h4>Трансмиттер ME200 (Ex)</h4>
+          <p>Расширенный трансмиттер с функцией тепловычислителя и взрывозащитой для котельных и топливного хозяйства:</p>
+          <ul>
+            <li>Два токовых выхода (массовый расход + температура)</li>
+            <li>Входы Pt100/Pt500/Pt1000 — измерение T<sub>под</sub> и T<sub>обр</sub></li>
+            <li>Встроенный тепловычислитель: Q = m × c × ΔT</li>
+            <li>Часовые и суточные архивы теплопотребления</li>
+            <li>RS-485 Modbus RTU + HART 7</li>
+            <li>Взрывозащита Ex d ib IIC T6 Gb</li>
+          </ul>
+        </div>
+        <div class="config-card">
+          <div class="cfg-icon"><i class="fas fa-thermometer-half"></i></div>
+          <h4>Изотермический кожух для мазута</h4>
+          <p>Специальное исполнение для вязкого топлива, требующего поддержания температуры вязкости — мазута М-40, М-100, печного топлива:</p>
+          <ul>
+            <li>Теплоизоляционный кожух с подогревом измерительной камеры</li>
+            <li>Поддержание температуры 50–80 °C для обеспечения подвижности мазута</li>
+            <li>Предотвращение застывания и парафинизации в измерительных трубках</li>
+            <li>Возможность комплектации паровым или электрическим обогревом</li>
+            <li>Устойчивость к высоковязким средам без потери точности</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="highlight-box animate-on-scroll">
+        <h3><i class="fas fa-check-circle"></i> Комплексное решение для коммерческого узла учёта тепла</h3>
+        <p>
+          <strong>Mass-EXPERT + ME200 (Ex)</strong> — полностью готовая конфигурация для коммерческого учёта тепловой энергии.
+          Один прибор заменяет теплосчётчик, расходомер и тепловычислитель. Измерение массового расхода и температуры
+          в подающем и обратном трубопроводах с последующим расчётом тепловой энергии. Все данные передаются
+          по Modbus RTU в АСУ ТП или автоматизированную систему коммерческого учёта энергоресурсов (АСКУЭ).
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== FEATURES TABLE ==================== -->
+  <section class="section" id="specifications">
+    <div class="container">
+      <div class="section-header animate-on-scroll">
+        <span class="section-badge">Характеристики</span>
+        <h2>Технические параметры для теплоэнергетики</h2>
+        <p>Ключевые характеристики расходомеров Mass-EXPERT, актуальные для задач теплоснабжения и ЖКХ</p>
+      </div>
+
+      <div class="feat-list animate-on-scroll" style="max-width:800px;margin:0 auto;">
+        <div class="feat-item">
+          <div class="feat-icon">✓</div>
+          <div class="feat-text"><strong>Диаметр условного прохода</strong><br>DN15–DN100 (стандартные типоразмеры для теплоэнергетики)</div>
+        </div>
+        <div class="feat-item">
+          <div class="feat-icon">✓</div>
+          <div class="feat-text"><strong>Температура среды</strong><br>от –196 до +350 °C (высокотемпературное исполнение)</div>
+        </div>
+        <div class="feat-item">
+          <div class="feat-icon">✓</div>
+          <div class="feat-text"><strong>Давление среды</strong><br>до 25 МПа (стандартное) / до 96 МПа (специальное)</div>
+        </div>
+        <div class="feat-item">
+          <div class="feat-icon">✓</div>
+          <div class="feat-text"><strong>Точность измерения</strong><br>±0,10–0,15% (жидкости), ±0,25% (газы/пар)</div>
+        </div>
+        <div class="feat-item">
+          <div class="feat-icon">✓</div>
+          <div class="feat-text"><strong>Измерение температуры</strong><br>Внешние Pt100/Pt500/Pt1000, погрешность ±0,15 °C</div>
+        </div>
+        <div class="feat-item">
+          <div class="feat-icon">✓</div>
+          <div class="feat-text"><strong>Взрывозащита</strong><br>Ex d ib IIC T6 Gb (ТР ТС 012/2011)</div>
+        </div>
+        <div class="feat-item">
+          <div class="feat-icon">✓</div>
+          <div class="feat-text"><strong>Цифровые интерфейсы</strong><br>RS-485 Modbus RTU, HART 7, два токовых выхода</div>
+        </div>
+        <div class="feat-item">
+          <div class="feat-icon">✓</div>
+          <div class="feat-text"><strong>Госреестр СИ</strong><br>№ 98506-26, допущен к коммерческому учёту</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== CTA BANNER ==================== -->
+  <section class="section section-blue" id="cta">
+    <div class="container" style="text-align:center;">
+      <div class="animate-on-scroll">
+        <h2 style="margin-bottom:1rem;">Готовы обсудить вашу задачу?</h2>
+        <p style="font-size:1.125rem;color:rgba(255,255,255,0.8);max-width:640px;margin:0 auto 2rem;">
+          Подберём оптимальную конфигурацию Mass-EXPERT для вашего объекта теплоэнергетики или ЖКХ — от котельной до теплового пункта.
+        </p>
+        <div style="display:flex;gap:1rem;flex-wrap:wrap;justify-content:center;">
+          <a href="../index.html#contacts" class="btn btn-primary" style="font-size:1rem;padding:0.875rem 2.25rem;">
+            <i class="fas fa-envelope"></i> Связаться с нами
+          </a>
+          <a href="../index.html" class="btn btn-outline" style="font-size:1rem;padding:0.875rem 2.25rem;">
+            <i class="fas fa-home"></i> На главную
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== FOOTER ==================== -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <h4>Mass-EXPERT</h4>
+          <p>Счетчики-расходомеры массовые кориолисового типа.</p>
+          <p>Госреестр № 98506-26. ТУ 26.51.52-016-88090790-2024.</p>
+          <p style="margin-top:0.75rem;font-size:0.8125rem;">
+            Разработка и производство:<br>
+            ООО «Автоматизация-Метрология-ЭКСПЕРТ», г. Уфа
+          </p>
+        </div>
+        <div class="footer-links">
+          <h5>Продукт</h5>
+          <a href="../index.html#specifications">Характеристики</a>
+          <a href="../index.html#product-line">Типоразмеры</a>
+          <a href="../index.html#options">Модификации</a>
+          <a href="../index.html#transmitters">Трансмиттеры</a>
+        </div>
+        <div class="footer-links">
+          <h5>Документация</h5>
+          <a href="../index.html#certificates">Сертификаты</a>
+          <a href="../docs/ОПИСАНИЕ_ТИПА_2026-98506-26.pdf" target="_blank">Описание типа</a>
+          <a href="../docs/РЭ_Масс_Эксперт_v09.pdf" target="_blank">Руководство по эксплуатации</a>
+          <a href="../docs/2026-МП_98506-26_compressed.pdf" target="_blank">Методика поверки</a>
+        </div>
+        <div class="footer-links">
+          <h5>Контакты</h5>
+          <a href="tel:+734****5350">+7 (347) 286-53-50</a>
+          <a href="mailto:info@ame-info.ru">info@ame-info.ru</a>
+          <a href="https://www.ame-info.ru" target="_blank">www.ame-info.ru</a>
+          <a href="../sitemap.html" style="margin-top:0.5rem;font-size:0.8125rem;color:var(--gray-500);">📋 Карта сайта</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>© <span id="year">2026</span> ООО «Автоматизация-Метрология-ЭКСПЕРТ». Все права защищены.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="../js/main.js"></script>
+</body>
+</html>

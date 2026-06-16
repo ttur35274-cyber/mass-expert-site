@@ -1,0 +1,771 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Пищевая промышленность и напитки — Mass-EXPERT | Кориолисовые расходомеры</title>
+  <meta name="description" content="Кориолисовые расходомеры Mass-EXPERT для пищевой промышленности и напитков: измерение шоколада, сиропов, соусов, паст, молочных продуктов, соков, концентратов, спиртов, масел. Гигиенический дизайн (Ra ≤ 0,8 мкм, 3-A). CIP/SIP-очистка. L-тип для вязких продуктов. Самоопорожнение (W-тип).">
+  <meta name="keywords" content="пищевая промышленность, напитки, кориолисовый расходомер, Mass-EXPERT, шоколад, сиропы, соусы, пасты, молоко, соки, масла, спирты, экстракты, гигиенический дизайн, CIP, SIP, 3-A, Ra 0.8 мкм, L-тип, W-тип, Tri-clamp, санитарные сенсоры">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <!-- Open Graph -->
+  <meta property="og:title" content="Пищевая промышленность и напитки — Mass-EXPERT">
+  <meta property="og:description" content="Измерение шоколада, сиропов, соусов, паст, молочных продуктов, соков, концентратов, спиртов, масел. Гигиенический дизайн (Ra ≤ 0,8 мкм, 3-A). CIP/SIP-очистка.">
+  <meta property="og:type" content="website">
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 40 40'><rect width='40' height='40' rx='8' fill='%23F59E0B'/><text x='20' y='26' text-anchor='middle' font-size='14' font-weight='900' fill='%230F172A' font-family='Inter'>ME</text></svg>">
+  <style>
+    /* Food page specific styles */
+    .food-hero {
+      position: relative;
+      min-height: 70vh;
+      display: flex;
+      align-items: center;
+      background: linear-gradient(135deg, #1a1a2e 0%, #e0522a 50%, #1a1a2e 100%);
+      overflow: hidden;
+      padding-top: 72px;
+    }
+    .food-hero::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background:
+        radial-gradient(ellipse at 70% 30%, rgba(255, 153, 0, 0.15) 0%, transparent 60%),
+        radial-gradient(ellipse at 30% 80%, rgba(255,255,255,0.03) 0%, transparent 50%);
+      pointer-events: none;
+    }
+    .food-hero-content {
+      position: relative;
+      z-index: 1;
+    }
+    .food-hero-content .food-label {
+      display: inline-block;
+      font-size: 0.75rem;
+      color: var(--gray-400);
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      font-weight: 600;
+      margin-bottom: 0.75rem;
+      background: rgba(255,255,255,0.08);
+      padding: 0.3rem 0.75rem;
+      border-radius: 999px;
+    }
+    .food-hero-content h1 {
+      color: var(--white);
+      margin-bottom: 0.5rem;
+      font-size: 3.5rem;
+    }
+    .food-hero-content .food-subtitle {
+      font-size: 1.35rem;
+      color: #F59E0B;
+      font-weight: 600;
+      margin-bottom: 1.5rem;
+    }
+    .food-hero-content .food-desc {
+      color: rgba(255,255,255,0.8);
+      font-size: 1.0625rem;
+      margin: 1.5rem 0 2rem;
+      max-width: 680px;
+    }
+    .food-badges {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.75rem;
+      margin-top: 1.5rem;
+    }
+    .food-badge {
+      background: rgba(255,255,255,0.1);
+      border: 1px solid rgba(255,255,255,0.15);
+      color: rgba(255,255,255,0.9);
+      padding: 0.4rem 1rem;
+      border-radius: 999px;
+      font-size: 0.8125rem;
+      font-weight: 500;
+    }
+    .food-hero-icon {
+      font-size: 5rem;
+      color: #F59E0B;
+      margin-bottom: 1rem;
+      opacity: 0.9;
+    }
+
+    /* Section overrides */
+    .section-header .section-icon-big {
+      font-size: 3rem;
+      color: var(--primary);
+      margin-bottom: 0.75rem;
+    }
+
+    /* Media cards */
+    .fmedia-cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 1.5rem;
+      margin-top: 2rem;
+    }
+    .fmedia-card {
+      background: var(--white);
+      border: 1px solid var(--gray-200);
+      border-radius: var(--radius-lg);
+      padding: 1.5rem;
+      transition: all var(--transition);
+    }
+    .fmedia-card:hover {
+      border-color: var(--primary);
+      box-shadow: var(--shadow-md);
+      transform: translateY(-2px);
+    }
+    .fmedia-card .fmc-icon {
+      font-size: 2.5rem;
+      margin-bottom: 0.75rem;
+    }
+    .fmedia-card h4 {
+      font-size: 1.0625rem;
+      color: var(--primary);
+      margin-bottom: 0.5rem;
+    }
+    .fmedia-card p {
+      font-size: 0.9375rem;
+      color: var(--gray-500);
+      margin: 0;
+    }
+    .fmedia-card .fmc-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.4rem;
+      margin-top: 0.75rem;
+    }
+    .fmedia-card .fmc-tag {
+      background: var(--gray-50);
+      border: 1px solid var(--gray-200);
+      border-radius: 999px;
+      padding: 0.2rem 0.75rem;
+      font-size: 0.75rem;
+      font-weight: 600;
+      color: var(--primary);
+    }
+
+    /* Advantage cards */
+    .fadv-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 1.5rem;
+      margin-top: 2rem;
+    }
+    .fadv-card {
+      background: var(--white);
+      border: 1px solid var(--gray-200);
+      border-radius: var(--radius-lg);
+      padding: 1.5rem;
+      text-align: center;
+      transition: all var(--transition);
+    }
+    .fadv-card:hover {
+      border-color: #F59E0B;
+      box-shadow: var(--shadow-md);
+      transform: translateY(-2px);
+    }
+    .fadv-card .fadv-icon {
+      font-size: 2.5rem;
+      margin-bottom: 0.75rem;
+    }
+    .fadv-card h4 {
+      font-size: 1.0625rem;
+      color: var(--primary);
+      margin-bottom: 0.5rem;
+    }
+    .fadv-card p {
+      font-size: 0.9375rem;
+      color: var(--gray-500);
+      margin: 0;
+    }
+
+    /* Config cards */
+    .fconfig-cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 1.5rem;
+      margin-top: 2rem;
+    }
+    .fconfig-card {
+      background: var(--white);
+      border: 1px solid var(--gray-200);
+      border-radius: var(--radius-lg);
+      padding: 1.5rem;
+      border-top: 4px solid #F59E0B;
+      transition: all var(--transition);
+    }
+    .fconfig-card:hover {
+      box-shadow: var(--shadow-md);
+      transform: translateY(-2px);
+    }
+    .fconfig-card .fcfg-icon {
+      font-size: 2rem;
+      color: #F59E0B;
+      margin-bottom: 0.75rem;
+    }
+    .fconfig-card h4 {
+      font-size: 1.0625rem;
+      color: var(--primary);
+      margin-bottom: 0.5rem;
+    }
+    .fconfig-card ul {
+      margin: 0.75rem 0 0;
+      padding: 0;
+      list-style: none;
+    }
+    .fconfig-card ul li {
+      position: relative;
+      padding-left: 1.25rem;
+      margin-bottom: 0.35rem;
+      font-size: 0.875rem;
+      color: var(--gray-600);
+    }
+    .fconfig-card ul li::before {
+      content: '✓';
+      position: absolute;
+      left: 0;
+      color: var(--success, #10B981);
+      font-weight: 700;
+    }
+
+    /* Highlight box */
+    .food-highlight {
+      background: linear-gradient(135deg, #FFFBEB, #FEF3C7);
+      border: 1px solid #FDE68A;
+      border-left: 4px solid #F59E0B;
+      border-radius: var(--radius-lg);
+      padding: 1.5rem 2rem;
+      margin: 2rem 0;
+    }
+    .food-highlight h3 {
+      color: #92400E;
+      font-size: 1.0625rem;
+      margin-bottom: 0.5rem;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+    .food-highlight p {
+      color: #78350F;
+      font-size: 0.9375rem;
+      margin-bottom: 0;
+    }
+
+    /* Hygienic design feature rows */
+    .hygiene-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 1rem;
+      margin: 1.5rem 0;
+    }
+    .hygiene-card {
+      background: var(--gray-50);
+      border: 1px solid var(--gray-200);
+      border-radius: var(--radius);
+      padding: 1.25rem;
+      text-align: center;
+      transition: all var(--transition);
+    }
+    .hygiene-card:hover {
+      border-color: #F59E0B;
+      background: var(--white);
+    }
+    .hygiene-card .hy-icon {
+      font-size: 2rem;
+      margin-bottom: 0.5rem;
+    }
+    .hygiene-card .hy-name {
+      font-weight: 700;
+      color: var(--gray-800);
+      font-size: 1rem;
+    }
+    .hygiene-card .hy-desc {
+      font-size: 0.8125rem;
+      color: var(--gray-500);
+      margin-top: 0.25rem;
+    }
+
+    /* Feature list */
+    .ffeat-list {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1rem;
+      margin: 1.5rem 0;
+    }
+    .ffeat-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 0.75rem;
+      padding: 0.75rem 0;
+    }
+    .ffeat-item .ffeat-icon {
+      flex-shrink: 0;
+      width: 28px;
+      height: 28px;
+      background: rgba(245, 158, 11, 0.12);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 0.875rem;
+      color: #D97706;
+      font-weight: 700;
+    }
+    .ffeat-item .ffeat-text {
+      font-size: 0.9375rem;
+      color: var(--gray-700);
+    }
+
+    @media (max-width: 768px) {
+      .ffeat-list { grid-template-columns: 1fr; }
+      .food-hero { min-height: auto; padding: 6rem 0 3rem; }
+      .food-hero-content h1 { font-size: 2.5rem; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ==================== NAVIGATION ==================== -->
+  <nav class="navbar" role="navigation" aria-label="Основная навигация">
+    <div class="container">
+      <a href="../index.html" class="navbar-brand">
+        <span class="brand-icon">MASS<br>EXPERT</span>
+        Mass-EXPERT
+      </a>
+      <button class="navbar-toggle" aria-label="Открыть меню">☰</button>
+      <div class="navbar-links">
+        <a href="../index.html#about">О продукте</a>
+        <a href="../index.html#advantages">Преимущества</a>
+        <a href="../index.html#principle">Принцип работы</a>
+        <a href="../index.html#applications" class="active">Применение</a>
+        <a href="../index.html#product-line">Типоразмеры</a>
+        <a href="../index.html#specifications">Характеристики</a>
+        <a href="../index.html#contacts">Контакты</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ==================== HERO ==================== -->
+  <section class="food-hero" id="hero">
+    <div class="container">
+      <div class="food-hero-content">
+        <span class="food-label">Отрасль применения</span>
+        <div class="food-hero-icon"><i class="fas fa-utensils"></i></div>
+        <h1>Пищевая промышленность и напитки</h1>
+        <div class="food-subtitle">Гигиеничное и точное измерение пищевых сред</div>
+        <p class="food-desc">
+          Массовые расходомеры <strong>Mass-EXPERT</strong> для измерения и дозирования
+          широкого спектра пищевых продуктов и напитков — от жидких молочных продуктов
+          до высоковязких шоколадных масс и паст. Гигиенический дизайн с шероховатостью
+          <strong>Ra ≤ 0,8 мкм</strong>, санитарные соединения <strong>Tri-clamp</strong>
+          и полная <strong>CIP/SIP-очистка</strong> без демонтажа обеспечивают соответствие
+          самым строгим стандартам пищевой безопасности.
+        </p>
+        <div style="display:flex;gap:1rem;flex-wrap:wrap;">
+          <a href="#media" class="btn btn-primary">Типичные среды</a>
+          <a href="#advantages" class="btn btn-outline">Преимущества</a>
+        </div>
+        <div class="food-badges">
+          <span class="food-badge"><i class="fas fa-hand-sparkles"></i> Гигиенический дизайн</span>
+          <span class="food-badge"><i class="fas fa-microscope"></i> Ra ≤ 0,8 мкм</span>
+          <span class="food-badge"><i class="fas fa-shower"></i> CIP/SIP-очистка</span>
+          <span class="food-badge"><i class="fas fa-clipboard-check"></i> 3-A стандарт</span>
+          <span class="food-badge"><i class="fas fa-tint"></i> Самоопорожнение W-тип</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== TYPICAL MEDIA ==================== -->
+  <section class="section" id="media">
+    <div class="container">
+      <div class="section-header animate-on-scroll">
+        <span class="section-badge">Типичные среды</span>
+        <h2>Измерение пищевых продуктов и напитков</h2>
+        <p>Кориолисовые расходомеры Mass-EXPERT в гигиеническом исполнении работают с широким спектром пищевых сред — от маловязких соков до высоковязких шоколадных масс и паст.</p>
+      </div>
+
+      <div class="fmedia-cards animate-on-scroll">
+        <div class="fmedia-card">
+          <div class="fmc-icon"><i class="fas fa-candy"></i></div>
+          <h4>Шоколад и кондитерские массы</h4>
+          <p>Глазурь, шоколадная масса, какао-масло, начинки, пралине, ореховые пасты. Высокая вязкость требует прямоточных сенсоров L-типа без застойных зон.</p>
+          <div class="fmc-tags">
+            <span class="fmc-tag">Глазурь</span>
+            <span class="fmc-tag">Какао-масло</span>
+            <span class="fmc-tag">Нуга</span>
+            <span class="fmc-tag">Пралине</span>
+          </div>
+        </div>
+        <div class="fmedia-card">
+          <div class="fmc-icon"><i class="fas fa-wheat-awn"></i></div>
+          <h4>Сиропы и сладкие среды</h4>
+          <p>Глюкозные, фруктозные, инвертные сиропы, патока, мёд, кленовый сироп. Высокая плотность и вязкость не влияют на точность массового измерения.</p>
+          <div class="fmc-tags">
+            <span class="fmc-tag">Глюкозный сироп</span>
+            <span class="fmc-tag">Патока</span>
+            <span class="fmc-tag">Мёд</span>
+            <span class="fmc-tag">Кленовый сироп</span>
+          </div>
+        </div>
+        <div class="fmedia-card">
+          <div class="fmc-icon"><i class="fas fa-jar"></i></div>
+          <h4>Соусы и пасты</h4>
+          <p>Томатная паста, кетчуп, майонез, горчица, соевый соус, овощные пасты. Прямотрубная конструкция исключает забивание и облегчает CIP-мойку.</p>
+          <div class="fmc-tags">
+            <span class="fmc-tag">Томатная паста</span>
+            <span class="fmc-tag">Кетчуп</span>
+            <span class="fmc-tag">Майонез</span>
+            <span class="fmc-tag">Горчица</span>
+          </div>
+        </div>
+        <div class="fmedia-card">
+          <div class="fmc-icon"><i class="fas fa-cow"></i></div>
+          <h4>Молочные продукты</h4>
+          <p>Молоко, сливки, сгущённое молоко, йогурт, кефир, сыворотка, мороженое. Кориолисовые расходомеры — стандарт для учёта молока на приёмке.</p>
+          <div class="fmc-tags">
+            <span class="fmc-tag">Молоко</span>
+            <span class="fmc-tag">Сливки</span>
+            <span class="fmc-tag">Сгущёнка</span>
+            <span class="fmc-tag">Йогурт</span>
+          </div>
+        </div>
+        <div class="fmedia-card">
+          <div class="fmc-icon"><i class="fas fa-wine-bottle"></i></div>
+          <h4>Напитки и соки</h4>
+          <p>Фруктовые и овощные соки, концентраты, нектары, безалкогольные и слабоалкогольные напитки. Измерение Brix и плотности в одном приборе.</p>
+          <div class="fmc-tags">
+            <span class="fmc-tag">Соки</span>
+            <span class="fmc-tag">Концентраты</span>
+            <span class="fmc-tag">Нектары</span>
+            <span class="fmc-tag">Лимонады</span>
+          </div>
+        </div>
+        <div class="fmedia-card">
+          <div class="fmc-icon"><i class="fas fa-wine-glass-alt"></i></div>
+          <h4>Спирты и экстракты</h4>
+          <p>Этанол/спирт (пищевой), ликёры, настойки, растительные экстракты, ароматизаторы. Прямое измерение массового расхода без влияния плотности.</p>
+          <div class="fmc-tags">
+            <span class="fmc-tag">Пищевой спирт</span>
+            <span class="fmc-tag">Ликёры</span>
+            <span class="fmc-tag">Настойки</span>
+            <span class="fmc-tag">Экстракты</span>
+          </div>
+        </div>
+        <div class="fmedia-card">
+          <div class="fmc-icon"><i class="fas fa-oil-can"></i></div>
+          <h4>Масла и жиры</h4>
+          <p>Растительные масла (подсолнечное, оливковое, пальмовое), животные жиры, маргарин. Измерение массового расхода от холодного до горячего.</p>
+          <div class="fmc-tags">
+            <span class="fmc-tag">Подсолнечное масло</span>
+            <span class="fmc-tag">Оливковое масло</span>
+            <span class="fmc-tag">Пальмовое масло</span>
+            <span class="fmc-tag">Маргарин</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== HYGIENIC DESIGN ==================== -->
+  <section class="section section-gray" id="hygiene">
+    <div class="container">
+      <div class="section-header animate-on-scroll">
+        <span class="section-badge">Гигиенический дизайн</span>
+        <h2>Санитарное исполнение для пищевой безопасности</h2>
+        <p>Расходомеры Mass-EXPERT в гигиеническом исполнении соответствуют строгим требованиям пищевой промышленности и обеспечивают безопасность продукции и лёгкость санитарной обработки.</p>
+      </div>
+
+      <div class="hygiene-grid animate-on-scroll">
+        <div class="hygiene-card">
+          <div class="hy-icon"><i class="fas fa-ruler-combined"></i></div>
+          <div class="hy-name">Ra ≤ 0,8 мкм</div>
+          <div class="hy-desc">Шероховатость контактных поверхностей не более 0,8 мкм — исключает налипание продуктов и обеспечивает лёгкую очистку.</div>
+        </div>
+        <div class="hygiene-card">
+          <div class="hy-icon"><i class="fas fa-certificate"></i></div>
+          <div class="hy-name">3-A стандарт</div>
+          <div class="hy-desc">Соответствие санитарным стандартам 3-A Sanitary Standards для оборудования пищевой промышленности.</div>
+        </div>
+        <div class="hygiene-card">
+          <div class="hy-icon"><i class="fas fa-water"></i></div>
+          <div class="hy-name">CIP/SIP-мойка</div>
+          <div class="hy-desc">Очистка на месте без демонтажа сенсора. Возможность мойки горячей водой, паром, кислотными и щелочными растворами.</div>
+        </div>
+        <div class="hygiene-card">
+          <div class="hy-icon"><i class="fas fa-link"></i></div>
+          <div class="hy-name">Tri-clamp соединения</div>
+          <div class="hy-desc">Санитарные хомутовые соединения по DIN 32676 / ISO 2852 — быстрый монтаж и демонтаж для обслуживания.</div>
+        </div>
+        <div class="hygiene-card">
+          <div class="hy-icon"><i class="fas fa-arrow-down"></i></div>
+          <div class="hy-name">Самоопорожнение (W-тип)</div>
+          <div class="hy-desc">Конструкция измерительной камеры обеспечивает полный слив продукта — идеально для смены продуктов без промывки.</div>
+        </div>
+        <div class="hygiene-card">
+          <div class="hy-icon"><i class="fas fa-hand-sparkles"></i></div>
+          <div class="hy-name">Без застойных зон</div>
+          <div class="hy-desc">Отсутствие карманов, щелей и резких переходов — продукт не задерживается и не разлагается внутри сенсора.</div>
+        </div>
+      </div>
+
+      <div class="food-highlight animate-on-scroll">
+        <h3>🧼 CIP/SIP-очистка без демонтажа — ключевое преимущество</h3>
+        <p>
+          В отличие от многих традиционных расходомеров, кориолисовые сенсоры Mass-EXPERT
+          в гигиеническом исполнении <strong>не требуют демонтажа</strong> для санитарной обработки.
+          Прямотрубные сенсоры L-типа и W-типа с шероховатостью <strong>Ra ≤ 0,8 мкм</strong>
+          выдерживают <strong>CIP-мойку</strong> (горячая вода / щелочные и кислотные растворы при
+          скорости потока до 1,5 м/с) и <strong>SIP-стерилизацию</strong> (насыщенным паром при
+          температуре до 140 °C). Это радикально сокращает время переналадки между партиями
+          и исключает риск вторичного загрязнения при обслуживании.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== ADVANTAGES ==================== -->
+  <section class="section" id="advantages">
+    <div class="container">
+      <div class="section-header animate-on-scroll">
+        <span class="section-badge">Преимущества</span>
+        <h2>Почему Mass-EXPERT для пищевой промышленности?</h2>
+        <p>Кориолисовая технология прямого массового измерения — оптимальное решение для гигиеничного учёта и дозирования пищевых продуктов</p>
+      </div>
+
+      <div class="fadv-grid animate-on-scroll">
+        <div class="fadv-card">
+          <div class="fadv-icon"><i class="fas fa-ruler-combined"></i></div>
+          <h4>Гигиенический дизайн</h4>
+          <p>Шероховатость контактных поверхностей Ra ≤ 0,8 мкм. Санитарные соединения Tri-clamp. Соответствие 3-A. Отсутствие застойных зон.</p>
+        </div>
+        <div class="fadv-card">
+          <div class="fadv-icon"><i class="fas fa-shower"></i></div>
+          <h4>CIP/SIP на месте</h4>
+          <p>Мойка и стерилизация без демонтажа сенсора. Выдерживает температуры CIP-мойки до 140 °C и скорости потока до 1,5 м/с.</p>
+        </div>
+        <div class="fadv-card">
+          <div class="fadv-icon"><i class="fas fa-arrow-up"></i></div>
+          <h4>Самоопорожнение</h4>
+          <p>W-тип с конфигурацией для полного слива. Смена продуктов без промывки — идеально для многономенклатурного производства.</p>
+        </div>
+        <div class="fadv-card">
+          <div class="fadv-icon"><i class="fas fa-weight"></i></div>
+          <h4>Прямое измерение массы</h4>
+          <p>Независимость от вязкости, плотности, температуры и профиля потока. Идеально для вязких паст, шоколада, мёда и сиропов.</p>
+        </div>
+        <div class="fadv-card">
+          <div class="fadv-icon"><i class="fas fa-thermometer-half"></i></div>
+          <h4>Измерение Brix / плотности</h4>
+          <p>Одновременное измерение массового расхода и плотности. Расчёт концентрации (Brix) для соков, сиропов и спиртов.</p>
+        </div>
+        <div class="fadv-card">
+          <div class="fadv-icon"><i class="fas fa-wrench"></i></div>
+          <h4>Минимум обслуживания</h4>
+          <p>Нет подвижных частей, не требующих замены уплотнений. Снижение эксплуатационных затрат и времени простоев на обслуживание.</p>
+        </div>
+      </div>
+
+      <div class="food-highlight animate-on-scroll" style="margin-top:2rem;">
+        <h3>🍫 Прямотрубный L-тип для вязких продуктов</h3>
+        <p>
+          Для особо вязких пищевых продуктов — <strong>томатной пасты, шоколада, мёда,</strong>
+          ореховых паст — Mass-EXPERT предлагает сенсоры <strong>L-типа (прямотрубные)</strong>.
+          Отсутствие изгибов измерительных трубок исключает застойные зоны и минимизирует
+          гидравлическое сопротивление. В сочетании с Ra ≤ 0,8 мкм и Tri-clamp соединениями
+          это лучшее решение для пищевых производств с высокими требованиями к гигиене.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== RECOMMENDED CONFIGURATIONS ==================== -->
+  <section class="section section-gray" id="configurations">
+    <div class="container">
+      <div class="section-header animate-on-scroll">
+        <span class="section-badge">Рекомендуемые конфигурации</span>
+        <h2>Оптимальные решения для пищевой промышленности</h2>
+        <p>Проверенные комбинации сенсоров, типов соединений и опций для типовых задач пищевых производств и напитков</p>
+      </div>
+
+      <div class="fconfig-cards animate-on-scroll">
+        <div class="fconfig-card">
+          <div class="fcfg-icon"><i class="fas fa-grip-lines"></i></div>
+          <h4>Сенсоры L-типа (прямотрубные)</h4>
+          <p style="font-size:0.9375rem;color:var(--gray-500);">
+            Рекомендованы для вязких и пастообразных пищевых продуктов. Отсутствие изгибов исключает застойные зоны и упрощает CIP/SIP-очистку.
+          </p>
+          <ul>
+            <li>Конструкция без изгибов — нет застойных зон</li>
+            <li>Минимальное гидравлическое сопротивление</li>
+            <li>Для шоколада, паст, мёда, томатной пасты</li>
+            <li>DN08–DN50 для различных расходов</li>
+          </ul>
+        </div>
+        <div class="fconfig-card" style="border-top-color:#D97706;">
+          <div class="fcfg-icon" style="color:#D97706;"><i class="fas fa-hand-sparkles"></i></div>
+          <h4>Гигиеническое исполнение с Tri-clamp</h4>
+          <p style="font-size:0.9375rem;color:var(--gray-500);">
+            Санитарные соединения Tri-clamp (DIN 32676 / ISO 2852) и шероховатость Ra ≤ 0,8 мкм — соответствие строгим стандартам пищевой безопасности.
+          </p>
+          <ul>
+            <li>Tri-clamp DN20–DN100</li>
+            <li>Полировка Ra ≤ 0,8 мкм</li>
+            <li>Быстрый монтаж / демонтаж</li>
+            <li>Совместимость с CIP/SIP</li>
+          </ul>
+        </div>
+        <div class="fconfig-card" style="border-top-color:#10B981;">
+          <div class="fcfg-icon" style="color:#10B981;"><i class="fas fa-arrow-down"></i></div>
+          <h4>Самоопорожняемый W-тип</h4>
+          <p style="font-size:0.9375rem;color:var(--gray-500);">
+            Специальная конфигурация измерительной камеры для полного слива продукта. Идеально для смены продуктов без промежуточной промывки.
+          </p>
+          <ul>
+            <li>Полный слив — отсутствие остатков продукта</li>
+            <li>Быстрая смена продукта без промывки</li>
+            <li>Минимизация потерь при переналадке</li>
+            <li>Для многономенклатурных линий</li>
+          </ul>
+        </div>
+        <div class="fconfig-card" style="border-top-color:#6366F1;">
+          <div class="fcfg-icon" style="color:#6366F1;"><i class="fas fa-microchip"></i></div>
+          <h4>Трансмиттеры ME100 / ME200</h4>
+          <p style="font-size:0.9375rem;color:var(--gray-500);">
+            Выбор трансмиттера в зависимости от потребностей в цифровых интерфейсах, взрывозащите и функциональности.
+          </p>
+          <ul>
+            <li>ME100 — базовый, 4–20 мА + HART, RS-485 Modbus</li>
+            <li>ME200 — расширенный, Ex-исполнение, два токовых выхода</li>
+            <li>Поддержка HART, Modbus, PROFIBUS PA</li>
+            <li>Цифровая интеграция в АСУ ТП</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="animate-on-scroll" style="margin-top:2rem;">
+        <div class="section-header">
+          <span class="section-badge">Ключевые параметры</span>
+          <h3 style="font-size:1.25rem;">Технические возможности Mass-EXPERT для пищевой промышленности</h3>
+        </div>
+        <div class="ffeat-list">
+          <div class="ffeat-item">
+            <div class="ffeat-icon">✓</div>
+            <div class="ffeat-text"><strong>Массовый расход жидкости:</strong> от 1 до 1 740 000 кг/ч</div>
+          </div>
+          <div class="ffeat-item">
+            <div class="ffeat-icon">✓</div>
+            <div class="ffeat-text"><strong>Погрешность измерений:</strong> ±0,1% – ±0,2%</div>
+          </div>
+          <div class="ffeat-item">
+            <div class="ffeat-icon">✓</div>
+            <div class="ffeat-text"><strong>Шероховатость контактных частей:</strong> Ra ≤ 0,8 мкм</div>
+          </div>
+          <div class="ffeat-item">
+            <div class="ffeat-icon">✓</div>
+            <div class="ffeat-text"><strong>Температура среды (CIP):</strong> до +140 °C</div>
+          </div>
+          <div class="ffeat-item">
+            <div class="ffeat-icon">✓</div>
+            <div class="ffeat-text"><strong>Рабочее давление:</strong> до 96 МПа</div>
+          </div>
+          <div class="ffeat-item">
+            <div class="ffeat-icon">✓</div>
+            <div class="ffeat-text"><strong>Диапазон плотности:</strong> 650–2000 кг/м³</div>
+          </div>
+          <div class="ffeat-item">
+            <div class="ffeat-icon">✓</div>
+            <div class="ffeat-text"><strong>Санитарные соединения:</strong> Tri-clamp (DIN 32676 / ISO 2852)</div>
+          </div>
+          <div class="ffeat-item">
+            <div class="ffeat-icon">✓</div>
+            <div class="ffeat-text"><strong>Материалы контактных частей:</strong> 316L / 304</div>
+          </div>
+          <div class="ffeat-item">
+            <div class="ffeat-icon">✓</div>
+            <div class="ffeat-text"><strong>Выходные сигналы:</strong> 4–20 мA HART, RS-485 Modbus, PROFIBUS PA</div>
+          </div>
+          <div class="ffeat-item">
+            <div class="ffeat-icon">✓</div>
+            <div class="ffeat-text"><strong>Степень защиты:</strong> IP66/IP67</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="food-highlight animate-on-scroll">
+        <h3>📋 Рекомендация для типовых задач</h3>
+        <p>
+          <strong>Для высоковязких продуктов</strong> (томатная паста, шоколад, мёд): сенсор <strong>L-типа</strong>
+          + Tri-clamp + Ra ≤ 0,8 мкм + трансмиттер <strong>ME200</strong>.<br>
+          <strong>Для жидких продуктов с частой сменой</strong> (соки, сиропы, молоко): сенсор <strong>W-типа</strong>
+          (самоопорожнение) + Tri-clamp + трансмиттер <strong>ME100</strong>.<br>
+          <strong>Для учёта спиртов и экстрактов</strong>: сенсор L-типа или U-типа + 316L + 
+          трансмиттер ME200 с HART/Modbus.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== CTA ==================== -->
+  <section class="section" style="background:linear-gradient(135deg, #1a1a2e 0%, #e0522a 50%, #1a1a2e 100%);text-align:center;">
+    <div class="container">
+      <div class="animate-on-scroll">
+        <span class="section-badge" style="background:rgba(255,255,255,0.1);color:rgba(255,255,255,0.8);">Готовы к внедрению?</span>
+        <h2 style="color:var(--white);">Подберём конфигурацию для вашего продукта</h2>
+        <p style="max-width:600px;margin:1rem auto 2rem;color:rgba(255,255,255,0.8);">
+          Наши инженеры помогут выбрать оптимальный тип сенсора, санитарное исполнение и трансмиттер
+          для вашей пищевой задачи — от молочной фермы до кондитерской фабрики.
+        </p>
+        <a href="../index.html#contacts" class="btn btn-primary btn-lg">Связаться с нами</a>
+        <a href="../index.html" class="btn btn-outline" style="margin-left:0.75rem;border-color:rgba(255,255,255,0.3);color:var(--white);">На главную</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== FOOTER ==================== -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <h4>Mass-EXPERT</h4>
+          <p>Счетчики-расходомеры массовые кориолисового типа.</p>
+          <p>Госреестр № 98506-26. ТУ 26.51.52-016-88090790-2024.</p>
+          <p style="margin-top:0.75rem;font-size:0.8125rem;">
+            Разработка и производство:<br>
+            ООО «Автоматизация-Метрология-ЭКСПЕРТ», г. Уфа
+          </p>
+        </div>
+        <div class="footer-links">
+          <h5>Продукт</h5>
+          <a href="../index.html#specifications">Характеристики</a>
+          <a href="../index.html#product-line">Типоразмеры</a>
+          <a href="../index.html#options">Модификации</a>
+          <a href="../index.html#transmitters">Трансмиттеры</a>
+        </div>
+        <div class="footer-links">
+          <h5>Документация</h5>
+          <a href="../index.html#certificates">Сертификаты</a>
+          <a href="../docs/ОПИСАНИЕ_ТИПА_2026-98506-26.pdf" target="_blank">Описание типа</a>
+          <a href="../docs/РЭ_Масс_Эксперт_v09.pdf" target="_blank">Руководство по эксплуатации</a>
+          <a href="../docs/2026-МП_98506-26_compressed.pdf" target="_blank">Методика поверки</a>
+        </div>
+        <div class="footer-links">
+          <h5>Контакты</h5>
+          <a href="tel:+734****5350">+7 (347) 286-53-50</a>
+          <a href="mailto:info@ame-info.ru">info@ame-info.ru</a>
+          <a href="https://www.ame-info.ru" target="_blank">www.ame-info.ru</a>
+          <a href="../sitemap.html" style="margin-top:0.5rem;font-size:0.8125rem;color:var(--gray-500);">📋 Карта сайта</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>© <span id="year">2026</span> ООО «Автоматизация-Метрология-ЭКСПЕРТ». Все права защищены.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="../js/main.js"></script>
+</body>
+</html>
