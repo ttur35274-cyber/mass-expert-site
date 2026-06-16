@@ -118,12 +118,13 @@ document.addEventListener('DOMContentLoaded', () => {
   // --- Smooth scroll for anchor links ---
   document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', function(e) {
+      // Instant scroll for mobile menu links (menu close fires before this handler)
+      const isMobileNav = this.closest('.navbar-links') !== null && window.innerWidth <= 768;
+      
       const target = document.querySelector(this.getAttribute('href'));
       if (target) {
         e.preventDefault();
-        // Instant scroll on mobile when nav menu is open, smooth otherwise
-        const useSmooth = !navLinks || !navLinks.classList.contains('open');
-        target.scrollIntoView({ behavior: useSmooth ? 'smooth' : 'instant', block: 'start' });
+        target.scrollIntoView({ behavior: isMobileNav ? 'instant' : 'smooth', block: 'start' });
       }
     });
   });
