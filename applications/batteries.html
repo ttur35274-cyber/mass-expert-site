@@ -220,7 +220,7 @@
       color: var(--gray-600);
     }
     .config-card ul li::before {
-      content: '✓';
+      content: '\2713';
       position: absolute;
       left: 0;
       color: var(--success, #10B981);
@@ -344,7 +344,7 @@
         <span class="brand-icon">MASS<br>EXPERT</span>
         Mass-EXPERT
       </a>
-      <button class="navbar-toggle" aria-label="Открыть меню">☰</button>
+      <button class="navbar-toggle" aria-label="Открыть меню"><i class="fas fa-bars"></i></button>
       <div class="navbar-links">
         <a href="../index.html#about">О продукте</a>
         <a href="../index.html#advantages">Преимущества</a>
@@ -376,12 +376,12 @@
           <a href="#advantages" class="btn btn-outline">Преимущества</a>
         </div>
         <div class="bat-badges">
-          <span class="bat-badge">🔋 Электролиты LiPF₆</span>
-          <span class="bat-badge">🧪 Катодные суспензии NMC</span>
-          <span class="bat-badge">⚫ Анодные суспензии (графит)</span>
-          <span class="bat-badge">🔬 Чистота процессов</span>
-          <span class="bat-badge">📏 ME100 — метрология</span>
-          <span class="bat-badge">🎯 Точность 0,1–0,2%</span>
+          <span class="bat-badge"><i class="fas fa-battery-full"></i> Электролиты LiPF₆</span>
+          <span class="bat-badge"><i class="fas fa-flask"></i> Катодные суспензии NMC</span>
+          <span class="bat-badge"><i class="fas fa-circle" style="color:#333;"></i> Анодные суспензии (графит)</span>
+          <span class="bat-badge"><i class="fas fa-microscope"></i> Чистота процессов</span>
+          <span class="bat-badge"><i class="fas fa-ruler"></i> ME100 — метрология</span>
+          <span class="bat-badge"><i class="fas fa-bullseye"></i> Точность 0,1–0,2%</span>
         </div>
       </div>
     </div>
@@ -398,7 +398,7 @@
 
       <div class="media-cards animate-on-scroll">
         <div class="media-card">
-          <div class="mc-icon">🔋</div>
+          <div class="mc-icon"><i class="fas fa-battery-full"></i></div>
           <h4>Электролиты</h4>
           <p>Растворы литиевых солей (LiPF₆, LiBF₄, LiTFSI) в смесях органических растворителей — этиленкарбонат (EC), диметилкарбонат (DMC), диэтилкарбонат (DEC), этилметилкарбонат (EMC). Высокая реакционная способность и чувствительность к влаге требуют герметичных систем и материалов, устойчивых к фторсодержащим средам.</p>
           <div>
@@ -408,7 +408,7 @@
           </div>
         </div>
         <div class="media-card">
-          <div class="mc-icon">🧪</div>
+          <div class="mc-icon"><i class="fas fa-flask"></i></div>
           <h4>Катодные суспензии (NMC, LFP, LCO)</h4>
           <p>Высоковязкие суспензии активных катодных материалов (LiNiMnCoO₂, LiFePO₄, LiCoO₂) с полимерными связующими (PVDF, CMC) в органических растворителях (NMP, вода). Дозирование с точностью до долей процента критически важно для равномерности нанесения покрытия на токосъёмник.</p>
           <div>
@@ -418,7 +418,7 @@
           </div>
         </div>
         <div class="media-card">
-          <div class="mc-icon">⚫</div>
+          <div class="mc-icon"><i class="fas fa-circle" style="color:#333;"></i></div>
           <h4>Анодные суспензии (графит, кремний)</h4>
           <p>Суспензии на основе природного/синтетического графита, кремний-углеродных композитов (Si/C), оксидов титана (LTO) с полимерными связующими (SBR, CMC, PAA) в водной или органической фазе. Требуют высокой стабильности и повторяемости расхода при дозировании.</p>
           <div>
@@ -428,7 +428,7 @@
           </div>
         </div>
         <div class="media-card">
-          <div class="mc-icon">🧴</div>
+          <div class="mc-icon"><i class="fas fa-bottle-droplet"></i></div>
           <h4>Компоненты активной массы</h4>
           <p>Точное смешение проводящих добавок (Super P, углеродная сажа, углеродные нанотрубки), полимерных связующих (PVDF, CMC, SBR, PAA) и функциональных присадок (FEC, VC, PS) в заданных пропорциях для приготовления качественной активной массы с однородной микроструктурой.</p>
           <div>
@@ -446,22 +446,22 @@
 
       <div class="media-cards animate-on-scroll" style="grid-template-columns:repeat(auto-fit, minmax(240px, 1fr));">
         <div class="media-card" style="text-align:center;">
-          <div class="mc-icon">💧</div>
+          <div class="mc-icon"><i class="fas fa-tint"></i></div>
           <h4>Содержание влаги &lt; 20 ppm</h4>
           <p>Электролиты и компоненты активной массы чрезвычайно чувствительны к влаге — образование HF из LiPF₆ разрушает SEI-слой и снижает циклический ресурс. Системы Mass-EXPERT герметичны и не допускают контакта среды с атмосферой.</p>
         </div>
         <div class="media-card" style="text-align:center;">
-          <div class="mc-icon">🔬</div>
+          <div class="mc-icon"><i class="fas fa-microscope"></i></div>
           <h4>Класс чистоты ISO 4–5 (dry room)</h4>
           <p>Сухие помещения (dry rooms) с точкой росы –40 °C…–60 °C обязательны на этапах дозирования электролита и сборки ячеек. Оборудование Mass-EXPERT в исполнении IP66/IP67 допускает эксплуатацию в таких условиях.</p>
         </div>
         <div class="media-card" style="text-align:center;">
-          <div class="mc-icon">🛡️</div>
+          <div class="mc-icon"><i class="fas fa-shield-alt"></i></div>
           <h4>Без генерации частиц</h4>
           <p>Отсутствие подвижных частей в измерительном сенсоре исключает абразивный износ и генерацию микрочастиц — критическое требование для сохранения чистоты суспензий и электролитов высокой чистоты.</p>
         </div>
         <div class="media-card" style="text-align:center;">
-          <div class="mc-icon">🧪</div>
+          <div class="mc-icon"><i class="fas fa-flask"></i></div>
           <h4>Пассивация материалов</h4>
           <p>Все контактирующие со средой поверхности (316L/Хастеллой) проходят электрохимическую пассивацию и финишную обработку Ra ≤ 0,4 мкм для минимизации адгезии загрязнений и облегчения очистки.</p>
         </div>
@@ -474,22 +474,22 @@
 
       <div class="materials-grid animate-on-scroll">
         <div class="material-card">
-          <div class="mat-icon">⚙️</div>
+          <div class="mat-icon"><i class="fas fa-cogs"></i></div>
           <div class="mat-name">Нержавеющая сталь 316L</div>
           <div class="mat-desc">Базовый материал для органических растворителей, NMP, карбонатов. Химическая стойкость к основным компонентам электролитов и связующих.</div>
         </div>
         <div class="material-card">
-          <div class="mat-icon">🛡️</div>
+          <div class="mat-icon"><i class="fas fa-shield-alt"></i></div>
           <div class="mat-name">Хастеллой C4/C276</div>
           <div class="mat-desc">Рекомендован для фторсодержащих электролитов (LiPF₆), кислых сред, продуктов деградации. Максимальная коррозионная стойкость к HF.</div>
         </div>
         <div class="material-card">
-          <div class="mat-icon">💎</div>
+          <div class="mat-icon"><i class="fas fa-gem"></i></div>
           <div class="mat-name">316L + покрытие</div>
           <div class="mat-desc">Внутреннее покрытие (DLC, алмазоподобное) для абразивных анодных/катодных суспензий. Высокая износостойкость и низкое гидравлическое сопротивление.</div>
         </div>
         <div class="material-card">
-          <div class="mat-icon">🔩</div>
+          <div class="mat-icon"><i class="fas fa-tools"></i></div>
           <div class="mat-name">PTFE-футеровка (по заказу)</div>
           <div class="mat-desc">Химическая инертность и минимальное выщелачивание для электролитов с жёсткими требованиями к металлическим примесям (&lt; 1 ppm).</div>
         </div>
@@ -508,39 +508,39 @@
 
       <div class="adv-grid animate-on-scroll">
         <div class="adv-card-app">
-          <div class="adv-icon">🎯</div>
+          <div class="adv-icon"><i class="fas fa-bullseye"></i></div>
           <h4>Прямое измерение массы</h4>
           <p>Дозирование компонентов активной массы и электролита по массе, а не по объёму. Исключает влияние температуры и плотности — ключевое преимущество при работе с неидеальными смесями карбонатов и твёрдых добавок.</p>
         </div>
         <div class="adv-card-app">
-          <div class="adv-icon">🔬</div>
+          <div class="adv-icon"><i class="fas fa-microscope"></i></div>
           <h4>Чистота и герметичность</h4>
           <p>Цельносварная конструкция без подвижных частей и уплотнений. Полная герметизация — отсутствие контакта электролита с атмосферой, что критически важно для влагочувствительных сред (LiPF₆ реагирует с влагой с образованием HF).</p>
         </div>
         <div class="adv-card-app">
-          <div class="adv-icon">⚖️</div>
+          <div class="adv-icon"><i class="fas fa-scale-balanced"></i></div>
           <h4>Высокая точность дозирования</h4>
           <p>Класс точности 0,1–0,2% для жидкостей и суспензий. Повторяемость измерений ±0,05% гарантирует стабильность состава активной массы от партии к партии.</p>
         </div>
         <div class="adv-card-app">
-          <div class="adv-icon">📊</div>
+          <div class="adv-icon"><i class="fas fa-chart-bar"></i></div>
           <h4>Многофункциональность</h4>
           <p>Один сенсор одновременно измеряет массовый расход, плотность (концентрацию) и температуру среды — полезно при контроле состава катодных суспензий и плотности электролита.</p>
         </div>
         <div class="adv-card-app">
-          <div class="adv-icon">🔋</div>
+          <div class="adv-icon"><i class="fas fa-battery-full"></i></div>
           <h4>Минимальное обслуживание</h4>
           <p>Нет вращающихся частей — нет износа. Отсутствие необходимости в регулярной калибровке и замене уплотнений. Минимальные эксплуатационные затраты и время простоев в непрерывном производстве.</p>
         </div>
         <div class="adv-card-app">
-          <div class="adv-icon">🛡️</div>
+          <div class="adv-icon"><i class="fas fa-shield-alt"></i></div>
           <h4>Устойчивость к абразиву</h4>
           <p>Прямотрубные сенсоры L-типа с минимальным гидравлическим сопротивлением позволяют дозировать высоконаполненные суспензии (графит, NMC, LFP) без эрозии измерительного тракта.</p>
         </div>
       </div>
 
       <div class="highlight-box animate-on-scroll">
-        <h3>🔋 Точное дозирование электролита — ключ к качеству Li-ion ячейки</h3>
+        <h3><i class="fas fa-battery-full"></i> Точное дозирование электролита — ключ к качеству Li-ion ячейки</h3>
         <p>
           Количество электролита, инжектируемого в аккумуляторную ячейку, напрямую влияет на
           её ёмкость, внутреннее сопротивление и срок службы. Кориолисовый расходомер
@@ -620,7 +620,7 @@
       </div>
 
       <div class="highlight-box animate-on-scroll" style="background:linear-gradient(135deg, #EDE9FE, #DDD6FE);border-color:#C4B5FD;border-left-color:#7C3AED;">
-        <h3 style="color:#4C1D95;">💡 Рекомендация для линии дозирования электролита</h3>
+        <h3 style="color:#4C1D95;"><i class="fas fa-lightbulb"></i> Рекомендация для линии дозирования электролита</h3>
         <p style="color:#4C1D95;">
           Для прецизионной инжекции электролита (LiPF₆ + EC/DMC/DEC) в аккумуляторные ячейки
           рекомендуем конфигурацию: <strong>сенсор L-типа DN01–DN04</strong> (малый внутренний
@@ -638,35 +638,35 @@
         </div>
         <div class="feat-list">
           <div class="feat-item">
-            <div class="feat-icon">✓</div>
+            <div class="feat-icon"><i class="fas fa-check" style="color:var(--success);font-size:inherit;"></i></div>
             <div class="feat-text"><strong>Массовый расход жидкости:</strong> от 0,1 до 1 740 000 кг/ч (зависит от DN)</div>
           </div>
           <div class="feat-item">
-            <div class="feat-icon">✓</div>
+            <div class="feat-icon"><i class="fas fa-check" style="color:var(--success);font-size:inherit;"></i></div>
             <div class="feat-text"><strong>Погрешность измерений:</strong> ±0,1% – ±0,2% (ME100 — 0,1%)</div>
           </div>
           <div class="feat-item">
-            <div class="feat-icon">✓</div>
+            <div class="feat-icon"><i class="fas fa-check" style="color:var(--success);font-size:inherit;"></i></div>
             <div class="feat-text"><strong>Диапазон плотности:</strong> 650–2000 кг/м³ — контроль концентрации суспензий</div>
           </div>
           <div class="feat-item">
-            <div class="feat-icon">✓</div>
+            <div class="feat-icon"><i class="fas fa-check" style="color:var(--success);font-size:inherit;"></i></div>
             <div class="feat-text"><strong>Температура среды:</strong> от –196 до +350 °C (опция обогрева сенсора)</div>
           </div>
           <div class="feat-item">
-            <div class="feat-icon">✓</div>
+            <div class="feat-icon"><i class="fas fa-check" style="color:var(--success);font-size:inherit;"></i></div>
             <div class="feat-text"><strong>Рабочее давление:</strong> до 96 МПа (в малых DN — 40 МПа)</div>
           </div>
           <div class="feat-item">
-            <div class="feat-icon">✓</div>
+            <div class="feat-icon"><i class="fas fa-check" style="color:var(--success);font-size:inherit;"></i></div>
             <div class="feat-text"><strong>Выходные сигналы:</strong> 4–20 мА HART, RS-485 Modbus RTU, PROFIBUS PA, EtherCAT (опция)</div>
           </div>
           <div class="feat-item">
-            <div class="feat-icon">✓</div>
+            <div class="feat-icon"><i class="fas fa-check" style="color:var(--success);font-size:inherit;"></i></div>
             <div class="feat-text"><strong>Взрывозащита:</strong> Ex d ib IIC T6 Gb (для помещений с легковосплам. растворителями)</div>
           </div>
           <div class="feat-item">
-            <div class="feat-icon">✓</div>
+            <div class="feat-icon"><i class="fas fa-check" style="color:var(--success);font-size:inherit;"></i></div>
             <div class="feat-text"><strong>Степень защиты:</strong> IP66/IP67 (эксплуатация в dry rooms)</div>
           </div>
         </div>
@@ -723,7 +723,7 @@
           <a href="tel:+734****5350">+7 (347) 286-53-50</a>
           <a href="mailto:info@ame-info.ru">info@ame-info.ru</a>
           <a href="https://www.ame-info.ru" target="_blank">www.ame-info.ru</a>
-          <a href="../sitemap.html" style="margin-top:0.5rem;font-size:0.8125rem;color:var(--gray-500);">📋 Карта сайта</a>
+          <a href="../sitemap.html" style="margin-top:0.5rem;font-size:0.8125rem;color:var(--gray-500);"><i class="fas fa-clipboard-list"></i> Карта сайта</a>
         </div>
       </div>
       <div class="footer-bottom">

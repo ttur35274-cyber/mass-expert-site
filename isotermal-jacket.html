@@ -15,9 +15,9 @@
     .temp-diagram { display:flex; gap:2rem; flex-wrap:wrap; align-items:center; justify-content:center; margin:2rem 0; padding:2rem; background:var(--gray-900); border-radius:var(--radius-lg); color:white; }
     .temp-diagram .arrow-down { font-size:2rem; color:var(--accent); }
     .problem-list li { margin-bottom: 1rem; padding-left: 1.5rem; position: relative; }
-    .problem-list li::before { content: '⚠️'; position: absolute; left: 0; }
+    .problem-list li::before { content: '\26A0'; position: absolute; left: 0; }
     .check-list li { margin-bottom: 0.5rem; padding-left: 1.5rem; position: relative; }
-    .check-list li::before { content: '✓'; position: absolute; left: 0; color: var(--success); font-weight: 700; }
+    .check-list li::before { content: '\2713'; position: absolute; left: 0; color: var(--success); font-weight: 700; }
     .media-card { background: var(--gray-50); border:1px solid var(--gray-200); border-radius:var(--radius); padding:1.5rem; }
     .media-card h4 { color: var(--primary); margin-bottom: 0.25rem; }
     .media-card .viscosity-warning { font-size: 0.875rem; color: var(--danger); }
@@ -32,7 +32,7 @@
         <span class="brand-icon">MASS<br>EXPERT</span>
         Mass-EXPERT
       </a>
-      <button class="navbar-toggle" aria-label="Меню">☰</button>
+      <button class="navbar-toggle" aria-label="Меню"><i class="fas fa-bars"></i></button>
       <div class="navbar-links">
         <a href="index.html#about">О продукте</a>
         <a href="index.html#advantages">Преимущества</a>
@@ -64,11 +64,11 @@
             <a href="#specs" class="btn btn-outline">Характеристики</a>
           </div>
           <div class="hero-badges">
-            <span class="hero-badge">✓ Битум</span>
-            <span class="hero-badge">✓ Сера</span>
-            <span class="hero-badge">✓ Парафины</span>
-            <span class="hero-badge">✓ Мазуты</span>
-            <span class="hero-badge">✓ Смолы</span>
+            <span class="hero-badge"><i class="fas fa-check" style="color:var(--success);font-size:inherit;"></i> Битум</span>
+            <span class="hero-badge"><i class="fas fa-check" style="color:var(--success);font-size:inherit;"></i> Сера</span>
+            <span class="hero-badge"><i class="fas fa-check" style="color:var(--success);font-size:inherit;"></i> Парафины</span>
+            <span class="hero-badge"><i class="fas fa-check" style="color:var(--success);font-size:inherit;"></i> Мазуты</span>
+            <span class="hero-badge"><i class="fas fa-check" style="color:var(--success);font-size:inherit;"></i> Смолы</span>
           </div>
         </div>
         <div class="hero-visual">
@@ -198,13 +198,13 @@
       <div class="temp-diagram animate-on-scroll">
         <div style="text-align:center;flex:1;">
           <div style="font-size:1.5rem;font-weight:700;color:var(--danger);margin-bottom:1rem;">Без кожуха</div>
-          <div style="font-size:3rem;">🌡️↗️↘️</div>
+          <div style="font-size:3rem;"><i class="fas fa-temperature-high"></i>↗️↘️</div>
           <div style="color:var(--gray-400);margin-top:0.5rem;">Температура скачет →<br>Вязкость хаотично меняется →<br><strong style="color:var(--danger);">Погрешность до 15%</strong></div>
         </div>
         <div style="font-size:3rem;color:var(--accent);">→</div>
         <div style="text-align:center;flex:1;">
           <div style="font-size:1.5rem;font-weight:700;color:var(--success);margin-bottom:1rem;">С изотермическим кожухом</div>
-          <div style="font-size:3rem;">🌡️➡️</div>
+          <div style="font-size:3rem;"><i class="fas fa-temperature-high"></i><i class="fas fa-arrow-right"></i>️</div>
           <div style="color:var(--gray-400);margin-top:0.5rem;">Температура стабильна →<br>Вязкость постоянна →<br><strong style="color:var(--success);">Точность ±0,1%</strong></div>
         </div>
       </div>

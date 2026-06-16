@@ -220,7 +220,7 @@
       color: var(--gray-600);
     }
     .config-card ul li::before {
-      content: '✓';
+      content: '\2713';
       position: absolute;
       left: 0;
       color: var(--success, #10B981);
@@ -326,7 +326,7 @@
         <span class="brand-icon">MASS<br>EXPERT</span>
         Mass-EXPERT
       </a>
-      <button class="navbar-toggle" aria-label="Открыть меню">☰</button>
+      <button class="navbar-toggle" aria-label="Открыть меню"><i class="fas fa-bars"></i></button>
       <div class="navbar-links">
         <a href="../index.html#about">О продукте</a>
         <a href="../index.html#advantages">Преимущества</a>
@@ -357,11 +357,11 @@
           <a href="#advantages" class="btn btn-outline">Преимущества</a>
         </div>
         <div class="cond-badges">
-          <span class="cond-badge">🧪 Кислоты H₂SO₄ / HCl / HNO₃</span>
-          <span class="cond-badge">🧴 Щёлочи NaOH / KOH</span>
-          <span class="cond-badge">💧 Растворители</span>
-          <span class="cond-badge">🛡️ Хастеллой / Тантал / Титан</span>
-          <span class="cond-badge">🎯 Точность 0,1–0,2%</span>
+          <span class="cond-badge"><i class="fas fa-flask"></i> Кислоты H₂SO₄ / HCl / HNO₃</span>
+          <span class="cond-badge"><i class="fas fa-bottle-droplet"></i> Щёлочи NaOH / KOH</span>
+          <span class="cond-badge"><i class="fas fa-tint"></i> Растворители</span>
+          <span class="cond-badge"><i class="fas fa-shield-alt"></i> Хастеллой / Тантал / Титан</span>
+          <span class="cond-badge"><i class="fas fa-bullseye"></i> Точность 0,1–0,2%</span>
         </div>
       </div>
     </div>
@@ -378,7 +378,7 @@
 
       <div class="media-cards animate-on-scroll">
         <div class="media-card">
-          <div class="mc-icon">🧪</div>
+          <div class="mc-icon"><i class="fas fa-flask"></i></div>
           <h4>Кислоты</h4>
           <p>Концентрированная и разбавленная серная кислота (H₂SO₄), соляная кислота (HCl), азотная кислота (HNO₃), фосфорная кислота (H₃PO₄), плавиковая кислота (HF) и другие.</p>
           <div>
@@ -388,7 +388,7 @@
           </div>
         </div>
         <div class="media-card">
-          <div class="mc-icon">🧴</div>
+          <div class="mc-icon"><i class="fas fa-bottle-droplet"></i></div>
           <h4>Щёлочи</h4>
           <p>Едкий натр (NaOH), гидроксид калия (KOH), растворы аммиака (NH₄OH) и другие щелочные соединения, требующие коррозионностойких материалов контактных частей.</p>
           <div>
@@ -398,12 +398,12 @@
           </div>
         </div>
         <div class="media-card">
-          <div class="mc-icon">💧</div>
+          <div class="mc-icon"><i class="fas fa-tint"></i></div>
           <h4>Растворители</h4>
           <p>Ацетон, метанол, этанол, изопропанол, толуол, ксилол, этилацетат, метилэтилкетон (MEK) и другие органические растворители, используемые в химическом синтезе.</p>
         </div>
         <div class="media-card">
-          <div class="mc-icon">⚗️</div>
+          <div class="mc-icon"><i class="fas fa-vial"></i></div>
           <h4>Реагенты и полупродукты</h4>
           <p>Хлорное железо, сульфаты, нитраты, хлораты, перекись водорода (H₂O₂), хлорорганические соединения и другие жидкие химические реагенты и промежуточные продукты.</p>
         </div>
@@ -416,22 +416,22 @@
 
       <div class="materials-grid animate-on-scroll">
         <div class="material-card">
-          <div class="mat-icon">🛡️</div>
+          <div class="mat-icon"><i class="fas fa-shield-alt"></i></div>
           <div class="mat-name">Хастеллой (C4/C276)</div>
           <div class="mat-desc">Высокая стойкость к кислотам и хлоридам. Рекомендован для HCl, H₂SO₄, влажного хлора.</div>
         </div>
         <div class="material-card">
-          <div class="mat-icon">🔩</div>
+          <div class="mat-icon"><i class="fas fa-tools"></i></div>
           <div class="mat-name">Тантал</div>
           <div class="mat-desc">Максимальная коррозионная стойкость к агрессивным средам. Идеален для HF, царской водки.</div>
         </div>
         <div class="material-card">
-          <div class="mat-icon">⚙️</div>
+          <div class="mat-icon"><i class="fas fa-cogs"></i></div>
           <div class="mat-name">Титан (Grade 2/5)</div>
           <div class="mat-desc">Лёгкий и прочный. Стойкость к хлоридным средам, окислителям, HNO₃.</div>
         </div>
         <div class="material-card">
-          <div class="mat-icon">🔬</div>
+          <div class="mat-icon"><i class="fas fa-microscope"></i></div>
           <div class="mat-name">Нержавеющая сталь 316L</div>
           <div class="mat-desc">Базовый материал для умеренно агрессивных сред. Подходит для большинства растворителей и щелочей.</div>
         </div>
@@ -450,39 +450,39 @@
 
       <div class="adv-grid animate-on-scroll">
         <div class="adv-card-app">
-          <div class="adv-icon">🎯</div>
+          <div class="adv-icon"><i class="fas fa-bullseye"></i></div>
           <h4>Прямое измерение массы</h4>
           <p>Исключает влияние переменной плотности и температуры среды, характерное для химических процессов с изменяющимся составом и нагревом/охлаждением.</p>
         </div>
         <div class="adv-card-app">
-          <div class="adv-icon">🛡️</div>
+          <div class="adv-icon"><i class="fas fa-shield-alt"></i></div>
           <h4>Коррозионная стойкость</h4>
           <p>Специальные материалы трубок (Хастеллой, Тантал, Титан) обеспечивают надёжную работу в самых агрессивных средах и максимальный срок службы.</p>
         </div>
         <div class="adv-card-app">
-          <div class="adv-icon">⚖️</div>
+          <div class="adv-icon"><i class="fas fa-scale-balanced"></i></div>
           <h4>Высокая точность дозирования</h4>
           <p>Точность измерений 0,1–0,2% позволяет точно дозировать реагенты в реакторах непрерывного действия, минимизируя отклонения состава продукта.</p>
         </div>
         <div class="adv-card-app">
-          <div class="adv-icon">🌡️</div>
+          <div class="adv-icon"><i class="fas fa-temperature-high"></i></div>
           <h4>Независимость от температуры</h4>
           <p>Измерение массового расхода не требует коррекции по температуре. Даже при экзотермических/эндотермических реакциях результат остаётся точным.</p>
         </div>
         <div class="adv-card-app">
-          <div class="adv-icon">🔋</div>
+          <div class="adv-icon"><i class="fas fa-battery-full"></i></div>
           <h4>Минимум обслуживания</h4>
           <p>Нет подвижных частей, не требуется замена уплотнений или калибровка. Снижение эксплуатационных затрат и времени простоев.</p>
         </div>
         <div class="adv-card-app">
-          <div class="adv-icon">📊</div>
+          <div class="adv-icon"><i class="fas fa-chart-bar"></i></div>
           <h4>Многофункциональность</h4>
           <p>Одновременное измерение массового расхода, плотности и температуры. Один прибор заменяет несколько, упрощая систему КИПиА.</p>
         </div>
       </div>
 
       <div class="highlight-box animate-on-scroll">
-        <h3>🧪 Прямое измерение массы — ключевое преимущество в химии</h3>
+        <h3><i class="fas fa-flask"></i> Прямое измерение массы — ключевое преимущество в химии</h3>
         <p>
           В химической технологии плотность реагентов часто меняется в ходе процесса — из-за изменения температуры, концентрации или фазового состава.
           Массовый расходомер измеряет именно <strong>массу</strong>, а не объём, поэтому
@@ -558,7 +558,7 @@
       </div>
 
       <div class="highlight-box animate-on-scroll" style="background:linear-gradient(135deg, #FFF7ED, #FFEDD5);border-color:#FED7AA;border-left-color:#F97316;">
-        <h3 style="color:#9A3412;">💡 Рекомендация для дозирования реагентов</h3>
+        <h3 style="color:#9A3412;"><i class="fas fa-lightbulb"></i> Рекомендация для дозирования реагентов</h3>
         <p style="color:#9A3412;">
           Для точного дозирования реагентов в реакторах непрерывного действия выбирайте
           комбинацию: <strong>сенсор L-типа</strong> + <strong>трубки из Хастеллоя C276 или Тантала</strong>
@@ -575,35 +575,35 @@
         </div>
         <div class="feat-list">
           <div class="feat-item">
-            <div class="feat-icon">✓</div>
+            <div class="feat-icon"><i class="fas fa-check" style="color:var(--success);font-size:inherit;"></i></div>
             <div class="feat-text"><strong>Массовый расход жидкости:</strong> от 1 до 1 740 000 кг/ч</div>
           </div>
           <div class="feat-item">
-            <div class="feat-icon">✓</div>
+            <div class="feat-icon"><i class="fas fa-check" style="color:var(--success);font-size:inherit;"></i></div>
             <div class="feat-text"><strong>Погрешность измерений:</strong> ±0,1% – ±0,2%</div>
           </div>
           <div class="feat-item">
-            <div class="feat-icon">✓</div>
+            <div class="feat-icon"><i class="fas fa-check" style="color:var(--success);font-size:inherit;"></i></div>
             <div class="feat-text"><strong>Диапазон плотности:</strong> 650–2000 кг/м³</div>
           </div>
           <div class="feat-item">
-            <div class="feat-icon">✓</div>
+            <div class="feat-icon"><i class="fas fa-check" style="color:var(--success);font-size:inherit;"></i></div>
             <div class="feat-text"><strong>Температура среды:</strong> от –196 до +350 °C</div>
           </div>
           <div class="feat-item">
-            <div class="feat-icon">✓</div>
+            <div class="feat-icon"><i class="fas fa-check" style="color:var(--success);font-size:inherit;"></i></div>
             <div class="feat-text"><strong>Рабочее давление:</strong> до 96 МПа</div>
           </div>
           <div class="feat-item">
-            <div class="feat-icon">✓</div>
+            <div class="feat-icon"><i class="fas fa-check" style="color:var(--success);font-size:inherit;"></i></div>
             <div class="feat-text"><strong>Выходные сигналы:</strong> 4–20 мА HART, RS-485 Modbus, PROFIBUS PA</div>
           </div>
           <div class="feat-item">
-            <div class="feat-icon">✓</div>
+            <div class="feat-icon"><i class="fas fa-check" style="color:var(--success);font-size:inherit;"></i></div>
             <div class="feat-text"><strong>Взрывозащита:</strong> Ex d ib IIC T6 Gb</div>
           </div>
           <div class="feat-item">
-            <div class="feat-icon">✓</div>
+            <div class="feat-icon"><i class="fas fa-check" style="color:var(--success);font-size:inherit;"></i></div>
             <div class="feat-text"><strong>Степень защиты:</strong> IP66/IP67</div>
           </div>
         </div>
@@ -659,7 +659,7 @@
           <a href="tel:+734****5350">+7 (347) 286-53-50</a>
           <a href="mailto:info@ame-info.ru">info@ame-info.ru</a>
           <a href="https://www.ame-info.ru" target="_blank">www.ame-info.ru</a>
-          <a href="../sitemap.html" style="margin-top:0.5rem;font-size:0.8125rem;color:var(--gray-500);">📋 Карта сайта</a>
+          <a href="../sitemap.html" style="margin-top:0.5rem;font-size:0.8125rem;color:var(--gray-500);"><i class="fas fa-clipboard-list"></i> Карта сайта</a>
         </div>
       </div>
       <div class="footer-bottom">
