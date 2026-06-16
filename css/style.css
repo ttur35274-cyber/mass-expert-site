@@ -499,6 +499,7 @@ p { margin-bottom: 1rem; }
   box-shadow: var(--shadow-md);
 }
 .app-card .app-icon { font-size: 1.75rem; margin-bottom: 0.5rem; }
+.app-card .app-icon i { font-size: 1.75rem; color: var(--primary); }
 .app-card .app-name { font-size: 0.8125rem; font-weight: 600; color: var(--gray-700); }
 
 /* --- Product Line Section --- */
