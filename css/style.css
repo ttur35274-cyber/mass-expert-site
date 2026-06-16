@@ -44,6 +44,8 @@ html {
   scroll-behavior: smooth;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
+  width: 100%;
 }
 
 body {
@@ -52,7 +54,7 @@ body {
   line-height: 1.65;
   color: var(--gray-800);
   background: var(--white);
-  overflow-x: hidden;
+  width: 100%;
 }
 
 img { max-width: 100%; height: auto; display: block; margin: 0 auto; }
@@ -959,4 +961,13 @@ details.expandable .expandable-body p {
   /* Tighter option table */
   .options-table td { font-size: 0.75rem; padding: 0.5rem; }
   .options-table th { font-size: 0.7rem; padding: 0.5rem; }
+  
+  /* Full-width sections on mobile */
+  section { width: 100%; overflow: hidden; }
+  .hero { width: 100%; }
+  .hero::before { width: 100%; }
+  
+  /* Reduce hero padding more */
+  .hero-content .hero-label { font-size: 0.65rem; }
+  .hero-badge { font-size: 0.65rem; padding: 0.2rem 0.5rem; }
 }
