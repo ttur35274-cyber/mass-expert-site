@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Изотермический кожух — Mass-EXPERT</title>
+  <meta name="description" content="Изотермический кожух для кориолисовых расходомеров Mass-EXPERT. Поддержание постоянной температуры измеряемой среды для битума, серы, парафинов и вязких продуктов.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 40 40'><rect width='40' height='40' rx='8' fill='%23F59E0B'/><text x='20' y='26' text-anchor='middle' font-size='14' font-weight='900' fill='%230F172A' font-family='Inter'>ME</text></svg>">
+  <style>
+    .temp-diagram { display:flex; gap:2rem; flex-wrap:wrap; align-items:center; justify-content:center; margin:2rem 0; padding:2rem; background:var(--gray-900); border-radius:var(--radius-lg); color:white; }
+    .temp-diagram .arrow-down { font-size:2rem; color:var(--accent); }
+    .problem-list li { margin-bottom: 1rem; padding-left: 1.5rem; position: relative; }
+    .problem-list li::before { content: '⚠️'; position: absolute; left: 0; }
+    .check-list li { margin-bottom: 0.5rem; padding-left: 1.5rem; position: relative; }
+    .check-list li::before { content: '✓'; position: absolute; left: 0; color: var(--success); font-weight: 700; }
+    .media-card { background: var(--gray-50); border:1px solid var(--gray-200); border-radius:var(--radius); padding:1.5rem; }
+    .media-card h4 { color: var(--primary); margin-bottom: 0.25rem; }
+    .media-card .viscosity-warning { font-size: 0.875rem; color: var(--danger); }
+  </style>
+</head>
+<body>
+
+  <!-- Navbar -->
+  <nav class="navbar">
+    <div class="container">
+      <a href="index.html" class="navbar-brand">
+        <span class="brand-icon">MASS<br>EXPERT</span>
+        Mass-EXPERT
+      </a>
+      <button class="navbar-toggle" aria-label="Меню">☰</button>
+      <div class="navbar-links">
+        <a href="index.html#about">О продукте</a>
+        <a href="index.html#advantages">Преимущества</a>
+        <a href="index.html#principle">Принцип работы</a>
+        <a href="index.html#options">Модификации</a>
+        <a href="index.html#certificates">Сертификаты</a>
+        <a href="index.html#contacts">Контакты</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero -->
+  <section class="hero" style="min-height:60vh;padding-top:100px;">
+    <div class="container">
+      <div class="hero-grid" style="grid-template-columns:1fr 1fr;gap:3rem;">
+        <div class="hero-content">
+          <span class="hero-label">Опция 19S</span>
+          <h1>Изотермический кожух</h1>
+          <div class="hero-subtitle">Поддержание температуры — залог точных измерений</div>
+          <p class="hero-desc">
+            Специализированное решение для измерения расхода сред, требующих 
+            постоянства температуры: битум, сера, парафины, мазуты, смолы и 
+            другие высоковязкие продукты. Изотермический кожух предотвращает 
+            застывание, кристаллизацию и неравномерное изменение вязкости 
+            измеряемой среды.
+          </p>
+          <div style="display:flex;gap:1rem;flex-wrap:wrap;">
+            <a href="#problem" class="btn btn-primary">Почему это важно?</a>
+            <a href="#specs" class="btn btn-outline">Характеристики</a>
+          </div>
+          <div class="hero-badges">
+            <span class="hero-badge">✓ Битум</span>
+            <span class="hero-badge">✓ Сера</span>
+            <span class="hero-badge">✓ Парафины</span>
+            <span class="hero-badge">✓ Мазуты</span>
+            <span class="hero-badge">✓ Смолы</span>
+          </div>
+        </div>
+        <div class="hero-visual">
+          <div class="hero-device-card">
+            <div class="device-svg">
+              <img src="images/isotermal_jacket1.jpg" alt="Расходомер Mass-EXPERT с изотермическим кожухом" style="width:100%;height:auto;border-radius:4px;">
+            </div>
+            <div class="hero-stats" style="grid-template-columns:repeat(2,1fr);">
+              <div>
+                <div class="hero-stat-value">−196…+350 °C</div>
+                <div class="hero-stat-label">Диапазон температур</div>
+              </div>
+              <div>
+                <div class="hero-stat-value">Стабильность</div>
+                <div class="hero-stat-label">Постоянство вязкости</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- What is it -->
+  <section class="section" id="about">
+    <div class="container">
+      <div class="section-header animate-on-scroll">
+        <span class="section-badge">О решении</span>
+        <h2>Что такое изотермический кожух?</h2>
+        <p>Изотермический кожух — это теплоизолирующая оболочка, устанавливаемая на сенсор 
+        кориолисового расходомера, которая поддерживает стабильную температуру рабочей среды 
+        в процессе измерения. Это особенно важно для продуктов, чья вязкость критически 
+        зависит от температуры.</p>
+      </div>
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:2rem;align-items:center;" class="animate-on-scroll">
+        <div>
+          <h3 style="color:var(--primary);margin-bottom:1rem;">Как это работает</h3>
+          <ul class="check-list" style="padding:0;">
+            <li>Кожух плотно охватывает измерительные трубки сенсора</li>
+            <li>Через рубашку кожуха пропускается теплоноситель (пар, горячее масло)</li>
+            <li>Температура среды внутри трубок поддерживается на заданном уровне</li>
+            <li>Вязкость остаётся стабильной во время всего цикла измерения</li>
+            <li>Исключаются погрешности, вызванные тепловыми градиентами</li>
+            <li>Предотвращается кристаллизация и застывание продукта внутри сенсора</li>
+          </ul>
+        </div>
+        <div style="text-align:center;">
+          <img src="images/isotermal_jacket_diagram.png" alt="Схема изотермического кожуха" style="max-width:100%;border-radius:var(--radius);border:1px solid var(--gray-200);">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Problem section -->
+  <section class="section section-gray" id="problem">
+    <div class="container">
+      <div class="section-header animate-on-scroll">
+        <span class="section-badge">Проблематика</span>
+        <h2>Почему температура критична для точных измерений?</h2>
+        <p>Многие промышленные продукты кардинально меняют свои свойства при малейших колебаниях температуры. 
+        Без изотермического кожуха измерение расхода таких сред становится нестабильным и недостоверным.</p>
+      </div>
+
+      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:1.5rem;" class="animate-on-scroll">
+        
+        <!-- Bitumen -->
+        <div class="media-card">
+          <div style="display:flex;align-items:center;gap:0.75rem;margin-bottom:1rem;">
+            <i class="fas fa-road" style="font-size:2rem;color:var(--primary);"></i>
+            <h4 style="margin:0;">Битум</h4>
+          </div>
+          <p><strong>Проблема:</strong> Вязкость битума экспоненциально зависит от температуры. При снижении температуры на 10 °C вязкость может возрасти в 10 и более раз.</p>
+          <div class="viscosity-warning">
+            <i class="fas fa-temperature-low"></i> При 180 °C — текучий, при 140 °C — густеет, ниже 100 °C — твёрдый
+          </div>
+          <p style="margin-top:1rem;"><strong>Без кожуха:</strong> При скачках температуры меняется вязкость → меняется профиль скорости потока → погрешность измерения массового расхода до 5–15%.</p>
+          <p><strong>С кожухом:</strong> Битум сохраняет заданную температуру и вязкость на всём протяжении измерения. Погрешность — в пределах паспортной точности расходомера.</p>
+        </div>
+
+        <!-- Sulfur -->
+        <div class="media-card">
+          <div style="display:flex;align-items:center;gap:0.75rem;margin-bottom:1rem;">
+            <i class="fas fa-circle" style="font-size:2rem;color:var(--accent);"></i>
+            <h4 style="margin:0;">Сера</h4>
+          </div>
+          <p><strong>Проблема:</strong> Сера — уникальный продукт с резко нелинейной вязкостью. При 120 °C сера жидкая (вязкость как вода), при 160 °C вязкость возрастает в сотни раз (становится как мёд), а при 190 °C снова падает.</p>
+          <div class="viscosity-warning">
+            <i class="fas fa-chart-line"></i> 120 °C → жидкая · 140 °C ↔ · 160 °C ↑↑↑ · 190 °C ↓
+          </div>
+          <p style="margin-top:1rem;"><strong>Без кожуха:</strong> Любое колебание температуры в трубопроводе приводит к драматическому изменению вязкости. Расходомер «видит» хаотичное изменение плотности и профиля потока — показания становятся нестабильными.</p>
+          <p><strong>С кожухом:</strong> Температура серы стабилизируется в оптимальном диапазоне (135–145 °C), где вязкость минимальна и стабильна. Измерения — точные и воспроизводимые.</p>
+        </div>
+
+        <!-- Paraffins / Waxes -->
+        <div class="media-card">
+          <div style="display:flex;align-items:center;gap:0.75rem;margin-bottom:1rem;">
+            <i class="fas fa-cube" style="font-size:2rem;color:var(--primary);"></i>
+            <h4 style="margin:0;">Парафины и воски</h4>
+          </div>
+          <p><strong>Проблема:</strong> При снижении температуры ниже точки помутнения парафины кристаллизуются, образуя твёрдую фазу. Это забивает измерительные трубки, вызывает дрейф нуля и резкое возрастание погрешности.</p>
+          <p><strong>Без кожуха:</strong> Даже кратковременное остывание стенок трубки может вызвать отложение парафина на внутренних поверхностях. С каждым циклом охлаждения слой нарастает.</p>
+          <p><strong>С кожухом:</strong> Температура стенок трубки всегда выше точки кристаллизации. Отложения не образуются. Расходомер работает стабильно годами без чистки.</p>
+        </div>
+
+        <!-- Heavy fuel oil -->
+        <div class="media-card">
+          <div style="display:flex;align-items:center;gap:0.75rem;margin-bottom:1rem;">
+            <i class="fas fa-oil-can" style="font-size:2rem;color:var(--primary);"></i>
+            <h4 style="margin:0;">Мазуты и гудроны</h4>
+          </div>
+          <p><strong>Проблема:</strong> Тяжёлые нефтепродукты требуют подогрева для перекачки. При потере температуры теряют подвижность, что может привести к застыванию в измерительной камере.</p>
+          <p><strong>Без кожуха:</strong> При остановке потока (ночные смены, плановые остановы) мазут в сенсоре остывает быстрее, чем в трубопроводе — сенсор «застывает» первым. Перезапуск требует длительного прогрева.</p>
+          <p><strong>С кожухом:</strong> Температура сенсора поддерживается на уровне трубопровода. Нет локальных «холодных зон». Перезапуск после останова — мгновенный.</p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Visual comparison -->
+  <section class="section">
+    <div class="container">
+      <div class="section-header animate-on-scroll">
+        <span class="section-badge">Визуализация</span>
+        <h2>Сравнение: без кожуха и с кожухом</h2>
+      </div>
+      <div class="temp-diagram animate-on-scroll">
+        <div style="text-align:center;flex:1;">
+          <div style="font-size:1.5rem;font-weight:700;color:var(--danger);margin-bottom:1rem;">Без кожуха</div>
+          <div style="font-size:3rem;">🌡️↗️↘️</div>
+          <div style="color:var(--gray-400);margin-top:0.5rem;">Температура скачет →<br>Вязкость хаотично меняется →<br><strong style="color:var(--danger);">Погрешность до 15%</strong></div>
+        </div>
+        <div style="font-size:3rem;color:var(--accent);">→</div>
+        <div style="text-align:center;flex:1;">
+          <div style="font-size:1.5rem;font-weight:700;color:var(--success);margin-bottom:1rem;">С изотермическим кожухом</div>
+          <div style="font-size:3rem;">🌡️➡️</div>
+          <div style="color:var(--gray-400);margin-top:0.5rem;">Температура стабильна →<br>Вязкость постоянна →<br><strong style="color:var(--success);">Точность ±0,1%</strong></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Gallery -->
+  <section class="section section-gray" id="gallery">
+    <div class="container">
+      <div class="section-header animate-on-scroll">
+        <span class="section-badge">Фотогалерея</span>
+        <h2>Изотермический кожух в различных исполнениях</h2>
+      </div>
+      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:1.5rem;" class="animate-on-scroll">
+        <div style="text-align:center;">
+          <img src="images/isotermal_jacket1.jpg" alt="Расходомер с изотермическим кожухом" style="max-width:100%;max-height:350px;border-radius:var(--radius);border:1px solid var(--gray-200);">
+          <div style="font-size:0.8125rem;color:var(--gray-500);margin-top:0.5rem;">Расходомер Mass-EXPERT в изотермическом кожухе</div>
+        </div>
+        <div style="text-align:center;">
+          <img src="images/isotermal_jacket2.jpg" alt="Изотермический кожух на сенсоре" style="max-width:100%;max-height:350px;border-radius:var(--radius);border:1px solid var(--gray-200);">
+          <div style="font-size:0.8125rem;color:var(--gray-500);margin-top:0.5rem;">Сенсор с установленным изотермическим кожухом</div>
+        </div>
+        <div style="text-align:center;">
+          <img src="images/isotermal_jacket_diagram.png" alt="Схема конструкции кожуха" style="max-width:100%;max-height:350px;border-radius:var(--radius);border:1px solid var(--gray-200);">
+          <div style="font-size:0.8125rem;color:var(--gray-500);margin-top:0.5rem;">Схема изотермического кожуха</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Specs -->
+  <section class="section" id="specs">
+    <div class="container">
+      <div class="section-header animate-on-scroll">
+        <span class="section-badge">Характеристики</span>
+        <h2>Технические характеристики изотермического кожуха</h2>
+      </div>
+      <div class="table-wrap animate-on-scroll">
+        <table>
+          <thead><tr><th>Параметр</th><th>Значение</th></tr></thead>
+          <tbody>
+            <tr><td>Температура рабочей среды</td><td>от −196 до +350 °C</td></tr>
+            <tr><td>Тип теплоносителя</td><td>Пар, горячее масло, горячая вода</td></tr>
+            <tr><td>Давление теплоносителя</td><td>до 16 МПа (в зависимости от исполнения)</td></tr>
+            <tr><td>Материал кожуха</td><td>304 / 316L нержавеющая сталь</td></tr>
+            <tr><td>Теплоизоляция</td><td>Минеральная вата / аэрогель (опционально)</td></tr>
+            <tr><td>DN совместимость</td><td>DN08 – DN250 (в зависимости от типоразмера)</td></tr>
+            <tr><td>Код опции</td><td><span class="option-code">19S — Y</span> (Да)</td></tr>
+            <tr><td>Подходит для типов сенсора</td><td>U, K, W, L (прямотрубный), D (Δ-тип)</td></tr>
+            <tr><td>Основные применения</td><td>Битум, сера, парафины, мазуты, гудроны, смолы, полимеры</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <!-- Applications summary -->
+  <section class="section section-gray">
+    <div class="container">
+      <div class="section-header animate-on-scroll">
+        <span class="section-badge">Применение</span>
+        <h2>Где необходим изотермический кожух</h2>
+      </div>
+      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:1rem;" class="animate-on-scroll">
+        <div class="app-card" style="text-align:center;padding:1.5rem;">
+          <div class="app-icon"><i class="fas fa-road" style="font-size:2rem;color:var(--primary);"></i></div>
+          <div style="font-weight:600;">Битумные производства</div>
+          <div style="font-size:0.8125rem;color:var(--gray-500);">Дорожное строительство, кровельные материалы</div>
+        </div>
+        <div class="app-card" style="text-align:center;padding:1.5rem;">
+          <div class="app-icon"><i class="fas fa-circle" style="font-size:2rem;color:var(--accent);"></i></div>
+          <div style="font-weight:600;">Производство серы</div>
+          <div style="font-size:0.8125rem;color:var(--gray-500);">Нефтепереработка, грануляция серы</div>
+        </div>
+        <div class="app-card" style="text-align:center;padding:1.5rem;">
+          <div class="app-icon"><i class="fas fa-cube" style="font-size:2rem;color:var(--primary);"></i></div>
+          <div style="font-weight:600;">Парафины и воски</div>
+          <div style="font-size:0.8125rem;color:var(--gray-500);">Нефтехимия, свечное производство</div>
+        </div>
+        <div class="app-card" style="text-align:center;padding:1.5rem;">
+          <div class="app-icon"><i class="fas fa-oil-can" style="font-size:2rem;color:var(--primary);"></i></div>
+          <div style="font-weight:600;">Мазуты и гудроны</div>
+          <div style="font-size:0.8125rem;color:var(--gray-500);">ТЭЦ, котельные, нефтепереработка</div>
+        </div>
+        <div class="app-card" style="text-align:center;padding:1.5rem;">
+          <div class="app-icon"><i class="fas fa-dna" style="font-size:2rem;color:var(--primary);"></i></div>
+          <div style="font-weight:600;">Полимеры и смолы</div>
+          <div style="font-size:0.8125rem;color:var(--gray-500);">Химическая промышленность</div>
+        </div>
+        <div class="app-card" style="text-align:center;padding:1.5rem;">
+          <div class="app-icon"><i class="fas fa-snowflake" style="font-size:2rem;color:var(--primary);"></i></div>
+          <div style="font-weight:600;">Криогенные среды</div>
+          <div style="font-size:0.8125rem;color:var(--gray-500);">Сжиженные газы, СПГ</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Navigation -->
+  <section class="section">
+    <div class="container" style="text-align:center;">
+      <a href="index.html#options" class="btn btn-primary" style="margin-right:1rem;">← К модификациям</a>
+      <a href="index.html" class="btn btn-outline-dark">На главную</a>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <h4>Mass-EXPERT</h4>
+          <p>Счетчики-расходомеры массовые кориолисового типа. Госреестр № 98506-26.</p>
+        </div>
+        <div class="footer-links">
+          <h5>Продукт</h5>
+          <a href="index.html#specifications">Характеристики</a>
+          <a href="index.html#options">Модификации</a>
+          <a href="index.html#transmitters">Трансмиттеры</a>
+        </div>
+        <div class="footer-links">
+          <h5>Документация</h5>
+          <a href="index.html#certificates">Сертификаты</a>
+        </div>
+        <div class="footer-links">
+          <h5>Контакты</h5>
+          <a href="index.html#contacts">Связаться с нами</a>
+          <a href="sitemap.html">Карта сайта</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>© 2026 ООО «Автоматизация-Метрология-ЭКСПЕРТ»</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
