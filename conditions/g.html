@@ -1,0 +1,507 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>G — Высокая температура | Mass-EXPERT | Кориолисовые расходомеры</title>
+  <meta name="description" content="Исполнение G Mass-EXPERT для высокотемпературных сред: от −50 °C до +230 °C. Горячие масла, расплавы, перегретый пар. Раздельное исполнение для защиты электроники от перегрева.">
+  <meta name="keywords" content="расходомер высокой температуры, G исполнение, кориолисовый расходомер, горячие масла, расплавы, перегретый пар, 230 °C, Mass-EXPERT, раздельное исполнение">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/style.css">
+  <!-- Open Graph -->
+  <meta property="og:title" content="G — Высокая температура — Mass-EXPERT">
+  <meta property="og:description" content="Исполнение G для высокотемпературных сред: от −50 °C до +230 °C. Горячие масла, расплавы, перегретый пар. Раздельное исполнение.">
+  <meta property="og:type" content="website">
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 40 40'><rect width='40' height='40' rx='8' fill='%23F59E0B'/><text x='20' y='26' text-anchor='middle' font-size='14' font-weight='900' fill='%230F172A' font-family='Inter'>ME</text></svg>">
+  <style>
+    /* Additional styles specific to G condition page */
+    .cond-hero {
+      position: relative;
+      min-height: 70vh;
+      display: flex;
+      align-items: center;
+      background: linear-gradient(135deg, #4a1a1a 0%, #8B2500 50%, #B22222 100%);
+      overflow: hidden;
+      padding-top: 72px;
+    }
+    .cond-hero::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background:
+        radial-gradient(ellipse at 70% 30%, rgba(245, 158, 11, 0.15) 0%, transparent 60%),
+        radial-gradient(ellipse at 30% 80%, rgba(255, 69, 0, 0.08) 0%, transparent 50%);
+      pointer-events: none;
+    }
+    .cond-hero-content {
+      position: relative;
+      z-index: 1;
+    }
+    .cond-hero-content .cond-label {
+      display: inline-block;
+      font-size: 0.75rem;
+      color: var(--gray-400);
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      font-weight: 600;
+      margin-bottom: 0.75rem;
+      background: rgba(255,255,255,0.08);
+      padding: 0.3rem 0.75rem;
+      border-radius: 999px;
+    }
+    .cond-hero-content h1 {
+      color: var(--white);
+      margin-bottom: 0.5rem;
+    }
+    .cond-hero-content .cond-subtitle {
+      font-size: 1.35rem;
+      color: var(--accent);
+      font-weight: 600;
+      margin-bottom: 1.5rem;
+    }
+    .cond-hero-content .cond-desc {
+      color: rgba(255,255,255,0.8);
+      font-size: 1.0625rem;
+      margin: 1.5rem 0 2rem;
+      max-width: 680px;
+    }
+    .cond-badges {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.75rem;
+      margin-top: 1.5rem;
+    }
+    .cond-badge {
+      background: rgba(255,255,255,0.1);
+      border: 1px solid rgba(255,255,255,0.15);
+      color: rgba(255,255,255,0.9);
+      padding: 0.4rem 1rem;
+      border-radius: 999px;
+      font-size: 0.8125rem;
+      font-weight: 500;
+    }
+
+    /* Gallery */
+    .gallery-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 1.5rem;
+    }
+    .gallery-item {
+      border-radius: var(--radius-lg);
+      overflow: hidden;
+      border: 1px solid var(--gray-200);
+      background: var(--white);
+      transition: all var(--transition);
+    }
+    .gallery-item:hover {
+      box-shadow: var(--shadow-lg);
+      transform: translateY(-4px);
+    }
+    .gallery-item img {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+    .gallery-item .gallery-caption {
+      padding: 0.75rem 1rem;
+      font-size: 0.8125rem;
+      color: var(--gray-600);
+      font-weight: 500;
+      text-align: center;
+      border-top: 1px solid var(--gray-100);
+    }
+
+    /* Features list */
+    .feat-list {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1rem;
+      margin: 1.5rem 0;
+    }
+    .feat-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 0.75rem;
+      padding: 0.75rem 0;
+    }
+    .feat-item .feat-icon {
+      flex-shrink: 0;
+      width: 28px;
+      height: 28px;
+      background: #FEE2E2;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 0.875rem;
+      color: #DC2626;
+      font-weight: 700;
+    }
+    .feat-item .feat-text {
+      font-size: 0.9375rem;
+      color: var(--gray-700);
+    }
+
+    @media (max-width: 768px) {
+      .feat-list { grid-template-columns: 1fr; }
+      .cond-hero { min-height: auto; padding: 6rem 0 3rem; }
+    }
+
+    /* Specification summary cards */
+    .spec-highlight-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 1rem;
+      margin: 2rem 0;
+    }
+    .spec-highlight-card {
+      background: var(--gray-50);
+      border: 1px solid var(--gray-200);
+      border-radius: var(--radius);
+      padding: 1.25rem;
+      text-align: center;
+    }
+    .spec-highlight-card .spec-hl-value {
+      font-size: 1.75rem;
+      font-weight: 800;
+      color: #B22222;
+    }
+    .spec-highlight-card .spec-hl-label {
+      font-size: 0.8125rem;
+      color: var(--gray-500);
+      margin-top: 0.25rem;
+    }
+
+    /* Application tags */
+    .app-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+      margin-top: 1rem;
+    }
+    .app-tag {
+      background: var(--gray-100);
+      border: 1px solid var(--gray-200);
+      padding: 0.5rem 1rem;
+      border-radius: 999px;
+      font-size: 0.875rem;
+      font-weight: 500;
+      color: var(--gray-700);
+      transition: all var(--transition);
+    }
+    .app-tag:hover {
+      border-color: #B22222;
+      color: #B22222;
+      background: var(--white);
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ==================== NAVIGATION ==================== -->
+  <nav class="navbar" role="navigation" aria-label="Основная навигация">
+    <div class="container">
+      <a href="../index.html" class="navbar-brand">
+        <span class="brand-icon">MASS<br>EXPERT</span>
+        Mass-EXPERT
+      </a>
+      <button class="navbar-toggle" aria-label="Открыть меню">☰</button>
+      <div class="navbar-links">
+        <a href="../index.html#about">О продукте</a>
+        <a href="../index.html#advantages">Преимущества</a>
+        <a href="../index.html#principle">Принцип работы</a>
+        <a href="../index.html#applications">Применение</a>
+        <a href="../index.html#product-line">Типоразмеры</a>
+        <a href="../index.html#specifications">Характеристики</a>
+        <a href="../index.html#contacts">Контакты</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ==================== HERO ==================== -->
+  <section class="cond-hero" id="hero">
+    <div class="container">
+      <div class="cond-hero-content">
+        <span class="cond-label">Исполнение высокой температуры</span>
+        <h1>G</h1>
+        <div class="cond-subtitle">Высокая температура</div>
+        <p class="cond-desc">
+          Исполнение <strong>G</strong> предназначено для измерения расхода
+          высокотемпературных сред. Рабочий диапазон температур от <strong>−50 °C</strong>
+          до <strong>+230 °C</strong>. Горячие масла, расплавы, перегретый пар —
+          исполнение G сохраняет точность и стабильность в самых жёстких условиях.
+          Доступно в <strong>раздельном исполнении</strong> для защиты электроники
+          от перегрева.
+        </p>
+        <div style="display:flex;gap:1rem;flex-wrap:wrap;">
+          <a href="#specifications" class="btn btn-primary">Технические характеристики</a>
+          <a href="../index.html#contacts" class="btn btn-outline">Запросить КП</a>
+        </div>
+        <div class="cond-badges">
+          <span class="cond-badge">🔥 −50 °C … +230 °C</span>
+          <span class="cond-badge">✓ Горячие масла</span>
+          <span class="cond-badge">✓ Расплавы</span>
+          <span class="cond-badge">✓ Перегретый пар</span>
+          <span class="cond-badge">✓ Раздельное исполнение</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== OVERVIEW ==================== -->
+  <section class="section" id="overview">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-badge">Обзор</span>
+        <h2>G — Высокая температура</h2>
+        <p>
+          Исполнение G разработано для задач, требующих надёжного измерения расхода
+          при экстремальных температурах. Специальные термостойкие материалы и конструкция
+          обеспечивают долговременную стабильность показаний в средах с температурой
+          до +230 °C и криогенно-низкими температурами до −50 °C.
+        </p>
+      </div>
+
+      <div class="spec-highlight-grid">
+        <div class="spec-highlight-card">
+          <div class="spec-hl-value">−50 … +230</div>
+          <div class="spec-hl-label">°C диапазон температур</div>
+        </div>
+        <div class="spec-highlight-card">
+          <div class="spec-hl-value">✓ Раздельное</div>
+          <div class="spec-hl-label">Исполнение (электроника вынесена)</div>
+        </div>
+        <div class="spec-highlight-card">
+          <div class="spec-hl-value">🔥 Пар / Масла</div>
+          <div class="spec-hl-label">Горячие среды</div>
+        </div>
+        <div class="spec-highlight-card">
+          <div class="spec-hl-value">Расплавы</div>
+          <div class="spec-hl-label">Полимеры, битумы, сера</div>
+        </div>
+      </div>
+
+      <div style="margin-top:2rem;">
+        <h3 style="color:var(--primary);margin-bottom:1rem;">Ключевые особенности</h3>
+        <div class="feat-list">
+          <div class="feat-item">
+            <div class="feat-icon">🔥</div>
+            <div class="feat-text"><strong>Широкий температурный диапазон</strong> — от −50 °C до +230 °C для работы с самыми разными средами</div>
+          </div>
+          <div class="feat-item">
+            <div class="feat-icon">🔥</div>
+            <div class="feat-text"><strong>Раздельное исполнение</strong> — электронный преобразователь вынесен из горячей зоны для защиты от перегрева</div>
+          </div>
+          <div class="feat-item">
+            <div class="feat-icon">🔥</div>
+            <div class="feat-text"><strong>Горячие масла и расплавы</strong> — специальные термостойкие уплотнения и материалы контактной группы</div>
+          </div>
+          <div class="feat-item">
+            <div class="feat-icon">🔥</div>
+            <div class="feat-text"><strong>Перегретый пар</strong> — стабильные измерения при высоких температурах пара без потери точности</div>
+          </div>
+          <div class="feat-item">
+            <div class="feat-icon">🔥</div>
+            <div class="feat-text"><strong>Термокомпенсация</strong> — встроенная цифровая компенсация температурных погрешностей</div>
+          </div>
+          <div class="feat-item">
+            <div class="feat-icon">🔥</div>
+            <div class="feat-text"><strong>Устойчивость к термоциклам</strong> — конструкция выдерживает многократные циклы нагрев/охлаждение</div>
+          </div>
+        </div>
+      </div>
+
+      <div style="margin-top:2.5rem;">
+        <h3 style="color:var(--primary);margin-bottom:0.75rem;">Рекомендуемые области применения</h3>
+        <div class="app-tags">
+          <span class="app-tag">🔥 Горячие масла и теплоносители</span>
+          <span class="app-tag">🧪 Химическая промышленность</span>
+          <span class="app-tag">♨️ Перегретый пар</span>
+          <span class="app-tag">🧴 Расплавы полимеров</span>
+          <span class="app-tag">🛢️ Битумные и асфальтовые смеси</span>
+          <span class="app-tag">⚗️ Расплавленная сера</span>
+          <span class="app-tag">🏭 Нефтепереработка</span>
+          <span class="app-tag">❄️ Криогенные применения до −50 °C</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== GALLERY ==================== -->
+  <section class="section section-gray" id="gallery">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-badge">Фотогалерея</span>
+        <h2>Исполнение G</h2>
+        <p>Внешний вид моделей высокой температуры G с раздельным исполнением</p>
+      </div>
+      <div class="gallery-grid">
+        <div class="gallery-item">
+          <img src="../images/G_C_high_temp.png" alt="G — расходомер высокой температуры" loading="lazy">
+          <div class="gallery-caption">G — модель высокой температуры (раздельное исполнение)</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== SPECIFICATIONS ==================== -->
+  <section class="section" id="specifications">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-badge">Технические характеристики</span>
+        <h2>Параметры исполнения G</h2>
+        <p>Основные рабочие характеристики для высокотемпературного исполнения G</p>
+      </div>
+
+      <div class="table-wrap">
+        <table>
+          <thead>
+            <tr>
+              <th>Параметр</th>
+              <th>Значение</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>Диапазон температур среды</strong></td>
+              <td>от −50 °C до +230 °C</td>
+            </tr>
+            <tr>
+              <td><strong>Температура окружающей среды (раздельное исп.)</strong></td>
+              <td>от −40 °C до +70 °C</td>
+            </tr>
+            <tr>
+              <td><strong>Исполнение</strong></td>
+              <td>Раздельное (электронный блок вынесен)</td>
+            </tr>
+            <tr>
+              <td><strong>Термостойкие уплотнения</strong></td>
+              <td>Фторэластомеры (FKM), PTFE, металлические</td>
+            </tr>
+            <tr>
+              <td><strong>Материалы контактной группы</strong></td>
+              <td>Нержавеющая сталь 316L / Hastelloy (опционально)</td>
+            </tr>
+            <tr>
+              <td><strong>Термокомпенсация</strong></td>
+              <td>Цифровая, встроенная</td>
+            </tr>
+            <tr>
+              <td><strong>Применяемые среды</strong></td>
+              <td>Горячие масла, расплавы, перегретый пар, теплоносители</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <p style="font-size:0.875rem;color:var(--gray-500);margin-top:1rem;">
+        * Конкретные значения зависят от типоразмера, материала уплотнений и условий эксплуатации.
+        Уточняйте при заказе в зависимости от рабочей среды и температуры.
+      </p>
+    </div>
+  </section>
+
+  <!-- ==================== CONNECTIONS ==================== -->
+  <section class="section section-blue" id="connections">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-badge" style="background:rgba(255,255,255,0.12);color:var(--accent);">Конструкция</span>
+        <h2>Раздельное исполнение</h2>
+        <p>Для защиты электроники от высокотемпературного воздействия</p>
+      </div>
+      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:1.5rem;">
+        <div class="param-card" style="background:rgba(255,255,255,0.06);border:1px solid rgba(255,255,255,0.1);border-radius:var(--radius);padding:1.5rem;text-align:center;">
+          <div class="param-label">Конфигурация</div>
+          <div class="param-value">Раздельная</div>
+          <p style="font-size:0.8125rem;color:rgba(255,255,255,0.6);margin-top:0.5rem;margin-bottom:0;">
+            Измерительный преобразователь и электронный блок размещены отдельно
+          </p>
+        </div>
+        <div class="param-card" style="background:rgba(255,255,255,0.06);border:1px solid rgba(255,255,255,0.1);border-radius:var(--radius);padding:1.5rem;text-align:center;">
+          <div class="param-label">Кабель связи</div>
+          <div class="param-value">Экранированный</div>
+          <p style="font-size:0.8125rem;color:rgba(255,255,255,0.6);margin-top:0.5rem;margin-bottom:0;">
+            Специальный термостойкий кабель между сенсором и электроникой
+          </p>
+        </div>
+        <div class="param-card" style="background:rgba(255,255,255,0.06);border:1px solid rgba(255,255,255,0.1);border-radius:var(--radius);padding:1.5rem;text-align:center;">
+          <div class="param-label">Преимущество</div>
+          <div class="param-value">Надёжность</div>
+          <p style="font-size:0.8125rem;color:rgba(255,255,255,0.6);margin-top:0.5rem;margin-bottom:0;">
+            Электроника защищена от перегрева, продлевая срок службы прибора
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== NAVIGATION HELP ==================== -->
+  <section class="section" id="more">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-badge">Другие исполнения</span>
+        <h2>Больше информации</h2>
+        <p>Вернуться к основному каталогу продукции Mass-EXPERT</p>
+      </div>
+      <div style="text-align:center;">
+        <a href="../index.html" class="btn btn-primary">← На главную</a>
+        <a href="../index.html#product-line" class="btn btn-outline-dark" style="margin-left:0.75rem;">Все типоразмеры</a>
+        <a href="../sitemap.html" class="btn btn-outline-dark" style="margin-left:0.75rem;">📋 Карта сайта</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== FOOTER ==================== -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <h4>Mass-EXPERT</h4>
+          <p>Счетчики-расходомеры массовые кориолисового типа.</p>
+          <p>Госреестр № 98506-26. ТУ 26.51.52-016-88090790-2024.</p>
+          <p style="margin-top:0.75rem;font-size:0.8125rem;">
+            Разработка и производство:<br>
+            ООО «Автоматизация-Метрология-ЭКСПЕРТ», г. Уфа
+          </p>
+        </div>
+        <div class="footer-links">
+          <h5>Продукт</h5>
+          <a href="../index.html#specifications">Характеристики</a>
+          <a href="../index.html#product-line">Типоразмеры</a>
+          <a href="../index.html#options">Модификации</a>
+        </div>
+        <div class="footer-links">
+          <h5>Документация</h5>
+          <a href="../index.html#certificates">Сертификаты</a>
+          <a href="../docs/ОПИСАНИЕ_ТИПА_2026-98506-26.pdf" target="_blank">Описание типа</a>
+          <a href="../docs/РЭ_Масс_Эксперт_v09.pdf" target="_blank">Руководство по эксплуатации</a>
+        </div>
+        <div class="footer-links">
+          <h5>Контакты</h5>
+          <a href="tel:+734****5350">+7 (347) 286-53-50</a>
+          <a href="mailto:info@ame-info.ru">info@ame-info.ru</a>
+          <a href="https://www.ame-info.ru" target="_blank">www.ame-info.ru</a>
+          <a href="../sitemap.html" style="margin-top:0.5rem;font-size:0.8125rem;color:var(--gray-500);">📋 Карта сайта</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>© <span id="year">2026</span> ООО «Автоматизация-Метрология-ЭКСПЕРТ». Все права защищены.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="../js/main.js"></script>
+  <script>
+    // Set current year in footer
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    // Mobile nav toggle
+    document.querySelector('.navbar-toggle')?.addEventListener('click', function() {
+      document.querySelector('.navbar-links')?.classList.toggle('open');
+    });
+  </script>
+</body>
+</html>

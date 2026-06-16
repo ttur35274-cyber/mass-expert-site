@@ -1,0 +1,880 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>C — Сверхвысокая температура | Mass-EXPERT | Кориолисовые расходомеры</title>
+  <meta name="description" content="Исполнение C — сверхвысокая температура до +350 °C для кориолисовых расходомеров Mass-EXPERT. Нефтехимия, высокотемпературные реакторы. Раздельное исполнение — электроника в безопасной зоне.">
+  <meta name="keywords" content="расходомер высокотемпературный, исполнение C, кориолисовый расходомер, +350°C, высокотемпературный реактор, нефтехимия, раздельное исполнение, Mass-EXPERT, выносная электроника">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/style.css">
+  <!-- Open Graph -->
+  <meta property="og:title" content="C — Сверхвысокая температура — Mass-EXPERT">
+  <meta property="og:description" content="Исполнение C для сверхвысоких температур до +350 °C. Раздельное исполнение — электроника в безопасной зоне. Нефтехимия, высокотемпературные реакторы.">
+  <meta property="og:type" content="website">
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 40 40'><rect width='40' height='40' rx='8' fill='%23F59E0B'/><text x='20' y='26' text-anchor='middle' font-size='14' font-weight='900' fill='%230F172A' font-family='Inter'>ME</text></svg>">
+  <style>
+    /* Additional styles specific to C condition page */
+    .cond-hero {
+      position: relative;
+      min-height: 70vh;
+      display: flex;
+      align-items: center;
+      background: linear-gradient(135deg, #1a0a2e 0%, #6B1D3B 50%, #2d1b4e 100%);
+      overflow: hidden;
+      padding-top: 72px;
+    }
+    .cond-hero::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background:
+        radial-gradient(ellipse at 70% 30%, rgba(239, 68, 68, 0.12) 0%, transparent 60%),
+        radial-gradient(ellipse at 30% 80%, rgba(255,255,255,0.03) 0%, transparent 50%);
+      pointer-events: none;
+    }
+    .cond-hero-content {
+      position: relative;
+      z-index: 1;
+    }
+    .cond-hero-content .cond-label {
+      display: inline-block;
+      font-size: 0.75rem;
+      color: var(--gray-400);
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      font-weight: 600;
+      margin-bottom: 0.75rem;
+      background: rgba(255,255,255,0.08);
+      padding: 0.3rem 0.75rem;
+      border-radius: 999px;
+    }
+    .cond-hero-content h1 {
+      color: var(--white);
+      margin-bottom: 0.5rem;
+    }
+    .cond-hero-content .cond-subtitle {
+      font-size: 1.35rem;
+      color: var(--accent);
+      font-weight: 600;
+      margin-bottom: 1.5rem;
+    }
+    .cond-hero-content .cond-desc {
+      color: rgba(255,255,255,0.8);
+      font-size: 1.0625rem;
+      margin: 1.5rem 0 2rem;
+      max-width: 680px;
+    }
+    .cond-badges {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.75rem;
+      margin-top: 1.5rem;
+    }
+    .cond-badge {
+      background: rgba(255,255,255,0.1);
+      border: 1px solid rgba(255,255,255,0.15);
+      color: rgba(255,255,255,0.9);
+      padding: 0.4rem 1rem;
+      border-radius: 999px;
+      font-size: 0.8125rem;
+      font-weight: 500;
+    }
+
+    /* Gallery */
+    .gallery-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 1.5rem;
+    }
+    .gallery-item {
+      border-radius: var(--radius-lg);
+      overflow: hidden;
+      border: 1px solid var(--gray-200);
+      background: var(--white);
+      transition: all var(--transition);
+    }
+    .gallery-item:hover {
+      box-shadow: var(--shadow-lg);
+      transform: translateY(-4px);
+    }
+    .gallery-item img {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+    .gallery-item .gallery-caption {
+      padding: 0.75rem 1rem;
+      font-size: 0.8125rem;
+      color: var(--gray-600);
+      font-weight: 500;
+      text-align: center;
+      border-top: 1px solid var(--gray-100);
+    }
+
+    /* Features list */
+    .feat-list {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1rem;
+      margin: 1.5rem 0;
+    }
+    .feat-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 0.75rem;
+      padding: 0.75rem 0;
+    }
+    .feat-item .feat-icon {
+      flex-shrink: 0;
+      width: 28px;
+      height: 28px;
+      background: rgba(239, 68, 68, 0.12);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 0.875rem;
+      color: #DC2626;
+      font-weight: 700;
+    }
+    .feat-item .feat-text {
+      font-size: 0.9375rem;
+      color: var(--gray-700);
+    }
+
+    @media (max-width: 768px) {
+      .feat-list { grid-template-columns: 1fr; }
+      .cond-hero { min-height: auto; padding: 6rem 0 3rem; }
+    }
+
+    /* Specification summary cards */
+    .spec-highlight-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 1rem;
+      margin: 2rem 0;
+    }
+    .spec-highlight-card {
+      background: var(--gray-50);
+      border: 1px solid var(--gray-200);
+      border-radius: var(--radius);
+      padding: 1.25rem;
+      text-align: center;
+    }
+    .spec-highlight-card .spec-hl-value {
+      font-size: 1.75rem;
+      font-weight: 800;
+      color: var(--primary);
+    }
+    .spec-highlight-card .spec-hl-label {
+      font-size: 0.8125rem;
+      color: var(--gray-500);
+      margin-top: 0.25rem;
+    }
+
+    /* Application tags */
+    .app-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+      margin-top: 1rem;
+    }
+    .app-tag {
+      background: var(--gray-100);
+      border: 1px solid var(--gray-200);
+      padding: 0.5rem 1rem;
+      border-radius: 999px;
+      font-size: 0.875rem;
+      font-weight: 500;
+      color: var(--gray-700);
+      transition: all var(--transition);
+    }
+    .app-tag:hover {
+      border-color: var(--primary);
+      color: var(--primary);
+      background: var(--white);
+    }
+
+    /* Design feature cards */
+    .design-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 1.5rem;
+      margin-top: 2rem;
+    }
+    .design-card {
+      background: var(--white);
+      border: 1px solid var(--gray-200);
+      border-radius: var(--radius-lg);
+      padding: 1.5rem;
+      transition: all var(--transition);
+    }
+    .design-card:hover {
+      border-color: var(--primary);
+      box-shadow: var(--shadow-md);
+      transform: translateY(-2px);
+    }
+    .design-card .design-icon {
+      font-size: 2rem;
+      margin-bottom: 0.75rem;
+    }
+    .design-card h4 {
+      font-size: 1.0625rem;
+      color: var(--primary);
+      margin-bottom: 0.5rem;
+    }
+    .design-card p {
+      font-size: 0.9375rem;
+      color: var(--gray-500);
+      margin: 0;
+    }
+
+    /* Safety notice */
+    .safety-notice {
+      background: linear-gradient(135deg, #FEF3C7, #FDE68A);
+      border: 1px solid #F59E0B;
+      border-left: 4px solid #F59E0B;
+      border-radius: var(--radius-lg);
+      padding: 1.5rem 2rem;
+      margin: 2rem 0;
+    }
+    .safety-notice h3 {
+      color: #92400E;
+      font-size: 1.0625rem;
+      margin-bottom: 0.5rem;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+    .safety-notice p {
+      color: #78350F;
+      font-size: 0.9375rem;
+      margin-bottom: 0;
+    }
+
+    /* Temperature range visual */
+    .temp-range {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.5rem;
+      padding: 1.5rem;
+      background: var(--gray-50);
+      border: 1px solid var(--gray-200);
+      border-radius: var(--radius-lg);
+      margin: 1.5rem 0;
+    }
+    .temp-range .temp-low {
+      font-size: 1.5rem;
+      font-weight: 700;
+      color: #3B82F6;
+    }
+    .temp-range .temp-arrow {
+      font-size: 1.5rem;
+      color: var(--gray-400);
+    }
+    .temp-range .temp-high {
+      font-size: 1.5rem;
+      font-weight: 700;
+      color: #DC2626;
+    }
+    .temp-range .temp-label {
+      font-size: 0.8125rem;
+      color: var(--gray-500);
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ==================== NAVIGATION ==================== -->
+  <nav class="navbar" role="navigation" aria-label="Основная навигация">
+    <div class="container">
+      <a href="../index.html" class="navbar-brand">
+        <span class="brand-icon">MASS<br>EXPERT</span>
+        Mass-EXPERT
+      </a>
+      <button class="navbar-toggle" aria-label="Открыть меню">☰</button>
+      <div class="navbar-links">
+        <a href="../index.html#about">О продукте</a>
+        <a href="../index.html#advantages">Преимущества</a>
+        <a href="../index.html#principle">Принцип работы</a>
+        <a href="../index.html#applications">Применение</a>
+        <a href="../index.html#product-line">Типоразмеры</a>
+        <a href="../index.html#specifications">Характеристики</a>
+        <a href="../index.html#contacts">Контакты</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ==================== HERO ==================== -->
+  <section class="cond-hero" id="hero">
+    <div class="container">
+      <div class="cond-hero-content">
+        <span class="cond-label">Исполнение по условиям эксплуатации</span>
+        <h1>C</h1>
+        <div class="cond-subtitle">Сверхвысокая температура</div>
+        <p class="cond-desc">
+          Исполнение <strong>C</strong> предназначено для эксплуатации в условиях
+          <strong>сверхвысоких температур</strong> рабочей среды — от −50 °C до +350 °C.
+          Оптимизировано для нефтехимических процессов, высокотемпературных реакторов и
+          установок термической обработки. <strong>Обязательное раздельное исполнение</strong> —
+          электронный блок выносится в безопасную зону.
+        </p>
+        <div style="display:flex;gap:1rem;flex-wrap:wrap;">
+          <a href="#specifications" class="btn btn-primary">Технические характеристики</a>
+          <a href="../index.html#contacts" class="btn btn-outline">Запросить КП</a>
+        </div>
+        <div class="cond-badges">
+          <span class="cond-badge">🔥 До +350 °C</span>
+          <span class="cond-badge">✓ Раздельное исполнение</span>
+          <span class="cond-badge">✓ Нефтехимия</span>
+          <span class="cond-badge">✓ Высокотемпературные реакторы</span>
+          <span class="cond-badge">✓ Специальные материалы</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== OVERVIEW ==================== -->
+  <section class="section" id="overview">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-badge">Обзор</span>
+        <h2>C — Сверхвысокая температура</h2>
+        <p>
+          Исполнение C специально разработано для процессов, где температура
+          рабочей среды превышает возможности стандартного исполнения T (+150 °C).
+          Применение специализированных жаропрочных материалов, терморазвязок и
+          обязательного раздельного исполнения электроники позволяет надёжно
+          работать при температурах до +350 °C.
+        </p>
+      </div>
+
+      <div class="temp-range">
+        <div>
+          <div class="temp-low">−50 °C</div>
+          <div class="temp-label">Минимальная температура среды</div>
+        </div>
+        <div class="temp-arrow">━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━</div>
+        <div>
+          <div class="temp-high">+350 °C</div>
+          <div class="temp-label">Максимальная температура среды</div>
+        </div>
+      </div>
+
+      <div class="spec-highlight-grid">
+        <div class="spec-highlight-card">
+          <div class="spec-hl-value">−50…+350</div>
+          <div class="spec-hl-label">°C диапазон температур</div>
+        </div>
+        <div class="spec-highlight-card">
+          <div class="spec-hl-value">Раздельное</div>
+          <div class="spec-hl-label">Исполнение электроники</div>
+        </div>
+        <div class="spec-highlight-card">
+          <div class="spec-hl-value">Жаропрочные</div>
+          <div class="spec-hl-label">Сплавы и уплотнения</div>
+        </div>
+        <div class="spec-highlight-card">
+          <div class="spec-hl-value">Нефтехимия</div>
+          <div class="spec-hl-label">Основная отрасль применения</div>
+        </div>
+      </div>
+
+      <div style="margin-top:2rem;">
+        <h3 style="color:var(--primary);margin-bottom:1rem;">Ключевые особенности</h3>
+        <div class="feat-list">
+          <div class="feat-item">
+            <div class="feat-icon">🔥</div>
+            <div class="feat-text"><strong>Сверхвысокая температура до +350 °C</strong> — специальные жаропрочные материалы измерительных трубок и корпуса выдерживают экстремальные температурные нагрузки</div>
+          </div>
+          <div class="feat-item">
+            <div class="feat-icon">↔️</div>
+            <div class="feat-text"><strong>Раздельное исполнение</strong> — электронный блок (трансмиттер) выносится в безопасную зону, соединяется с сенсором кабелем-удлинителем</div>
+          </div>
+          <div class="feat-item">
+            <div class="feat-icon">⚙️</div>
+            <div class="feat-text"><strong>Терморазвязка</strong> — конструкция сенсора включает тепловые барьеры, минимизирующие передачу тепла к фланцам и креплениям</div>
+          </div>
+          <div class="feat-item">
+            <div class="feat-icon">🧪</div>
+            <div class="feat-text"><strong>Специальные уплотнения</strong> — высокотемпературные прокладочные материалы, стойкие к термическому старению и агрессивным средам</div>
+          </div>
+          <div class="feat-item">
+            <div class="feat-icon">📡</div>
+            <div class="feat-text"><strong>Удалённая электроника</strong> — трансмиттер может быть установлен на расстоянии до 30 м от сенсора (опционально до 100 м)</div>
+          </div>
+          <div class="feat-item">
+            <div class="feat-icon">✅</div>
+            <div class="feat-text"><strong>Полная совместимость</strong> — со всеми типоразмерами DN01–DN250 и типами измерительных трубок (U, K, W, L, Δ)</div>
+          </div>
+        </div>
+      </div>
+
+      <div style="margin-top:2.5rem;">
+        <h3 style="color:var(--primary);margin-bottom:0.75rem;">Рекомендуемые области применения</h3>
+        <div class="app-tags">
+          <span class="app-tag">🔥 Нефтехимические реакторы</span>
+          <span class="app-tag">🏭 Пиролизные установки</span>
+          <span class="app-tag">⚗️ Каталитический крекинг</span>
+          <span class="app-tag">🧪 Высокотемпературный синтез</span>
+          <span class="app-tag">🛢️ Перегонка нефти (кубовые остатки)</span>
+          <span class="app-tag">♻️ Термическая переработка отходов</span>
+          <span class="app-tag">🌡️ Энергетика (высокотемпературные теплоносители)</span>
+          <span class="app-tag">⚗️ Производство полимеров</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== DESIGN FEATURES ==================== -->
+  <section class="section section-gray" id="design">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-badge">Конструкция</span>
+        <h2>Конструктивные особенности исполнения C</h2>
+        <p>
+          Исполнение C базируется на стандартных сенсорах Mass-EXPERT, но с рядом
+          конструктивных изменений, обеспечивающих надёжную работу при сверхвысоких температурах.
+        </p>
+      </div>
+
+      <div class="design-grid">
+        <div class="design-card">
+          <div class="design-icon">🔩</div>
+          <h4>Жаропрочные измерительные трубки</h4>
+          <p>Измерительные трубки изготавливаются из специальных высокотемпературных сплавов (Inconel, Hastelloy или аналоги), сохраняющих механическую прочность и упругие свойства при температурах до +350 °C.</p>
+        </div>
+        <div class="design-card">
+          <div class="design-icon">🛡️</div>
+          <h4>Тепловые барьеры и терморазвязки</h4>
+          <p>Специальные теплозащитные экраны и теплоизолирующие проставки между сенсором и присоединительными фланцами предотвращают перегрев смежных участков трубопровода.</p>
+        </div>
+        <div class="design-card">
+          <div class="design-icon">📦</div>
+          <h4>Раздельное исполнение сенсора и электроники</h4>
+          <p>Электронный блок (трансмиттер) устанавливается удалённо — в безопасной зоне с допустимой температурой окружающей среды. Соединение с сенсором осуществляется через герметичный высокотемпературный кабель.</p>
+        </div>
+        <div class="design-card">
+          <div class="design-icon">🔌</div>
+          <h4>Высокотемпературный кабель-удлинитель</h4>
+          <p>Специальный кабель с термостойкой изоляцией (до +350 °C) и герметичными разъёмами обеспечивает надёжную передачу сигнала катушек возбуждения и измерения.</p>
+        </div>
+        <div class="design-card">
+          <div class="design-icon">🧊</div>
+          <h4>Термокомпенсация</h4>
+          <p>Встроенные датчики температуры и алгоритмы цифровой термокомпенсации в трансмиттере обеспечивают стабильность измерений во всём рабочем диапазоне температур.</p>
+        </div>
+        <div class="design-card">
+          <div class="design-icon">🔐</div>
+          <h4>Усиленная тепловая изоляция корпуса</h4>
+          <p>Корпус сенсора снабжён дополнительной тепловой изоляцией для снижения теплопотерь и защиты окружающего оборудования от перегрева.</p>
+        </div>
+      </div>
+
+      <div class="safety-notice">
+        <h3>⚠️ Обязательное требование — раздельное исполнение</h3>
+        <p>
+          Для всех расходомеров в исполнении C (сверхвысокая температура) электронный блок
+          (трансмиттер) <strong>обязательно устанавливается отдельно от сенсора</strong>, в безопасной
+          зоне, где температура окружающей среды не превышает допустимых значений для электроники
+          (от −40 °C до +60 °C). Запрещается эксплуатация с интегрированным (накладным)
+          трансмиттером при температуре рабочей среды свыше +150 °C. Сенсор и трансмиттер
+          соединяются высокотемпературным экранированным кабелем длиной от 3 до 30 метров
+          (опционально до 100 м).
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== GALLERY ==================== -->
+  <section class="section" id="gallery">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-badge">Фотогалерея</span>
+        <h2>Исполнение C — Сверхвысокая температура</h2>
+        <p>Внешний вид моделей сверхвысокотемпературного исполнения C с раздельным сенсором и выносной электроникой</p>
+      </div>
+      <div class="gallery-grid">
+        <div class="gallery-item">
+          <img src="../images/G_C_high_temp.png" alt="C — расходомер сверхвысокой температуры с раздельным исполнением" loading="lazy">
+          <div class="gallery-caption">C — модель сверхвысокой температуры (сенсор с терморазвязкой)</div>
+        </div>
+        <div class="gallery-item">
+          <img src="../images/P_01-02.png" alt="Сенсорное исполнение — общий вид" loading="lazy">
+          <div class="gallery-caption">Типоразмеры 001–002 (U-образные трубки, жаропрочное исполнение)</div>
+        </div>
+        <div class="gallery-item">
+          <img src="../images/P_03-015.png" alt="Сенсорное исполнение — общий вид 003–015" loading="lazy">
+          <div class="gallery-caption">Типоразмеры 003–015 (U-образные трубки, жаропрочное исполнение)</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== SPECIFICATIONS ==================== -->
+  <section class="section section-gray" id="specifications">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-badge">Технические характеристики</span>
+        <h2>Параметры исполнения C</h2>
+        <p>Технические характеристики расходомеров в сверхвысокотемпературном исполнении C</p>
+      </div>
+
+      <div class="table-wrap">
+        <table>
+          <thead>
+            <tr>
+              <th>Параметр</th>
+              <th>Значение</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Код исполнения</td>
+              <td><span class="option-code">C</span></td>
+            </tr>
+            <tr>
+              <td>Диапазон температур рабочей среды</td>
+              <td>от −50 до +350 °C</td>
+            </tr>
+            <tr>
+              <td>Температура окружающей среды (электроника)</td>
+              <td>от −40 до +60 °C</td>
+            </tr>
+            <tr>
+              <td>Максимальное рабочее давление</td>
+              <td>до 10 МПа (стандарт); выше — по запросу</td>
+            </tr>
+            <tr>
+              <td>Исполнение электронного блока</td>
+              <td><strong>Только раздельное</strong> (выносное)</td>
+            </tr>
+            <tr>
+              <td>Длина кабеля сенсор–трансмиттер</td>
+              <td>от 3 до 30 м (опционально до 100 м)</td>
+            </tr>
+            <tr>
+              <td>Материал измерительных трубок</td>
+              <td>Жаропрочные сплавы (Inconel / Hastelloy / аналог)</td>
+            </tr>
+            <tr>
+              <td>Материал корпуса сенсора</td>
+              <td>Нержавеющая сталь, термостойкое покрытие</td>
+            </tr>
+            <tr>
+              <td>Типы измерительных трубок</td>
+              <td>U, K, W, L, Δ (все типы)</td>
+            </tr>
+            <tr>
+              <td>Условный диаметр (DN)</td>
+              <td>от 1 до 250</td>
+            </tr>
+            <tr>
+              <td>Трансмиттеры</td>
+              <td>ME100, ME200, ME300 (выносные)</td>
+            </tr>
+            <tr>
+              <td>Выходные сигналы</td>
+              <td>4–20 мА (HART), RS-485 (Modbus RTU), Profibus PA, CAN, импульсный, частотный, дискретный</td>
+            </tr>
+            <tr>
+              <td>Взрывозащита</td>
+              <td>Ex d ib IIC T6 Gb; Ex db ia IIC T6 Gb; Ex tb ia IIIC T80°C Db</td>
+            </tr>
+            <tr>
+              <td>Степень защиты (сенсор)</td>
+              <td>IP66, IP67</td>
+            </tr>
+            <tr>
+              <td>Степень защиты (трансмиттер)</td>
+              <td>IP66, IP67</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== TECHNICAL DETAILS ==================== -->
+  <section class="section" id="technical">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-badge">Технические подробности</span>
+        <h2>Детальные характеристики исполнения C</h2>
+        <p>
+          Исполнение C предназначено для критических высокотемпературных процессов.
+          Ниже приведены детальные параметры для каждого типоразмера.
+        </p>
+      </div>
+
+      <div class="table-wrap">
+        <table>
+          <thead>
+            <tr>
+              <th>Типоразмер</th>
+              <th>Температура среды, °C</th>
+              <th>Макс. давление, МПа</th>
+              <th>Материал трубок</th>
+              <th>Примечание</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><span class="option-code">001..C</span></td>
+              <td>−50…+350</td>
+              <td>≤ 10</td>
+              <td>Inconel / Hastelloy</td>
+              <td>Микрорасходомер для высокотемпературных сред</td>
+            </tr>
+            <tr>
+              <td><span class="option-code">002..C</span></td>
+              <td>−50…+350</td>
+              <td>≤ 10</td>
+              <td>Inconel / Hastelloy</td>
+              <td>Для малых расходов при высоких температурах</td>
+            </tr>
+            <tr>
+              <td><span class="option-code">003..C</span></td>
+              <td>−50…+350</td>
+              <td>≤ 10</td>
+              <td>Inconel / Hastelloy</td>
+              <td>Базовый типоразмер для нефтехимии</td>
+            </tr>
+            <tr>
+              <td><span class="option-code">004..C</span></td>
+              <td>−50…+350</td>
+              <td>≤ 10</td>
+              <td>Inconel / Hastelloy</td>
+              <td>Универсальное решение для реакторов</td>
+            </tr>
+            <tr>
+              <td><span class="option-code">008..C</span></td>
+              <td>−50…+350</td>
+              <td>≤ 10</td>
+              <td>Inconel / Hastelloy</td>
+              <td>Для пиролизных и крекинг-установок</td>
+            </tr>
+            <tr>
+              <td><span class="option-code">015..C</span></td>
+              <td>−50…+350</td>
+              <td>≤ 10</td>
+              <td>Inconel / Hastelloy</td>
+              <td>Высокотемпературные жидкости и газы</td>
+            </tr>
+            <tr>
+              <td><span class="option-code">025..C</span></td>
+              <td>−50…+350</td>
+              <td>≤ 10</td>
+              <td>Inconel / Hastelloy</td>
+              <td>Технологические трубопроводы</td>
+            </tr>
+            <tr>
+              <td><span class="option-code">050..C</span></td>
+              <td>−50…+350</td>
+              <td>≤ 10</td>
+              <td>Inconel / Hastelloy</td>
+              <td>Крупные высокотемпературные потоки</td>
+            </tr>
+            <tr>
+              <td><span class="option-code">100..C</span></td>
+              <td>−50…+350</td>
+              <td>≤ 10</td>
+              <td>Inconel / Hastelloy</td>
+              <td>Магистральные высокотемпературные линии</td>
+            </tr>
+            <tr>
+              <td><span class="option-code">250..C</span></td>
+              <td>−50…+350</td>
+              <td>≤ 10</td>
+              <td>Inconel / Hastelloy</td>
+              <td>Максимальный типоразмер для высоких температур</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <p style="font-size:0.875rem;color:var(--gray-500);margin-top:1rem;">
+        * Указаны базовые характеристики для типовых условий. Для специфических применений
+        (высокое давление в сочетании с высокой температурой, агрессивные среды и т.п.)
+        возможна индивидуальная проработка исполнения. Уточняйте при заказе.
+      </p>
+    </div>
+  </section>
+
+  <!-- ==================== SEPARATE EXECUTION DETAILS ==================== -->
+  <section class="section section-blue" id="separate">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-badge" style="background:rgba(255,255,255,0.12);color:var(--accent);">Раздельное исполнение</span>
+        <h2>Раздельное исполнение сенсора и электроники</h2>
+        <p>Принципиальная схема и особенности монтажа расходомеров в исполнении C</p>
+      </div>
+
+      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:1.5rem;">
+        <div class="param-card" style="background:rgba(255,255,255,0.06);border:1px solid rgba(255,255,255,0.1);border-radius:var(--radius);padding:1.5rem;text-align:center;">
+          <div class="param-label">Сенсор</div>
+          <div class="param-value">В зоне высокой температуры</div>
+          <p style="font-size:0.8125rem;color:rgba(255,255,255,0.6);margin-top:0.5rem;margin-bottom:0;">
+            Устанавливается непосредственно на высокотемпературном трубопроводе или реакторе.
+            Не содержит электронных компонентов — только измерительные катушки и датчики температуры.
+          </p>
+        </div>
+        <div class="param-card" style="background:rgba(255,255,255,0.06);border:1px solid rgba(255,255,255,0.1);border-radius:var(--radius);padding:1.5rem;text-align:center;">
+          <div class="param-label">Кабель-удлинитель</div>
+          <div class="param-value">3…30 (100) м</div>
+          <p style="font-size:0.8125rem;color:rgba(255,255,255,0.6);margin-top:0.5rem;margin-bottom:0;">
+            Высокотемпературный экранированный кабель с термостойкой изоляцией.
+            Передаёт сигналы возбуждения и измерения без потери точности.
+          </p>
+        </div>
+        <div class="param-card" style="background:rgba(255,255,255,0.06);border:1px solid rgba(255,255,255,0.1);border-radius:var(--radius);padding:1.5rem;text-align:center;">
+          <div class="param-label">Трансмиттер (электроника)</div>
+          <div class="param-value">В безопасной зоне</div>
+          <p style="font-size:0.8125rem;color:rgba(255,255,255,0.6);margin-top:0.5rem;margin-bottom:0;">
+            Устанавливается в зоне с допустимой температурой (−40…+60 °C).
+            Выполняет обработку сигнала, термокомпенсацию и выдачу выходных сигналов.
+            Может устанавливаться в щите или на DIN-рейку.
+          </p>
+        </div>
+      </div>
+
+      <div style="text-align:center;margin-top:2rem;">
+        <p style="color:rgba(255,255,255,0.7);font-size:0.9375rem;margin-bottom:0;">
+          Раздельное исполнение позволяет эксплуатировать кориолисовые расходомеры
+          Mass-EXPERT в процессах с температурой рабочей среды до +350 °C,
+          сохраняя электронику в комфортных условиях и продлевая срок её службы.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== MATERIALS ==================== -->
+  <section class="section section-gray" id="materials">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-badge">Материалы</span>
+        <h2>Применяемые материалы</h2>
+        <p>
+          Для обеспечения надёжной работы при сверхвысоких температурах в исполнении C
+          используются специальные жаропрочные и коррозионностойкие материалы.
+        </p>
+      </div>
+
+      <div class="table-wrap">
+        <table>
+          <thead>
+            <tr>
+              <th>Элемент конструкции</th>
+              <th>Материал</th>
+              <th>Температурный предел</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Измерительные трубки</td>
+              <td>Inconel 625 / 718, Hastelloy C-276</td>
+              <td>до +400 °C</td>
+            </tr>
+            <tr>
+              <td>Корпус сенсора</td>
+              <td>Нержавеющая сталь AISI 316L / 321</td>
+              <td>до +400 °C</td>
+            </tr>
+            <tr>
+              <td>Фланцы / присоединения</td>
+              <td>Нержавеющая сталь AISI 316L / 321</td>
+              <td>до +400 °C</td>
+            </tr>
+            <tr>
+              <td>Уплотнения (внутренние)</td>
+              <td>Графитовые / металлические прокладки</td>
+              <td>до +400 °C</td>
+            </tr>
+            <tr>
+              <td>Изоляция кабеля</td>
+              <td>PTFE / PFA / кремнийорганика</td>
+              <td>до +350 °C</td>
+            </tr>
+            <tr>
+              <td>Тепловые барьеры</td>
+              <td>Керамика / спечённый оксид алюминия</td>
+              <td>до +600 °C</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== NAVIGATION HELP ==================== -->
+  <section class="section" id="more">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-badge">Другие исполнения</span>
+        <h2>Больше информации</h2>
+        <p>Вернуться к основному каталогу продукции Mass-EXPERT или посмотреть другие исполнения по условиям эксплуатации</p>
+      </div>
+      <div style="text-align:center;">
+        <a href="../index.html" class="btn btn-primary">← На главную</a>
+        <a href="../sitemap.html" class="btn btn-outline-dark" style="margin-left:0.75rem;">📋 Карта сайта</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== FOOTER ==================== -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <h4>Mass-EXPERT</h4>
+          <p>Счетчики-расходомеры массовые кориолисового типа.</p>
+          <p>Госреестр № 98506-26. ТУ 26.51.52-016-88090790-2024.</p>
+          <p style="margin-top:0.75rem;font-size:0.8125rem;">
+            Разработка и производство:<br>
+            ООО «Автоматизация-Метрология-ЭКСПЕРТ», г. Уфа
+          </p>
+        </div>
+        <div class="footer-links">
+          <h5>Продукт</h5>
+          <a href="../index.html#specifications">Характеристики</a>
+          <a href="../index.html#product-line">Типоразмеры</a>
+          <a href="../index.html#options">Модификации</a>
+        </div>
+        <div class="footer-links">
+          <h5>Документация</h5>
+          <a href="../index.html#certificates">Сертификаты</a>
+          <a href="../docs/ОПИСАНИЕ_ТИПА_2026-98506-26.pdf" target="_blank">Описание типа</a>
+          <a href="../docs/РЭ_Масс_Эксперт_v09.pdf" target="_blank">Руководство по эксплуатации</a>
+        </div>
+        <div class="footer-links">
+          <h5>Контакты</h5>
+          <a href="tel:+734****5350">+7 (347) 286-53-50</a>
+          <a href="mailto:info@ame-info.ru">info@ame-info.ru</a>
+          <a href="https://www.ame-info.ru" target="_blank">www.ame-info.ru</a>
+          <a href="../sitemap.html" style="margin-top:0.5rem;font-size:0.8125rem;color:var(--gray-500);">📋 Карта сайта</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>© <span id="year">2026</span> ООО «Автоматизация-Метрология-ЭКСПЕРТ». Все права защищены.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="../js/main.js"></script>
+  <script>
+    // Set current year in footer
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    // Mobile nav toggle
+    document.querySelector('.navbar-toggle')?.addEventListener('click', function() {
+      document.querySelector('.navbar-links')?.classList.toggle('open');
+    });
+  </script>
+
+</body>
+</html>

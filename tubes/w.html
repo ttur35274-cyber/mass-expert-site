@@ -1,0 +1,506 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>W — W-образный микроизгиб | Mass-EXPERT | Кориолисовые расходомеры</title>
+  <meta name="description" content="W-образный микроизгиб — компактное решение для ограниченного пространства. Минимальные габариты, низкое гидравлическое сопротивление, высокая точность при малых расходах, устойчивость к вибрациям, лёгкое самоопорожнение. DN08–DN100.">
+  <meta name="keywords" content="W-образный микроизгиб, измерительная трубка W, кориолисовый расходомер, компактный расходомер, микрорасходомер, Mass-EXPERT, малорасходный, самоопорожнение, пищевая промышленность, фармацевтика">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/style.css">
+  <!-- Open Graph -->
+  <meta property="og:title" content="W — W-образный микроизгиб — Mass-EXPERT">
+  <meta property="og:description" content="Компактное решение для ограниченного пространства. Минимальные габариты, низкое гидравлическое сопротивление, высокая точность при малых расходах.">
+  <meta property="og:type" content="website">
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 40 40'><rect width='40' height='40' rx='8' fill='%23F59E0B'/><text x='20' y='26' text-anchor='middle' font-size='14' font-weight='900' fill='%230F172A' font-family='Inter'>ME</text></svg>">
+  <style>
+    /* Page-specific styles for W-tube page */
+    .tube-hero {
+      position: relative;
+      min-height: 70vh;
+      display: flex;
+      align-items: center;
+      background: linear-gradient(135deg, #0B3D6B 0%, #1a5276 40%, #0F172A 100%);
+      overflow: hidden;
+      padding-top: 72px;
+    }
+    .tube-hero::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background:
+        radial-gradient(ellipse at 60% 20%, rgba(245, 158, 11, 0.08) 0%, transparent 60%),
+        radial-gradient(ellipse at 80% 80%, rgba(16, 185, 129, 0.06) 0%, transparent 50%);
+      pointer-events: none;
+    }
+    .tube-hero-content {
+      position: relative;
+      z-index: 1;
+    }
+    .tube-hero-content .tube-label {
+      display: inline-block;
+      font-size: 0.75rem;
+      color: var(--gray-400);
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      font-weight: 600;
+      margin-bottom: 0.75rem;
+      background: rgba(255,255,255,0.08);
+      padding: 0.3rem 0.75rem;
+      border-radius: 999px;
+    }
+    .tube-hero-content h1 {
+      color: var(--white);
+      margin-bottom: 0.5rem;
+    }
+    .tube-hero-content .tube-subtitle {
+      font-size: 1.35rem;
+      color: var(--accent);
+      font-weight: 600;
+      margin-bottom: 1.5rem;
+    }
+    .tube-hero-content .tube-desc {
+      color: rgba(255,255,255,0.8);
+      font-size: 1.0625rem;
+      margin: 1.5rem 0 2rem;
+      max-width: 680px;
+    }
+    .tube-badges {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.75rem;
+      margin-top: 1.5rem;
+    }
+    .tube-badge {
+      background: rgba(255,255,255,0.1);
+      border: 1px solid rgba(255,255,255,0.15);
+      color: rgba(255,255,255,0.9);
+      padding: 0.4rem 1rem;
+      border-radius: 999px;
+      font-size: 0.8125rem;
+      font-weight: 500;
+    }
+
+    /* Features list */
+    .feat-list {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1rem;
+      margin: 1.5rem 0;
+    }
+    .feat-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 0.75rem;
+      padding: 0.75rem 0;
+    }
+    .feat-item .feat-icon {
+      flex-shrink: 0;
+      width: 28px;
+      height: 28px;
+      background: rgba(11, 61, 107, 0.12);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 0.875rem;
+      color: var(--primary);
+      font-weight: 700;
+    }
+    .feat-item .feat-text {
+      font-size: 0.9375rem;
+      color: var(--gray-700);
+    }
+
+    /* Gallery */
+    .gallery-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 1.5rem;
+    }
+    .gallery-item {
+      border-radius: var(--radius-lg);
+      overflow: hidden;
+      border: 1px solid var(--gray-200);
+      background: var(--white);
+      transition: all var(--transition);
+    }
+    .gallery-item:hover {
+      box-shadow: var(--shadow-lg);
+      transform: translateY(-4px);
+    }
+    .gallery-item img {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+    .gallery-item .gallery-caption {
+      padding: 0.75rem 1rem;
+      font-size: 0.8125rem;
+      color: var(--gray-600);
+      font-weight: 500;
+      text-align: center;
+      border-top: 1px solid var(--gray-100);
+    }
+
+    /* Spec highlight cards */
+    .spec-highlight-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 1rem;
+      margin: 2rem 0;
+    }
+    .spec-highlight-card {
+      background: var(--gray-50);
+      border: 1px solid var(--gray-200);
+      border-radius: var(--radius);
+      padding: 1.25rem;
+      text-align: center;
+    }
+    .spec-highlight-card .spec-hl-value {
+      font-size: 1.75rem;
+      font-weight: 800;
+      color: var(--primary);
+    }
+    .spec-highlight-card .spec-hl-label {
+      font-size: 0.8125rem;
+      color: var(--gray-500);
+      margin-top: 0.25rem;
+    }
+
+    @media (max-width: 768px) {
+      .feat-list { grid-template-columns: 1fr; }
+      .tube-hero { min-height: auto; padding: 6rem 0 3rem; }
+    }
+
+    /* Safety notice */
+    .safety-notice {
+      background: var(--accent-light);
+      border-left: 4px solid var(--accent);
+      border-radius: var(--radius);
+      padding: 1.5rem;
+      margin: 2rem 0;
+    }
+    .safety-notice h3 {
+      color: var(--gray-900);
+      margin-bottom: 0.5rem;
+    }
+    .safety-notice p {
+      color: var(--gray-700);
+      margin-bottom: 0;
+      font-size: 0.9375rem;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ==================== NAVIGATION ==================== -->
+  <nav class="navbar" role="navigation" aria-label="Основная навигация">
+    <div class="container">
+      <a href="../index.html" class="navbar-brand">
+        <span class="brand-icon">MASS<br>EXPERT</span>
+        Mass-EXPERT
+      </a>
+      <button class="navbar-toggle" aria-label="Открыть меню">☰</button>
+      <div class="navbar-links">
+        <a href="../index.html#about">О продукте</a>
+        <a href="../index.html#advantages">Преимущества</a>
+        <a href="../index.html#principle">Принцип работы</a>
+        <a href="../index.html#applications">Применение</a>
+        <a href="../index.html#product-line">Типоразмеры</a>
+        <a href="../index.html#specifications">Характеристики</a>
+        <a href="../index.html#contacts">Контакты</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ==================== HERO ==================== -->
+  <section class="tube-hero" id="hero">
+    <div class="container">
+      <div class="tube-hero-content">
+        <span class="tube-label">Тип измерительных трубок</span>
+        <h1>W</h1>
+        <div class="tube-subtitle">W-образный микроизгиб</div>
+        <p class="tube-desc">
+          <strong>W-образный микроизгиб</strong> — компактное решение для ограниченного
+          пространства. Идеально подходит для встраивания в шкафы управления, щитовые
+          конструкции и дозирующие установки, где каждый сантиметр на счету.
+        </p>
+        <div style="display:flex;gap:1rem;flex-wrap:wrap;">
+          <a href="#specifications" class="btn btn-primary">Технические характеристики</a>
+          <a href="../index.html#contacts" class="btn btn-outline">Запросить КП</a>
+        </div>
+        <div class="tube-badges">
+          <span class="tube-badge">📏 DN08–DN100</span>
+          <span class="tube-badge">✓ Минимальные габариты</span>
+          <span class="tube-badge">✓ Низкое гидросопротивление</span>
+          <span class="tube-badge">✓ Лёгкое самоопорожнение</span>
+          <span class="tube-badge">✓ Пищевая / фармацевтика</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== OVERVIEW ==================== -->
+  <section class="section" id="overview">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-badge">Обзор</span>
+        <h2>W — W-образный микроизгиб</h2>
+        <p>
+          W-образная конфигурация измерительных трубок сочетает компактность и
+          высокую точность измерений. Благодаря особой геометрии микроизгиба
+          достигается оптимальное соотношение габаритов и метрологических
+          характеристик, что делает эту конструкцию востребованной для задач
+          с жёсткими ограничениями по монтажному пространству.
+        </p>
+      </div>
+
+      <div class="spec-highlight-grid">
+        <div class="spec-highlight-card">
+          <div class="spec-hl-value">DN08–DN100</div>
+          <div class="spec-hl-label">Условный диаметр</div>
+        </div>
+        <div class="spec-highlight-card">
+          <div class="spec-hl-value">Компактный</div>
+          <div class="spec-hl-label">Микроизгиб для стеснённых условий</div>
+        </div>
+        <div class="spec-highlight-card">
+          <div class="spec-hl-value">Самоопорожнение</div>
+          <div class="spec-hl-label">Гигиеничность и CIP/SIP</div>
+        </div>
+        <div class="spec-highlight-card">
+          <div class="spec-hl-value">≤ 10 МПа</div>
+          <div class="spec-hl-label">Максимальное рабочее давление</div>
+        </div>
+      </div>
+
+      <div style="margin-top:2rem;">
+        <h3 style="color:var(--primary);margin-bottom:1rem;">Преимущества W-образного микроизгиба</h3>
+        <div class="feat-list">
+          <div class="feat-item">
+            <div class="feat-icon">📏</div>
+            <div class="feat-text"><strong>Минимальные габариты</strong> — компактная W-образная геометрия для монтажа в шкафах, щитах и дозирующих установках с ограниченным пространством</div>
+          </div>
+          <div class="feat-item">
+            <div class="feat-icon">🌊</div>
+            <div class="feat-text"><strong>Низкое гидравлическое сопротивление</strong> — плавные изгибы трубок минимизируют потери давления в системе</div>
+          </div>
+          <div class="feat-item">
+            <div class="feat-icon">🎯</div>
+            <div class="feat-text"><strong>Высокая точность при малых расходах</strong> — оптимизированная геометрия микроизгиба обеспечивает стабильную работу в диапазоне малых расходов</div>
+          </div>
+          <div class="feat-item">
+            <div class="feat-icon">🔩</div>
+            <div class="feat-text"><strong>Устойчивость к вибрациям</strong> — жёсткая W-образная конструкция трубок менее чувствительна к внешним вибрационным воздействиям</div>
+          </div>
+          <div class="feat-item">
+            <div class="feat-icon">💧</div>
+            <div class="feat-text"><strong>Лёгкое самоопорожнение</strong> — W-образная геометрия не создаёт застойных зон, что критически важно для пищевой и фармацевтической промышленности</div>
+          </div>
+          <div class="feat-item">
+            <div class="feat-icon">🔄</div>
+            <div class="feat-text"><strong>Совместимость с CIP/SIP</strong> — конструкция допускает промывку и стерилизацию на месте без демонтажа прибора</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="safety-notice">
+        <h3>📋 Рекомендуемые области применения</h3>
+        <p>
+          W-образный микроизгиб оптимален для задач точного дозирования реагентов,
+          контроля подачи присадок, учёта дорогостоящих компонентов в фармацевтике
+          и пищевой промышленности, а также для встраивания в компактные
+          технологические установки и лабораторные стенды. Подходит как для
+          жидкостей, так и для газов с малыми расходами.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== GALLERY ==================== -->
+  <section class="section section-gray" id="gallery">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-badge">Фотогалерея</span>
+        <h2>W-образные измерительные трубки</h2>
+        <p>Внешний вид W-образных микроизгибов Mass-EXPERT и их исполнение</p>
+      </div>
+      <div class="gallery-grid">
+        <div class="gallery-item">
+          <img src="../images/W_type.png" alt="W-образный микроизгиб — тип измерительной трубки" loading="lazy">
+          <div class="gallery-caption">W-образная измерительная трубка — микроизгиб компактного исполнения</div>
+        </div>
+        <div class="gallery-item">
+          <img src="../images/Mass-EXPERT-080..W.png" alt="Mass-EXPERT 080 с W-образными трубками" loading="lazy">
+          <div class="gallery-caption">Типоразмер 080 — сенсор с W-образными измерительными трубками</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== SPECIFICATIONS ==================== -->
+  <section class="section" id="specifications">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-badge">Технические характеристики</span>
+        <h2>Параметры W-образного микроизгиба</h2>
+        <p>Технические характеристики расходомеров с W-образными измерительными трубками</p>
+      </div>
+
+      <div class="table-wrap">
+        <table>
+          <thead>
+            <tr>
+              <th>Параметр</th>
+              <th>Значение</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Тип измерительных трубок</td>
+              <td><span class="option-code">W</span> — W-образный микроизгиб</td>
+            </tr>
+            <tr>
+              <td>Диапазон условных диаметров</td>
+              <td>DN08 – DN100</td>
+            </tr>
+            <tr>
+              <td>Диапазон температур рабочей среды</td>
+              <td>от −50 до +150 °C (стандарт); до +350 °C (исполнение C)</td>
+            </tr>
+            <tr>
+              <td>Максимальное рабочее давление</td>
+              <td>до 10 МПа (стандарт); выше — по запросу</td>
+            </tr>
+            <tr>
+              <td>Класс точности (жидкость)</td>
+              <td>±0,1…±0,15 %</td>
+            </tr>
+            <tr>
+              <td>Класс точности (газ)</td>
+              <td>±0,5 %</td>
+            </tr>
+            <tr>
+              <td>Повторяемость</td>
+              <td>±0,05 %</td>
+            </tr>
+            <tr>
+              <td>Динамический диапазон</td>
+              <td>100:1</td>
+            </tr>
+            <tr>
+              <td>Измерение плотности</td>
+              <td>±0,002 г/см³ (стандарт); ±0,0005 г/см³ (прецизионное)</td>
+            </tr>
+            <tr>
+              <td>Материал измерительных трубок</td>
+              <td>Нержавеющая сталь AISI 316L / 1.4404 (стандарт); Hastelloy C-276 (опция)</td>
+            </tr>
+            <tr>
+              <td>Материал корпуса сенсора</td>
+              <td>Нержавеющая сталь AISI 304 / 316L</td>
+            </tr>
+            <tr>
+              <td>Самоопорожнение</td>
+              <td>Да — конструкция не создаёт застойных зон</td>
+            </tr>
+            <tr>
+              <td>Присоединения к процессу</td>
+              <td>Фланцы DIN / ANSI / ГОСТ, Tri-Clamp (для пищевой и фармацевтики)</td>
+            </tr>
+            <tr>
+              <td>Трансмиттеры</td>
+              <td>ME100, ME200, ME300 (интегрированные / выносные)</td>
+            </tr>
+            <tr>
+              <td>Выходные сигналы</td>
+              <td>4–20 мА (HART), RS-485 (Modbus RTU), Profibus PA, CAN, импульсный, частотный, дискретный</td>
+            </tr>
+            <tr>
+              <td>Взрывозащита</td>
+              <td>Ex d ib IIC T6 Gb; Ex db ia IIC T6 Gb; Ex tb ia IIIC T80°C Db</td>
+            </tr>
+            <tr>
+              <td>Степень защиты (сенсор)</td>
+              <td>IP66, IP67</td>
+            </tr>
+            <tr>
+              <td>Гигиеническое исполнение</td>
+              <td>Доступно (пищевая, фармацевтика, биотехнологии)</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== NAVIGATION HELP ==================== -->
+  <section class="section section-gray" id="more">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-badge">Навигация</span>
+        <h2>Больше информации</h2>
+        <p>Вернуться к основному каталогу продукции Mass-EXPERT или посмотреть другие типы измерительных трубок</p>
+      </div>
+      <div style="text-align:center;">
+        <a href="../index.html" class="btn btn-primary">← На главную</a>
+        <a href="../sitemap.html" class="btn btn-outline-dark" style="margin-left:0.75rem;">📋 Карта сайта</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== FOOTER ==================== -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <h4>Mass-EXPERT</h4>
+          <p>Счетчики-расходомеры массовые кориолисового типа.</p>
+          <p>Госреестр № 98506-26. ТУ 26.51.52-016-88090790-2024.</p>
+          <p style="margin-top:0.75rem;font-size:0.8125rem;">
+            Разработка и производство:<br>
+            ООО «Автоматизация-Метрология-ЭКСПЕРТ», г. Уфа
+          </p>
+        </div>
+        <div class="footer-links">
+          <h5>Продукт</h5>
+          <a href="../index.html#specifications">Характеристики</a>
+          <a href="../index.html#product-line">Типоразмеры</a>
+          <a href="../index.html#options">Модификации</a>
+        </div>
+        <div class="footer-links">
+          <h5>Документация</h5>
+          <a href="../index.html#certificates">Сертификаты</a>
+          <a href="../docs/ОПИСАНИЕ_ТИПА_2026-98506-26.pdf" target="_blank">Описание типа</a>
+          <a href="../docs/РЭ_Масс_Эксперт_v09.pdf" target="_blank">Руководство по эксплуатации</a>
+        </div>
+        <div class="footer-links">
+          <h5>Контакты</h5>
+          <a href="tel:+734****5350">+7 (347) 286-53-50</a>
+          <a href="mailto:info@ame-info.ru">info@ame-info.ru</a>
+          <a href="https://www.ame-info.ru" target="_blank">www.ame-info.ru</a>
+          <a href="../sitemap.html" style="margin-top:0.5rem;font-size:0.8125rem;color:var(--gray-500);">📋 Карта сайта</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>© <span id="year">2026</span> ООО «Автоматизация-Метрология-ЭКСПЕРТ». Все права защищены.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="../js/main.js"></script>
+  <script>
+    // Set current year in footer
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    // Mobile nav toggle
+    document.querySelector('.navbar-toggle')?.addEventListener('click', function() {
+      document.querySelector('.navbar-links')?.classList.toggle('open');
+    });
+  </script>
+
+</body>
+</html>

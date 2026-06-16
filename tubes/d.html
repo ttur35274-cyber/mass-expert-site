@@ -1,0 +1,772 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>D — Δ-образный (треугольный) тип сенсора | Mass-EXPERT | Кориолисовые расходомеры</title>
+  <meta name="description" content="Δ-образный (треугольный) тип измерительных трубок — максимальная жёсткость и виброустойчивость. Две симметричные трубки, образующие треугольную геометрию. DN01–DN25. Для газов, жидкостей под высоким давлением, сильной пульсации потока.">
+  <meta name="keywords" content="Δ-образный сенсор, треугольные трубки, дельта-тип, кориолисовый расходомер, тип D, Mass-EXPERT, измерительные трубки D-типа, высокая жёсткость, виброустойчивость, микрорасходы, DN01, DN02">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/style.css">
+  <!-- Open Graph -->
+  <meta property="og:title" content="D — Δ-образный (треугольный) тип сенсора — Mass-EXPERT">
+  <meta property="og:description" content="Δ-образный тип измерительных трубок — максимальная жёсткость и виброустойчивость. Две симметричные трубки, образующие треугольную геометрию. DN01–DN25.">
+  <meta property="og:type" content="website">
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 40 40'><rect width='40' height='40' rx='8' fill='%23F59E0B'/><text x='20' y='26' text-anchor='middle' font-size='14' font-weight='900' fill='%230F172A' font-family='Inter'>ME</text></svg>">
+  <style>
+    /* Page-specific styles for D (Delta) tube type */
+    .cond-hero {
+      position: relative;
+      min-height: 70vh;
+      display: flex;
+      align-items: center;
+      background: linear-gradient(135deg, #1a1a2e 0%, #16213e 40%, #0f3460 100%);
+      overflow: hidden;
+      padding-top: 72px;
+    }
+    .cond-hero::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background:
+        radial-gradient(ellipse at 65% 25%, rgba(245, 158, 11, 0.10) 0%, transparent 60%),
+        radial-gradient(ellipse at 30% 75%, rgba(37, 99, 235, 0.08) 0%, transparent 50%);
+      pointer-events: none;
+    }
+    .cond-hero-content {
+      position: relative;
+      z-index: 1;
+    }
+    .cond-hero-content .cond-label {
+      display: inline-block;
+      font-size: 0.75rem;
+      color: var(--gray-400);
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      font-weight: 600;
+      margin-bottom: 0.75rem;
+      background: rgba(255,255,255,0.08);
+      padding: 0.3rem 0.75rem;
+      border-radius: 999px;
+    }
+    .cond-hero-content h1 {
+      color: var(--white);
+      margin-bottom: 0.5rem;
+      font-size: 4rem;
+    }
+    .cond-hero-content .cond-subtitle {
+      font-size: 1.35rem;
+      color: var(--accent);
+      font-weight: 600;
+      margin-bottom: 1.5rem;
+    }
+    .cond-hero-content .cond-desc {
+      color: rgba(255,255,255,0.8);
+      font-size: 1.0625rem;
+      margin: 1.5rem 0 2rem;
+      max-width: 680px;
+    }
+    .cond-badges {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.75rem;
+      margin-top: 1.5rem;
+    }
+    .cond-badge {
+      background: rgba(255,255,255,0.1);
+      border: 1px solid rgba(255,255,255,0.15);
+      color: rgba(255,255,255,0.9);
+      padding: 0.4rem 1rem;
+      border-radius: 999px;
+      font-size: 0.8125rem;
+      font-weight: 500;
+    }
+
+    /* Gallery */
+    .gallery-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 1.5rem;
+    }
+    .gallery-item {
+      border-radius: var(--radius-lg);
+      overflow: hidden;
+      border: 1px solid var(--gray-200);
+      background: var(--white);
+      transition: all var(--transition);
+    }
+    .gallery-item:hover {
+      box-shadow: var(--shadow-lg);
+      transform: translateY(-4px);
+    }
+    .gallery-item img {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+    .gallery-item .gallery-caption {
+      padding: 0.75rem 1rem;
+      font-size: 0.8125rem;
+      color: var(--gray-600);
+      font-weight: 500;
+      text-align: center;
+      border-top: 1px solid var(--gray-100);
+    }
+
+    /* Features list */
+    .feat-list {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1rem;
+      margin: 1.5rem 0;
+    }
+    .feat-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 0.75rem;
+      padding: 0.75rem 0;
+    }
+    .feat-item .feat-icon {
+      flex-shrink: 0;
+      width: 28px;
+      height: 28px;
+      background: rgba(245, 158, 11, 0.12);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 0.875rem;
+      color: #D97706;
+      font-weight: 700;
+    }
+    .feat-item .feat-text {
+      font-size: 0.9375rem;
+      color: var(--gray-700);
+    }
+
+    @media (max-width: 768px) {
+      .feat-list { grid-template-columns: 1fr; }
+      .cond-hero { min-height: auto; padding: 6rem 0 3rem; }
+      .cond-hero-content h1 { font-size: 2.5rem; }
+    }
+
+    /* Specification summary cards */
+    .spec-highlight-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 1rem;
+      margin: 2rem 0;
+    }
+    .spec-highlight-card {
+      background: var(--gray-50);
+      border: 1px solid var(--gray-200);
+      border-radius: var(--radius);
+      padding: 1.25rem;
+      text-align: center;
+    }
+    .spec-highlight-card .spec-hl-value {
+      font-size: 1.75rem;
+      font-weight: 800;
+      color: var(--primary);
+    }
+    .spec-highlight-card .spec-hl-label {
+      font-size: 0.8125rem;
+      color: var(--gray-500);
+      margin-top: 0.25rem;
+    }
+
+    /* Application tags */
+    .app-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+      margin-top: 1rem;
+    }
+    .app-tag {
+      background: var(--gray-100);
+      border: 1px solid var(--gray-200);
+      padding: 0.5rem 1rem;
+      border-radius: 999px;
+      font-size: 0.875rem;
+      font-weight: 500;
+      color: var(--gray-700);
+      transition: all var(--transition);
+    }
+    .app-tag:hover {
+      border-color: var(--primary);
+      color: var(--primary);
+      background: var(--white);
+    }
+
+    /* Highlight box */
+    .highlight-box {
+      background: linear-gradient(135deg, #FFFBEB, #FEF3C7);
+      border: 1px solid #FCD34D;
+      border-left: 4px solid #D97706;
+      border-radius: var(--radius-lg);
+      padding: 1.5rem 2rem;
+      margin: 2rem 0;
+    }
+    .highlight-box h3 {
+      color: #78350F;
+      font-size: 1.0625rem;
+      margin-bottom: 0.5rem;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+    .highlight-box p {
+      color: #78350F;
+      font-size: 0.9375rem;
+      margin-bottom: 0;
+    }
+
+    /* Application table */
+    .app-table th:first-child { width: 200px; }
+
+    /* Micro flow notice */
+    .micro-notice {
+      background: linear-gradient(135deg, #F0F9FF, #E0F2FE);
+      border: 1px solid #BAE6FD;
+      border-left: 4px solid #0284C7;
+      border-radius: var(--radius-lg);
+      padding: 1.5rem 2rem;
+      margin: 2rem 0;
+    }
+    .micro-notice h3 {
+      color: #0C4A6E;
+      font-size: 1.0625rem;
+      margin-bottom: 0.5rem;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+    .micro-notice p {
+      color: #0C4A6E;
+      font-size: 0.9375rem;
+      margin-bottom: 0;
+    }
+
+    /* Design feature cards */
+    .design-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 1.5rem;
+      margin-top: 2rem;
+    }
+    .design-card {
+      background: var(--white);
+      border: 1px solid var(--gray-200);
+      border-radius: var(--radius-lg);
+      padding: 1.5rem;
+      transition: all var(--transition);
+    }
+    .design-card:hover {
+      border-color: #D97706;
+      box-shadow: var(--shadow-md);
+      transform: translateY(-2px);
+    }
+    .design-card .design-icon {
+      font-size: 2rem;
+      margin-bottom: 0.75rem;
+    }
+    .design-card h4 {
+      font-size: 1.0625rem;
+      color: var(--primary);
+      margin-bottom: 0.5rem;
+    }
+    .design-card p {
+      font-size: 0.9375rem;
+      color: var(--gray-500);
+      margin: 0;
+    }
+
+    /* Tube type reference */
+    .tube-type-ref {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+      margin: 1rem 0;
+      justify-content: center;
+    }
+    .tube-type-ref a {
+      display: inline-block;
+      padding: 0.5rem 1.25rem;
+      border-radius: 999px;
+      font-size: 0.875rem;
+      font-weight: 600;
+      text-decoration: none;
+      border: 1px solid var(--gray-200);
+      color: var(--gray-600);
+      background: var(--white);
+      transition: all var(--transition);
+    }
+    .tube-type-ref a:hover {
+      border-color: var(--primary);
+      color: var(--primary);
+      background: var(--gray-50);
+    }
+    .tube-type-ref a.active {
+      background: var(--primary);
+      color: var(--white);
+      border-color: var(--primary);
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ==================== NAVIGATION ==================== -->
+  <nav class="navbar" role="navigation" aria-label="Основная навигация">
+    <div class="container">
+      <a href="../index.html" class="navbar-brand">
+        <span class="brand-icon">MASS<br>EXPERT</span>
+        Mass-EXPERT
+      </a>
+      <button class="navbar-toggle" aria-label="Открыть меню">☰</button>
+      <div class="navbar-links">
+        <a href="../index.html#about">О продукте</a>
+        <a href="../index.html#advantages">Преимущества</a>
+        <a href="../index.html#principle">Принцип работы</a>
+        <a href="../index.html#product-line">Типоразмеры</a>
+        <a href="../index.html#specifications">Характеристики</a>
+        <a href="../index.html#contacts">Контакты</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ==================== HERO ==================== -->
+  <section class="cond-hero" id="hero">
+    <div class="container">
+      <div class="cond-hero-content">
+        <span class="cond-label">Тип измерительных трубок</span>
+        <h1>Δ</h1>
+        <div class="cond-subtitle">Δ-образный (треугольный) тип сенсора</div>
+        <p class="cond-desc">
+          <strong>Δ-образная (треугольная) конструкция</strong> — максимальная жёсткость
+          и виброустойчивость среди всех типов измерительных трубок. Две симметричные
+          трубки, образующие треугольную геометрию, обеспечивают <strong>высокую
+          чувствительность на малых расходах</strong> (доли кг/ч) при исключительной
+          механической стабильности.
+        </p>
+        <div style="display:flex;gap:1rem;flex-wrap:wrap;">
+          <a href="#specifications" class="btn btn-primary">Технические характеристики</a>
+          <a href="../index.html#contacts" class="btn btn-outline">Запросить КП</a>
+        </div>
+        <div class="cond-badges">
+          <span class="cond-badge">📐 DN01–DN25</span>
+          <span class="cond-badge">📏 DN1 / DN2 — микрорасходы</span>
+          <span class="cond-badge">🔺 Макс. жёсткость</span>
+          <span class="cond-badge">🛡️ Виброустойчивость</span>
+          <span class="cond-badge">🎯 Доли кг/ч</span>
+          <span class="cond-badge">✓ Высокое давление</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== OVERVIEW ==================== -->
+  <section class="section" id="overview">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-badge">Обзор</span>
+        <h2>Δ-образный (треугольный) тип сенсора</h2>
+        <p>
+          D-тип (Delta) — инженерное решение, где две измерительные трубки образуют
+          треугольную (Δ-образную) геометрию. Такая конфигурация обеспечивает
+          <strong>максимальную жёсткость конструкции</strong> и наилучшую
+          виброустойчивость среди всех типов сенсоров кориолисовых расходомеров
+          Mass-EXPERT. Треугольная форма минимизирует паразитные деформации и
+          гарантирует стабильность показаний даже в условиях сильных внешних
+          вибраций и пульсирующих потоков.
+        </p>
+      </div>
+
+      <!-- Delta schematic -->
+      <div style="text-align:center;margin:2rem 0;" class="animate-on-scroll">
+        <img src="../images/D_type_delta.png" alt="Δ-образный (треугольный) тип измерительных трубок — сенсор Mass-EXPERT D-типа" style="max-width:100%;border-radius:var(--radius);border:1px solid var(--gray-200);">
+      </div>
+
+      <div class="spec-highlight-grid">
+        <div class="spec-highlight-card">
+          <div class="spec-hl-value">DN01–DN25</div>
+          <div class="spec-hl-label">Диапазон условных диаметров</div>
+        </div>
+        <div class="spec-highlight-card">
+          <div class="spec-hl-value">DN1 / DN2</div>
+          <div class="spec-hl-label">Микрорасходы — доли кг/ч</div>
+        </div>
+        <div class="spec-highlight-card">
+          <div class="spec-hl-value">1000:1</div>
+          <div class="spec-hl-label">Широкий динамический диапазон</div>
+        </div>
+        <div class="spec-highlight-card">
+          <div class="spec-hl-value">≥ 25 МПа</div>
+          <div class="spec-hl-label">Высокое рабочее давление</div>
+        </div>
+      </div>
+
+      <!-- Micro flow notice -->
+      <div class="micro-notice">
+        <h3>🧪 Микрорасходы — DN1 и DN2</h3>
+        <p>
+          Типоразмеры <strong>DN1</strong> и <strong>DN2</strong> (микрорасходы)
+          спроектированы для измерения <strong>очень малых расходов</strong> —
+          от долей кг/ч. Идеальное решение для тонкого дозирования дорогостоящих
+          реагентов, катализаторов, ароматизаторов и красителей в лабораторных
+          и промышленных условиях.
+        </p>
+      </div>
+
+      <div style="margin-top:2rem;">
+        <h3 style="color:var(--primary);margin-bottom:1rem;">Ключевые преимущества Δ-образного типа</h3>
+        <div class="feat-list">
+          <div class="feat-item">
+            <div class="feat-icon">🔺</div>
+            <div class="feat-text"><strong>Высокая жёсткость и виброустойчивость</strong> — треугольная геометрия обеспечивает максимальную механическую стабильность, минимальную чувствительность к внешним вибрациям и гидроударам</div>
+          </div>
+          <div class="feat-item">
+            <div class="feat-icon">🎯</div>
+            <div class="feat-text"><strong>Высокая чувствительность на малых расходах</strong> — Δ-образная конфигурация даёт стабильный сигнал даже при расходах в доли кг/ч, недоступных для других типов</div>
+          </div>
+          <div class="feat-item">
+            <div class="feat-icon">🔄</div>
+            <div class="feat-text"><strong>Широкий динамический диапазон</strong> — до 1000:1, что позволяет перекрывать измерения от микрорасходов до максимальных значений на одном приборе</div>
+          </div>
+          <div class="feat-item">
+            <div class="feat-icon">🌊</div>
+            <div class="feat-text"><strong>Улучшенная гидродинамика</strong> — минимум застойных зон благодаря оптимизированной геометрии трубок, снижение потерь давления</div>
+          </div>
+          <div class="feat-item">
+            <div class="feat-icon">💪</div>
+            <div class="feat-text"><strong>Работа с газами и жидкостями под высоким давлением</strong> — усиленная конструкция эффективна для газов, жидкостей под высоким давлением и при сильной пульсации потока</div>
+          </div>
+          <div class="feat-item">
+            <div class="feat-icon">📦</div>
+            <div class="feat-text"><strong>Компактность для подвижных установок</strong> — D-тип рекомендуется для скид-модулей, мобильных установок, высокоточных дозаторов и фасовочных линий</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="highlight-box">
+        <h3>⭐ Рекомендуемый тип для прецизионного дозирования</h3>
+        <p>
+          D-тип (Delta) рекомендуется для подвижных установок, скид-модулей,
+          высокоточных дозаторов и фасовочных линий. Сочетание максимальной жёсткости,
+          виброустойчивости и высокой чувствительности на микрорасходах делает его
+          оптимальным выбором для наиболее ответственных задач дозирования.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== ADVANTAGES DETAILED ==================== -->
+  <section class="section section-gray" id="advantages">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-badge">Преимущества</span>
+        <h2>Почему Δ-образный тип — выбор для микрорасходов и высоких давлений</h2>
+        <p>
+          Треугольная геометрия измерительных трубок D-типа сочетает рекордную
+          механическую жёсткость с исключительной чувствительностью, открывая
+          возможности для задач, где другие типы сенсоров достигают предела.
+        </p>
+      </div>
+
+      <div class="design-grid">
+        <div class="design-card">
+          <div class="design-icon">🔺</div>
+          <h4>Максимальная жёсткость</h4>
+          <p>Треугольная конфигурация обеспечивает наивысшую жёсткость среди всех типов измерительных трубок Mass-EXPERT. Минимальные деформации под нагрузкой, стабильность геометрии при перепадах давления и температуры.</p>
+        </div>
+        <div class="design-card">
+          <div class="design-icon">🛡️</div>
+          <h4>Виброустойчивость</h4>
+          <p>Симметричная Δ-образная конструкция эффективно гасит внешние вибрации. Незаменим для подвижных установок, скид-модулей, морского применения и объектов с сильным вибрационным фоном.</p>
+        </div>
+        <div class="design-card">
+          <div class="design-icon">🎯</div>
+          <h4>Чувствительность на микрорасходах</h4>
+          <p>Высокая чувствительность при расходах от долей кг/ч. DN1 и DN2 специально разработаны для сверхмалых расходов — тонкое дозирование катализаторов, реагентов, присадок и ароматизаторов.</p>
+        </div>
+        <div class="design-card">
+          <div class="design-icon">🌊</div>
+          <h4>Гидродинамика без застойных зон</h4>
+          <p>Оптимизированная Δ-образная геометрия минимизирует застойные зоны внутри измерительных трубок. Улучшенная гидродинамика снижает загрязнение и облегчает промывку.</p>
+        </div>
+        <div class="design-card">
+          <div class="design-icon">⚡</div>
+          <h4>Работа с пульсирующими потоками</h4>
+          <p>Особенно эффективен для газов, жидкостей под высоким давлением и сред с сильной пульсацией потока. Высокая собственная частота колебаний трубок обеспечивает стабильность измерений.</p>
+        </div>
+        <div class="design-card">
+          <div class="design-icon">📐</div>
+          <h4>Широкий диапазон DN</h4>
+          <p>От микрорасходных DN1–DN2 до DN25. Единая Δ-образная конструкция для всего спектра задач — от лабораторного дозирования до промышленных линий среднего диаметра.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== GALLERY ==================== -->
+  <section class="section" id="gallery">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-badge">Фотогалерея</span>
+        <h2>Δ-образные измерительные трубки</h2>
+        <p>Внешний вид D-типа (Delta) Mass-EXPERT — треугольная конфигурация трубок</p>
+      </div>
+      <div class="gallery-grid">
+        <div class="gallery-item">
+          <img src="../images/D_type_delta.png" alt="Δ-образный (треугольный) тип измерительных трубок — D-тип Mass-EXPERT" loading="lazy">
+          <div class="gallery-caption">Δ-образная измерительная трубка D-типа — треугольная геометрия</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== APPLICATIONS ==================== -->
+  <section class="section section-gray" id="applications">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-badge">Применение</span>
+        <h2>Области применения D-типа</h2>
+        <p>Δ-образный тип рекомендуется для задач, требующих максимальной точности при минимальных расходах в условиях повышенных вибраций и высокого давления</p>
+      </div>
+
+      <div class="table-wrap">
+        <table class="app-table">
+          <thead>
+            <tr>
+              <th>Область применения</th>
+              <th>Описание</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>🧪 Тонкое дозирование в химии</td>
+              <td>Катализаторы, реагенты, модификаторы — микропорции с высокой точностью для химических и нефтехимических процессов</td>
+            </tr>
+            <tr>
+              <td>💊 Фармацевтика</td>
+              <td>Дозирование активных фармацевтических субстанций (АФС), вспомогательных веществ, контроль подачи растворителей в реакторы</td>
+            </tr>
+            <tr>
+              <td>🛢️ Нефтехимия</td>
+              <td>Присадки, ингибиторы коррозии, деэмульгаторы, антистатики — прецизионное дозирование в трубопроводы и реакторы</td>
+            </tr>
+            <tr>
+              <td>🍶 Пищевая промышленность</td>
+              <td>Ароматизаторы, красители, вкусовые добавки, витаминные премиксы — точное дозирование дорогостоящих ингредиентов</td>
+            </tr>
+            <tr>
+              <td>⛽ Газ и СУГ</td>
+              <td>Измерение расхода газов и сжиженных углеводородных газов на малых линиях, отбор проб, дозирование одорантов</td>
+            </tr>
+            <tr>
+              <td>🏭 Подвижные установки</td>
+              <td>Скид-модули, мобильные дозирующие станции, фасовочные линии — компактные и виброустойчивые решения для транспортируемых объектов</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div style="margin-top:2rem;">
+        <h3 style="color:var(--primary);margin-bottom:1rem;">Ключевые отрасли</h3>
+        <div class="app-tags">
+          <span class="app-tag">🧪 Химическая промышленность</span>
+          <span class="app-tag">💊 Фармацевтика</span>
+          <span class="app-tag">🛢️ Нефтехимия</span>
+          <span class="app-tag">🍶 Пищевая промышленность</span>
+          <span class="app-tag">⛽ Газ и СУГ</span>
+          <span class="app-tag">⚗️ Лабораторное дозирование</span>
+          <span class="app-tag">🏭 Скид-модули</span>
+          <span class="app-tag">📦 Фасовочные линии</span>
+          <span class="app-tag">🔬 Биотехнологии</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== SPECIFICATIONS ==================== -->
+  <section class="section" id="specifications">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-badge">Технические характеристики</span>
+        <h2>Параметры Δ-образного (D) типа</h2>
+        <p>Технические характеристики расходомеров Mass-EXPERT с Δ-образными измерительными трубками</p>
+      </div>
+
+      <div class="table-wrap">
+        <table>
+          <thead>
+            <tr>
+              <th>Параметр</th>
+              <th>Значение</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Тип измерительных трубок</td>
+              <td><span class="option-code">D</span> — Δ-образный (треугольный)</td>
+            </tr>
+            <tr>
+              <td>Диапазон условных диаметров</td>
+              <td>DN01 – DN25</td>
+            </tr>
+            <tr>
+              <td>Микрорасходы</td>
+              <td>DN1, DN2 — от долей кг/ч</td>
+            </tr>
+            <tr>
+              <td>Диапазон температур рабочей среды</td>
+              <td>от −50 до +150 °C (стандарт); до +350 °C (исполнение C)</td>
+            </tr>
+            <tr>
+              <td>Максимальное рабочее давление</td>
+              <td>до 25 МПа (стандарт); до 70 МПа — по запросу</td>
+            </tr>
+            <tr>
+              <td>Класс точности (жидкость)</td>
+              <td>±0,10…±0,15 %</td>
+            </tr>
+            <tr>
+              <td>Класс точности (газ)</td>
+              <td>±0,5 %</td>
+            </tr>
+            <tr>
+              <td>Повторяемость</td>
+              <td>±0,05 %</td>
+            </tr>
+            <tr>
+              <td>Динамический диапазон</td>
+              <td>100:1 (стандарт); до 1000:1 (оптимизированные исполнения)</td>
+            </tr>
+            <tr>
+              <td>Измерение плотности</td>
+              <td>±0,002 г/см³ (стандарт); ±0,0005 г/см³ (прецизионное)</td>
+            </tr>
+            <tr>
+              <td>Материал измерительных трубок</td>
+              <td>Нержавеющая сталь AISI 316L / 1.4404 (стандарт); Hastelloy C-276 (опция)</td>
+            </tr>
+            <tr>
+              <td>Материал корпуса сенсора</td>
+              <td>Нержавеющая сталь AISI 304 / 316L</td>
+            </tr>
+            <tr>
+              <td>Присоединения к процессу</td>
+              <td>Фланцы DIN / ANSI / ГОСТ, резьбовые (для микрорасходов), Tri-Clamp</td>
+            </tr>
+            <tr>
+              <td>Трансмиттеры</td>
+              <td>ME100, ME200, ME300 (интегрированные / выносные)</td>
+            </tr>
+            <tr>
+              <td>Выходные сигналы</td>
+              <td>4–20 мА (HART), RS-485 (Modbus RTU), Profibus PA, CAN, импульсный, частотный, дискретный</td>
+            </tr>
+            <tr>
+              <td>Взрывозащита</td>
+              <td>Ex d ib IIC T6 Gb; Ex db ia IIC T6 Gb; Ex tb ia IIIC T80°C Db</td>
+            </tr>
+            <tr>
+              <td>Степень защиты (сенсор)</td>
+              <td>IP66, IP67</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <!-- Dimensional spec high cards for D-type -->
+      <div class="spec-highlight-grid" style="margin-top:2.5rem;">
+        <div class="spec-highlight-card">
+          <div class="spec-hl-value">DN01</div>
+          <div class="spec-hl-label">Наименьший типоразмер</div>
+        </div>
+        <div class="spec-highlight-card">
+          <div class="spec-hl-value">DN1 / DN2</div>
+          <div class="spec-hl-label">Микрорасходы — доли кг/ч</div>
+        </div>
+        <div class="spec-highlight-card">
+          <div class="spec-hl-value">DN03–DN25</div>
+          <div class="spec-hl-label">Основной ряд типоразмеров</div>
+        </div>
+        <div class="spec-highlight-card">
+          <div class="spec-hl-value">Резьба / Фланец</div>
+          <div class="spec-hl-label">Типы присоединений</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== NAVIGATION HELP ==================== -->
+  <section class="section section-gray" id="more">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-badge">Навигация</span>
+        <h2>Больше информации</h2>
+        <p>Вернуться к основному каталогу продукции Mass-EXPERT или посмотреть другие типы измерительных трубок</p>
+      </div>
+      <div style="text-align:center;">
+        <a href="../index.html" class="btn btn-primary">← На главную</a>
+        <a href="../sitemap.html" class="btn btn-outline-dark" style="margin-left:0.75rem;">📋 Карта сайта</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== FOOTER ==================== -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <h4>Mass-EXPERT</h4>
+          <p>Счетчики-расходомеры массовые кориолисового типа.</p>
+          <p>Госреестр № 98506-26. ТУ 26.51.52-016-88090790-2024.</p>
+          <p style="margin-top:0.75rem;font-size:0.8125rem;">
+            Разработка и производство:<br>
+            ООО «Автоматизация-Метрология-ЭКСПЕРТ», г. Уфа
+          </p>
+        </div>
+        <div class="footer-links">
+          <h5>Продукт</h5>
+          <a href="../index.html#specifications">Характеристики</a>
+          <a href="../index.html#product-line">Типоразмеры</a>
+          <a href="../index.html#options">Модификации</a>
+        </div>
+        <div class="footer-links">
+          <h5>Документация</h5>
+          <a href="../index.html#certificates">Сертификаты</a>
+          <a href="../docs/ОПИСАНИЕ_ТИПА_2026-98506-26.pdf" target="_blank">Описание типа</a>
+          <a href="../docs/РЭ_Масс_Эксперт_v09.pdf" target="_blank">Руководство по эксплуатации</a>
+        </div>
+        <div class="footer-links">
+          <h5>Контакты</h5>
+          <a href="tel:+734****5350">+7 (347) 286-53-50</a>
+          <a href="mailto:info@ame-info.ru">info@ame-info.ru</a>
+          <a href="https://www.ame-info.ru" target="_blank">www.ame-info.ru</a>
+          <a href="../sitemap.html" style="margin-top:0.5rem;font-size:0.8125rem;color:var(--gray-500);">📋 Карта сайта</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>© <span id="year">2026</span> ООО «Автоматизация-Метрология-ЭКСПЕРТ». Все права защищены.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="../js/main.js"></script>
+  <script>
+    // Set current year in footer
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    // Mobile nav toggle
+    document.querySelector('.navbar-toggle')?.addEventListener('click', function() {
+      const links = document.querySelector('.navbar-links');
+      links?.classList.toggle('navbar-links--open');
+      this.textContent = links?.classList.contains('navbar-links--open') ? '✕' : '☰';
+    });
+  </script>
+
+</body>
+</html>

@@ -1,0 +1,624 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>T — Стандартное исполнение | Mass-EXPERT</title>
+  <meta name="description" content="Исполнение T — стандартное исполнение кориолисовых расходомеров Mass-EXPERT для типовых промышленных условий. Рабочая среда от −50 °C до +150 °C, до 10 МПа. DN01–DN250.">
+  <meta name="keywords" content="Mass-EXPERT, исполнение T, стандартное исполнение, кориолисовый расходомер, типовые условия, −50°C, +150°C, 10 МПа">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/style.css">
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 40 40'><rect width='40' height='40' rx='8' fill='%23F59E0B'/><text x='20' y='26' text-anchor='middle' font-size='14' font-weight='900' fill='%230F172A' font-family='Inter'>ME</text></svg>">
+  <style>
+    /* Page-specific styles */
+    .option-hero {
+      position: relative;
+      min-height: 60vh;
+      display: flex;
+      align-items: center;
+      background: linear-gradient(135deg, var(--primary-dark) 0%, var(--primary) 50%, var(--primary-light) 100%);
+      overflow: hidden;
+      padding-top: 72px;
+    }
+    .option-hero::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background:
+        radial-gradient(ellipse at 80% 50%, rgba(245, 158, 11, 0.08) 0%, transparent 60%),
+        radial-gradient(ellipse at 20% 80%, rgba(255,255,255,0.03) 0%, transparent 50%);
+      pointer-events: none;
+    }
+    .option-hero .container {
+      position: relative;
+      z-index: 1;
+    }
+    .option-hero-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 3rem;
+      align-items: center;
+    }
+    .option-hero-content h1 {
+      color: var(--white);
+      margin-bottom: 0.5rem;
+    }
+    .option-hero-content .hero-subtitle {
+      font-size: 1.5rem;
+      color: var(--accent);
+      font-weight: 600;
+      margin-bottom: 0.25rem;
+    }
+    .option-hero-content .hero-label {
+      display: inline-block;
+      font-size: 0.75rem;
+      color: var(--gray-400);
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      font-weight: 600;
+      margin-bottom: 0.75rem;
+      background: rgba(255,255,255,0.08);
+      padding: 0.3rem 0.75rem;
+      border-radius: 999px;
+    }
+    .option-hero-content .hero-desc {
+      color: rgba(255,255,255,0.8);
+      font-size: 1.125rem;
+      margin: 1.5rem 0 2rem;
+      max-width: 540px;
+    }
+    .option-hero-badges {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.75rem;
+      margin-top: 2rem;
+    }
+    .option-hero-badge {
+      background: rgba(255,255,255,0.1);
+      border: 1px solid rgba(255,255,255,0.15);
+      color: rgba(255,255,255,0.9);
+      padding: 0.4rem 1rem;
+      border-radius: 999px;
+      font-size: 0.8125rem;
+      font-weight: 500;
+    }
+    .option-hero-visual {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    .option-hero-card {
+      background: linear-gradient(180deg, rgba(255,255,255,0.1) 0%, rgba(255,255,255,0.04) 100%);
+      border: 1px solid rgba(255,255,255,0.12);
+      border-radius: var(--radius-xl);
+      padding: 2rem;
+      width: 100%;
+      max-width: 420px;
+      backdrop-filter: blur(8px);
+      text-align: center;
+    }
+    .option-hero-card img {
+      width: 100%;
+      height: auto;
+      border-radius: 4px;
+    }
+    .option-hero-card .img-caption {
+      margin-top: 0.75rem;
+      font-size: 0.8125rem;
+      color: rgba(255,255,255,0.6);
+    }
+    .spec-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 1rem;
+      margin-top: 2rem;
+    }
+    .spec-card {
+      background: var(--white);
+      border: 1px solid var(--gray-200);
+      border-radius: var(--radius);
+      padding: 1.25rem;
+      text-align: center;
+      transition: all var(--transition);
+    }
+    .spec-card:hover {
+      border-color: var(--primary);
+      box-shadow: var(--shadow-md);
+      transform: translateY(-2px);
+    }
+    .spec-card .spec-label {
+      font-size: 0.75rem;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      color: var(--gray-500);
+      font-weight: 600;
+      margin-bottom: 0.25rem;
+    }
+    .spec-card .spec-value {
+      font-size: 1.25rem;
+      font-weight: 700;
+      color: var(--primary);
+    }
+    .spec-card .spec-desc {
+      font-size: 0.8125rem;
+      color: var(--gray-500);
+      margin-top: 0.5rem;
+    }
+    .feature-list {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 1.5rem;
+      margin-top: 2rem;
+    }
+    .feature-item {
+      background: var(--white);
+      border: 1px solid var(--gray-200);
+      border-radius: var(--radius);
+      padding: 1.5rem;
+      transition: all var(--transition);
+    }
+    .feature-item:hover {
+      border-color: var(--accent);
+      box-shadow: var(--shadow-md);
+    }
+    .feature-item .feature-icon {
+      font-size: 2rem;
+      margin-bottom: 0.75rem;
+    }
+    .feature-item h4 {
+      font-size: 1.0625rem;
+      color: var(--primary);
+      margin-bottom: 0.5rem;
+    }
+    .feature-item p {
+      font-size: 0.9375rem;
+      color: var(--gray-500);
+      margin: 0;
+    }
+    .application-items {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 1rem;
+      margin-top: 1.5rem;
+    }
+    .application-item {
+      background: var(--gray-50);
+      border: 1px solid var(--gray-200);
+      border-radius: var(--radius);
+      padding: 1rem 1.25rem;
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+      font-size: 0.9375rem;
+      font-weight: 500;
+      color: var(--gray-700);
+      transition: all var(--transition);
+    }
+    .application-item:hover {
+      border-color: var(--primary);
+      background: var(--white);
+    }
+    .application-item .app-icon {
+      font-size: 1.5rem;
+    }
+
+    @media (max-width: 768px) {
+      .option-hero-grid {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+      }
+      .option-hero-visual {
+        order: -1;
+      }
+      .option-hero-card {
+        max-width: 100%;
+      }
+      .feature-list {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ==================== NAVIGATION ==================== -->
+  <nav class="navbar" role="navigation" aria-label="Основная навигация">
+    <div class="container">
+      <a href="../index.html" class="navbar-brand">
+        <span class="brand-icon">MASS<br>EXPERT</span>
+        Mass-EXPERT
+      </a>
+      <button class="navbar-toggle" aria-label="Открыть меню">☰</button>
+      <div class="navbar-links">
+        <a href="../index.html#about">О продукте</a>
+        <a href="../index.html#advantages">Преимущества</a>
+        <a href="../index.html#principle">Принцип работы</a>
+        <a href="../index.html#applications">Применение</a>
+        <a href="../index.html#product-line">Типоразмеры</a>
+        <a href="../index.html#specifications">Характеристики</a>
+        <a href="../index.html#options">Модификации</a>
+        <a href="../index.html#certificates">Сертификаты</a>
+        <a href="../index.html#contacts">Контакты</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ==================== OPTION HERO ==================== -->
+  <section class="option-hero" id="hero">
+    <div class="container">
+      <div class="option-hero-grid">
+        <div class="option-hero-content">
+          <span class="hero-label">Модификация по условиям эксплуатации</span>
+          <h1>Исполнение T</h1>
+          <div class="hero-subtitle">Стандартное исполнение</div>
+          <p class="hero-desc">
+            Типовые промышленные условия — универсальное решение для большинства
+            технологических процессов. Расходомеры в стандартном исполнении T
+            обеспечивают надёжную и точную работу в диапазоне рабочих температур
+            от −50 °C до +150 °C при давлении до 10 МПа.
+          </p>
+          <a href="../index.html#options" class="btn btn-outline">← К списку модификаций</a>
+          <div class="option-hero-badges">
+            <span class="option-hero-badge">✓ DN01–DN250</span>
+            <span class="option-hero-badge">✓ до 10 МПа</span>
+            <span class="option-hero-badge">✓ −50…+150 °C</span>
+            <span class="option-hero-badge">✓ Интегрированный дизайн</span>
+            <span class="option-hero-badge">✓ Не требует прямых участков</span>
+          </div>
+        </div>
+        <div class="option-hero-visual">
+          <div class="option-hero-card">
+            <img src="../images/T_standard.png" alt="Расходомер Mass-EXPERT в исполнении T — стандартное исполнение">
+            <div class="img-caption">Исполнение T — стандартное промышленное исполнение</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== BREADCRUMBS ==================== -->
+  <div style="background:var(--gray-100);border-bottom:1px solid var(--gray-200);padding:0.75rem 0;">
+    <div class="container">
+      <div style="display:flex;align-items:center;gap:0.5rem;font-size:0.8125rem;color:var(--gray-500);">
+        <a href="../index.html" style="color:var(--gray-500);">Главная</a>
+        <span>›</span>
+        <a href="../index.html#options" style="color:var(--gray-500);">Модификации</a>
+        <span>›</span>
+        <span style="color:var(--gray-700);font-weight:500;">T — Стандартное исполнение</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- ==================== OVERVIEW ==================== -->
+  <section class="section" id="overview">
+    <div class="container">
+      <div class="section-header animate-on-scroll">
+        <span class="section-badge">Общие сведения</span>
+        <h2>Стандартное исполнение T</h2>
+        <p>
+          Исполнение T — базовая модификация кориолисовых расходомеров Mass-EXPERT,
+          предназначенная для типовых промышленных условий эксплуатации.
+          Это универсальное решение, охватывающее подавляющее большинство
+          стандартных технологических процессов.
+        </p>
+      </div>
+
+      <div class="spec-grid animate-on-scroll">
+        <div class="spec-card">
+          <div class="spec-label">Диапазон DN</div>
+          <div class="spec-value">DN01 – DN250</div>
+          <div class="spec-desc">Все типоразмеры линейки Mass-EXPERT</div>
+        </div>
+        <div class="spec-card">
+          <div class="spec-label">Температура среды</div>
+          <div class="spec-value">−50…+150 °C</div>
+          <div class="spec-desc">Стандартный промышленный диапазон</div>
+        </div>
+        <div class="spec-card">
+          <div class="spec-label">Рабочее давление</div>
+          <div class="spec-value">до 10 МПа</div>
+          <div class="spec-desc">Типовые условия трубопроводов</div>
+        </div>
+        <div class="spec-card">
+          <div class="spec-label">Измерение</div>
+          <div class="spec-value">Независимое</div>
+          <div class="spec-desc">От вязкости, плотности, электропроводности</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== KEY FEATURES ==================== -->
+  <section class="section section-gray" id="features">
+    <div class="container">
+      <div class="section-header animate-on-scroll">
+        <span class="section-badge">Ключевые особенности</span>
+        <h2>Преимущества исполнения T</h2>
+        <p>
+          Стандартное исполнение T объединяет все базовые преимущества
+          кориолисовой технологии Mass-EXPERT в корпусе, оптимизированном
+          для типовых промышленных условий.
+        </p>
+      </div>
+
+      <div class="feature-list animate-on-scroll">
+        <div class="feature-item">
+          <div class="feature-icon">🌡️</div>
+          <h4>Широкий температурный диапазон</h4>
+          <p>
+            Рабочая среда от −50 °C до +150 °C охватывает большинство
+            технологических процессов в нефтегазовой, химической, пищевой
+            и других отраслях промышленности. Не требует специальных
+            термоизоляционных мероприятий.
+          </p>
+        </div>
+        <div class="feature-item">
+          <div class="feature-icon">🔧</div>
+          <h4>Рабочее давление до 10 МПа</h4>
+          <p>
+            Стандартное исполнение рассчитано на давление до 10 МПа,
+            что соответствует подавляющему большинству промышленных
+            трубопроводов. Для более высоких давлений предусмотрены
+            модификации P и PK.
+          </p>
+        </div>
+        <div class="feature-item">
+          <div class="feature-icon">📐</div>
+          <h4>Полный ряд DN01–DN250</h4>
+          <p>
+            Исполнение T доступно во всех типоразмерах — от микрорасходомеров
+            DN01 до промышленных DN250. Это позволяет подобрать оптимальный
+            расходомер для любой задачи без смены модификации.
+          </p>
+        </div>
+        <div class="feature-item">
+          <div class="feature-icon">⚡</div>
+          <h4>Независимость от свойств среды</h4>
+          <p>
+            Измерение массового расхода не зависит от вязкости, плотности
+            и электропроводности рабочей среды. Обеспечивается стабильная
+            точность для жидкостей, газов, суспензий и многофазных сред.
+          </p>
+        </div>
+        <div class="feature-item">
+          <div class="feature-icon">🔩</div>
+          <h4>Интегрированный дизайн</h4>
+          <p>
+            Компактная моноблочная конструкция объединяет сенсор и трансмиттер
+            в едином корпусе. Это упрощает монтаж, снижает стоимость установки
+            и исключает дополнительные кабельные соединения.
+          </p>
+        </div>
+        <div class="feature-item">
+          <div class="feature-icon">📏</div>
+          <h4>Не требует прямых участков</h4>
+          <p>
+            Кориолисовый принцип измерения не требует наличия прямых участков
+            трубопровода до и после расходомера. Это позволяет устанавливать
+            прибор в условиях ограниченного пространства.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== TECHNICAL DETAILS ==================== -->
+  <section class="section" id="technical">
+    <div class="container">
+      <div class="section-header animate-on-scroll">
+        <span class="section-badge">Технические подробности</span>
+        <h2>Детальные характеристики исполнения T</h2>
+        <p>
+          Стандартное исполнение T — базовая комплектация, рекомендуемая
+          для подавляющего большинства промышленных применений, не требующих
+          экстремальных температур или давлений.
+        </p>
+      </div>
+
+      <div class="table-wrap animate-on-scroll">
+        <table>
+          <thead>
+            <tr><th colspan="2">Параметры исполнения T (Стандартное)</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>Код исполнения</td><td><span class="option-tag">T</span></td></tr>
+            <tr><td>Условный диаметр (DN)</td><td>от 1 до 250</td></tr>
+            <tr><td>Диапазон температур рабочей среды</td><td>от −50 до +150 °C</td></tr>
+            <tr><td>Максимальное рабочее давление</td><td>до 10 МПа</td></tr>
+            <tr><td>Принцип измерения</td><td>Кориолисовый эффект</td></tr>
+            <tr><td>Зависимость от вязкости среды</td><td>Нет</td></tr>
+            <tr><td>Зависимость от плотности среды</td><td>Нет</td></tr>
+            <tr><td>Зависимость от электропроводности</td><td>Нет</td></tr>
+            <tr><td>Требование к прямым участкам</td><td>Не требуется</td></tr>
+            <tr><td>Конструкция</td><td>Интегрированная (сенсор + трансмиттер)</td></tr>
+            <tr><td>Рекомендуемая область применения</td><td>Типовые промышленные условия без экстремальных температур / давлений</td></tr>
+            <tr><td>Типы измерительных трубок</td><td>U, K, W, L, Δ (все типы)</td></tr>
+            <tr><td>Трансмиттеры</td><td>ME100, ME200, ME300</td></tr>
+            <tr><td>Выходные сигналы</td><td>4–20 мА (HART), RS-485 (Modbus RTU), Profibus PA, CAN, импульсный, частотный, дискретный</td></tr>
+            <tr><td>Взрывозащита</td><td>Ex d ib IIC T6 Gb; Ex db ia IIC T6 Gb; Ex tb ia IIIC T80°C Db</td></tr>
+            <tr><td>Степень защиты корпуса</td><td>IP66, IP67</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== APPLICATIONS ==================== -->
+  <section class="section section-gray" id="applications">
+    <div class="container">
+      <div class="section-header animate-on-scroll">
+        <span class="section-badge">Рекомендуемые применения</span>
+        <h2>Где используется исполнение T</h2>
+        <p>
+          Стандартное исполнение T рекомендуется для большинства промышленных
+          задач, где температура среды не превышает +150 °C, а давление —
+          10 МПа.
+        </p>
+      </div>
+
+      <div class="application-items animate-on-scroll">
+        <div class="application-item">
+          <span class="app-icon">🛢️</span>
+          Нефтепродукты и масла
+        </div>
+        <div class="application-item">
+          <span class="app-icon">🧪</span>
+          Химические реагенты
+        </div>
+        <div class="application-item">
+          <span class="app-icon">💧</span>
+          Вода и водные растворы
+        </div>
+        <div class="application-item">
+          <span class="app-icon">🍺</span>
+          Пищевая продукция и напитки
+        </div>
+        <div class="application-item">
+          <span class="app-icon">💊</span>
+          Фармацевтические субстанции
+        </div>
+        <div class="application-item">
+          <span class="app-icon">🏭</span>
+          Теплоэнергетика и ЖКХ
+        </div>
+        <div class="application-item">
+          <span class="app-icon">⚖️</span>
+          Дозирование и смешение
+        </div>
+        <div class="application-item">
+          <span class="app-icon">🔬</span>
+          Лабораторные и стендовые испытания
+        </div>
+        <div class="application-item">
+          <span class="app-icon">🔥</span>
+          СУГ / LPG (пропан-бутан)
+        </div>
+        <div class="application-item">
+          <span class="app-icon">🔄</span>
+          Газовые среды (при стандартных условиях)
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== COMPARISON NOTE ==================== -->
+  <section class="section" id="comparison">
+    <div class="container">
+      <div class="section-header animate-on-scroll">
+        <span class="section-badge">Выбор исполнения</span>
+        <h2>Когда выбрать T, а когда — другую модификацию</h2>
+        <p>
+          Исполнение T — базовая модификация, оптимальная для стандартных условий.
+          Если ваши технологические параметры выходят за рамки −50…+150 °C
+          или 10 МПа, рассмотрите специализированные исполнения.
+        </p>
+      </div>
+
+      <div class="table-wrap animate-on-scroll">
+        <table>
+          <thead>
+            <tr><th>Условия</th><th>Рекомендуемое исполнение</th></tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>−50…+150 °C, до 10 МПа</td>
+              <td><strong>T</strong> — Стандартное ✅</td>
+            </tr>
+            <tr>
+              <td>Высокое давление (выше 10 МПа)</td>
+              <td><strong><a href="p.html">P</a></strong> — Повышенное давление</td>
+            </tr>
+            <tr>
+              <td>Сверхвысокое давление (до 96 МПа, водород)</td>
+              <td><strong><a href="pk.html">PK</a></strong> — Сверхвысокое давление</td>
+            </tr>
+            <tr>
+              <td>Криогенные среды (до −200 °C)</td>
+              <td><strong><a href="l.html">L</a></strong> — Криогенное исполнение</td>
+            </tr>
+            <tr>
+              <td>Высокая температура (до +230 °C)</td>
+              <td><strong><a href="g.html">G</a></strong> — Высокая температура</td>
+            </tr>
+            <tr>
+              <td>Сверхвысокая температура (до +350 °C)</td>
+              <td><strong><a href="c.html">C</a></strong> — Сверхвысокая температура</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div style="text-align:center;margin-top:2rem;" class="animate-on-scroll">
+        <a href="../index.html#options" class="btn btn-outline-dark">← Вернуться ко всем модификациям</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== FOOTER ==================== -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <h4>Mass-EXPERT</h4>
+          <p>Счетчики-расходомеры массовые кориолисовые</p>
+          <p style="font-size:0.8125rem;">Госреестр СИ № 98506-26</p>
+        </div>
+        <div class="footer-links">
+          <h5>Продукт</h5>
+          <a href="../index.html#about">О продукте</a>
+          <a href="../index.html#advantages">Преимущества</a>
+          <a href="../index.html#principle">Принцип работы</a>
+          <a href="../index.html#specifications">Характеристики</a>
+        </div>
+        <div class="footer-links">
+          <h5>Модификации</h5>
+          <a href="t.html">T — Стандартное</a>
+          <a href="p.html">P — Высокое давление</a>
+          <a href="l.html">L — Криогенное</a>
+          <a href="g.html">G — Высокая температура</a>
+        </div>
+        <div class="footer-links">
+          <h5>Документация</h5>
+          <a href="../index.html#certificates">Сертификаты</a>
+          <a href="../index.html#contacts">Контакты</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>© 2026 ООО «Автоматизация-Метрология-ЭКСПЕРТ»</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ==================== SCRIPTS ==================== -->
+  <script>
+    // Mobile navbar toggle
+    document.querySelector('.navbar-toggle')?.addEventListener('click', function() {
+      document.querySelector('.navbar-links').classList.toggle('open');
+    });
+
+    // Scroll animation
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+        }
+      });
+    }, { threshold: 0.1 });
+
+    document.querySelectorAll('.animate-on-scroll').forEach(el => observer.observe(el));
+
+    // Sticky navbar on scroll
+    window.addEventListener('scroll', function() {
+      const navbar = document.querySelector('.navbar');
+      if (window.scrollY > 50) {
+        navbar.classList.add('scrolled');
+      } else {
+        navbar.classList.remove('scrolled');
+      }
+    });
+  </script>
+
+</body>
+</html>
