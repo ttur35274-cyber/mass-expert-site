@@ -426,6 +426,9 @@ p { margin-bottom: 1rem; }
   line-height: 1;
   margin-bottom: 0.5rem;
 }
+.adv-card-last {
+  grid-column: 2 / 3;
+}
 .adv-card .adv-icon {
   font-size: 2rem;
   margin-bottom: 1rem;
@@ -869,6 +872,7 @@ details.expandable .expandable-body p {
   .about-grid { grid-template-columns: 1fr; }
   .about-highlights { grid-template-columns: 1fr; }
   .advantages-grid { grid-template-columns: 1fr; }
+  .adv-card-last { grid-column: auto; }
   .principle-steps { grid-template-columns: 1fr; gap: 0; }
   .principle-params { grid-template-columns: repeat(2, 1fr); }
   .apps-grid { grid-template-columns: repeat(2, 1fr); }
@@ -907,6 +911,8 @@ details.expandable .expandable-body p {
   .about-highlight { padding: 1rem; }
   .adv-card { padding: 1.25rem; }
   .cert-card { padding: 1.25rem; }
+  .adv-card { box-sizing: border-box; }
+  .advantages-grid { box-sizing: border-box; }
 
   /* Contacts address */
   .contact-row { font-size: 0.875rem; }
