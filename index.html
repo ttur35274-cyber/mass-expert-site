@@ -876,50 +876,457 @@
       </details>
 
       <!-- ===== ПОЛНАЯ ТАБЛИЦА ОПЦИЙ ===== -->
-      <h3 style="color:var(--primary);margin:2.5rem 0 1rem;font-size:1.25rem;">Полная таблица конфигурации (23 блока опций)</h3>
-      <p style="color:var(--gray-500);margin-bottom:1rem;">Каждый блок кодируется в условном обозначении прибора. Ниже приведены все доступные опции.</p>
+      <h3 style="color:var(--primary);margin:2.5rem 0 0.5rem;font-size:1.25rem;">Полная таблица конфигурации (23 блока опций)</h3>
+      <p style="color:var(--gray-500);margin-bottom:1rem;">Структура условного обозначения / код заказа Mass-EXPERT. Каждый блок кодирует определённую опцию.</p>
 
-      <div class="options-table-wrap animate-on-scroll">
-        <table class="options-table">
-          <thead>
-            <tr>
-              <th>Блок</th>
-              <th>Название</th>
-              <th>Значения</th>
-            </tr>
-          </thead>
+      <div style="text-align:center;margin:1.5rem 0;">
+        <img src="images/option_diagram.png" alt="Структура условного обозначения кода модели" style="max-width:100%;border-radius:var(--radius);border:1px solid var(--gray-200);">
+        <div style="font-size:0.8125rem;color:var(--gray-500);margin-top:0.5rem;">Рисунок 9.1 — Типовое обозначение кода модели расходомера</div>
+      </div>
+
+      <!-- 1A -->
+      <h4 style="color:var(--primary);margin:2rem 0 0.5rem;">Таблица 9.1 — Блок опции: 1A | Диаметр условного прохода</h4>
+      <div class="table-wrap">
+        <table>
+          <thead><tr><th>Код</th><th>DN</th><th>Макс. расход, кг/мин</th><th>Макс. расход, кг/ч</th></tr></thead>
           <tbody>
-            <tr><td><span class="option-code">1A</span></td><td>Условный диаметр</td><td>001(DN01, 12 кг/ч), 002(DN02, 96), 003(DN03, 180), 004(DN04, 300), 008(DN08, 1200), 015(DN15, 3600), 020(DN20, 6000), 025(DN25, 12000), 040(DN40, 27000), 050(DN50, 39000), 080(DN80, 120000), 100(DN100, 180000), 150(DN150, 720000), 200(DN200, 1080000), 250(DN250, 1740000) кг/ч</td></tr>
-            <tr><td><span class="option-code">2B</span></td><td>Условия эксплуатации</td><td><strong>T</strong> — Стандартное (−50…+150 °C, ≤10 МПа); <strong>P</strong> — Повышенное давление; <strong>L</strong> — Криогенное (−196…+150 °C, U/D); <strong>D</strong> — Сверхнизкие темп. (−255…+150 °C, раздельн.); <strong>G</strong> — Высокая темп. (−50…+230 °C, раздельн.); <strong>C</strong> — Сверхвысокая темп. (−50…+350 °C, раздельн.); <strong>X</strong> — Особые условия</td></tr>
-            <tr><td><span class="option-code">3C</span></td><td>Тип сенсора</td><td><strong>U</strong> — U-образный (≥DN03); <strong>K</strong> — Широкий U-образный (DN02–DN25); <strong>W</strong> — Микроизгиб; <strong>L</strong> — Прямотрубный; <strong>D</strong> — Δ-тип (DN01/DN02/DN25); <strong>X</strong> — Специальное</td></tr>
-            <tr><td><span class="option-code">4D</span></td><td>Макс. рабочее давление</td><td>02(1,6) / 04(4) / 06(6,3) / 10(10) / 16(16) / 20(20) / 25(25) / 30(30) / 35(35) / 40(40) / 45(45) / 70(70) / 90(90) МПа; XX — Специальное</td></tr>
-            <tr><td><span class="option-code">5E</span></td><td>Технологическое соединение</td><td>R..(ГОСТ 33259) / EN..(EN 1092-1) / AS..(ASME B16.5) / FR–FW(HG/T 20592) / FA–FE(HG/T 20615) / GS–G1(резьба G) / DS–DV(DIN) / GT–GY(GB/T 9115) / US–UB(UNF) / RC–RD(RC) / HS–HD(Tri-clamp) / AS–AX(ASME) / GA–GG(ГОСТ 12821) / GJ–GN(ГОСТ 33259) / ES–EX(EN) / JS–JV(JIS) / SS(SMS) / VS–VC(VCO) / VR–VW(VCR) / KT(обжимная) / NR–NU(NPT) / BS(1/2" фланец) / MS / OS / ZS–ZV / C8(изм. типа) / C9(спец.)</td></tr>
-            <tr><td><span class="option-code">6F</span></td><td>Материал измерительных трубок</td><td><strong>S</strong> — 316L (по умолч.); <strong>G</strong> — 316L (Ni); <strong>L</strong> — 904L; <strong>T</strong> — Титан; <strong>C</strong> — Сталь C4; <strong>H</strong> — Хастеллой; <strong>D</strong> — Дуплекс; <strong>A</strong> — Тантал; <strong>X</strong> — Прочие</td></tr>
-            <tr><td><span class="option-code">7G</span></td><td>Точность (масса)</td><td><strong>S</strong> — 0,1%; <strong>A</strong> — 0,15%; <strong>B</strong> — 0,2%; <strong>C</strong> — 0,5%; <strong>D</strong> — 1,0%; <strong>X</strong> — Прочие</td></tr>
-            <tr><td><span class="option-code">8H</span></td><td>Тип монтажа трансмиттера</td><td><strong>N</strong> — Интегрированное; <strong>S</strong> — Раздельное (кабель 3 м); <strong>J</strong> — Компактное (без Ex); <strong>D</strong> — DIN-рейка (без Ex); <strong>X</strong> — Прочие</td></tr>
-            <tr><td><span class="option-code">9I</span></td><td>Наличие дисплея</td><td><strong>C</strong> — С дисплеем; <strong>M</strong> — Без дисплея (по умолч.); <strong>X</strong> — Прочие</td></tr>
-            <tr><td><span class="option-code">10J</span></td><td>Выходные сигналы</td><td><strong>M</strong> — Modbus RTU/RS-485 + имп. (по умолч.); <strong>L</strong> — 4-20 мА + имп.; <strong>H</strong> — HART + 4-20 мА; <strong>P</strong> — PROFIBUS PA + Modbus; <strong>X</strong> — Прочие</td></tr>
-            <tr><td><span class="option-code">11K</span></td><td>Сертификация</td><td><strong>N</strong> — Нет (по умолч.); <strong>C</strong> — Взрывозащита Ex; <strong>A</strong> — 3-A; <strong>S</strong> — TS; <strong>J</strong> — CCS; <strong>X</strong> — Прочие</td></tr>
-            <tr><td><span class="option-code">12L</span></td><td>Версия трансмиттера</td><td><strong>V1</strong> — ME100 (по умолч.); <strong>V2</strong> — ME200; <strong>V3</strong> — ME300; <strong>XX</strong> — Специальное</td></tr>
-            <tr><td><span class="option-code">13M</span></td><td>Режим измерения</td><td><strong>M</strong> — Масса (по умолч.); <strong>D</strong> — Плотность; <strong>A</strong> — Масса и плотность; <strong>X</strong> — Прочие</td></tr>
-            <tr><td><span class="option-code">14N</span></td><td>Материал тех. соединения</td><td><strong>E</strong> — 304; <strong>S</strong> — 316L (по умолч.); <strong>G</strong> — 316L (Ni); <strong>L</strong> — 904L; <strong>T</strong> — Титан; <strong>C</strong> — Сталь C4; <strong>H</strong> — Хастеллой; <strong>D</strong> — Дуплекс; <strong>A</strong> — Тантал; <strong>X</strong> — Прочие</td></tr>
-            <tr><td><span class="option-code">15O</span></td><td>Материал корпуса сенсора</td><td><strong>E</strong> — 304; <strong>S</strong> — 316L; <strong>X</strong> — Прочие</td></tr>
-            <tr><td><span class="option-code">16P</span></td><td>Электропитание</td><td><strong>1</strong> — 24 В DC (по умолч.); <strong>2</strong> — 220 В AC / 24 В DC (авто); <strong>X</strong> — Прочие</td></tr>
-            <tr><td><span class="option-code">17Q</span></td><td>Кабельный ввод</td><td><strong>N</strong> — 1/2" NPT; <strong>M</strong> — M20×1,5 (по умолч.); <strong>X</strong> — Специальное</td></tr>
-            <tr><td><span class="option-code">18R</span></td><td>Измерение плотности</td><td><strong>1</strong> — ±3 кг/м³; <strong>2</strong> — ±1 кг/м³; <strong>3</strong> — ±0,5 кг/м³; <strong>4</strong> — ±0,2 кг/м³; <strong>5</strong> — ±0,15 кг/м³; <strong>Q</strong> — Нет (по умолч.)</td></tr>
-            <tr><td><span class="option-code">19S</span></td><td>Изотермический кожух</td><td><strong>N</strong> — Нет (по умолч.); <strong>Y</strong> — Да <a href="isotermal-jacket.html" style="font-weight:500;font-size:0.75rem;">(подробнее →)</a></td></tr>
-            <tr><td><span class="option-code">20T</span></td><td>Язык интерфейса</td><td><strong>E</strong> — Английский; <strong>C</strong> — Китайский; <strong>R</strong> — Русский (по умолч.); <strong>X</strong> — Прочие</td></tr>
-            <tr><td><span class="option-code">21U</span></td><td>Дополнительно в комплекте</td><td><strong>0</strong> — Нет (по умолч.); <strong>1</strong> — Фланцы (углер. сталь) + крепёж + прокладки СНП; <strong>2</strong> — Фланцы (нерж. сталь) + крепёж + прокладки СНП; <strong>X</strong> — Прочие</td></tr>
-            <tr><td><span class="option-code">22V</span></td><td>ETO — на заказ</td><td>ETOZZZ — инженерные решения под уникальные требования. Код привязывается к серийному номеру.</td></tr>
-            <tr><td><span class="option-code">23X</span></td><td>Условия гарантии</td><td><strong>-</strong> — Стандартная (12 мес. с ввода / 18 мес. с изготовления); <strong>EW</strong> — Расширенная (24 мес. / 36 мес.); <strong>SW</strong> — Специальная</td></tr>
+            <tr><td>001</td><td>DN01</td><td>0,2</td><td>12</td></tr>
+            <tr><td>002</td><td>DN02</td><td>1,6</td><td>96</td></tr>
+            <tr><td>003</td><td>DN03</td><td>3</td><td>180</td></tr>
+            <tr><td>004</td><td>DN04</td><td>5</td><td>300</td></tr>
+            <tr><td>008</td><td>DN08</td><td>20</td><td>1 200</td></tr>
+            <tr><td>015</td><td>DN15</td><td>60</td><td>3 600</td></tr>
+            <tr><td>020</td><td>DN20</td><td>100</td><td>6 000</td></tr>
+            <tr><td>025</td><td>DN25</td><td>200</td><td>12 000</td></tr>
+            <tr><td>040</td><td>DN40</td><td>450</td><td>27 000</td></tr>
+            <tr><td>050</td><td>DN50</td><td>650</td><td>39 000</td></tr>
+            <tr><td>080</td><td>DN80</td><td>2 000</td><td>120 000</td></tr>
+            <tr><td>100</td><td>DN100</td><td>3 000</td><td>180 000</td></tr>
+            <tr><td>150</td><td>DN150</td><td>12 000</td><td>720 000</td></tr>
+            <tr><td>200</td><td>DN200</td><td>18 000</td><td>1 080 000</td></tr>
+            <tr><td>250</td><td>DN250</td><td>29 000</td><td>1 740 000</td></tr>
           </tbody>
         </table>
       </div>
 
-    </div>
-  </section>
+      <!-- 2B -->
+      <h4 style="color:var(--primary);margin:2rem 0 0.5rem;">Таблица 9.2 — Блок опции: 2B | Типовые условия эксплуатации</h4>
+      <div class="table-wrap">
+        <table>
+          <thead><tr><th>Код</th><th>Описание</th><th>Примечание</th></tr></thead>
+          <tbody>
+            <tr><td><span class="option-code">T</span></td><td>Стандартное исполнение</td><td>−50…+150 °C, P≤10 МПа</td></tr>
+            <tr><td><span class="option-code">P</span></td><td>Повышенное давление</td><td>−50…+150 °C</td></tr>
+            <tr><td><span class="option-code">L</span></td><td>Криогенное исполнение</td><td>−196…+150 °C, только U/Δ-модели</td></tr>
+            <tr><td><span class="option-code">D</span></td><td>Сверхнизкие температуры</td><td>−255…+150 °C, только раздельное исполнение</td></tr>
+            <tr><td><span class="option-code">G</span></td><td>Высокая температура</td><td>−50…+230 °C, только раздельное исполнение</td></tr>
+            <tr><td><span class="option-code">C</span></td><td>Сверхвысокая температура</td><td>−50…+350 °C, только раздельное исполнение</td></tr>
+            <tr><td><span class="option-code">X</span></td><td>Особые условия эксплуатации</td><td>требуется подробное описание</td></tr>
+          </tbody>
+        </table>
+      </div>
 
-  <!-- ==================== CERTIFICATES ==================== -->
+      <!-- 3C -->
+      <h4 style="color:var(--primary);margin:2rem 0 0.5rem;">Таблица 9.3 — Блок опции: 3C | Тип сенсора</h4>
+      <div class="table-wrap">
+        <table>
+          <thead><tr><th>Код</th><th>Описание</th><th>Примечание</th></tr></thead>
+          <tbody>
+            <tr><td><span class="option-code">U</span></td><td>U-образный тип измерительных трубок</td><td>только для ≥ DN03</td></tr>
+            <tr><td><span class="option-code">K</span></td><td>Широкий U-образный тип измерительных трубок</td><td>только DN02–DN25</td></tr>
+            <tr><td><span class="option-code">W</span></td><td>Микроизгиб измерительных трубок</td><td></td></tr>
+            <tr><td><span class="option-code">L</span></td><td>Прямотрубный</td><td></td></tr>
+            <tr><td><span class="option-code">D</span></td><td>Треугольный Δ-тип измерительных трубок</td><td>только DN01, DN02, DN25</td></tr>
+            <tr><td><span class="option-code">X</span></td><td>Специальное исполнение</td><td>требуется описание</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <!-- 4D -->
+      <h4 style="color:var(--primary);margin:2rem 0 0.5rem;">Таблица 9.4 — Блок опции: 4D | Максимальное рабочее давление</h4>
+      <div class="table-wrap">
+        <table>
+          <thead><tr><th>Код</th><th>Давление, МПа</th><th>Примечание</th></tr></thead>
+          <tbody>
+            <tr><td><span class="option-code">02</span></td><td>1,6</td><td></td></tr>
+            <tr><td><span class="option-code">04</span></td><td>4</td><td>по умолчанию: фланец, мин. класс 4 МПа</td></tr>
+            <tr><td><span class="option-code">06</span></td><td>6,3</td><td></td></tr>
+            <tr><td><span class="option-code">10</span></td><td>10</td><td></td></tr>
+            <tr><td><span class="option-code">16</span></td><td>16</td><td></td></tr>
+            <tr><td><span class="option-code">20</span></td><td>20</td><td></td></tr>
+            <tr><td><span class="option-code">25</span></td><td>25</td><td></td></tr>
+            <tr><td><span class="option-code">30</span></td><td>30</td><td></td></tr>
+            <tr><td><span class="option-code">35</span></td><td>35</td><td></td></tr>
+            <tr><td><span class="option-code">40</span></td><td>40</td><td></td></tr>
+            <tr><td><span class="option-code">45</span></td><td>45</td><td></td></tr>
+            <tr><td><span class="option-code">70</span></td><td>70</td><td></td></tr>
+            <tr><td><span class="option-code">90</span></td><td>90</td><td></td></tr>
+            <tr><td><span class="option-code">XX</span></td><td>Специальное</td><td>требуется описание</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <!-- 5E -->
+      <h4 style="color:var(--primary);margin:2rem 0 0.5rem;">Таблица 9.5 — Блок опции: 5E | Технологическое соединение</h4>
+      <div class="table-wrap" style="max-height:400px;overflow-y:auto;">
+        <table>
+          <thead><tr><th>Код</th><th>Стандарт</th><th>Примечание</th></tr></thead>
+          <tbody>
+            <tr><td><span class="option-code">RXXXYYYZ</span></td><td>ГОСТ 33259</td><td>XXX-DN, мм; YYY-PN, кгс/см²; Z-исполнение</td></tr>
+            <tr><td><span class="option-code">ENXXXYYYZ</span></td><td>EN 1092-1</td><td>XXX-DN, мм; YYY-PN, бар; Z-исполнение</td></tr>
+            <tr><td><span class="option-code">ASXXYYYYZZZ</span></td><td>ASME B16.5</td><td>XX-DN, дюйм; YYYY-Class; ZZZ-исполнение</td></tr>
+            <tr><td><span class="option-code">FR</span></td><td>HG/T 20592-2009 WN RF PN16</td><td>DN10–DN300</td></tr>
+            <tr><td><span class="option-code">FQ</span></td><td>HG/T 20592-2009 WN RF PN25</td><td>DN10–DN300</td></tr>
+            <tr><td><span class="option-code">FT</span></td><td>HG/T 20592-2009 WN RF PN40</td><td>DN10–DN300</td></tr>
+            <tr><td><span class="option-code">FU</span></td><td>HG/T 20592-2009 WN RF PN63</td><td>DN10–DN300</td></tr>
+            <tr><td><span class="option-code">FV</span></td><td>HG/T 20592-2009 WN RF PN100</td><td>DN10–DN300</td></tr>
+            <tr><td><span class="option-code">FW</span></td><td>HG/T 20592-2009 WN RF PN160</td><td>DN10–DN300</td></tr>
+            <tr><td><span class="option-code">FA</span></td><td>HG/T 20615-2009 WN RF Class150</td><td>DN15–DN300</td></tr>
+            <tr><td><span class="option-code">FB</span></td><td>HG/T 20615-2009 WN RF Class300</td><td>DN15–DN300</td></tr>
+            <tr><td><span class="option-code">FC</span></td><td>HG/T 20615-2009 WN RF Class600</td><td>DN15–DN300</td></tr>
+            <tr><td><span class="option-code">FD</span></td><td>HG/T 20615-2009 WN RF Class900</td><td>DN15–DN300</td></tr>
+            <tr><td><span class="option-code">FE</span></td><td>HG/T 20615-2009 WN RF Class1500</td><td>DN15–DN300</td></tr>
+            <tr><td><span class="option-code">GS</span></td><td>Резьба G</td><td>трубная</td></tr>
+            <tr><td><span class="option-code">G4</span></td><td>Резьба G1/4"</td><td>трубная</td></tr>
+            <tr><td><span class="option-code">G2</span></td><td>Резьба G1/2"</td><td>трубная</td></tr>
+            <tr><td><span class="option-code">G1</span></td><td>Резьба G1"</td><td>трубная</td></tr>
+            <tr><td><span class="option-code">DS</span></td><td>DIN 11851-SI</td><td>мм</td></tr>
+            <tr><td><span class="option-code">DT</span></td><td>DIN 11851-US</td><td>дюймы</td></tr>
+            <tr><td><span class="option-code">DU</span></td><td>DIN 11864-1 Form A, резьбовое</td><td>санитарное</td></tr>
+            <tr><td><span class="option-code">DV</span></td><td>DIN 11864-2 Form A, плоский фланец</td><td></td></tr>
+            <tr><td><span class="option-code">GT</span></td><td>GB/T 9115-2010 RF PN25</td><td>DN10–DN300</td></tr>
+            <tr><td><span class="option-code">GU</span></td><td>GB/T 9115-2010 RF PN16</td><td>DN10–DN300</td></tr>
+            <tr><td><span class="option-code">GV</span></td><td>GB/T 9115-2010 RF PN40</td><td>DN10–DN300</td></tr>
+            <tr><td><span class="option-code">GW</span></td><td>GB/T 9115-2010 RF PN63</td><td>DN10–DN300</td></tr>
+            <tr><td><span class="option-code">GX</span></td><td>GB/T 9115-2010 RF PN100</td><td>DN10–DN300</td></tr>
+            <tr><td><span class="option-code">GY</span></td><td>GB/T 9115-2010 RF PN160</td><td>DN10–DN300</td></tr>
+            <tr><td><span class="option-code">US</span></td><td>UNF резьба</td><td>коническая</td></tr>
+            <tr><td><span class="option-code">UA</span></td><td>UNF резьба 9/16-18UNF</td><td>коническая</td></tr>
+            <tr><td><span class="option-code">UB</span></td><td>UNF резьба 1 3/8-12UNF</td><td>коническая</td></tr>
+            <tr><td><span class="option-code">RC</span></td><td>Резьба RC</td><td></td></tr>
+            <tr><td><span class="option-code">RD</span></td><td>Резьба Rc 3/4"</td><td></td></tr>
+            <tr><td><span class="option-code">HS</span></td><td>Tri-clamp DN32676:2022-10</td><td>∅25</td></tr>
+            <tr><td><span class="option-code">HA</span></td><td>Tri-clamp DN32676:2022-10</td><td>∅34</td></tr>
+            <tr><td><span class="option-code">HB</span></td><td>Tri-clamp DN32676:2022-10</td><td>∅50,5</td></tr>
+            <tr><td><span class="option-code">HC</span></td><td>Tri-clamp DN32676:2022-10</td><td>∅64</td></tr>
+            <tr><td><span class="option-code">HD</span></td><td>Tri-clamp DN32676:2022-10</td><td>∅91</td></tr>
+            <tr><td><span class="option-code">AS</span></td><td>ASME B16.5-2020, приварной Class 150</td><td>1/2–12"</td></tr>
+            <tr><td><span class="option-code">AT</span></td><td>ASME B16.5-2020 Class 300</td><td>1/2–12"</td></tr>
+            <tr><td><span class="option-code">AU</span></td><td>ASME B16.5-2020 Class 600</td><td>1/2–12"</td></tr>
+            <tr><td><span class="option-code">AV</span></td><td>ASME B16.5-2020 Class 900</td><td>1/2–12"</td></tr>
+            <tr><td><span class="option-code">AW</span></td><td>ASME B16.5-2020 Class 1500</td><td>1/2–12"</td></tr>
+            <tr><td><span class="option-code">AX</span></td><td>ASME B16.5-2020 Class 2500</td><td>1/2–12"</td></tr>
+            <tr><td><span class="option-code">GA</span></td><td>GOST 12821-80, 1.6 МПа</td><td>DN10–DN300</td></tr>
+            <tr><td><span class="option-code">GB</span></td><td>GOST 12821-80, 2.5 МПа</td><td>DN10–DN300</td></tr>
+            <tr><td><span class="option-code">GC</span></td><td>GOST 12821-80, 4 МПа</td><td>DN10–DN300</td></tr>
+            <tr><td><span class="option-code">GD</span></td><td>GOST 12821-80, 6.3 МПа</td><td>DN10–DN300</td></tr>
+            <tr><td><span class="option-code">GE</span></td><td>GOST 12821-80, 10 МПа</td><td>DN10–DN300</td></tr>
+            <tr><td><span class="option-code">GF</span></td><td>GOST 12821-80, 16 МПа</td><td>DN15–DN300</td></tr>
+            <tr><td><span class="option-code">GG</span></td><td>GOST 12821-80, 20 МПа</td><td>DN15–DN300</td></tr>
+            <tr><td><span class="option-code">GH</span></td><td>GOST 33259-2015 PN16-B</td><td>DN15–DN300</td></tr>
+            <tr><td><span class="option-code">GJ</span></td><td>GOST 33259-2015 PN25-B</td><td>DN15–DN300</td></tr>
+            <tr><td><span class="option-code">GK</span></td><td>GOST 33259-2015 PN40-B</td><td>DN15–DN300</td></tr>
+            <tr><td><span class="option-code">GL</span></td><td>GOST 33259-2015 PN63-B</td><td>DN15–DN300</td></tr>
+            <tr><td><span class="option-code">GM</span></td><td>GOST 33259-2015 PN100-B</td><td>DN15–DN300</td></tr>
+            <tr><td><span class="option-code">GN</span></td><td>GOST 33259-2015 PN160-B</td><td>DN15–DN300</td></tr>
+            <tr><td><span class="option-code">ES</span></td><td>EN 1092-1:2007(E) Type11 PN16</td><td>DN10–DN300</td></tr>
+            <tr><td><span class="option-code">ET</span></td><td>EN 1092-1:2007(E) Type11 PN25</td><td>DN10–DN300</td></tr>
+            <tr><td><span class="option-code">EU</span></td><td>EN 1092-1:2007(E) Type11 PN40</td><td>DN10–DN300</td></tr>
+            <tr><td><span class="option-code">EV</span></td><td>EN 1092-1:2007(E) Type11 PN63</td><td>DN10–DN300</td></tr>
+            <tr><td><span class="option-code">EW</span></td><td>EN 1092-1:2007(E) Type11 PN100</td><td>DN10–DN300</td></tr>
+            <tr><td><span class="option-code">EX</span></td><td>EN 1092-1:2007(E) Type11 PN160</td><td>DN10–DN300</td></tr>
+            <tr><td><span class="option-code">JS</span></td><td>JIS B2220:2004 RF 10K</td><td>DN10–DN300</td></tr>
+            <tr><td><span class="option-code">JT</span></td><td>JIS B2220:2004 RF 20K</td><td>DN10–DN300</td></tr>
+            <tr><td><span class="option-code">JU</span></td><td>JIS B2220:2004 RF 40K</td><td>DN10–DN300</td></tr>
+            <tr><td><span class="option-code">JV</span></td><td>JIS B2220:2004 RF 63K</td><td>DN10–DN300</td></tr>
+            <tr><td><span class="option-code">SS</span></td><td>SMS 1145, резьбовое</td><td>санитарное</td></tr>
+            <tr><td><span class="option-code">MS</span></td><td>Металлическое уплотнение</td><td></td></tr>
+            <tr><td><span class="option-code">OS</span></td><td>Уплотнение O-Ring</td><td></td></tr>
+            <tr><td><span class="option-code">ZS</span></td><td>ZG1/8-F</td><td></td></tr>
+            <tr><td><span class="option-code">ZT</span></td><td>ZG1/2-F</td><td></td></tr>
+            <tr><td><span class="option-code">ZU</span></td><td>ZG3/4-F</td><td></td></tr>
+            <tr><td><span class="option-code">ZV</span></td><td>ZG1-F</td><td></td></tr>
+            <tr><td><span class="option-code">NR</span></td><td>1/4" NPT-F</td><td></td></tr>
+            <tr><td><span class="option-code">NS</span></td><td>1/2" NPT-F</td><td></td></tr>
+            <tr><td><span class="option-code">NT</span></td><td>3/4" NPT-F</td><td></td></tr>
+            <tr><td><span class="option-code">NU</span></td><td>1" NPT-F</td><td></td></tr>
+            <tr><td><span class="option-code">BS</span></td><td>1/2" фланец</td><td></td></tr>
+            <tr><td><span class="option-code">VS</span></td><td>VCO соединение</td><td></td></tr>
+            <tr><td><span class="option-code">VA</span></td><td>VCO соединение</td><td>VCO1/2"</td></tr>
+            <tr><td><span class="option-code">VB</span></td><td>VCO соединение</td><td>VCO3/4"</td></tr>
+            <tr><td><span class="option-code">VC</span></td><td>VCO соединение</td><td>VCO1"</td></tr>
+            <tr><td><span class="option-code">VR</span></td><td>VCR соединение</td><td>VCR1/8"</td></tr>
+            <tr><td><span class="option-code">VT</span></td><td>VCR соединение</td><td>VCR1/4"</td></tr>
+            <tr><td><span class="option-code">VU</span></td><td>VCR соединение</td><td>VCR1/2"</td></tr>
+            <tr><td><span class="option-code">VV</span></td><td>VCR соединение</td><td>VCR3/4"</td></tr>
+            <tr><td><span class="option-code">VW</span></td><td>VCR соединение</td><td>VCR1"</td></tr>
+            <tr><td><span class="option-code">KT</span></td><td>Обжимная гайка</td><td>кард-слив Card sleeve</td></tr>
+            <tr><td><span class="option-code">C8</span></td><td>Только изменение типа соединения</td><td>описание обязательно</td></tr>
+            <tr><td><span class="option-code">C9</span></td><td>Специальное соединение</td><td>описание обязательно</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <!-- 6F -->
+      <h4 style="color:var(--primary);margin:2rem 0 0.5rem;">Таблица 9.6 — Блок опции: 6F | Материал измерительных трубок</h4>
+      <div class="table-wrap">
+        <table>
+          <thead><tr><th>Код</th><th>Материал</th><th>Примечание</th></tr></thead>
+          <tbody>
+            <tr><td><span class="option-code">S</span></td><td>316L</td><td>по умолчанию</td></tr>
+            <tr><td><span class="option-code">G</span></td><td>316L с высоким содержанием никеля</td><td></td></tr>
+            <tr><td><span class="option-code">L</span></td><td>904L</td><td></td></tr>
+            <tr><td><span class="option-code">T</span></td><td>Титан</td><td></td></tr>
+            <tr><td><span class="option-code">C</span></td><td>Сталь C4</td><td></td></tr>
+            <tr><td><span class="option-code">H</span></td><td>Хастеллой</td><td></td></tr>
+            <tr><td><span class="option-code">D</span></td><td>Дуплексная сталь</td><td></td></tr>
+            <tr><td><span class="option-code">A</span></td><td>Тантал</td><td></td></tr>
+            <tr><td><span class="option-code">X</span></td><td>Прочие материалы</td><td>описание обязательно</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <!-- 7G -->
+      <h4 style="color:var(--primary);margin:2rem 0 0.5rem;">Таблица 9.7 — Блок опции: 7G | Точность</h4>
+      <div class="table-wrap">
+        <table>
+          <thead><tr><th>Код</th><th>Описание</th><th>Примечание</th></tr></thead>
+          <tbody>
+            <tr><td><span class="option-code">S</span></td><td>0,1%</td><td>масса</td></tr>
+            <tr><td><span class="option-code">A</span></td><td>0,15%</td><td>масса</td></tr>
+            <tr><td><span class="option-code">B</span></td><td>0,2%</td><td>масса</td></tr>
+            <tr><td><span class="option-code">C</span></td><td>0,5%</td><td>масса</td></tr>
+            <tr><td><span class="option-code">D</span></td><td>1,0%</td><td>масса</td></tr>
+            <tr><td><span class="option-code">X</span></td><td>Прочие требования</td><td>описание обязательно</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <!-- 8H -->
+      <h4 style="color:var(--primary);margin:2rem 0 0.5rem;">Таблица 9.8 — Блок опции: 8H | Тип монтажа трансмиттера</h4>
+      <div class="table-wrap">
+        <table>
+          <thead><tr><th>Код</th><th>Описание</th><th>Примечание</th></tr></thead>
+          <tbody>
+            <tr><td><span class="option-code">N</span></td><td>Интегрированное исполнение</td><td></td></tr>
+            <tr><td><span class="option-code">S</span></td><td>Раздельное исполнение</td><td>длина кабеля по умолч. — 3 м</td></tr>
+            <tr><td><span class="option-code">J</span></td><td>Компактное интегрированное исполнение</td><td>без взрывозащиты</td></tr>
+            <tr><td><span class="option-code">D</span></td><td>Монтаж на DIN-рейку</td><td>без взрывозащиты</td></tr>
+            <tr><td><span class="option-code">X</span></td><td>Прочие требования</td><td>требуется подробное описание</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <!-- 9I -->
+      <h4 style="color:var(--primary);margin:2rem 0 0.5rem;">Таблица 9.9 — Блок опции: 9I | Наличие дисплея</h4>
+      <div class="table-wrap">
+        <table>
+          <thead><tr><th>Код</th><th>Описание</th><th>Примечание</th></tr></thead>
+          <tbody>
+            <tr><td><span class="option-code">C</span></td><td>С дисплеем</td><td></td></tr>
+            <tr><td><span class="option-code">M</span></td><td>Без дисплея</td><td>по умолчанию</td></tr>
+            <tr><td><span class="option-code">X</span></td><td>Прочие требования</td><td>описание обязательно</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <!-- 10J -->
+      <h4 style="color:var(--primary);margin:2rem 0 0.5rem;">Таблица 9.10 — Блок опции: 10J | Выходные сигналы</h4>
+      <div class="table-wrap">
+        <table>
+          <thead><tr><th>Код</th><th>Описание</th><th>Примечание</th></tr></thead>
+          <tbody>
+            <tr><td><span class="option-code">M</span></td><td>Modbus RTU/RS-485, активный импульсный</td><td>по умолчанию</td></tr>
+            <tr><td><span class="option-code">L</span></td><td>4-20 мА активный + сигналы по умолч.</td><td></td></tr>
+            <tr><td><span class="option-code">H</span></td><td>HART + 4-20 мА активный + сигналы по умолч.</td><td></td></tr>
+            <tr><td><span class="option-code">P</span></td><td>PROFIBUS PA + Modbus RTU/RS-485, активный импульсный</td><td></td></tr>
+            <tr><td><span class="option-code">X</span></td><td>Прочие требования</td><td>описание обязательно</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <!-- 11K -->
+      <h4 style="color:var(--primary);margin:2rem 0 0.5rem;">Таблица 9.11 — Блок опции: 11K | Сертификация</h4>
+      <div class="table-wrap">
+        <table>
+          <thead><tr><th>Код</th><th>Описание</th><th>Примечание</th></tr></thead>
+          <tbody>
+            <tr><td><span class="option-code">N</span></td><td>Нет</td><td>по умолчанию</td></tr>
+            <tr><td><span class="option-code">C</span></td><td>Взрывозащита Ex</td><td></td></tr>
+            <tr><td><span class="option-code">A</span></td><td>Сертификат 3-A</td><td></td></tr>
+            <tr><td><span class="option-code">S</span></td><td>Лицензия на производство спецоборудования TS</td><td></td></tr>
+            <tr><td><span class="option-code">J</span></td><td>Сертификат классификационного общества CCS</td><td></td></tr>
+            <tr><td><span class="option-code">X</span></td><td>Прочие требования</td><td>описание обязательно</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <!-- 12L -->
+      <h4 style="color:var(--primary);margin:2rem 0 0.5rem;">Таблица 9.12 — Блок опции: 12L | Версия трансмиттера</h4>
+      <div class="table-wrap">
+        <table>
+          <thead><tr><th>Код</th><th>Версия</th><th>Примечание</th></tr></thead>
+          <tbody>
+            <tr><td><span class="option-code">V1</span></td><td>ME100</td><td>по умолчанию</td></tr>
+            <tr><td><span class="option-code">V2</span></td><td>ME200</td><td></td></tr>
+            <tr><td><span class="option-code">V3</span></td><td>ME300</td><td></td></tr>
+            <tr><td><span class="option-code">XX</span></td><td>Специальное исполнение</td><td>описание обязательно</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <!-- 13M -->
+      <h4 style="color:var(--primary);margin:2rem 0 0.5rem;">Таблица 9.13 — Блок опции: 13M | Режим измерения</h4>
+      <div class="table-wrap">
+        <table>
+          <thead><tr><th>Код</th><th>Режим</th><th>Примечание</th></tr></thead>
+          <tbody>
+            <tr><td><span class="option-code">M</span></td><td>Масса</td><td>по умолчанию</td></tr>
+            <tr><td><span class="option-code">D</span></td><td>Плотность</td><td></td></tr>
+            <tr><td><span class="option-code">A</span></td><td>Масса и плотность</td><td></td></tr>
+            <tr><td><span class="option-code">X</span></td><td>Прочие требования</td><td>описание обязательно</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <!-- 14N -->
+      <h4 style="color:var(--primary);margin:2rem 0 0.5rem;">Таблица 9.14 — Блок опции: 14N | Материал технологического соединения</h4>
+      <div class="table-wrap">
+        <table>
+          <thead><tr><th>Код</th><th>Материал</th><th>Примечание</th></tr></thead>
+          <tbody>
+            <tr><td><span class="option-code">E</span></td><td>304</td><td></td></tr>
+            <tr><td><span class="option-code">S</span></td><td>316L</td><td>по умолчанию</td></tr>
+            <tr><td><span class="option-code">G</span></td><td>316L с высоким содержанием никеля</td><td></td></tr>
+            <tr><td><span class="option-code">L</span></td><td>904L</td><td></td></tr>
+            <tr><td><span class="option-code">T</span></td><td>Титан</td><td></td></tr>
+            <tr><td><span class="option-code">C</span></td><td>Сталь C4</td><td></td></tr>
+            <tr><td><span class="option-code">H</span></td><td>Хастеллой</td><td></td></tr>
+            <tr><td><span class="option-code">D</span></td><td>Дуплексная сталь</td><td></td></tr>
+            <tr><td><span class="option-code">A</span></td><td>Тантал</td><td></td></tr>
+            <tr><td><span class="option-code">X</span></td><td>Прочие материалы</td><td>описание обязательно</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <!-- 15O -->
+      <h4 style="color:var(--primary);margin:2rem 0 0.5rem;">Таблица 9.15 — Блок опции: 15O | Материал корпуса сенсора</h4>
+      <div class="table-wrap">
+        <table>
+          <thead><tr><th>Код</th><th>Материал</th><th>Примечание</th></tr></thead>
+          <tbody>
+            <tr><td><span class="option-code">E</span></td><td>304</td><td></td></tr>
+            <tr><td><span class="option-code">S</span></td><td>316L</td><td></td></tr>
+            <tr><td><span class="option-code">X</span></td><td>Прочие материалы</td><td>описание обязательно</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <!-- 16P -->
+      <h4 style="color:var(--primary);margin:2rem 0 0.5rem;">Таблица 9.16 — Блок опции: 16P | Электропитание</h4>
+      <div class="table-wrap">
+        <table>
+          <thead><tr><th>Код</th><th>Питание</th><th>Примечание</th></tr></thead>
+          <tbody>
+            <tr><td><span class="option-code">1</span></td><td>24 В постоянного тока</td><td>по умолчанию</td></tr>
+            <tr><td><span class="option-code">2</span></td><td>220 В переменного / 24 В постоянного</td><td>автоматически</td></tr>
+            <tr><td><span class="option-code">X</span></td><td>Прочие требования</td><td>описание обязательно</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <!-- 17Q -->
+      <h4 style="color:var(--primary);margin:2rem 0 0.5rem;">Таблица 9.17 — Блок опции: 17Q | Кабельный ввод</h4>
+      <div class="table-wrap">
+        <table>
+          <thead><tr><th>Код</th><th>Тип</th><th>Примечание</th></tr></thead>
+          <tbody>
+            <tr><td><span class="option-code">N</span></td><td>1/2" NPT</td><td></td></tr>
+            <tr><td><span class="option-code">M</span></td><td>M20×1,5</td><td>по умолчанию</td></tr>
+            <tr><td><span class="option-code">X</span></td><td>Специальное исполнение</td><td>описание обязательно</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <!-- 18R -->
+      <h4 style="color:var(--primary);margin:2rem 0 0.5rem;">Таблица 9.18 — Блок опции: 18R | Измерение плотности</h4>
+      <div class="table-wrap">
+        <table>
+          <thead><tr><th>Код</th><th>Точность, кг/м³</th><th>Примечание</th></tr></thead>
+          <tbody>
+            <tr><td><span class="option-code">1</span></td><td>3</td><td></td></tr>
+            <tr><td><span class="option-code">2</span></td><td>1</td><td></td></tr>
+            <tr><td><span class="option-code">3</span></td><td>0,5</td><td></td></tr>
+            <tr><td><span class="option-code">4</span></td><td>0,2</td><td></td></tr>
+            <tr><td><span class="option-code">5</span></td><td>0,15</td><td></td></tr>
+            <tr><td><span class="option-code">Q</span></td><td>Нет требований</td><td>по умолчанию</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <!-- 19S -->
+      <h4 style="color:var(--primary);margin:2rem 0 0.5rem;">Таблица 9.19 — Блок опции: 19S | Изотермический кожух</h4>
+      <div class="table-wrap">
+        <table>
+          <thead><tr><th>Код</th><th>Описание</th><th>Примечание</th></tr></thead>
+          <tbody>
+            <tr><td><span class="option-code">N</span></td><td>Нет</td><td>по умолчанию</td></tr>
+            <tr><td><span class="option-code">Y</span></td><td>Да</td><td><a href="isotermal-jacket.html" style="font-weight:500;">(подробнее →)</a></td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <!-- 20T -->
+      <h4 style="color:var(--primary);margin:2rem 0 0.5rem;">Таблица 9.20 — Блок опции: 20T | Язык интерфейса</h4>
+      <div class="table-wrap">
+        <table>
+          <thead><tr><th>Код</th><th>Язык</th><th>Примечание</th></tr></thead>
+          <tbody>
+            <tr><td><span class="option-code">E</span></td><td>Английский</td><td></td></tr>
+            <tr><td><span class="option-code">C</span></td><td>Китайский</td><td></td></tr>
+            <tr><td><span class="option-code">R</span></td><td>Русский</td><td>по умолчанию</td></tr>
+            <tr><td><span class="option-code">X</span></td><td>Прочие</td><td>описание обязательно</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <!-- 21U -->
+      <h4 style="color:var(--primary);margin:2rem 0 0.5rem;">Таблица 9.21 — Блок опции: 21U | Дополнительно в комплекте</h4>
+      <div class="table-wrap">
+        <table>
+          <thead><tr><th>Код</th><th>Описание</th><th>Примечание</th></tr></thead>
+          <tbody>
+            <tr><td><span class="option-code">0</span></td><td>Нет</td><td>по умолчанию</td></tr>
+            <tr><td><span class="option-code">1</span></td><td>Ответные фланцы из углерод. стали, крепёж, прокладки СНП</td><td></td></tr>
+            <tr><td><span class="option-code">2</span></td><td>Ответные фланцы из нерж. стали, крепёж, прокладки СНП</td><td></td></tr>
+            <tr><td><span class="option-code">X</span></td><td>Прочие</td><td>описание обязательно</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <!-- 22V -->
+      <h4 style="color:var(--primary);margin:2rem 0 0.5rem;">Таблица 9.22 — Блок опции: 22V | Дополнительные опции ETO — на заказ</h4>
+      <div class="table-wrap">
+        <table>
+          <thead><tr><th>Код</th><th>Описание</th></tr></thead>
+          <tbody>
+            <tr><td><span class="option-code">ETOZZZ</span></td><td>ZZZ — цифро-буквенное обозначение. Может не отображаться на шильде, привязывается к серийному номеру. Используется для индивидуальных решений, адаптированных к уникальным требованиям с помощью проектных работ и инженерных мероприятий.</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <!-- 23X -->
+      <h4 style="color:var(--primary);margin:2rem 0 0.5rem;">Таблица 9.23 — Блок опции: 23X | Условия гарантии</h4>
+      <div class="table-wrap">
+        <table>
+          <thead><tr><th>Код</th><th>Описание</th><th>Примечание</th></tr></thead>
+          <tbody>
+            <tr><td><span class="option-code">-</span></td><td>Стандартная: 12 мес. со дня ввода в эксплуатацию, но не более 18 мес. со дня изготовления</td><td>по умолчанию</td></tr>
+            <tr><td><span class="option-code">EW</span></td><td>Расширенная: 24 мес. со дня ввода, но не более 36 мес. со дня изготовления</td><td></td></tr>
+            <tr><td><span class="option-code">SW</span></td><td>Специальная — особые условия гарантии. Указываются отдельно</td><td></td></tr>
+          </tbody>
+        </table>
+      </div><!-- ==================== CERTIFICATES ==================== -->
   <section class="section section-gray" id="certificates">
     <div class="container">
       <div class="section-header animate-on-scroll">
