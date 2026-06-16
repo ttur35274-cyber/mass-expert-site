@@ -71,11 +71,20 @@ document.addEventListener('DOMContentLoaded', () => {
     toggle.addEventListener('click', () => {
       const isOpen = navLinks.classList.toggle('open');
       document.body.style.overflow = isOpen ? 'hidden' : '';
+      document.documentElement.style.overflow = isOpen ? 'hidden' : '';
+      // Fix iOS Safari
+      document.body.style.position = isOpen ? 'fixed' : '';
+      document.body.style.width = isOpen ? '100%' : '';
+      document.body.style.top = isOpen ? '-0px' : '';
     });
     navLinks.querySelectorAll('a').forEach(link => {
       link.addEventListener('click', () => {
         navLinks.classList.remove('open');
         document.body.style.overflow = '';
+        document.documentElement.style.overflow = '';
+        document.body.style.position = '';
+        document.body.style.width = '';
+        document.body.style.top = '';
       });
     });
   }
