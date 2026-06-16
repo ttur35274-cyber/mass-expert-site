@@ -50,8 +50,8 @@ html.theme-dark {
   --primary: #60A5FA;
   --primary-dark: #1E3A5F;
   --primary-light: #93C5FD;
-  --accent: #FBBF24;
-  --accent-hover: #F59E0B;
+  --accent: #F59E0B;
+  --accent-hover: #D97706;
   --accent-light: #1E293B;
   --success: #34D399;
   --danger: #F87171;
@@ -83,13 +83,17 @@ html.theme-dark {
 /* Dark theme: structural overrides — these elements must stay dark */
 html.theme-dark .footer { background: #0F172A !important; }
 html.theme-dark .footer-links a { color: rgba(255,255,255,0.5) !important; }
-html.theme-dark .footer-links a:hover { color: var(--accent) !important; }
+html.theme-dark .footer-links a:hover { color: var(--accent-hover) !important; }
 html.theme-dark .footer-bottom { border-top-color: rgba(255,255,255,0.08) !important; }
 html.theme-dark thead { background: #1a2236 !important; }
 html.theme-dark th { color: var(--text-heading) !important; }
-html.theme-dark .navbar { background: rgba(7, 38, 73, 0.99) !important; }
+html.theme-dark .navbar { background: rgba(7, 38, 73, 0.99) !important; border-bottom-color: rgba(255,255,255,0.08) !important; }
 html.theme-dark.scrolled .navbar,
 html.theme-dark .navbar.scrolled { background: rgba(7, 38, 73, 0.99) !important; }
+html.theme-dark .navbar-brand .brand-icon { background: #F59E0B !important; color: #0F172A !important; }
+html.theme-dark .btn-primary { background: #F59E0B !important; color: #0F172A !important; border-color: #F59E0B !important; }
+html.theme-dark .btn-primary:hover { background: #D97706 !important; }
+html.theme-dark .btn-outline { color: rgba(255,255,255,0.85) !important; }
 html.theme-dark h1,
 html.theme-dark h2,
 html.theme-dark h3,
@@ -100,6 +104,7 @@ html.theme-dark .hero { background: linear-gradient(135deg, #072649, #0a1628) !i
 html.theme-dark .section-blue { background: linear-gradient(135deg, #072649, #0a1628) !important; }
 html.theme-dark .section-dark { background: #0F172A !important; }
 html.theme-dark .section-dark h2 { color: var(--text-heading) !important; }
+html.theme-dark .hero-stat-value { color: #F59E0B !important; }
 
 /* --- Accessibility / Visually Impaired mode (full WCAG) --- */
 html.theme-accessibility,

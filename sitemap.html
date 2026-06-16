@@ -67,7 +67,12 @@
       margin-left: 0.25rem;
       font-weight: 400;
     }
-  </style>
+  
+<style>
+.theme-float-btn{position:fixed;bottom:1rem;right:1rem;z-index:9999;width:44px;height:44px;border-radius:50%;background:var(--accent);color:#0F172A;border:none;font-size:1.25rem;cursor:pointer;box-shadow:0 2px 8px rgba(0,0,0,0.3);display:flex;align-items:center;justify-content:center;transition:all 0.2s;}
+.theme-float-btn:hover{transform:scale(1.1);}
+
+</style>
 </head>
 <body>
   <div class="container" style="padding-bottom:3rem;">
@@ -211,5 +216,15 @@
       </p>
     </div>
   </div>
+
+<script>
+(function(){var t=localStorage.getItem('mass-expert-theme');if(t==='dark')document.documentElement.classList.add('theme-dark');if(t==='accessibility')document.documentElement.classList.add('theme-accessibility');})();
+</script>
+
+<button class="theme-float-btn" id="floatThemeToggle" title="Тёмная тема"><i class="fas fa-moon"></i></button>
+<script>
+var btn=document.getElementById('floatThemeToggle');
+if(btn){btn.addEventListener('click',function(){var h=document.documentElement;var isDark=h.classList.contains('theme-dark');h.classList.remove('theme-dark','theme-accessibility');if(!isDark){h.classList.add('theme-dark');btn.innerHTML='<i class="fas fa-sun"></i>';btn.title='Светлая тема';}else{btn.innerHTML='<i class="fas fa-moon"></i>';btn.title='Тёмная тема';}localStorage.setItem('mass-expert-theme',isDark?'':'dark');});}
+</script>
 </body>
 </html>
