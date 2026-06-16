@@ -6,58 +6,63 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // --- Theme System (Dark + Accessibility) ---
   const html = document.documentElement;
-  const themeToggle = document.getElementById('themeToggle');
-  const accessibilityToggle = document.getElementById('accessibilityToggle');
+
+  // Desktop + Mobile toggle buttons
+  const themeBtns = [
+    document.getElementById('themeToggle'),
+    document.getElementById('themeToggleMobile')
+  ].filter(Boolean);
+  const accessibilityBtns = [
+    document.getElementById('accessibilityToggle'),
+    document.getElementById('accessibilityToggleMobile')
+  ].filter(Boolean);
+
+  function setThemeUI(theme) {
+    const isDark = theme === 'dark';
+    const isA11y = theme === 'accessibility';
+    themeBtns.forEach(btn => {
+      btn.innerHTML = isDark
+        ? '<i class="fas fa-sun"></i>'
+        : '<i class="fas fa-moon"></i>';
+      btn.title = isDark ? 'Светлая тема' : 'Тёмная тема';
+    });
+    accessibilityBtns.forEach(btn => {
+      btn.innerHTML = isA11y
+        ? '<i class="fas fa-eye-slash"></i>'
+        : '<i class="fas fa-eye"></i>';
+      btn.title = isA11y ? 'Обычный режим' : 'Режим для слабовидящих';
+    });
+    localStorage.setItem('mass-expert-theme', theme || '');
+  }
 
   function setTheme(theme) {
-    // Remove both theme classes
     html.classList.remove('theme-dark', 'theme-accessibility');
     if (theme === 'dark') html.classList.add('theme-dark');
     if (theme === 'accessibility') html.classList.add('theme-accessibility');
-    // Update icons
-    if (themeToggle) {
-      themeToggle.innerHTML = theme === 'dark'
-        ? '<i class="fas fa-sun"></i>'
-        : '<i class="fas fa-moon"></i>';
-      themeToggle.title = theme === 'dark' ? 'Светлая тема' : 'Тёмная тема';
-    }
-    if (accessibilityToggle) {
-      const isA11y = theme === 'accessibility';
-      accessibilityToggle.innerHTML = isA11y
-        ? '<i class="fas fa-eye-slash"></i>'
-        : '<i class="fas fa-eye"></i>';
-      accessibilityToggle.title = isA11y ? 'Обычный режим' : 'Режим для слабовидящих';
-    }
-    localStorage.setItem('mass-expert-theme', theme || '');
+    setThemeUI(theme);
   }
 
   // Load saved theme
   const saved = localStorage.getItem('mass-expert-theme');
   if (saved) setTheme(saved);
 
-  // Theme toggle click
-  if (themeToggle) {
-    themeToggle.addEventListener('click', () => {
-      const current = html.classList.contains('theme-dark');
-      setTheme(current ? '' : 'dark');
+  // Theme toggle click (both desktop and mobile)
+  themeBtns.forEach(btn => {
+    btn.addEventListener('click', () => {
+      const isDark = html.classList.contains('theme-dark');
+      html.classList.remove('theme-accessibility');
+      setTheme(isDark ? '' : 'dark');
     });
-  }
+  });
 
-  // Accessibility toggle click
-  if (accessibilityToggle) {
-    accessibilityToggle.addEventListener('click', () => {
-      const current = html.classList.contains('theme-accessibility');
-      // When enabling accessibility, also apply dark theme for better contrast
-      setTheme(current ? '' : 'accessibility');
-      if (!current && !html.classList.contains('theme-dark')) {
-        html.classList.add('theme-dark');
-        if (themeToggle) {
-          themeToggle.innerHTML = '<i class="fas fa-sun"></i>';
-          themeToggle.title = 'Светлая тема';
-        }
-      }
+  // Accessibility toggle click (both desktop and mobile)
+  accessibilityBtns.forEach(btn => {
+    btn.addEventListener('click', () => {
+      const isA11y = html.classList.contains('theme-accessibility');
+      html.classList.remove('theme-dark', 'theme-accessibility');
+      setTheme(isA11y ? '' : 'accessibility');
     });
-  }
+  });
 
   // --- Mobile Nav Toggle ---
   const toggle = document.querySelector('.navbar-toggle');
