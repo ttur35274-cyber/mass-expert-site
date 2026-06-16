@@ -312,9 +312,9 @@ p { margin-bottom: 1rem; }
   padding: 5rem 0;
 }
 .section-header {
-  text-align: center;
-  max-width: 740px;
-  margin: 0 auto 3.5rem;
+  text-align: left;
+  max-width: 800px;
+  margin: 0 0 2.5rem;
 }
 .section-header h2 {
   margin-bottom: 0.75rem;
