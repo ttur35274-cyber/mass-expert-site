@@ -500,6 +500,14 @@ p { margin-bottom: 1rem; }
 .theme-toggles-mobile {
   display: none;
 }
+.theme-toggles-desktop {
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+  margin-left: 0.5rem;
+  padding-left: 0.75rem;
+  border-left: 1px solid rgba(255,255,255,0.15);
+}
 .navbar-toggle {
   display: none;
   background: none;
@@ -1186,6 +1194,7 @@ details.expandable .expandable-body p {
   .navbar-links.open { display: flex; }
   .navbar-links a { width: 100%; padding: 0.75rem 1rem; }
   .theme-toggles-mobile { display: flex; gap: 0.5rem; padding: 0.75rem 1rem; border-top: 1px solid rgba(255,255,255,0.1); margin-top: 0.5rem; }
+  .theme-toggles-desktop { display: none; }
   .navbar-toggle { display: block; }
   .hero { min-height: auto; padding: 6rem 0 3rem; }
   .hero-content .hero-desc { font-size: 1rem; }
