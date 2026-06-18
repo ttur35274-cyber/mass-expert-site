@@ -115,18 +115,16 @@ html.theme-accessibility body {
   word-spacing: 0.1em;
 }
 html.theme-accessibility {
-  /* High contrast: black bg + WHITE text */
-  --primary: #FFFFFF;
-  --primary-dark: #FFFFFF;
-  --primary-light: #FFFFFF;
-  --accent: #FFFFFF;
-  --accent-hover: #CCCCCC;
-  --accent-light: #333333;
-  --success: #CCCCCC;
-  --danger: #CCCCCC;
+  /* High contrast: black bg + white text */
+  --bg-body: #000000;
+  --bg-section: #000000;
+  --bg-card: #000000;
+  --text-body: #FFFFFF;
+  --text-muted: #CCCCCC;
+  --border-color: #FFFFFF;
   --gray-50: #000000;
-  --gray-100: #0a0a0a;
-  --gray-200: #1a1a1a;
+  --gray-100: #000000;
+  --gray-200: #000000;
   --gray-300: #333333;
   --gray-400: #FFFFFF;
   --gray-500: #FFFFFF;
@@ -135,17 +133,12 @@ html.theme-accessibility {
   --gray-800: #FFFFFF;
   --gray-900: #FFFFFF;
   --white: #000000;
-  --bg-body: #000000;
-  --bg-section: #0a0a0a;
-  --bg-card: #1a1a1a;
-  --text-body: #FFFFFF;
-  --text-muted: #CCCCCC;
-  --border-color: #FFFFFF;
+  --accent: #000000;
+  --accent-hover: #333333;
 }
 html.theme-accessibility * {
   transition: none !important;
   animation: none !important;
-  box-shadow: none !important;
   text-shadow: none !important;
 }
 html.theme-accessibility body {
@@ -157,69 +150,54 @@ html.theme-accessibility h2,
 html.theme-accessibility h3,
 html.theme-accessibility h4,
 html.theme-accessibility h5,
-html.theme-accessibility h6 {
-  color: #FFFFFF !important;
-}
+html.theme-accessibility h6,
 html.theme-accessibility p,
 html.theme-accessibility li,
 html.theme-accessibility td,
 html.theme-accessibility th,
 html.theme-accessibility .app-name,
 html.theme-accessibility .hero-desc,
-html.theme-accessibility .hero-stat-label {
+html.theme-accessibility .hero-stat-label,
+html.theme-accessibility .hero-stat-value,
+html.theme-accessibility .contact-row {
   color: #FFFFFF !important;
 }
 html.theme-accessibility a,
 html.theme-accessibility .navbar-brand {
   color: #FFFFFF !important;
   text-decoration: underline !important;
-  text-decoration-thickness: 2px;
-  text-underline-offset: 3px;
 }
-html.theme-accessibility a:hover,
-html.theme-accessibility a:focus {
+html.theme-accessibility a:hover {
   background: #FFFFFF !important;
   color: #000000 !important;
-  outline: 3px solid #FFFFFF !important;
-  outline-offset: 3px !important;
 }
 html.theme-accessibility .navbar {
   background: #000000 !important;
-  border-bottom: 3px solid #FFFFFF !important;
+  border-bottom: 2px solid #FFFFFF !important;
 }
 html.theme-accessibility .navbar-links a {
-  border: 1px solid transparent;
+  color: #FFFFFF !important;
 }
 html.theme-accessibility .navbar-links a:hover,
 html.theme-accessibility .navbar-links a.active {
   background: #FFFFFF !important;
   color: #000000 !important;
 }
-html.theme-accessibility .btn {
+html.theme-accessibility .btn-primary {
   background: #FFFFFF !important;
   color: #000000 !important;
-  border: 3px solid #FFFFFF !important;
-  font-weight: 700 !important;
+  border: 2px solid #FFFFFF !important;
 }
 html.theme-accessibility .btn-outline {
-  border: 3px solid #FFFFFF !important;
+  border: 2px solid #FFFFFF !important;
   color: #FFFFFF !important;
-  background: transparent !important;
 }
 html.theme-accessibility .btn-outline-dark {
-  border: 3px solid #FFFFFF !important;
+  border: 2px solid #FFFFFF !important;
   color: #FFFFFF !important;
 }
-html.theme-accessibility .hero {
-  background: #000000 !important;
-}
-html.theme-accessibility .hero::before { display: none !important; }
-html.theme-accessibility .section-gray {
-  background: #0a0a0a !important;
-}
-html.theme-accessibility .section-blue {
-  background: #000000 !important;
-}
+html.theme-accessibility .section-gray,
+html.theme-accessibility .section-blue,
 html.theme-accessibility .section-dark {
   background: #000000 !important;
 }
@@ -227,74 +205,41 @@ html.theme-accessibility .adv-card,
 html.theme-accessibility .app-card,
 html.theme-accessibility .transmitter-card,
 html.theme-accessibility .cert-card,
-html.theme-accessibility .about-highlight {
-  background: #1a1a1a !important;
-  border: 2px solid #FFFFFF !important;
-}
+html.theme-accessibility .about-highlight,
+html.theme-accessibility details.expandable,
 html.theme-accessibility .table-wrap {
+  background: #000000 !important;
   border: 2px solid #FFFFFF !important;
 }
-html.theme-accessibility table {
+html.theme-accessibility .hero {
   background: #000000 !important;
 }
-html.theme-accessibility td {
-  border-bottom: 1px solid #FFFFFF !important;
-  color: #FFFFFF !important;
-}
-html.theme-accessibility thead {
-  background: #FFFFFF !important;
-  color: #000000 !important;
-}
-html.theme-accessibility th {
-  color: #000000 !important;
-}
-html.theme-accessibility .footer {
-  background: #000000 !important;
-  border-top: 3px solid #FFFFFF !important;
-}
+html.theme-accessibility .hero::before { display: none !important; }
 html.theme-accessibility .hero-badge,
 html.theme-accessibility .section-badge {
-  background: #333333 !important;
+  background: #000000 !important;
   color: #FFFFFF !important;
   border: 2px solid #FFFFFF !important;
-  font-size: 0.9rem !important;
-  padding: 0.4rem 1rem !important;
 }
-html.theme-accessibility img:not([alt=""]) {
-  filter: invert(1) hue-rotate(180deg) contrast(1.2);
+html.theme-accessibility thead { background: #000000 !important; }
+html.theme-accessibility th { color: #FFFFFF !important; }
+html.theme-accessibility td { border-bottom: 1px solid #FFFFFF !important; color: #FFFFFF !important; }
+html.theme-accessibility .footer {
+  background: #000000 !important;
+  border-top: 2px solid #FFFFFF !important;
 }
-html.theme-accessibility img[alt=""],
-html.theme-accessibility .hero-device-card img {
-  opacity: 0.7;
-}
-html.theme-accessibility .container {
-  max-width: 800px !important;
-}
-html.theme-accessibility .hero-stats {
-  background: #1a1a1a !important;
-  border: 2px solid #FFFFFF !important;
-  padding: 1rem;
-  border-radius: 8px;
-}
+html.theme-accessibility .footer-links a { color: #FFFFFF !important; }
+html.theme-accessibility .footer-bottom { border-top-color: #FFFFFF !important; }
 html.theme-accessibility .principle-step .step-number {
   background: #FFFFFF !important;
   color: #000000 !important;
-  border: 2px solid #FFFF00;
 }
 html.theme-accessibility .param-card {
-  background: #1a1a1a !important;
+  background: #000000 !important;
   border: 2px solid #FFFFFF !important;
-}
-html.theme-accessibility .param-card .param-value {
-  color: #FFFFFF !important;
-}
-html.theme-accessibility .client-tag {
-  background: #1a1a1a !important;
-  border: 2px solid #FFFFFF !important;
-  color: #FFFFFF !important;
 }
 html.theme-accessibility .product-tab {
-  background: #1a1a1a !important;
+  background: #000000 !important;
   border: 2px solid #FFFFFF !important;
   color: #FFFFFF !important;
 }
@@ -302,16 +247,19 @@ html.theme-accessibility .product-tab.active {
   background: #FFFFFF !important;
   color: #000000 !important;
 }
-html.theme-accessibility details.expandable {
-  background: #1a1a1a !important;
+html.theme-accessibility .client-tag {
+  background: #000000 !important;
   border: 2px solid #FFFFFF !important;
-}
-html.theme-accessibility details.expandable summary {
   color: #FFFFFF !important;
-  border-bottom: 1px solid #FFFFFF !important;
 }
-html.theme-accessibility .theme-btn {
-  color: #FFFFFF !important;
+html.theme-accessibility .theme-btn { color: #FFFFFF !important; }
+html.theme-accessibility .navbar-brand .brand-icon {
+  background: #FFFFFF !important;
+  color: #000000 !important;
+}
+html.theme-accessibility img {
+  opacity: 0.85;
+  filter: none !important;
 }
 
 /* --- Reset & Base --- */
