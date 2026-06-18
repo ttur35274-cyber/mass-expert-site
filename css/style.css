@@ -115,32 +115,32 @@ html.theme-accessibility body {
   word-spacing: 0.1em;
 }
 html.theme-accessibility {
-  /* High contrast: black bg + yellow text */
-  --primary: #FFD700;
-  --primary-dark: #FFD700;
-  --primary-light: #FFD700;
-  --accent: #FFD700;
-  --accent-hover: #FFA500;
+  /* High contrast: black bg + WHITE text */
+  --primary: #FFFFFF;
+  --primary-dark: #FFFFFF;
+  --primary-light: #FFFFFF;
+  --accent: #FFFFFF;
+  --accent-hover: #CCCCCC;
   --accent-light: #333333;
-  --success: #00FF00;
-  --danger: #FF4444;
+  --success: #CCCCCC;
+  --danger: #CCCCCC;
   --gray-50: #000000;
   --gray-100: #0a0a0a;
   --gray-200: #1a1a1a;
   --gray-300: #333333;
-  --gray-400: #FFFF00;
-  --gray-500: #FFD700;
-  --gray-600: #FFD700;
-  --gray-700: #FFD700;
-  --gray-800: #FFFF00;
-  --gray-900: #FFFF00;
+  --gray-400: #FFFFFF;
+  --gray-500: #FFFFFF;
+  --gray-600: #FFFFFF;
+  --gray-700: #FFFFFF;
+  --gray-800: #FFFFFF;
+  --gray-900: #FFFFFF;
   --white: #000000;
   --bg-body: #000000;
   --bg-section: #0a0a0a;
   --bg-card: #1a1a1a;
-  --text-body: #FFFF00;
-  --text-muted: #FFD700;
-  --border-color: #FFD700;
+  --text-body: #FFFFFF;
+  --text-muted: #CCCCCC;
+  --border-color: #FFFFFF;
 }
 html.theme-accessibility * {
   transition: none !important;
@@ -150,7 +150,7 @@ html.theme-accessibility * {
 }
 html.theme-accessibility body {
   background: #000000 !important;
-  color: #FFFF00 !important;
+  color: #FFFFFF !important;
 }
 html.theme-accessibility h1,
 html.theme-accessibility h2,
@@ -158,7 +158,7 @@ html.theme-accessibility h3,
 html.theme-accessibility h4,
 html.theme-accessibility h5,
 html.theme-accessibility h6 {
-  color: #FFFF00 !important;
+  color: #FFFFFF !important;
 }
 html.theme-accessibility p,
 html.theme-accessibility li,
@@ -167,48 +167,48 @@ html.theme-accessibility th,
 html.theme-accessibility .app-name,
 html.theme-accessibility .hero-desc,
 html.theme-accessibility .hero-stat-label {
-  color: #FFFF00 !important;
+  color: #FFFFFF !important;
 }
 html.theme-accessibility a,
 html.theme-accessibility .navbar-brand {
-  color: #FFFF00 !important;
+  color: #FFFFFF !important;
   text-decoration: underline !important;
   text-decoration-thickness: 2px;
   text-underline-offset: 3px;
 }
 html.theme-accessibility a:hover,
 html.theme-accessibility a:focus {
-  background: #FFFF00 !important;
+  background: #FFFFFF !important;
   color: #000000 !important;
-  outline: 3px solid #FFFF00 !important;
+  outline: 3px solid #FFFFFF !important;
   outline-offset: 3px !important;
 }
 html.theme-accessibility .navbar {
   background: #000000 !important;
-  border-bottom: 3px solid #FFFF00 !important;
+  border-bottom: 3px solid #FFFFFF !important;
 }
 html.theme-accessibility .navbar-links a {
   border: 1px solid transparent;
 }
 html.theme-accessibility .navbar-links a:hover,
 html.theme-accessibility .navbar-links a.active {
-  background: #FFFF00 !important;
+  background: #FFFFFF !important;
   color: #000000 !important;
 }
 html.theme-accessibility .btn {
-  background: #FFFF00 !important;
+  background: #FFFFFF !important;
   color: #000000 !important;
-  border: 3px solid #FFFF00 !important;
+  border: 3px solid #FFFFFF !important;
   font-weight: 700 !important;
 }
 html.theme-accessibility .btn-outline {
-  border: 3px solid #FFFF00 !important;
-  color: #FFFF00 !important;
+  border: 3px solid #FFFFFF !important;
+  color: #FFFFFF !important;
   background: transparent !important;
 }
 html.theme-accessibility .btn-outline-dark {
-  border: 3px solid #FFFF00 !important;
-  color: #FFFF00 !important;
+  border: 3px solid #FFFFFF !important;
+  color: #FFFFFF !important;
 }
 html.theme-accessibility .hero {
   background: #000000 !important;
@@ -229,20 +229,20 @@ html.theme-accessibility .transmitter-card,
 html.theme-accessibility .cert-card,
 html.theme-accessibility .about-highlight {
   background: #1a1a1a !important;
-  border: 2px solid #FFFF00 !important;
+  border: 2px solid #FFFFFF !important;
 }
 html.theme-accessibility .table-wrap {
-  border: 2px solid #FFFF00 !important;
+  border: 2px solid #FFFFFF !important;
 }
 html.theme-accessibility table {
   background: #000000 !important;
 }
 html.theme-accessibility td {
-  border-bottom: 1px solid #FFFF00 !important;
-  color: #FFFF00 !important;
+  border-bottom: 1px solid #FFFFFF !important;
+  color: #FFFFFF !important;
 }
 html.theme-accessibility thead {
-  background: #FFFF00 !important;
+  background: #FFFFFF !important;
   color: #000000 !important;
 }
 html.theme-accessibility th {
@@ -250,13 +250,13 @@ html.theme-accessibility th {
 }
 html.theme-accessibility .footer {
   background: #000000 !important;
-  border-top: 3px solid #FFFF00 !important;
+  border-top: 3px solid #FFFFFF !important;
 }
 html.theme-accessibility .hero-badge,
 html.theme-accessibility .section-badge {
   background: #333333 !important;
-  color: #FFFF00 !important;
-  border: 2px solid #FFFF00 !important;
+  color: #FFFFFF !important;
+  border: 2px solid #FFFFFF !important;
   font-size: 0.9rem !important;
   padding: 0.4rem 1rem !important;
 }
@@ -272,46 +272,46 @@ html.theme-accessibility .container {
 }
 html.theme-accessibility .hero-stats {
   background: #1a1a1a !important;
-  border: 2px solid #FFFF00 !important;
+  border: 2px solid #FFFFFF !important;
   padding: 1rem;
   border-radius: 8px;
 }
 html.theme-accessibility .principle-step .step-number {
-  background: #FFFF00 !important;
+  background: #FFFFFF !important;
   color: #000000 !important;
   border: 2px solid #FFFF00;
 }
 html.theme-accessibility .param-card {
   background: #1a1a1a !important;
-  border: 2px solid #FFFF00 !important;
+  border: 2px solid #FFFFFF !important;
 }
 html.theme-accessibility .param-card .param-value {
-  color: #FFFF00 !important;
+  color: #FFFFFF !important;
 }
 html.theme-accessibility .client-tag {
   background: #1a1a1a !important;
-  border: 2px solid #FFFF00 !important;
-  color: #FFFF00 !important;
+  border: 2px solid #FFFFFF !important;
+  color: #FFFFFF !important;
 }
 html.theme-accessibility .product-tab {
   background: #1a1a1a !important;
-  border: 2px solid #FFFF00 !important;
-  color: #FFFF00 !important;
+  border: 2px solid #FFFFFF !important;
+  color: #FFFFFF !important;
 }
 html.theme-accessibility .product-tab.active {
-  background: #FFFF00 !important;
+  background: #FFFFFF !important;
   color: #000000 !important;
 }
 html.theme-accessibility details.expandable {
   background: #1a1a1a !important;
-  border: 2px solid #FFFF00 !important;
+  border: 2px solid #FFFFFF !important;
 }
 html.theme-accessibility details.expandable summary {
-  color: #FFFF00 !important;
-  border-bottom: 1px solid #FFFF00 !important;
+  color: #FFFFFF !important;
+  border-bottom: 1px solid #FFFFFF !important;
 }
 html.theme-accessibility .theme-btn {
-  color: #FFFF00 !important;
+  color: #FFFFFF !important;
 }
 
 /* --- Reset & Base --- */
