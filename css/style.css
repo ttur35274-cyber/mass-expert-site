@@ -385,19 +385,19 @@ p { margin-bottom: 1rem; }
 }
 .navbar-brand:hover { color: var(--accent); }
 .navbar-brand .brand-icon {
-  width: 46px;
-  height: 46px;
+  width: 56px;
+  height: 56px;
   background: var(--accent);
   border-radius: var(--radius);
   display: flex;
   align-items: center;
   justify-content: center;
   font-weight: 900;
-  font-size: 0.65rem;
+  font-size: 0.75rem;
   color: var(--gray-900);
-  line-height: 1.15;
+  line-height: 1.2;
   text-align: center;
-  padding: 3px;
+  padding: 4px;
   flex-shrink: 0;
 }
 .navbar-links {
