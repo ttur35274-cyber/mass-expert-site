@@ -535,6 +535,44 @@ def generate_kb():
         lines.append(f"| **{fm.get('title', fp.stem)}** | {desc} |\n")
     lines.append('\n---\n\n')
     
+    counter += 1
+    
+    # Operation manual
+    manual_path = CONTENT_DIR / 'Руководство_по_эксплуатации_и_монтажу_Mass-EXPERT_v_0.9.md'
+    if manual_path.exists():
+        lines.append(f"## {counter}. РУКОВОДСТВО ПО ЭКСПЛУАТАЦИИ И МОНТАЖУ\n\n")
+        manual_text = manual_path.read_text(encoding='utf-8')
+        
+        # Extract table of contents from the markdown link format
+        toc_lines = []
+        in_toc = False
+        for ml in manual_text.split('\n'):
+            line = ml.strip()
+            if line == '# Содержание':
+                in_toc = True
+                continue
+            if in_toc:
+                # Stop at first heading after TOC
+                if line.startswith('# ') and 'Содержание' not in line:
+                    break
+                # Extract from markdown links: [Title. Page](#_TocXXX)
+                m = re.match(r'\[\s*([^\]]+?)\s*\]\(#_Toc\d+\)', line)
+                if m:
+                    title = m.group(1).strip()
+                    # Clean up double dots
+                    title = re.sub(r'\.\.$', '', title)
+                    toc_lines.append(title)
+        
+        if toc_lines:
+            lines.append('### Содержание\n\n')
+            for tl in toc_lines:
+                lines.append(f"- {tl}\n")
+            lines.append('\n')
+        
+        lines.append('**Полный текст:** `content/Руководство_по_эксплуатации_и_монтажу_Mass-EXPERT_v_0.9.md`\n')
+        lines.append(f'**Всего строк:** {len(manual_text.splitlines())}\n')
+        lines.append('\n---\n\n')
+    
     (SITE_ROOT / 'KNOWLEDGE_BASE.md').write_text(''.join(lines), encoding='utf-8')
     print(f"✅ KNOWLEDGE_BASE.md ({len(lines)} lines)")
     return True
