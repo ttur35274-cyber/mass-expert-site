@@ -1,0 +1,27 @@
+---
+title: "Mass-EXPERT"
+section_id: "hero"
+tagline: "Счетчики-расходомеры массовые"
+description: "Высокоточные кориолисовые расходомеры для прямого измерения массового расхода, плотности и температуры жидкостей, газов и криогенных сред. От DN01 до DN250 — решения для любых задач промышленности."
+badges:
+  - icon: "fa-check"
+    text: "Госреестр СИ"
+  - icon: "fa-check"
+    text: "ТР ТС 012/020"
+  - icon: "fa-check"
+    text: "Взрывозащита Ex"
+  - icon: "fa-check"
+    text: "Сейсмостойкость"
+  - icon: "fa-check"
+    text: "Криогенное исполнение"
+stats:
+  - value: "±0,1%"
+    label: "Точность жидкости"
+  - value: "100:1"
+    label: "Динамический диапазон"
+  - value: "20 лет"
+    label: "Срок службы"
+image: "images/Mass-EXPERT_familyphoto.png"
+image_alt: "Семейство расходомеров Mass-EXPERT"
+hero_label: "Госреестр № 98506-26"
+---
