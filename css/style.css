@@ -385,7 +385,7 @@ p { margin-bottom: 1rem; }
 }
 .navbar-brand:hover { color: var(--accent); }
 .navbar-brand .brand-icon {
-  width: 56px;
+  width: 70px;
   height: 56px;
   background: var(--accent);
   border-radius: var(--radius);
@@ -393,7 +393,7 @@ p { margin-bottom: 1rem; }
   align-items: center;
   justify-content: center;
   font-weight: 900;
-  font-size: 0.75rem;
+  font-size: 0.875rem;
   color: var(--gray-900);
   line-height: 1.2;
   text-align: center;
@@ -403,11 +403,11 @@ p { margin-bottom: 1rem; }
 .navbar-links {
   display: flex;
   align-items: center;
-  gap: 0.25rem;
+  gap: 0.15rem;
 }
 .navbar-links a {
   color: rgba(255,255,255,0.85);
-  padding: 0.5rem 0.875rem;
+  padding: 0.5rem 0.6rem;
   border-radius: var(--radius);
   font-size: 0.875rem;
   font-weight: 500;
@@ -452,9 +452,9 @@ p { margin-bottom: 1rem; }
 .theme-toggles-desktop {
   display: flex;
   align-items: center;
-  gap: 0.25rem;
-  margin-left: 0.5rem;
-  padding-left: 0.75rem;
+  gap: 0.15rem;
+  margin-left: 0.3rem;
+  padding-left: 0.4rem;
   border-left: 1px solid rgba(255,255,255,0.15);
 }
 .navbar-toggle {
