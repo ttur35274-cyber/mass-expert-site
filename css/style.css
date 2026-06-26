@@ -1101,6 +1101,78 @@ details.expandable .expandable-body p {
   margin-right: 0.25rem;
 }
 
+/* --- Option Cards --- */
+.option-card-row {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+.option-card {
+  background: var(--white);
+  border: 1px solid var(--gray-200);
+  border-radius: var(--radius);
+  overflow: hidden;
+  transition: all var(--transition);
+}
+.option-card:hover {
+  border-color: var(--accent);
+  box-shadow: 0 2px 12px rgba(245,158,11,0.1);
+}
+.option-card-body {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1.5rem;
+  padding: 1rem 1.25rem;
+}
+.option-card-left {
+  flex: 1;
+  min-width: 0;
+}
+.option-card-header {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-bottom: 0.35rem;
+}
+.option-card-header h4 {
+  margin: 0;
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--gray-900);
+}
+.option-card-desc {
+  margin: 0 0 0.75rem;
+  font-size: 0.875rem;
+  color: var(--gray-500);
+}
+.option-card-right {
+  flex-shrink: 0;
+  width: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.option-card-right img {
+  max-width: 100%;
+  max-height: 70px;
+  height: auto;
+  border-radius: 4px;
+  object-fit: contain;
+}
+@media (max-width: 600px) {
+  .option-card-body {
+    flex-direction: column;
+    text-align: center;
+  }
+  .option-card-header {
+    justify-content: center;
+  }
+  .option-card-right {
+    width: 80px;
+  }
+}
+
 /* --- Scroll Animation --- */
 .animate-on-scroll {
   opacity: 0;
