@@ -1101,29 +1101,34 @@ details.expandable .expandable-body p {
   margin-right: 0.25rem;
 }
 
-/* --- Option Cards --- */
+/* --- Option Cards (Emerson style) --- */
 .option-card-row {
   display: flex;
   flex-direction: column;
-  gap: 0.75rem;
+  gap: 1px;
+  border: 1px solid var(--gray-200);
+  border-radius: 8px;
+  overflow: hidden;
 }
 .option-card {
   background: var(--white);
-  border: 1px solid var(--gray-200);
-  border-radius: var(--radius);
-  overflow: hidden;
-  transition: all var(--transition);
+  border: none;
+  border-bottom: 1px solid var(--gray-100);
+  transition: all 0.15s ease;
+}
+.option-card:last-child {
+  border-bottom: none;
 }
 .option-card:hover {
-  border-color: var(--accent);
-  box-shadow: 0 2px 12px rgba(245,158,11,0.1);
+  background: #fafaf9;
 }
 .option-card-body {
   display: flex;
   align-items: center;
-  justify-content: space-between;
   gap: 1.5rem;
-  padding: 1rem 1.25rem;
+  padding: 0.875rem 1.25rem;
+  text-decoration: none;
+  color: inherit;
 }
 .option-card-left {
   flex: 1;
@@ -1132,45 +1137,141 @@ details.expandable .expandable-body p {
 .option-card-header {
   display: flex;
   align-items: center;
-  gap: 0.5rem;
-  margin-bottom: 0.35rem;
+  gap: 1rem;
+  margin-bottom: 0.2rem;
+}
+.option-card-header .option-tag {
+  font-family: var(--font-mono);
+  font-weight: 700;
+  font-size: 0.75rem;
+  color: var(--white);
+  background: var(--primary);
+  padding: 0.15rem 0.45rem;
+  border-radius: 3px;
+  letter-spacing: 0.02em;
 }
 .option-card-header h4 {
   margin: 0;
-  font-size: 1rem;
+  font-size: 0.9375rem;
   font-weight: 600;
   color: var(--gray-900);
+  line-height: 1.3;
+}
+.option-card-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.375rem;
+  margin-bottom: 0.5rem;
+}
+.option-card-meta span {
+  display: inline-block;
+  font-size: 0.75rem;
+  color: var(--gray-500);
+  background: var(--gray-50);
+  padding: 0.15rem 0.5rem;
+  border-radius: 3px;
+  white-space: nowrap;
 }
 .option-card-desc {
-  margin: 0 0 0.75rem;
-  font-size: 0.875rem;
+  margin: 0 0 0.5rem;
+  font-size: 0.8125rem;
   color: var(--gray-500);
+  line-height: 1.4;
+}
+.option-card-footer {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+.option-card-footer a,
+.option-card-footer span {
+  font-size: 0.8125rem;
+  font-weight: 600;
+  color: var(--primary);
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.25rem;
+  cursor: pointer;
+}
+.option-card-footer a:hover,
+.option-card-footer span:hover {
+  color: var(--accent);
+  text-decoration: underline;
 }
 .option-card-right {
   flex-shrink: 0;
-  width: 100px;
+  width: 90px;
   display: flex;
   align-items: center;
   justify-content: center;
 }
 .option-card-right img {
   max-width: 100%;
-  max-height: 70px;
+  max-height: 65px;
   height: auto;
-  border-radius: 4px;
+  border-radius: 3px;
   object-fit: contain;
 }
 @media (max-width: 600px) {
   .option-card-body {
     flex-direction: column;
-    text-align: center;
-  }
-  .option-card-header {
-    justify-content: center;
+    align-items: flex-start;
+    gap: 0.75rem;
   }
   .option-card-right {
-    width: 80px;
+    width: 100%;
+    justify-content: flex-start;
   }
+  .option-card-right img {
+    max-height: 50px;
+  }
+}
+
+html.theme-dark .option-card-row {
+  border-color: rgba(255,255,255,0.12);
+}
+html.theme-dark .option-card {
+  background: rgba(255,255,255,0.04);
+  border-bottom-color: rgba(255,255,255,0.06);
+}
+html.theme-dark .option-card:hover {
+  background: rgba(255,255,255,0.07);
+}
+html.theme-dark .option-card-header h4 {
+  color: var(--white);
+}
+html.theme-dark .option-card-meta span {
+  color: rgba(255,255,255,0.6);
+  background: rgba(255,255,255,0.08);
+}
+html.theme-dark .option-card-footer span,
+html.theme-dark .option-card-footer a {
+  color: var(--accent);
+}
+
+html.theme-accessibility .option-card-row {
+  border-color: #FFFFFF;
+}
+html.theme-accessibility .option-card {
+  background: #000000;
+  border-bottom-color: #FFFFFF;
+}
+html.theme-accessibility .option-card:hover {
+  background: #111111;
+}
+html.theme-accessibility .option-card-header h4 {
+  color: #FFFFFF;
+}
+html.theme-accessibility .option-card-meta span {
+  color: #FFFFFF;
+  background: #000000;
+  border: 1px solid #FFFFFF;
+}
+html.theme-accessibility .option-card-footer span,
+html.theme-accessibility .option-card-footer a {
+  color: #FFFFFF;
+  text-decoration: underline;
 }
 
 /* --- Scroll Animation --- */
