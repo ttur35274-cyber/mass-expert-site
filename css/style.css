@@ -385,7 +385,7 @@ p { margin-bottom: 1rem; }
 }
 .navbar-brand:hover { color: var(--accent); }
 .navbar-brand .brand-icon {
-  width: 70px;
+  width: 56px;
   height: 56px;
   background: var(--accent);
   border-radius: var(--radius);
@@ -407,10 +407,12 @@ p { margin-bottom: 1rem; }
 }
 .navbar-links a {
   color: rgba(255,255,255,0.85);
-  padding: 0.5rem 0.6rem;
+  padding: 0.5rem 0.4rem;
   border-radius: var(--radius);
   font-size: 0.875rem;
   font-weight: 500;
+  white-space: nowrap;
+  flex-shrink: 1;
   transition: all var(--transition);
 }
 .navbar-links a:hover,
