@@ -372,7 +372,7 @@ p { margin-bottom: 1rem; }
   display: flex;
   align-items: center;
   justify-content: space-between;
-  height: 72px;
+  height: 78px;
 }
 .navbar-brand {
   display: flex;
@@ -385,8 +385,8 @@ p { margin-bottom: 1rem; }
 }
 .navbar-brand:hover { color: var(--accent); }
 .navbar-brand .brand-icon {
-  width: 56px;
-  height: 56px;
+  width: 70px;
+  height: 70px;
   background: var(--accent);
   border-radius: var(--radius);
   display: flex;
@@ -397,7 +397,7 @@ p { margin-bottom: 1rem; }
   color: var(--gray-900);
   line-height: 1.2;
   text-align: center;
-  padding: 4px;
+  padding: 6px;
   flex-shrink: 0;
 }
 .navbar-links {
