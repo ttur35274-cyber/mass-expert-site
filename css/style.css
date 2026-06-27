@@ -1316,17 +1316,24 @@ html.theme-accessibility .option-card-footer a {
 }
 
 @media (max-width: 768px) {
+  .navbar .container { height: 56px; }
+  .navbar-brand .brand-icon {
+    width: 40px;
+    height: 40px;
+    font-size: 0.65rem;
+    padding: 3px;
+  }
   .navbar-links {
     display: none;
     position: absolute;
-    top: 72px;
+    top: 56px;
     left: 0;
     right: 0;
     background: var(--primary-dark);
     flex-direction: column;
     padding: 1rem;
     border-bottom: 1px solid rgba(255,255,255,0.08);
-    max-height: calc(100vh - 72px);
+    max-height: calc(100vh - 56px);
     overflow-y: auto;
   }
   .navbar-links.open { display: flex; }
