@@ -1139,7 +1139,7 @@ details.expandable .expandable-body p {
   transition: transform 0.3s ease;
 }
 .card-hover-zoom {
-  overflow: hidden;
+  overflow: clip;
 }
 .card-hover-zoom .option-card-image {
   background: transparent;
