@@ -1175,14 +1175,14 @@ details.expandable .expandable-body p {
   transition: transform 0.3s ease;
 }
 .card-hover-zoom:hover .option-card-meta {
-  transform: translateY(60px);
+  transform: translateY(110px);
 }
 .card-hover-zoom .option-card-desc {
   transition: opacity 0.2s ease, transform 0.3s ease;
 }
 .card-hover-zoom:hover .option-card-desc {
   opacity: 0;
-  transform: translateY(60px);
+  transform: translateY(110px);
 }
 .card-hover-zoom .option-card-header h4,
 .card-hover-zoom .option-card-header .option-tag {
@@ -1191,7 +1191,7 @@ details.expandable .expandable-body p {
 }
 .card-hover-zoom:hover .option-card-header h4,
 .card-hover-zoom:hover .option-card-header .option-tag {
-  transform: translateY(60px);
+  transform: translateY(110px);
 }
 .option-card-body {
   padding: 1rem 1.25rem 0.875rem;
