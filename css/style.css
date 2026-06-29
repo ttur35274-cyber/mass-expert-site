@@ -1416,6 +1416,13 @@ html.theme-accessibility .option-card-footer a {
   .theme-toggles-mobile { display: flex; gap: 0.5rem; padding: 0.75rem 1rem; border-top: 1px solid rgba(255,255,255,0.1); margin-top: 0.5rem; }
   .theme-toggles-desktop { display: none; }
   .navbar-toggle { display: block; }
+  .card-hover-zoom .option-card-hover-btn {
+    opacity: 1;
+    visibility: visible;
+    position: static;
+    z-index: auto;
+    margin-top: 0.5rem;
+  }
   .hero { min-height: auto; padding: 6rem 0 3rem; }
   .hero-content .hero-desc { font-size: 1rem; }
   .about-grid { grid-template-columns: 1fr; }
