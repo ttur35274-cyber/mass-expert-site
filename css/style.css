@@ -1138,11 +1138,17 @@ details.expandable .expandable-body p {
   object-fit: contain;
   transition: transform 0.3s ease;
 }
+.card-hover-zoom .option-card-image {
+  background: transparent;
+  border-bottom: 1px solid var(--gray-100);
+  overflow: hidden;
+}
 .card-hover-zoom .option-card-image img {
   max-height: 90px;
+  transition: transform 0.3s ease;
 }
 .card-hover-zoom:hover .option-card-image img {
-  transform: scale(1.12);
+  transform: scale(2);
 }
 .card-hover-zoom .option-card-hover-btn {
   display: none;
@@ -1160,6 +1166,22 @@ details.expandable .expandable-body p {
   flex: 1;
   display: flex;
   flex-direction: column;
+}
+.card-hover-zoom .option-card-desc {
+  transition: opacity 0.2s ease;
+}
+.card-hover-zoom:hover .option-card-desc {
+  opacity: 0;
+}
+.card-hover-zoom .option-card-header h4,
+.card-hover-zoom .option-card-header .option-tag {
+  transition: transform 0.3s ease;
+  display: inline-block;
+}
+.card-hover-zoom:hover .option-card-header h4,
+.card-hover-zoom:hover .option-card-header .option-tag {
+  transform: scale(1.5);
+  transform-origin: left center;
 }
 .option-card-body {
   padding: 1rem 1.25rem 0.875rem;
@@ -1278,6 +1300,9 @@ html.theme-dark .option-card-footer {
 }
 html.theme-dark .option-card-footer a {
   color: var(--accent);
+}
+html.theme-dark .card-hover-zoom .option-card-image {
+  background: transparent;
 }
 html.theme-dark .card-hover-zoom .option-card-hover-btn .btn-primary {
   background: var(--accent);
