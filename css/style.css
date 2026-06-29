@@ -1138,22 +1138,28 @@ details.expandable .expandable-body p {
   object-fit: contain;
   transition: transform 0.3s ease;
 }
+.card-hover-zoom {
+  overflow: hidden;
+}
 .card-hover-zoom .option-card-image {
   background: transparent;
   border-bottom: none;
-  overflow: hidden;
+  overflow: visible;
+  height: auto;
+  padding: 0.75rem 1rem 0.5rem;
 }
 .card-hover-zoom .option-card-image img {
-  max-height: 90px;
+  max-height: 100px;
   transition: transform 0.3s ease;
+  display: block;
+  margin: 0 auto;
 }
 .card-hover-zoom:hover .option-card-image img {
   transform: scale(2);
 }
 .card-hover-zoom .option-card-hover-btn {
   display: none;
-  margin-top: auto;
-  padding-top: 0.625rem;
+  margin-top: 0.5rem;
 }
 .card-hover-zoom:hover .option-card-hover-btn {
   display: block;
@@ -1162,7 +1168,7 @@ details.expandable .expandable-body p {
   display: inline-flex;
 }
 .card-hover-zoom .option-card-body {
-  padding: 1rem 1.25rem 0.875rem;
+  padding: 0 1.25rem 0.875rem;
   flex: 1;
   display: flex;
   flex-direction: column;
@@ -1171,14 +1177,14 @@ details.expandable .expandable-body p {
   transition: transform 0.3s ease;
 }
 .card-hover-zoom:hover .option-card-meta {
-  transform: translateY(8px);
+  transform: translateY(40px);
 }
 .card-hover-zoom .option-card-desc {
   transition: opacity 0.2s ease, transform 0.3s ease;
 }
 .card-hover-zoom:hover .option-card-desc {
   opacity: 0;
-  transform: translateY(12px);
+  transform: translateY(40px);
 }
 .card-hover-zoom .option-card-header h4,
 .card-hover-zoom .option-card-header .option-tag {
