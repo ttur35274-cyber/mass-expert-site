@@ -1160,7 +1160,7 @@ details.expandable .expandable-body p {
 }
 .card-hover-zoom .option-card-hover-btn {
   display: none;
-  margin-top: 0.5rem;
+  margin-top: 0.25rem;
 }
 .card-hover-zoom:hover .option-card-hover-btn {
   display: block;
@@ -1173,6 +1173,8 @@ details.expandable .expandable-body p {
 }
 .card-hover-zoom .option-card-hover-btn .btn-primary {
   display: inline-flex;
+  padding: 0.25rem 0.75rem;
+  font-size: 0.8125rem;
 }
 .card-hover-zoom .option-card-body {
   padding: 0 1.25rem 0.875rem;
