@@ -1145,6 +1145,9 @@ details.expandable .expandable-body p {
   align-items: center;
   gap: 0.625rem;
   transition: transform 0.3s ease;
+  background: var(--white);
+  position: relative;
+  z-index: 1;
 }
 .card-hover-zoom:hover .option-card-header {
   transform: translateY(105px);
@@ -1186,6 +1189,8 @@ details.expandable .expandable-body p {
 .card-hover-zoom .option-card-hover-btn {
   display: none;
   margin-top: 0.5rem;
+  position: relative;
+  z-index: 1;
 }
 .card-hover-zoom:hover .option-card-hover-btn {
   display: block;
@@ -1335,6 +1340,7 @@ html.theme-dark .card-hover-zoom .option-card-image {
 }
 html.theme-dark .card-hover-zoom .option-card-header {
   border-bottom-color: rgba(255,255,255,0.08);
+  background: rgba(255,255,255,0.05);
 }
 html.theme-dark .card-hover-zoom .option-card-hover-btn .btn-primary {
   background: var(--accent);
