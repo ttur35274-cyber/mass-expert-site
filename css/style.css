@@ -1183,10 +1183,11 @@ details.expandable .expandable-body p {
   transform: translateY(105px);
 }
 .card-hover-zoom .option-card-desc {
-  transition: opacity 0.2s ease, transform 0.3s ease;
+  transition: opacity 0.2s ease 0.15s, visibility 0s ease 0.35s, transform 0.3s ease;
 }
 .card-hover-zoom:hover .option-card-desc {
   opacity: 0;
+  visibility: hidden;
   transform: translateY(105px);
 }
 .card-hover-zoom .option-card-header h4,
