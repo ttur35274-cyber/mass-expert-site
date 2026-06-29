@@ -1153,8 +1153,7 @@ details.expandable .expandable-body p {
   display: block;
 }
 .card-hover-zoom .option-card-hover-btn .btn-primary {
-  width: 100%;
-  text-align: center;
+  display: inline-flex;
 }
 .card-hover-zoom .option-card-body {
   padding: 1rem 1.25rem 0.875rem;
