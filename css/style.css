@@ -1117,8 +1117,8 @@ details.expandable .expandable-body p {
   flex-direction: column;
 }
 .option-card:hover {
-  border-color: var(--gray-300);
-  box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+  border-color: var(--gray-200);
+  box-shadow: none;
 }
 .option-card-image {
   width: 100%;
