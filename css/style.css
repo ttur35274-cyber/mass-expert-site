@@ -1138,9 +1138,37 @@ details.expandable .expandable-body p {
   object-fit: contain;
   transition: transform 0.3s ease;
 }
+.card-hover-zoom .option-card-header {
+  padding: 0.75rem 1.25rem;
+  border-bottom: 1px solid var(--gray-100);
+  display: flex;
+  align-items: center;
+  gap: 0.625rem;
+  transition: transform 0.3s ease;
+}
+.card-hover-zoom:hover .option-card-header {
+  transform: translateY(105px);
+}
+.card-hover-zoom .option-card-header .option-tag {
+  font-family: var(--font-mono);
+  font-weight: 700;
+  font-size: 0.6875rem;
+  color: var(--white);
+  background: var(--primary);
+  padding: 0.125rem 0.4rem;
+  border-radius: 3px;
+  letter-spacing: 0.03em;
+  line-height: 1.4;
+}
+.card-hover-zoom .option-card-header h4 {
+  margin: 0;
+  font-size: 0.9375rem;
+  font-weight: 600;
+  color: var(--gray-900);
+  line-height: 1.3;
+}
 .card-hover-zoom .option-card-image {
   background: transparent;
-  border-bottom: none;
   overflow: visible;
   height: auto;
   padding: 0.75rem 1rem 0.5rem;
@@ -1182,15 +1210,6 @@ details.expandable .expandable-body p {
 }
 .card-hover-zoom:hover .option-card-desc {
   opacity: 0;
-  transform: translateY(105px);
-}
-.card-hover-zoom .option-card-header h4,
-.card-hover-zoom .option-card-header .option-tag {
-  transition: transform 0.3s ease;
-  display: inline-block;
-}
-.card-hover-zoom:hover .option-card-header h4,
-.card-hover-zoom:hover .option-card-header .option-tag {
   transform: translateY(105px);
 }
 .option-card-body {
@@ -1313,6 +1332,9 @@ html.theme-dark .option-card-footer a {
 }
 html.theme-dark .card-hover-zoom .option-card-image {
   background: transparent;
+}
+html.theme-dark .card-hover-zoom .option-card-header {
+  border-bottom-color: rgba(255,255,255,0.08);
 }
 html.theme-dark .card-hover-zoom .option-card-hover-btn .btn-primary {
   background: var(--accent);
