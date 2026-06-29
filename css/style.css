@@ -1393,7 +1393,7 @@ html.theme-accessibility .option-card-footer a {
 @media (max-width: 768px) {
   .navbar .container { height: 56px; }
   .navbar-brand .brand-icon {
-    width: 40px;
+    width: 56px;
     height: 40px;
     font-size: 0.65rem;
     padding: 3px;
