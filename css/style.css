@@ -1161,6 +1161,12 @@ details.expandable .expandable-body p {
 }
 .card-hover-zoom:hover .option-card-hover-btn {
   display: block;
+  animation: fadeInUp 0.25s ease 0.15s both;
+}
+
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(8px); }
+  to   { opacity: 1; transform: translateY(0); }
 }
 .card-hover-zoom .option-card-hover-btn .btn-primary {
   display: inline-flex;
