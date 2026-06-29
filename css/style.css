@@ -1153,6 +1153,7 @@ details.expandable .expandable-body p {
 }
 .card-hover-zoom:hover .option-card-image img {
   transform: scale(2);
+  transform-origin: top center;
 }
 .card-hover-zoom .option-card-hover-btn {
   display: none;
@@ -1190,8 +1191,7 @@ details.expandable .expandable-body p {
 }
 .card-hover-zoom:hover .option-card-header h4,
 .card-hover-zoom:hover .option-card-header .option-tag {
-  transform: scale(1.5) translateY(12px);
-  transform-origin: left center;
+  transform: translateY(60px);
 }
 .option-card-body {
   padding: 1rem 1.25rem 0.875rem;
