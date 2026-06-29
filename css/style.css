@@ -1319,6 +1319,20 @@ html.theme-dark .option-card-footer {
 html.theme-dark .option-card-footer a {
   color: var(--accent);
 }
+html.theme-dark .product-tab {
+  background: rgba(255,255,255,0.06);
+  border-color: rgba(255,255,255,0.15);
+  color: rgba(255,255,255,0.7);
+}
+html.theme-dark .product-tab:hover {
+  border-color: var(--accent);
+  color: var(--accent);
+}
+html.theme-dark .product-tab.active {
+  background: var(--accent);
+  color: var(--gray-900);
+  border-color: var(--accent);
+}
 html.theme-dark .card-hover-zoom .option-card-image {
   background: transparent;
 }
