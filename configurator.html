@@ -1,0 +1,430 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Конфигуратор Mass-EXPERT — Быстрый подбор расходомера</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+<link rel="stylesheet" href="css/style.css">
+<style>
+:root {
+  --cfg-primary: #0B3D6B;
+  --cfg-accent: #F59E0B;
+  --cfg-gray: #6B7280;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  background: #F8F9FA;
+  padding-bottom: 4rem;
+}
+.cfg-header {
+  background: var(--cfg-primary);
+  color: white;
+  padding: 3rem 0 2rem;
+  text-align: center;
+}
+.cfg-header h1 { margin: 0; font-size: 1.75rem; }
+.cfg-header p { color: rgba(255,255,255,0.7); margin: 0.5rem 0 0; font-size: 0.9375rem; }
+
+.cfg-container { max-width: 1100px; margin: 0 auto; padding: 0 1.5rem; }
+
+/* Схема — SVG-подобная строка */
+.cfg-diagram {
+  background: white;
+  border: 1px solid #E5E7EB;
+  border-radius: 12px;
+  padding: 2rem 1.5rem;
+  margin: 2rem auto;
+  overflow-x: auto;
+  text-align: center;
+}
+.cfg-scheme {
+  display: inline-flex;
+  align-items: center;
+  gap: 0;
+  font-family: 'Courier New', monospace;
+  font-size: 0.75rem;
+  white-space: nowrap;
+}
+.cfg-scheme-label {
+  font-weight: 800;
+  color: var(--cfg-primary);
+  background: #EFF6FF;
+  padding: 0.5rem 0.75rem;
+  border-radius: 6px 0 0 6px;
+  border: 2px solid var(--cfg-primary);
+  border-right: none;
+  font-size: 0.7rem;
+}
+.cfg-block {
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0.4rem 0.5rem;
+  border: 2px solid #D1D5DB;
+  border-left: none;
+  cursor: pointer;
+  transition: all 0.15s;
+  min-width: 52px;
+  background: white;
+  position: relative;
+}
+.cfg-block:first-of-type { border-left: 2px solid #D1D5DB; }
+.cfg-block:hover { border-color: var(--cfg-accent); background: #FFFBEB; z-index: 1; }
+.cfg-block.selected { border-color: var(--cfg-accent); background: #FEF3C7; z-index: 2; }
+.cfg-block .block-code { font-weight: 700; font-size: 0.65rem; color: var(--cfg-gray); }
+.cfg-block .block-val { font-weight: 700; font-size: 0.7rem; color: var(--cfg-primary); margin-top: 2px; }
+.cfg-block.selected .block-val { color: #92400E; }
+
+/* Панель выбора опции */
+.cfg-panel {
+  background: white;
+  border: 1px solid #E5E7EB;
+  border-radius: 12px;
+  padding: 1.5rem;
+  margin-bottom: 1.5rem;
+  display: none;
+}
+.cfg-panel.active { display: block; }
+.cfg-panel h3 { margin: 0 0 0.25rem; font-size: 1.125rem; color: var(--cfg-primary); }
+.cfg-panel .panel-desc { font-size: 0.875rem; color: var(--cfg-gray); margin-bottom: 1rem; }
+.cfg-options {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 0.5rem;
+}
+.cfg-option {
+  border: 1px solid #E5E7EB;
+  border-radius: 8px;
+  padding: 0.625rem 0.75rem;
+  cursor: pointer;
+  transition: all 0.15s;
+  font-size: 0.8125rem;
+}
+.cfg-option:hover { border-color: var(--cfg-accent); background: #FFFBEB; }
+.cfg-option.selected { border-color: var(--cfg-accent); background: #FEF3C7; font-weight: 600; }
+.cfg-option .opt-code { font-weight: 700; color: var(--cfg-primary); }
+.cfg-option .opt-desc { color: var(--cfg-gray); font-size: 0.75rem; margin-top: 2px; }
+
+/* Сводка выбранного */
+.cfg-summary {
+  background: white;
+  border: 1px solid #E5E7EB;
+  border-radius: 12px;
+  padding: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+.cfg-summary h3 { margin: 0 0 0.75rem; font-size: 1rem; color: var(--cfg-primary); }
+.cfg-summary-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+  gap: 0.5rem;
+}
+.cfg-summary-item {
+  font-size: 0.75rem;
+  padding: 0.375rem 0.5rem;
+  background: #F3F4F6;
+  border-radius: 6px;
+}
+
+/* Форма заказа */
+.cfg-form {
+  background: white;
+  border: 1px solid #E5E7EB;
+  border-radius: 12px;
+  padding: 1.5rem;
+}
+.cfg-form h3 { margin: 0 0 0.75rem; font-size: 1rem; color: var(--cfg-primary); }
+.cfg-form input, .cfg-form textarea {
+  width: 100%;
+  padding: 0.625rem 0.75rem;
+  border: 1px solid #D1D5DB;
+  border-radius: 8px;
+  font-family: inherit;
+  font-size: 0.875rem;
+  margin-bottom: 0.75rem;
+  box-sizing: border-box;
+}
+.cfg-form input:focus, .cfg-form textarea:focus {
+  outline: none;
+  border-color: var(--cfg-accent);
+  box-shadow: 0 0 0 3px rgba(245,158,11,0.15);
+}
+.cfg-form .form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.75rem;
+}
+.cfg-form .btn-primary { font-size: 1rem; padding: 0.75rem 2rem; }
+
+.cfg-success {
+  display: none;
+  text-align: center;
+  padding: 3rem 2rem;
+  background: white;
+  border: 1px solid #E5E7EB;
+  border-radius: 12px;
+}
+.cfg-success.show { display: block; }
+.cfg-success .icon { font-size: 3rem; color: #10B981; margin-bottom: 1rem; }
+
+@media (max-width: 600px) {
+  .cfg-form .form-row { grid-template-columns: 1fr; }
+  .cfg-options { grid-template-columns: 1fr 1fr; }
+}
+</style>
+</head>
+<body>
+
+<div class="cfg-header">
+  <div class="cfg-container">
+    <h1>Конфигуратор Mass-EXPERT</h1>
+    <p>Выберите опции, чтобы подобрать расходомер под вашу задачу</p>
+  </div>
+</div>
+
+<div class="cfg-container">
+
+  <!-- SVG-схема -->
+  <div class="cfg-diagram">
+    <div class="cfg-scheme" id="scheme">
+      <span class="cfg-scheme-label">MASS‑EXPERT</span>
+    </div>
+  </div>
+
+  <!-- Панель выбора -->
+  <div class="cfg-panel" id="panel"></div>
+
+  <!-- Сводка -->
+  <div class="cfg-summary" id="summary">
+    <h3><i class="fas fa-clipboard-list"></i> Выбранная конфигурация</h3>
+    <div class="cfg-summary-grid" id="summaryGrid"></div>
+  </div>
+
+  <!-- Форма заказа -->
+  <div class="cfg-form" id="orderForm">
+    <h3><i class="fas fa-paper-plane"></i> Отправить запрос</h3>
+    <div class="form-row">
+      <input type="text" id="orderName" placeholder="Ваше имя *" required>
+      <input type="tel" id="orderPhone" placeholder="Телефон *" required>
+    </div>
+    <input type="email" id="orderEmail" placeholder="E-mail">
+    <textarea id="orderComment" rows="3" placeholder="Дополнительные требования, количество, сроки..."></textarea>
+    <div style="display:flex;align-items:center;gap:1rem;flex-wrap:wrap;">
+      <button class="btn btn-primary" onclick="sendOrder()">Отправить запрос</button>
+      <span style="font-size:0.8125rem;color:var(--cfg-gray);">* — обязательные поля</span>
+    </div>
+  </div>
+
+  <!-- Успех -->
+  <div class="cfg-success" id="success">
+    <div class="icon"><i class="fas fa-check-circle"></i></div>
+    <h3>Запрос отправлен!</h3>
+    <p style="color:var(--cfg-gray);">Мы свяжемся с вами в ближайшее время для уточнения деталей.</p>
+    <button class="btn btn-outline" onclick="resetConfig()" style="margin-top:1rem;">Настроить ещё</button>
+  </div>
+</div>
+
+<script>
+// ===== ДАННЫЕ ОПЦИЙ (23 блока) =====
+const BLOCKS = [
+  { id:'1A', name:'Условный диаметр', desc:'DN01–DN250', options:[
+    {code:'001',desc:'DN01 — 12 кг/ч'},{code:'002',desc:'DN02 — 96 кг/ч'},{code:'003',desc:'DN03 — 180 кг/ч'},
+    {code:'004',desc:'DN04 — 300 кг/ч'},{code:'008',desc:'DN08 — 1 200 кг/ч'},{code:'015',desc:'DN15 — 3 600 кг/ч'},
+    {code:'020',desc:'DN20 — 6 000 кг/ч'},{code:'025',desc:'DN25 — 12 000 кг/ч'},{code:'040',desc:'DN40 — 27 000 кг/ч'},
+    {code:'050',desc:'DN50 — 39 000 кг/ч'},{code:'080',desc:'DN80 — 120 000 кг/ч'},{code:'100',desc:'DN100 — 180 000 кг/ч'},
+    {code:'150',desc:'DN150 — 720 000 кг/ч'},{code:'200',desc:'DN200 — 1 080 000 кг/ч'},{code:'250',desc:'DN250 — 1 740 000 кг/ч'}
+  ]},
+  { id:'2B', name:'Условия эксплуатации', desc:'T/P/L/D/G/C/X', options:[
+    {code:'T',desc:'Стандартное (−50…+150 °C, до 10 МПа)'},{code:'P',desc:'Повышенное давление (до 45 МПа)'},
+    {code:'L',desc:'Криогенное (−200…+150 °C)'},{code:'D',desc:'Сверхнизкие температуры'},
+    {code:'G',desc:'Высокая температура (до +230 °C)'},{code:'C',desc:'Сверхвысокая температура (до +350 °C)'}
+  ]},
+  { id:'3C', name:'Тип сенсора', desc:'U/K/W/L/D', options:[
+    {code:'U',desc:'U-образный — универсальный'},{code:'K',desc:'Широкий U-образный — до 96 МПа'},
+    {code:'W',desc:'W-образный микроизгиб — компактный'},{code:'L',desc:'Прямотрубный — CIP/SIP'},
+    {code:'D',desc:'Δ-образный — микрорасходы'}
+  ]},
+  { id:'4D', name:'Макс. давление', desc:'1,6–90 МПа', options:[
+    {code:'02',desc:'1,6 МПа'},{code:'04',desc:'4 МПа'},{code:'06',desc:'6,3 МПа'},{code:'10',desc:'10 МПа'},
+    {code:'16',desc:'16 МПа'},{code:'20',desc:'20 МПа'},{code:'25',desc:'25 МПа'},{code:'30',desc:'30 МПа'},
+    {code:'35',desc:'35 МПа'},{code:'40',desc:'40 МПа'},{code:'45',desc:'45 МПа'},{code:'70',desc:'70 МПа'},
+    {code:'90',desc:'90 МПа'}
+  ]},
+  { id:'5E', name:'Соединение', desc:'Фланцы, резьба', options:[
+    {code:'R',desc:'ГОСТ 33259-2015'},{code:'EN',desc:'EN 1092-1'},{code:'AS',desc:'ASME B16.5'},
+    {code:'HS',desc:'Tri-clamp'},{code:'GS',desc:'Резьба G'},{code:'NR',desc:'NPT 1/4"–1"'}
+  ]},
+  { id:'6F', name:'Материал трубок', desc:'316L, Титан...', options:[
+    {code:'S',desc:'316L'},{code:'G',desc:'316L (Ni)'},{code:'L',desc:'904L'},{code:'T',desc:'Титан'},
+    {code:'C',desc:'Сталь C4'},{code:'H',desc:'Хастеллой'},{code:'D',desc:'Дуплекс'},{code:'A',desc:'Тантал'}
+  ]},
+  { id:'7G', name:'Точность', desc:'0,1%–1,0%', options:[
+    {code:'S',desc:'0,1 %'},{code:'A',desc:'0,15 %'},{code:'B',desc:'0,2 %'},{code:'C',desc:'0,5 %'},{code:'D',desc:'1,0 %'}
+  ]},
+  { id:'8H', name:'Монтаж трансмиттера', desc:'Интегр./раздельн.', options:[
+    {code:'N',desc:'Интегрированный'},{code:'S',desc:'Раздельный'},{code:'J',desc:'Компактный интегрированный'},
+    {code:'D',desc:'DIN-рейка'}
+  ]},
+  { id:'9I', name:'Дисплей', desc:'С/без дисплея', options:[{code:'C',desc:'С дисплеем'},{code:'M',desc:'Без дисплея'}]},
+  { id:'10J', name:'Выходные сигналы', desc:'HART, RS-485...', options:[
+    {code:'CL',desc:'4–20 мА + HART'},{code:'RS',desc:'RS-485 Modbus'},{code:'CN',desc:'CAN'},
+    {code:'PP',desc:'PROFIBUS PA'},{code:'ML',desc:'Multi (HART+RS-485+CAN)'}
+  ]},
+  { id:'11K', name:'Сертификация', desc:'Ex, 3-A, TS...', options:[
+    {code:'N',desc:'Нет'},{code:'A',desc:'3-A (санитарный)'},{code:'S',desc:'TS (спецоборудование)'},{code:'J',desc:'CCS (морской)'}
+  ]},
+  { id:'12L', name:'Трансмиттер', desc:'ME100/200/300', options:[
+    {code:'V1',desc:'ME100 — базовый'},{code:'V2',desc:'ME200 — расширенный Ex'},{code:'V3',desc:'ME300 — DIN-рейка'}
+  ]},
+  { id:'13M', name:'Режим измерения', desc:'Масса/плотность', options:[
+    {code:'M',desc:'Масса'},{code:'D',desc:'Плотность'},{code:'A',desc:'Масса + плотность'}
+  ]},
+  { id:'14N', name:'Материал соединения', desc:'304, 316L...', options:[
+    {code:'E',desc:'304'},{code:'S',desc:'316L'},{code:'G',desc:'316L (Ni)'},{code:'L',desc:'904L'},
+    {code:'T',desc:'Титан'},{code:'H',desc:'Хастеллой'},{code:'A',desc:'Тантал'}
+  ]},
+  { id:'15O', name:'Корпус сенсора', desc:'304/316L', options:[{code:'E',desc:'304'},{code:'S',desc:'316L'}]},
+  { id:'16P', name:'Электропитание', desc:'24VDC/220VAC', options:[
+    {code:'1',desc:'24 В DC'},{code:'2',desc:'220 В AC / 24 В DC'}
+  ]},
+  { id:'17Q', name:'Кабельный ввод', desc:'NPT/M20', options:[{code:'N',desc:'1/2" NPT'},{code:'M',desc:'M20×1,5'}]},
+  { id:'18R', name:'Измерение плотности', desc:'0,15–3 кг/м³', options:[
+    {code:'1',desc:'3 кг/м³'},{code:'2',desc:'1 кг/м³'},{code:'3',desc:'0,5 кг/м³'},{code:'4',desc:'0,2 кг/м³'},{code:'5',desc:'0,15 кг/м³'}
+  ]},
+  { id:'19S', name:'Изотерм. кожух', desc:'Да/Нет', options:[{code:'N',desc:'Нет'},{code:'Y',desc:'Да'}]},
+  { id:'20T', name:'Язык интерфейса', desc:'Англ./Рус./Кит.', options:[
+    {code:'E',desc:'Английский'},{code:'C',desc:'Китайский'},{code:'R',desc:'Русский'}
+  ]},
+  { id:'21U', name:'Комплектация', desc:'Фланцы в компл.', options:[
+    {code:'0',desc:'Без фланцев'},{code:'1',desc:'Фланцы углерод. сталь'},{code:'2',desc:'Фланцы нерж. сталь'}
+  ]},
+  { id:'22V', name:'ETO (на заказ)', desc:'Индивидуально', options:[{code:'X',desc:'Требуется индивидуальное решение'}]},
+  { id:'23X', name:'Гарантия', desc:'Станд./Расшир.', options:[
+    {code:'-',desc:'Стандартная 12 мес.'},{code:'EW',desc:'Расширенная 24 мес.'},{code:'SW',desc:'Специальная'}
+  ]}
+];
+
+let selections = {};
+let activeBlock = null;
+
+// Построить схему
+function buildScheme() {
+  const el = document.getElementById('scheme');
+  BLOCKS.forEach((b, i) => {
+    const div = document.createElement('div');
+    div.className = 'cfg-block' + (i === 0 ? ' first' : '');
+    div.dataset.idx = i;
+    div.innerHTML = `<span class="block-code">${b.id}</span><span class="block-val" id="val-${b.id}">—</span>`;
+    div.onclick = () => selectBlock(i);
+    div.title = b.name;
+    el.appendChild(div);
+  });
+}
+
+// Выбрать блок
+function selectBlock(idx) {
+  activeBlock = idx;
+  const block = BLOCKS[idx];
+  const panel = document.getElementById('panel');
+  
+  document.querySelectorAll('.cfg-block').forEach(el => el.classList.remove('selected'));
+  document.querySelectorAll(`.cfg-block[data-idx="${idx}"]`).forEach(el => el.classList.add('selected'));
+  
+  panel.className = 'cfg-panel active';
+  let html = `<h3>${block.id}: ${block.name}</h3><p class="panel-desc">${block.desc}</p><div class="cfg-options">`;
+  block.options.forEach(opt => {
+    const sel = selections[block.id] === opt.code ? ' selected' : '';
+    html += `<div class="cfg-option${sel}" onclick="selectOption('${block.id}','${opt.code}','${opt.desc}')">
+      <div class="opt-code">${opt.code}</div><div class="opt-desc">${opt.desc}</div>
+    </div>`;
+  });
+  html += `</div>`;
+  panel.innerHTML = html;
+}
+
+// Выбрать опцию
+function selectOption(blockId, code, desc) {
+  selections[blockId] = code;
+  
+  // Обновить схему
+  document.getElementById(`val-${blockId}`).textContent = code;
+  
+  // Обновить панель
+  document.querySelectorAll('#panel .cfg-option').forEach(el => el.classList.remove('selected'));
+  event.target.closest('.cfg-option').classList.add('selected');
+  
+  // Обновить сводку
+  updateSummary();
+  
+  // Автоматически перейти к следующему блоку
+  const idx = BLOCKS.findIndex(b => b.id === blockId);
+  if (idx >= 0 && idx < BLOCKS.length - 1) {
+    setTimeout(() => selectBlock(idx + 1), 300);
+  }
+}
+
+// Обновить сводку
+function updateSummary() {
+  const grid = document.getElementById('summaryGrid');
+  let html = '';
+  BLOCKS.forEach(b => {
+    const val = selections[b.id] || '—';
+    html += `<div class="cfg-summary-item"><strong>${b.id}</strong> ${b.name}: ${val}</div>`;
+  });
+  grid.innerHTML = html;
+}
+
+// Отправить заказ
+function sendOrder() {
+  const name = document.getElementById('orderName').value.trim();
+  const phone = document.getElementById('orderPhone').value.trim();
+  if (!name || !phone) { alert('Заполните имя и телефон'); return; }
+  
+  // Собрать конфигурацию
+  let configStr = 'Mass-EXPERT';
+  BLOCKS.forEach(b => { configStr += '-' + (selections[b.id] || '?'); });
+  
+  const comment = document.getElementById('orderComment').value.trim();
+  const email = document.getElementById('orderEmail').value.trim();
+  
+  const msg = `🔧 НОВЫЙ ЗАПРОС КОНФИГУРАТОРА\n\nКонфигурация: ${configStr}\n\nИмя: ${name}\nТелефон: ${phone}\nEmail: ${email || '—'}\nКомментарий: ${comment || '—'}`;
+  
+  // Показать успех
+  document.getElementById('orderForm').style.display = 'none';
+  document.getElementById('success').classList.add('show');
+  
+  // Скопировать в буфер для отправки вручную
+  navigator.clipboard.writeText(msg).catch(() => {});
+  
+  console.log('Order:', msg);
+}
+
+// Сброс
+function resetConfig() {
+  selections = {};
+  activeBlock = null;
+  document.querySelectorAll('.cfg-block').forEach(el => el.classList.remove('selected'));
+  BLOCKS.forEach(b => document.getElementById(`val-${b.id}`).textContent = '—');
+  document.getElementById('panel').className = 'cfg-panel';
+  document.getElementById('panel').innerHTML = '';
+  document.getElementById('orderForm').style.display = 'block';
+  document.getElementById('success').classList.remove('show');
+  document.getElementById('orderName').value = '';
+  document.getElementById('orderPhone').value = '';
+  document.getElementById('orderEmail').value = '';
+  document.getElementById('orderComment').value = '';
+  updateSummary();
+  selectBlock(0);
+}
+
+// Инициализация
+buildScheme();
+updateSummary();
+</script>
+</body>
+</html>
