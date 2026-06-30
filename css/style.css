@@ -1170,8 +1170,7 @@ details.expandable .expandable-body p {
 }
 .card-hover-zoom .option-card-hover-btn .btn-primary {
   display: inline-flex;
-  padding: 0.25rem 0.75rem;
-  font-size: 0.8125rem;
+  font-size: 0.875rem;
 }
 .card-hover-zoom .option-card-body {
   padding: 0 1.25rem 5px;
