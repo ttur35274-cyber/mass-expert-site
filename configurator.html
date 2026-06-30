@@ -15,197 +15,75 @@
   --cfg-accent: #F59E0B;
   --cfg-gray: #6B7280;
 }
-
-body {
-  font-family: 'Inter', sans-serif;
-  background: #F8F9FA;
-  padding-bottom: 4rem;
-}
-.cfg-header {
-  background: var(--cfg-primary);
-  color: white;
-  padding: 3rem 0 2rem;
-  text-align: center;
-}
+body { font-family: 'Inter', sans-serif; background: #F8F9FA; padding-bottom: 4rem; }
+.cfg-header { background: var(--cfg-primary); color: white; padding: 3rem 0 2rem; text-align: center; }
 .cfg-header h1 { margin: 0; font-size: 1.75rem; }
 .cfg-header p { color: rgba(255,255,255,0.7); margin: 0.5rem 0 0; font-size: 0.9375rem; }
-
 .cfg-container { max-width: 1100px; margin: 0 auto; padding: 0 1.5rem; }
 
-/* Схема — SVG-подобная строка */
-.cfg-diagram {
-  background: white;
-  border: 1px solid #E5E7EB;
-  border-radius: 12px;
-  padding: 2rem 1.5rem;
-  margin: 2rem auto;
-  overflow-x: auto;
-  text-align: center;
-}
-.cfg-scheme {
-  display: inline-flex;
-  align-items: center;
-  gap: 0;
-  font-family: 'Courier New', monospace;
-  font-size: 0.75rem;
-  white-space: nowrap;
-}
-.cfg-scheme-label {
-  font-weight: 800;
-  color: var(--cfg-primary);
-  background: #EFF6FF;
-  padding: 0.5rem 0.75rem;
-  border-radius: 6px 0 0 6px;
-  border: 2px solid var(--cfg-primary);
-  border-right: none;
-  font-size: 0.7rem;
-}
-.cfg-block {
-  display: inline-flex;
-  flex-direction: column;
-  align-items: center;
-  padding: 0.4rem 0.5rem;
-  border: 2px solid #D1D5DB;
-  border-left: none;
-  cursor: pointer;
-  transition: all 0.15s;
-  min-width: 52px;
-  background: white;
-  position: relative;
-}
+.cfg-diagram { background: white; border: 1px solid #E5E7EB; border-radius: 12px; padding: 1.5rem 1rem; margin: 2rem auto; overflow-x: auto; text-align: center; }
+.cfg-scheme { display: inline-flex; align-items: center; gap: 0; font-family: 'Courier New', monospace; font-size: 0.68rem; white-space: nowrap; }
+.cfg-scheme-label { font-weight: 800; color: var(--cfg-primary); background: #EFF6FF; padding: 0.4rem 0.6rem; border-radius: 6px 0 0 6px; border: 2px solid var(--cfg-primary); border-right: none; font-size: 0.65rem; }
+.cfg-block { display: inline-flex; flex-direction: column; align-items: center; padding: 0.3rem 0.35rem; border: 2px solid #D1D5DB; border-left: none; cursor: pointer; transition: all 0.15s; min-width: 44px; background: white; position: relative; }
 .cfg-block:first-of-type { border-left: 2px solid #D1D5DB; }
 .cfg-block:hover { border-color: var(--cfg-accent); background: #FFFBEB; z-index: 1; }
 .cfg-block.selected { border-color: var(--cfg-accent); background: #FEF3C7; z-index: 2; }
-.cfg-block .block-code { font-weight: 700; font-size: 0.65rem; color: var(--cfg-gray); }
-.cfg-block .block-val { font-weight: 700; font-size: 0.7rem; color: var(--cfg-primary); margin-top: 2px; }
+.cfg-block .block-code { font-weight: 700; font-size: 0.6rem; color: var(--cfg-gray); }
+.cfg-block .block-val { font-weight: 700; font-size: 0.65rem; color: var(--cfg-primary); margin-top: 1px; }
 .cfg-block.selected .block-val { color: #92400E; }
 
-/* Панель выбора опции */
-.cfg-panel {
-  background: white;
-  border: 1px solid #E5E7EB;
-  border-radius: 12px;
-  padding: 1.5rem;
-  margin-bottom: 1.5rem;
-  display: none;
-}
+.cfg-panel { background: white; border: 1px solid #E5E7EB; border-radius: 12px; padding: 1.5rem; margin-bottom: 1.5rem; display: none; }
 .cfg-panel.active { display: block; }
 .cfg-panel h3 { margin: 0 0 0.25rem; font-size: 1.125rem; color: var(--cfg-primary); }
-.cfg-panel .panel-desc { font-size: 0.875rem; color: var(--cfg-gray); margin-bottom: 1rem; }
-.cfg-options {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-  gap: 0.5rem;
-}
-.cfg-option {
-  border: 1px solid #E5E7EB;
-  border-radius: 8px;
-  padding: 0.625rem 0.75rem;
-  cursor: pointer;
-  transition: all 0.15s;
-  font-size: 0.8125rem;
-}
+.cfg-panel .panel-desc { font-size: 0.8125rem; color: var(--cfg-gray); margin-bottom: 1rem; }
+.cfg-panel .panel-note { font-size: 0.75rem; color: #B91C1C; background: #FEF2F2; padding: 0.5rem 0.75rem; border-radius: 6px; margin-bottom: 0.75rem; display: none; }
+.cfg-panel .panel-note.show { display: block; }
+.cfg-options { display: grid; grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); gap: 0.5rem; }
+.cfg-option { border: 1px solid #E5E7EB; border-radius: 8px; padding: 0.5rem 0.75rem; cursor: pointer; transition: all 0.15s; font-size: 0.8125rem; }
 .cfg-option:hover { border-color: var(--cfg-accent); background: #FFFBEB; }
 .cfg-option.selected { border-color: var(--cfg-accent); background: #FEF3C7; font-weight: 600; }
 .cfg-option .opt-code { font-weight: 700; color: var(--cfg-primary); }
 .cfg-option .opt-desc { color: var(--cfg-gray); font-size: 0.75rem; margin-top: 2px; }
+.cfg-option .opt-note { color: #B91C1C; font-size: 0.7rem; font-style: italic; }
 
-/* Сводка выбранного */
-.cfg-summary {
-  background: white;
-  border: 1px solid #E5E7EB;
-  border-radius: 12px;
-  padding: 1.5rem;
-  margin-bottom: 1.5rem;
-}
+.cfg-summary { background: white; border: 1px solid #E5E7EB; border-radius: 12px; padding: 1.5rem; margin-bottom: 1.5rem; }
 .cfg-summary h3 { margin: 0 0 0.75rem; font-size: 1rem; color: var(--cfg-primary); }
-.cfg-summary-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
-  gap: 0.5rem;
-}
-.cfg-summary-item {
-  font-size: 0.75rem;
-  padding: 0.375rem 0.5rem;
-  background: #F3F4F6;
-  border-radius: 6px;
-}
+.cfg-summary-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(140px, 1fr)); gap: 0.4rem; }
+.cfg-summary-item { font-size: 0.7rem; padding: 0.3rem 0.5rem; background: #F3F4F6; border-radius: 6px; }
+.cfg-summary-item .s-block { font-weight: 700; color: var(--cfg-primary); }
+.cfg-summary-item .s-code { font-weight: 700; color: #92400E; }
 
-/* Форма заказа */
-.cfg-form {
-  background: white;
-  border: 1px solid #E5E7EB;
-  border-radius: 12px;
-  padding: 1.5rem;
-}
+.cfg-form { background: white; border: 1px solid #E5E7EB; border-radius: 12px; padding: 1.5rem; }
 .cfg-form h3 { margin: 0 0 0.75rem; font-size: 1rem; color: var(--cfg-primary); }
-.cfg-form input, .cfg-form textarea {
-  width: 100%;
-  padding: 0.625rem 0.75rem;
-  border: 1px solid #D1D5DB;
-  border-radius: 8px;
-  font-family: inherit;
-  font-size: 0.875rem;
-  margin-bottom: 0.75rem;
-  box-sizing: border-box;
-}
-.cfg-form input:focus, .cfg-form textarea:focus {
-  outline: none;
-  border-color: var(--cfg-accent);
-  box-shadow: 0 0 0 3px rgba(245,158,11,0.15);
-}
-.cfg-form .form-row {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 0.75rem;
-}
+.cfg-form input, .cfg-form textarea { width: 100%; padding: 0.625rem 0.75rem; border: 1px solid #D1D5DB; border-radius: 8px; font-family: inherit; font-size: 0.875rem; margin-bottom: 0.75rem; box-sizing: border-box; }
+.cfg-form input:focus, .cfg-form textarea:focus { outline: none; border-color: var(--cfg-accent); box-shadow: 0 0 0 3px rgba(245,158,11,0.15); }
+.cfg-form .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 0.75rem; }
 .cfg-form .btn-primary { font-size: 1rem; padding: 0.75rem 2rem; }
-
-.cfg-success {
-  display: none;
-  text-align: center;
-  padding: 3rem 2rem;
-  background: white;
-  border: 1px solid #E5E7EB;
-  border-radius: 12px;
-}
+.cfg-success { display: none; text-align: center; padding: 3rem 2rem; background: white; border: 1px solid #E5E7EB; border-radius: 12px; }
 .cfg-success.show { display: block; }
 .cfg-success .icon { font-size: 3rem; color: #10B981; margin-bottom: 1rem; }
-
-@media (max-width: 600px) {
-  .cfg-form .form-row { grid-template-columns: 1fr; }
-  .cfg-options { grid-template-columns: 1fr 1fr; }
-}
+@media (max-width: 600px) { .cfg-form .form-row { grid-template-columns: 1fr; } }
 </style>
 </head>
 <body>
-
 <div class="cfg-header">
   <div class="cfg-container">
     <h1>Конфигуратор Mass-EXPERT</h1>
-    <p>Выберите опции, чтобы подобрать расходомер под вашу задачу</p>
+    <p>Выберите опции по порядку — система подскажет доступные варианты</p>
   </div>
 </div>
-
 <div class="cfg-container">
-
-  <!-- SVG-схема -->
   <div class="cfg-diagram">
     <div class="cfg-scheme" id="scheme">
       <span class="cfg-scheme-label">MASS‑EXPERT</span>
     </div>
   </div>
-
-  <!-- Панель выбора -->
   <div class="cfg-panel" id="panel"></div>
-
-  <!-- Сводка -->
   <div class="cfg-summary" id="summary">
     <h3><i class="fas fa-clipboard-list"></i> Выбранная конфигурация</h3>
+    <div style="font-size:0.875rem;font-family:monospace;margin-bottom:0.75rem;padding:0.5rem;background:#F3F4F6;border-radius:6px;" id="cfgCode">Mass-EXPERT-?-?-?-?-?-?-?-?-?-?-?-?-?-?-?-?-?-?-?-?-?-?-?</div>
     <div class="cfg-summary-grid" id="summaryGrid"></div>
   </div>
-
-  <!-- Форма заказа -->
   <div class="cfg-form" id="orderForm">
     <h3><i class="fas fa-paper-plane"></i> Отправить запрос</h3>
     <div class="form-row">
@@ -219,210 +97,296 @@ body {
       <span style="font-size:0.8125rem;color:var(--cfg-gray);">* — обязательные поля</span>
     </div>
   </div>
-
-  <!-- Успех -->
   <div class="cfg-success" id="success">
     <div class="icon"><i class="fas fa-check-circle"></i></div>
     <h3>Запрос отправлен!</h3>
-    <p style="color:var(--cfg-gray);">Мы свяжемся с вами в ближайшее время для уточнения деталей.</p>
+    <p style="color:var(--cfg-gray);">Мы свяжемся с вами в ближайшее время.</p>
     <button class="btn btn-outline" onclick="resetConfig()" style="margin-top:1rem;">Настроить ещё</button>
   </div>
 </div>
 
 <script>
-// ===== ДАННЫЕ ОПЦИЙ (23 блока) =====
+// ===== ПОЛНЫЕ ДАННЫЕ ОПЦИЙ (23 блока, нумерация из ОПИСАНИЯ ТИПА) =====
 const BLOCKS = [
-  { id:'1A', name:'Условный диаметр', desc:'DN01–DN250', options:[
-    {code:'001',desc:'DN01 — 12 кг/ч'},{code:'002',desc:'DN02 — 96 кг/ч'},{code:'003',desc:'DN03 — 180 кг/ч'},
-    {code:'004',desc:'DN04 — 300 кг/ч'},{code:'008',desc:'DN08 — 1 200 кг/ч'},{code:'015',desc:'DN15 — 3 600 кг/ч'},
-    {code:'020',desc:'DN20 — 6 000 кг/ч'},{code:'025',desc:'DN25 — 12 000 кг/ч'},{code:'040',desc:'DN40 — 27 000 кг/ч'},
-    {code:'050',desc:'DN50 — 39 000 кг/ч'},{code:'080',desc:'DN80 — 120 000 кг/ч'},{code:'100',desc:'DN100 — 180 000 кг/ч'},
-    {code:'150',desc:'DN150 — 720 000 кг/ч'},{code:'200',desc:'DN200 — 1 080 000 кг/ч'},{code:'250',desc:'DN250 — 1 740 000 кг/ч'}
+  {id:'1A',name:'Условный диаметр',desc:'DN01–DN250', opts:[
+    {c:'001',d:'DN01 — 12 кг/ч'},{c:'002',d:'DN02 — 96 кг/ч'},{c:'003',d:'DN03 — 180 кг/ч'},
+    {c:'004',d:'DN04 — 300 кг/ч'},{c:'008',d:'DN08 — 1 200 кг/ч'},{c:'015',d:'DN15 — 3 600 кг/ч'},
+    {c:'020',d:'DN20 — 6 000 кг/ч'},{c:'025',d:'DN25 — 12 000 кг/ч'},{c:'040',d:'DN40 — 27 000 кг/ч'},
+    {c:'050',d:'DN50 — 39 000 кг/ч'},{c:'080',d:'DN80 — 120 000 кг/ч'},{c:'100',d:'DN100 — 180 000 кг/ч'},
+    {c:'150',d:'DN150 — 720 000 кг/ч'},{c:'200',d:'DN200 — 1 080 000 кг/ч'},{c:'250',d:'DN250 — 1 740 000 кг/ч'}
   ]},
-  { id:'2B', name:'Условия эксплуатации', desc:'T/P/L/D/G/C/X', options:[
-    {code:'T',desc:'Стандартное (−50…+150 °C, до 10 МПа)'},{code:'P',desc:'Повышенное давление (до 45 МПа)'},
-    {code:'L',desc:'Криогенное (−200…+150 °C)'},{code:'D',desc:'Сверхнизкие температуры'},
-    {code:'G',desc:'Высокая температура (до +230 °C)'},{code:'C',desc:'Сверхвысокая температура (до +350 °C)'}
+  {id:'2B',name:'Условия эксплуатации',desc:'T/P/L/D/G/C/X', opts:[
+    {c:'T',d:'Стандартное',n:'−50…+150 °C, P≤10 МПа'},
+    {c:'P',d:'Повышенное давление',n:'−50…+150 °C, до 45 МПа'},
+    {c:'L',d:'Криогенное',n:'−196…+150 °C, только U/D-сенсоры'},
+    {c:'D',d:'Сверхнизкие темп.',n:'−255…+150 °C, только раздельное исп.'},
+    {c:'G',d:'Высокая температура',n:'−50…+230 °C, только раздельное исп.'},
+    {c:'C',d:'Сверхвысокая темп.',n:'−50…+350 °C, только раздельное исп.'},
+    {c:'X',d:'Особые условия',n:'требуется описание'}
   ]},
-  { id:'3C', name:'Тип сенсора', desc:'U/K/W/L/D', options:[
-    {code:'U',desc:'U-образный — универсальный'},{code:'K',desc:'Широкий U-образный — до 96 МПа'},
-    {code:'W',desc:'W-образный микроизгиб — компактный'},{code:'L',desc:'Прямотрубный — CIP/SIP'},
-    {code:'D',desc:'Δ-образный — микрорасходы'}
+  {id:'3C',name:'Тип сенсора',desc:'U/K/W/L/Δ', opts:[
+    {c:'U',d:'U-образный',n:'≥DN03, универсальный'},
+    {c:'K',d:'Широкий U-образный',n:'DN02–DN25, до 96 МПа'},
+    {c:'W',d:'W-образный микроизгиб',n:'компактный'},
+    {c:'L',d:'Прямотрубный',n:'CIP/SIP, вязкие среды'},
+    {c:'D',d:'Δ-образный (треугольный)',n:'DN01/DN02/DN25, микрорасходы'},
+    {c:'X',d:'Специальное',n:'требуется описание'}
   ]},
-  { id:'4D', name:'Макс. давление', desc:'1,6–90 МПа', options:[
-    {code:'02',desc:'1,6 МПа'},{code:'04',desc:'4 МПа'},{code:'06',desc:'6,3 МПа'},{code:'10',desc:'10 МПа'},
-    {code:'16',desc:'16 МПа'},{code:'20',desc:'20 МПа'},{code:'25',desc:'25 МПа'},{code:'30',desc:'30 МПа'},
-    {code:'35',desc:'35 МПа'},{code:'40',desc:'40 МПа'},{code:'45',desc:'45 МПа'},{code:'70',desc:'70 МПа'},
-    {code:'90',desc:'90 МПа'}
+  {id:'4D',name:'Макс. давление',desc:'1,6–90 МПа', opts:[
+    {c:'02',d:'1,6 МПа'},{c:'04',d:'4 МПа (по умолч.)'},{c:'06',d:'6,3 МПа'},
+    {c:'10',d:'10 МПа'},{c:'16',d:'16 МПа'},{c:'20',d:'20 МПа'},{c:'25',d:'25 МПа'},
+    {c:'30',d:'30 МПа'},{c:'35',d:'35 МПа'},{c:'40',d:'40 МПа'},{c:'45',d:'45 МПа'},
+    {c:'70',d:'70 МПа'},{c:'90',d:'90 МПа'},{c:'XX',d:'Специальное',n:'требуется описание'}
   ]},
-  { id:'5E', name:'Соединение', desc:'Фланцы, резьба', options:[
-    {code:'R',desc:'ГОСТ 33259-2015'},{code:'EN',desc:'EN 1092-1'},{code:'AS',desc:'ASME B16.5'},
-    {code:'HS',desc:'Tri-clamp'},{code:'GS',desc:'Резьба G'},{code:'NR',desc:'NPT 1/4"–1"'}
+  {id:'5E',name:'Тех. соединение',desc:'Фланцы, резьба, Tri-clamp', opts:[
+    {c:'R',d:'ГОСТ 33259, фланец',n:'DN-PN-Z, XXXYYYZ'},
+    {c:'EN',d:'EN 1092-1, фланец',n:'DN-PN-Z, XXXYYYZ'},
+    {c:'AS',d:'ASME B16.5, Class150',n:'1/2–12"'},
+    {c:'AT',d:'ASME B16.5, Class300',n:'1/2–12"'},
+    {c:'AU',d:'ASME B16.5, Class600',n:'1/2–12"'},
+    {c:'AV',d:'ASME B16.5, Class900',n:'1/2–12"'},
+    {c:'AW',d:'ASME B16.5, Class1500',n:'1/2–12"'},
+    {c:'AX',d:'ASME B16.5, Class2500',n:'1/2–12"'},
+    {c:'GA',d:'ГОСТ 12821, PN1.6',n:'DN10–300'},{c:'GB',d:'ГОСТ 12821, PN2.5',n:'DN10–300'},
+    {c:'GC',d:'ГОСТ 12821, PN4',n:'DN10–300'},{c:'GD',d:'ГОСТ 12821, PN6.3',n:'DN10–300'},
+    {c:'GE',d:'ГОСТ 12821, PN10',n:'DN10–300'},{c:'GF',d:'ГОСТ 12821, PN16',n:'DN15–300'},
+    {c:'GG',d:'ГОСТ 12821, PN20',n:'DN15–300'},
+    {c:'GH',d:'ГОСТ 33259, PN16-B',n:'DN15–300'},{c:'GJ',d:'ГОСТ 33259, PN25-B',n:'DN15–300'},
+    {c:'GK',d:'ГОСТ 33259, PN40-B',n:'DN15–300'},{c:'GL',d:'ГОСТ 33259, PN63-B',n:'DN15–300'},
+    {c:'GM',d:'ГОСТ 33259, PN100-B',n:'DN15–300'},{c:'GN',d:'ГОСТ 33259, PN160-B',n:'DN15–300'},
+    {c:'ES',d:'EN 1092-1, PN16',n:'DN10–300'},{c:'ET',d:'EN 1092-1, PN25',n:'DN10–300'},
+    {c:'EU',d:'EN 1092-1, PN40',n:'DN10–300'},{c:'EV',d:'EN 1092-1, PN63',n:'DN10–300'},
+    {c:'EW',d:'EN 1092-1, PN100',n:'DN10–300'},{c:'EX',d:'EN 1092-1, PN160',n:'DN10–300'},
+    {c:'FR',d:'HG/T 20592, PN16',n:'DN10–300'},{c:'FQ',d:'HG/T 20592, PN25',n:'DN10–300'},
+    {c:'FT',d:'HG/T 20592, PN40',n:'DN10–300'},{c:'FU',d:'HG/T 20592, PN63',n:'DN10–300'},
+    {c:'FV',d:'HG/T 20592, PN100',n:'DN10–300'},{c:'FW',d:'HG/T 20592, PN160',n:'DN10–300'},
+    {c:'FA',d:'HG/T 20615, Class150',n:'DN15–300'},{c:'FB',d:'HG/T 20615, Class300',n:'DN15–300'},
+    {c:'FC',d:'HG/T 20615, Class600',n:'DN15–300'},{c:'FD',d:'HG/T 20615, Class900',n:'DN15–300'},
+    {c:'FE',d:'HG/T 20615, Class1500',n:'DN15–300'},
+    {c:'JS',d:'JIS B2220, 10K',n:'DN10–300'},{c:'JT',d:'JIS B2220, 20K',n:'DN10–300'},
+    {c:'JU',d:'JIS B2220, 40K',n:'DN10–300'},{c:'JV',d:'JIS B2220, 63K',n:'DN10–300'},
+    {c:'GT',d:'GB/T 9115, PN25',n:'DN10–300'},{c:'GU',d:'GB/T 9115, PN16',n:'DN10–300'},
+    {c:'GV',d:'GB/T 9115, PN40',n:'DN10–300'},{c:'GW',d:'GB/T 9115, PN63',n:'DN10–300'},
+    {c:'GX',d:'GB/T 9115, PN100',n:'DN10–300'},{c:'GY',d:'GB/T 9115, PN160',n:'DN10–300'},
+    {c:'GS',d:'Резьба G',n:'трубная'},{c:'G4',d:'Резьба G1/4\"'},{c:'G2',d:'Резьба G1/2\"'},{c:'G1',d:'Резьба G1\"'},
+    {c:'DS',d:'DIN 11851-SI',n:'мм'},{c:'DT',d:'DIN 11851-US',n:'дюймы'},
+    {c:'DU',d:'DIN 11864-1, резьб.'},{c:'DV',d:'DIN 11864-2, плоский'},
+    {c:'HS',d:'Tri-clamp DN32676, ∅25'},{c:'HA',d:'Tri-clamp, ∅34'},{c:'HB',d:'Tri-clamp, ∅50.5'},
+    {c:'HC',d:'Tri-clamp, ∅64'},{c:'HD',d:'Tri-clamp, ∅91'},
+    {c:'SS',d:'SMS 1145, резьб.'},{c:'MS',d:'Метал. уплотнение'},{c:'OS',d:'Уплотнение O-Ring'},
+    {c:'US',d:'UNF резьба'},{c:'UA',d:'UNF 9/16-18UNF'},{c:'UB',d:'UNF 1 3/8-12UNF'},
+    {c:'RC',d:'Резьба RC'},{c:'RD',d:'Rc 3/4\"'},
+    {c:'NR',d:'1/4\" NPT-F'},{c:'NS',d:'1/2\" NPT-F'},{c:'NT',d:'3/4\" NPT-F'},{c:'NU',d:'1\" NPT-F'},
+    {c:'BS',d:'1/2\" фланец'},{c:'VS',d:'VCO'},{c:'VA',d:'VCO 1/2\"'},{c:'VB',d:'VCO 3/4\"'},{c:'VC',d:'VCO 1\"'},
+    {c:'VR',d:'VCR 1/8\"'},{c:'VT',d:'VCR 1/4\"'},{c:'VU',d:'VCR 1/2\"'},{c:'VV',d:'VCR 3/4\"'},{c:'VW',d:'VCR 1\"'},
+    {c:'KT',d:'Card sleeve'},{c:'ZS',d:'ZG1/8-F'},{c:'ZT',d:'ZG1/2-F'},{c:'ZU',d:'ZG3/4-F'},{c:'ZV',d:'ZG1-F'},
+    {c:'C8',d:'Смена типа соед.',n:'только фланец/резьба'},
+    {c:'C9',d:'Спец. соединение',n:'описание обязательно'}
   ]},
-  { id:'6F', name:'Материал трубок', desc:'316L, Титан...', options:[
-    {code:'S',desc:'316L'},{code:'G',desc:'316L (Ni)'},{code:'L',desc:'904L'},{code:'T',desc:'Титан'},
-    {code:'C',desc:'Сталь C4'},{code:'H',desc:'Хастеллой'},{code:'D',desc:'Дуплекс'},{code:'A',desc:'Тантал'}
+  {id:'6F',name:'Материал трубок',desc:'316L, Ti, Hastelloy…', opts:[
+    {c:'S',d:'316L',n:'по умолчанию'},{c:'G',d:'316L с высоким Ni'},{c:'L',d:'904L'},
+    {c:'T',d:'Титан'},{c:'C',d:'Сталь C4'},{c:'H',d:'Хастеллой'},{c:'D',d:'Дуплексная сталь'},
+    {c:'A',d:'Тантал'},{c:'X',d:'Прочие',n:'описание обязательно'}
   ]},
-  { id:'7G', name:'Точность', desc:'0,1%–1,0%', options:[
-    {code:'S',desc:'0,1 %'},{code:'A',desc:'0,15 %'},{code:'B',desc:'0,2 %'},{code:'C',desc:'0,5 %'},{code:'D',desc:'1,0 %'}
+  {id:'7G',name:'Точность',desc:'0,1%–1,0%', opts:[
+    {c:'S',d:'0,1 %',n:'масса'},{c:'A',d:'0,15 %',n:'масса'},{c:'B',d:'0,2 %',n:'масса'},
+    {c:'C',d:'0,5 %',n:'масса'},{c:'D',d:'1,0 %',n:'масса'},{c:'X',d:'Прочие',n:'описание обязательно'}
   ]},
-  { id:'8H', name:'Монтаж трансмиттера', desc:'Интегр./раздельн.', options:[
-    {code:'N',desc:'Интегрированный'},{code:'S',desc:'Раздельный'},{code:'J',desc:'Компактный интегрированный'},
-    {code:'D',desc:'DIN-рейка'}
+  {id:'8H',name:'Монтаж трансмиттера',desc:'Интегр./раздельн.', opts:[
+    {c:'N',d:'Интегрированное'},{c:'S',d:'Раздельное',n:'кабель 3 м по умолч.'},{c:'J',d:'Компактное интегр.',n:'без взрывозащиты'},
+    {c:'D',d:'DIN-рейка',n:'без взрывозащиты'},{c:'X',d:'Прочие',n:'описание обязательно'}
   ]},
-  { id:'9I', name:'Дисплей', desc:'С/без дисплея', options:[{code:'C',desc:'С дисплеем'},{code:'M',desc:'Без дисплея'}]},
-  { id:'10J', name:'Выходные сигналы', desc:'HART, RS-485...', options:[
-    {code:'CL',desc:'4–20 мА + HART'},{code:'RS',desc:'RS-485 Modbus'},{code:'CN',desc:'CAN'},
-    {code:'PP',desc:'PROFIBUS PA'},{code:'ML',desc:'Multi (HART+RS-485+CAN)'}
+  {id:'9I',name:'Дисплей',desc:'С/без', opts:[{c:'C',d:'С дисплеем'},{c:'M',d:'Без дисплея',n:'по умолчанию'},{c:'X',d:'Прочие',n:'описание обязательно'}]},
+  {id:'10J',name:'Выходные сигналы',desc:'HART, RS-485…', opts:[
+    {c:'M',d:'Modbus RTU/RS-485 + имп.',n:'по умолчанию'},{c:'L',d:'4–20 мА активный + имп.'},
+    {c:'H',d:'HART + 4–20 мА + имп.'},{c:'P',d:'PROFIBUS PA + Modbus + имп.'},{c:'X',d:'Прочие',n:'описание обязательно'}
   ]},
-  { id:'11K', name:'Сертификация', desc:'Ex, 3-A, TS...', options:[
-    {code:'N',desc:'Нет'},{code:'A',desc:'3-A (санитарный)'},{code:'S',desc:'TS (спецоборудование)'},{code:'J',desc:'CCS (морской)'}
+  {id:'11K',name:'Сертификация',desc:'Ex, 3-A, TS…', opts:[
+    {c:'N',d:'Нет',n:'по умолчанию'},{c:'C',d:'Взрывозащита Ex'},{c:'A',d:'Сертификат 3-A'},
+    {c:'S',d:'Лицензия TS'},{c:'J',d:'Сертификат CCS'},{c:'X',d:'Прочие',n:'описание обязательно'}
   ]},
-  { id:'12L', name:'Трансмиттер', desc:'ME100/200/300', options:[
-    {code:'V1',desc:'ME100 — базовый'},{code:'V2',desc:'ME200 — расширенный Ex'},{code:'V3',desc:'ME300 — DIN-рейка'}
+  {id:'12L',name:'Трансмиттер',desc:'ME100/200/300', opts:[
+    {c:'V1',d:'ME100',n:'базовый, по умолч.'},{c:'V2',d:'ME200',n:'расширенный Ex'},{c:'V3',d:'ME300',n:'DIN-рейка'},{c:'XX',d:'Спец. исп.',n:'описание обязательно'}
   ]},
-  { id:'13M', name:'Режим измерения', desc:'Масса/плотность', options:[
-    {code:'M',desc:'Масса'},{code:'D',desc:'Плотность'},{code:'A',desc:'Масса + плотность'}
+  {id:'13M',name:'Режим измерения',desc:'Масса/плотность', opts:[
+    {c:'M',d:'Масса',n:'по умолчанию'},{c:'D',d:'Плотность'},{c:'A',d:'Масса + плотность'},{c:'X',d:'Прочие',n:'описание обязательно'}
   ]},
-  { id:'14N', name:'Материал соединения', desc:'304, 316L...', options:[
-    {code:'E',desc:'304'},{code:'S',desc:'316L'},{code:'G',desc:'316L (Ni)'},{code:'L',desc:'904L'},
-    {code:'T',desc:'Титан'},{code:'H',desc:'Хастеллой'},{code:'A',desc:'Тантал'}
+  {id:'14N',name:'Материал соединения',desc:'304/316L/Ti…', opts:[
+    {c:'E',d:'304'},{c:'S',d:'316L',n:'по умолчанию'},{c:'G',d:'316L с высоким Ni'},{c:'L',d:'904L'},
+    {c:'T',d:'Титан'},{c:'C',d:'Сталь C4'},{c:'H',d:'Хастеллой'},{c:'D',d:'Дуплекс'},{c:'A',d:'Тантал'},{c:'X',d:'Прочие',n:'описание обязательно'}
   ]},
-  { id:'15O', name:'Корпус сенсора', desc:'304/316L', options:[{code:'E',desc:'304'},{code:'S',desc:'316L'}]},
-  { id:'16P', name:'Электропитание', desc:'24VDC/220VAC', options:[
-    {code:'1',desc:'24 В DC'},{code:'2',desc:'220 В AC / 24 В DC'}
+  {id:'15O',name:'Корпус сенсора',desc:'304/316L', opts:[{c:'E',d:'304'},{c:'S',d:'316L'},{c:'X',d:'Прочие',n:'описание обязательно'}]},
+  {id:'16P',name:'Электропитание',desc:'24VDC/220VAC', opts:[{c:'1',d:'24 В DC',n:'по умолчанию'},{c:'2',d:'220 В AC / 24 В DC',n:'автоадаптация'},{c:'X',d:'Прочие',n:'описание обязательно'}]},
+  {id:'17Q',name:'Кабельный ввод',desc:'NPT / M20', opts:[{c:'N',d:'1/2\" NPT'},{c:'M',d:'M20×1,5',n:'по умолчанию'},{c:'X',d:'Спец. исп.',n:'описание обязательно'}]},
+  {id:'18R',name:'Измерение плотности',desc:'0,15–3 кг/м³', opts:[
+    {c:'1',d:'3 кг/м³'},{c:'2',d:'1 кг/м³'},{c:'3',d:'0,5 кг/м³'},{c:'4',d:'0,2 кг/м³'},{c:'5',d:'0,15 кг/м³'},{c:'Q',d:'Нет требований',n:'по умолчанию'}
   ]},
-  { id:'17Q', name:'Кабельный ввод', desc:'NPT/M20', options:[{code:'N',desc:'1/2" NPT'},{code:'M',desc:'M20×1,5'}]},
-  { id:'18R', name:'Измерение плотности', desc:'0,15–3 кг/м³', options:[
-    {code:'1',desc:'3 кг/м³'},{code:'2',desc:'1 кг/м³'},{code:'3',desc:'0,5 кг/м³'},{code:'4',desc:'0,2 кг/м³'},{code:'5',desc:'0,15 кг/м³'}
+  {id:'19S',name:'Изотерм. кожух',desc:'Да/Нет', opts:[{c:'N',d:'Нет',n:'по умолчанию'},{c:'Y',d:'Да'}]},
+  {id:'20T',name:'Язык интерфейса',desc:'Рус/Англ/Кит', opts:[{c:'E',d:'Английский'},{c:'C',d:'Китайский'},{c:'R',d:'Русский',n:'по умолчанию'},{c:'X',d:'Прочие',n:'описание обязательно'}]},
+  {id:'21U',name:'Комплектация',desc:'Фланцы/крепёж', opts:[
+    {c:'0',d:'Нет',n:'по умолчанию'},{c:'1',d:'Фланцы углерод. ст. + крепёж'},{c:'2',d:'Фланцы нерж. ст. + крепёж'},{c:'X',d:'Прочие',n:'описание обязательно'}
   ]},
-  { id:'19S', name:'Изотерм. кожух', desc:'Да/Нет', options:[{code:'N',desc:'Нет'},{code:'Y',desc:'Да'}]},
-  { id:'20T', name:'Язык интерфейса', desc:'Англ./Рус./Кит.', options:[
-    {code:'E',desc:'Английский'},{code:'C',desc:'Китайский'},{code:'R',desc:'Русский'}
-  ]},
-  { id:'21U', name:'Комплектация', desc:'Фланцы в компл.', options:[
-    {code:'0',desc:'Без фланцев'},{code:'1',desc:'Фланцы углерод. сталь'},{code:'2',desc:'Фланцы нерж. сталь'}
-  ]},
-  { id:'22V', name:'ETO (на заказ)', desc:'Индивидуально', options:[{code:'X',desc:'Требуется индивидуальное решение'}]},
-  { id:'23X', name:'Гарантия', desc:'Станд./Расшир.', options:[
-    {code:'-',desc:'Стандартная 12 мес.'},{code:'EW',desc:'Расширенная 24 мес.'},{code:'SW',desc:'Специальная'}
+  {id:'22V',name:'ETO (на заказ)',desc:'Индивидуально', opts:[{c:'ETOZZZ',d:'Инженерное решение',n:'привязывается к серийному номеру'}]},
+  {id:'23X',name:'Гарантия',desc:'12/24 мес', opts:[
+    {c:'-',d:'Стандартная',n:'12 мес. (не более 18 с изготовления)'},{c:'EW',d:'Расширенная',n:'24 мес. (не более 36)'},{c:'SW',d:'Специальная',n:'особые условия'}
   ]}
+];
+
+// ===== ОГРАНИЧЕНИЯ =====
+const CONSTRAINTS = [
+  {from:'2B',val:'L', check:(sel)=>{const s=sel['3C'];return !s||s==='U'||s==='D'||s==='X';}, msg:'Криогенное L: только U/D сенсоры'},
+  {from:'2B',val:'D', check:(sel)=>{const s=sel['8H'];return !s||s==='S';}, msg:'Сверхнизкие D: только раздельное исполнение (8H=S)'},
+  {from:'2B',val:'G', check:(sel)=>{const s=sel['8H'];return !s||s==='S';}, msg:'Высокая темп. G: только раздельное исполнение (8H=S)'},
+  {from:'2B',val:'C', check:(sel)=>{const s=sel['8H'];return !s||s==='S';}, msg:'Сверхвысокая C: только раздельное исполнение (8H=S)'},
+  {from:'3C',val:'U', check:(sel)=>{const d=sel['1A'];return !d||parseInt(d)>=3;}, msg:'U-образный: только ≥DN03'},
+  {from:'3C',val:'K', check:(sel)=>{const d=sel['1A'];return !d||(parseInt(d)>=2&&parseInt(d)<=25);}, msg:'K-тип: только DN02–DN25'},
+  {from:'3C',val:'D', check:(sel)=>{const d=sel['1A'];return !d||d==='001'||d==='002'||d==='025';}, msg:'Δ-тип: только DN01, DN02, DN25'},
+  {from:'8H',val:'J', check:(sel)=>{const k=sel['11K'];return !k||k==='N'||k==='A';}, msg:'Компактное J: без взрывозащиты'},
+  {from:'8H',val:'D', check:(sel)=>{const k=sel['11K'];return !k||k==='N'||k==='A';}, msg:'DIN-рейка D: без взрывозащиты'},
 ];
 
 let selections = {};
 let activeBlock = null;
 
-// Построить схему
 function buildScheme() {
   const el = document.getElementById('scheme');
   BLOCKS.forEach((b, i) => {
     const div = document.createElement('div');
-    div.className = 'cfg-block' + (i === 0 ? ' first' : '');
+    div.className = 'cfg-block';
+    if (i === 0) div.classList.add('first');
     div.dataset.idx = i;
     div.innerHTML = `<span class="block-code">${b.id}</span><span class="block-val" id="val-${b.id}">—</span>`;
     div.onclick = () => selectBlock(i);
-    div.title = b.name;
+    div.title = b.name + ': ' + b.desc;
     el.appendChild(div);
   });
 }
 
-// Выбрать блок
 function selectBlock(idx) {
   activeBlock = idx;
   const block = BLOCKS[idx];
-  const panel = document.getElementById('panel');
-  
   document.querySelectorAll('.cfg-block').forEach(el => el.classList.remove('selected'));
-  document.querySelectorAll(`.cfg-block[data-idx="${idx}"]`).forEach(el => el.classList.add('selected'));
-  
+  document.querySelector(`.cfg-block[data-idx="${idx}"]`).classList.add('selected');
+
+  const panel = document.getElementById('panel');
   panel.className = 'cfg-panel active';
+
+  let noteHtml = '';
+  const noteDiv = document.createElement('div');
+  noteDiv.className = 'panel-note';
+
   let html = `<h3>${block.id}: ${block.name}</h3><p class="panel-desc">${block.desc}</p><div class="cfg-options">`;
-  block.options.forEach(opt => {
-    const sel = selections[block.id] === opt.code ? ' selected' : '';
-    html += `<div class="cfg-option${sel}" onclick="selectOption('${block.id}','${opt.code}','${opt.desc}')">
-      <div class="opt-code">${opt.code}</div><div class="opt-desc">${opt.desc}</div>
+  block.opts.forEach(opt => {
+    const sel = selections[block.id] === opt.c ? ' selected' : '';
+    // Check constraints
+    let disabled = false;
+    let warn = '';
+    CONSTRAINTS.forEach(c => {
+      if (c.from === block.id && c.val === opt.c && selections['1A']) {
+        if (!c.check(selections)) { disabled = true; warn = c.msg; }
+      }
+    });
+    // Also check constraints WHERE THIS BLOCK IS DEPENDED ON
+    CONSTRAINTS.forEach(c => {
+      if (c.from !== block.id && selections[c.from] === c.val && opt.c === selections[block.id]) {
+        // Check if current selection violates constraint
+      }
+    });
+    const disAttr = disabled ? ' style="opacity:0.4;cursor:not-allowed;"' : '';
+    const noteHtml = opt.n ? `<div class="opt-note">${opt.n}</div>` : '';
+    html += `<div class="cfg-option${sel}"${disAttr} onclick="${disabled?'':`selectOption('${block.id}','${opt.c}','${opt.d}')`}">
+      <div class="opt-code">${opt.c}</div><div class="opt-desc">${opt.d}</div>${noteHtml}
     </div>`;
   });
   html += `</div>`;
   panel.innerHTML = html;
+
+  // Show dynamic constraints note
+  showConstraintsNote(block.id);
 }
 
-// Выбрать опцию
-function selectOption(blockId, code, desc) {
-  selections[blockId] = code;
-  
-  // Обновить схему
-  document.getElementById(`val-${blockId}`).textContent = code;
-  
-  // Обновить панель
-  document.querySelectorAll('#panel .cfg-option').forEach(el => el.classList.remove('selected'));
-  event.target.closest('.cfg-option').classList.add('selected');
-  
-  // Обновить сводку
-  updateSummary();
-  
-  // Автоматически перейти к следующему блоку
-  const idx = BLOCKS.findIndex(b => b.id === blockId);
-  if (idx >= 0 && idx < BLOCKS.length - 1) {
-    setTimeout(() => selectBlock(idx + 1), 300);
+function showConstraintsNote(blockId) {
+  const note = document.getElementById('panel').querySelector('.panel-note') || document.createElement('div');
+  // Check if any constraint applies to a BLOCK THAT WAS ALREADY SELECTED
+  let msgs = [];
+  CONSTRAINTS.forEach(c => {
+    if (c.from === blockId && selections[c.from] === c.val) {
+      // This block has a constraint that affects other blocks
+      msgs.push(`⚠ ${c.msg}`);
+    }
+  });
+  // Check if previously selected blocks constrain this block
+  CONSTRAINTS.forEach(c => {
+    if (c.from !== blockId && selections[c.from] === c.val && !c.check(selections)) {
+      msgs.push(`⚠ ${c.msg}`);
+    }
+  });
+  note.className = 'panel-note' + (msgs.length ? ' show' : '');
+  note.innerHTML = msgs.join('<br>');
+  const panel = document.getElementById('panel');
+  if (!panel.querySelector('.panel-note')) {
+    panel.insertBefore(note, panel.querySelector('.cfg-options'));
   }
 }
 
-// Обновить сводку
+function selectOption(blockId, code, desc) {
+  selections[blockId] = code;
+  document.getElementById(`val-${blockId}`).textContent = code;
+  document.querySelectorAll('#panel .cfg-option').forEach(el => el.classList.remove('selected'));
+  event.target.closest('.cfg-option').classList.add('selected');
+  updateSummary();
+  
+  const idx = BLOCKS.findIndex(b => b.id === blockId);
+  if (idx >= 0 && idx < BLOCKS.length - 1) {
+    // Check if next block should be skipped or constrained
+    setTimeout(() => selectBlock(idx + 1), 250);
+  }
+}
+
 function updateSummary() {
   const grid = document.getElementById('summaryGrid');
   let html = '';
+  let code = 'Mass-EXPERT';
   BLOCKS.forEach(b => {
-    const val = selections[b.id] || '—';
-    html += `<div class="cfg-summary-item"><strong>${b.id}</strong> ${b.name}: ${val}</div>`;
+    const val = selections[b.id] || '?';
+    code += '-' + val;
+    html += `<div class="cfg-summary-item"><span class="s-block">${b.id}</span> ${val === '?' ? '?' : `<span class="s-code">${val}</span>`}</div>`;
   });
+  document.getElementById('cfgCode').textContent = code;
   grid.innerHTML = html;
 }
 
-// Отправить заказ
 function sendOrder() {
   const name = document.getElementById('orderName').value.trim();
   const phone = document.getElementById('orderPhone').value.trim();
   if (!name || !phone) { alert('Заполните имя и телефон'); return; }
-  
-  // Собрать конфигурацию
   let configStr = 'Mass-EXPERT';
   BLOCKS.forEach(b => { configStr += '-' + (selections[b.id] || '?'); });
-  
   const comment = document.getElementById('orderComment').value.trim();
   const email = document.getElementById('orderEmail').value.trim();
-  
-  const msg = `🔧 НОВЫЙ ЗАПРОС КОНФИГУРАТОРА\n\nКонфигурация: ${configStr}\n\nИмя: ${name}\nТелефон: ${phone}\nEmail: ${email || '—'}\nКомментарий: ${comment || '—'}`;
-  
-  // Показать успех
+  // Build detailed config
+  let details = '';
+  BLOCKS.forEach(b => { const v = selections[b.id]; if (v) { const o = b.opts.find(x=>x.c===v); details += `\n  ${b.id} (${b.name}): ${v} — ${o ? o.d : ''}`; } });
+  const msg = `🔧 НОВЫЙ ЗАПРОС КОНФИГУРАТОРА\n\nКонфигурация: ${configStr}\n${details}\n\nИмя: ${name}\nТелефон: ${phone}\nEmail: ${email || '—'}\nКомментарий: ${comment || '—'}`;
   document.getElementById('orderForm').style.display = 'none';
   document.getElementById('success').classList.add('show');
-  
-  // Скопировать в буфер для отправки вручную
   navigator.clipboard.writeText(msg).catch(() => {});
-  
   console.log('Order:', msg);
 }
 
-// Сброс
 function resetConfig() {
-  selections = {};
-  activeBlock = null;
+  selections = {}; activeBlock = null;
   document.querySelectorAll('.cfg-block').forEach(el => el.classList.remove('selected'));
   BLOCKS.forEach(b => document.getElementById(`val-${b.id}`).textContent = '—');
   document.getElementById('panel').className = 'cfg-panel';
   document.getElementById('panel').innerHTML = '';
   document.getElementById('orderForm').style.display = 'block';
   document.getElementById('success').classList.remove('show');
-  document.getElementById('orderName').value = '';
-  document.getElementById('orderPhone').value = '';
-  document.getElementById('orderEmail').value = '';
-  document.getElementById('orderComment').value = '';
+  ['orderName','orderPhone','orderEmail','orderComment'].forEach(id => document.getElementById(id).value = '');
   updateSummary();
   selectBlock(0);
 }
 
-// Инициализация
 buildScheme();
 updateSummary();
 </script>
