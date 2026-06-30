@@ -1373,6 +1373,10 @@ html.theme-accessibility .option-card-footer a {
   text-decoration: underline;
 }
 
+/* --- Jacket images hover --- */
+.jacket-img { cursor: pointer; }
+.jacket-img:hover { transform: scale(1.15); }
+
 /* --- Scroll Animation --- */
 .animate-on-scroll {
   opacity: 0;
