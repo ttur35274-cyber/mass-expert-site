@@ -1375,7 +1375,7 @@ html.theme-accessibility .option-card-footer a {
 
 /* --- Jacket images hover --- */
 .jacket-img { cursor: pointer; }
-.jacket-img:hover { transform: scale(2); }
+.jacket-img:hover { transform: scale(2); transform-origin: top center; }
 
 /* --- Scroll Animation --- */
 .animate-on-scroll {
