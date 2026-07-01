@@ -1378,19 +1378,28 @@ html.theme-accessibility .option-card-footer a {
   transition: transform 0.3s ease;
 }
 details.expandable:hover .jacket-content {
-  transform: translateY(280px);
+  transform: translateY(105px);
+}
+.jacket-content ul,
+.jacket-content p:last-of-type {
+  transition: opacity 0.2s ease 0.15s, visibility 0s ease 0.35s, transform 0.3s ease;
+}
+details.expandable:hover .jacket-content ul,
+details.expandable:hover .jacket-content p:last-of-type {
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(105px);
 }
 details.expandable:hover .jacket-img {
   transform: scale(2);
   transform-origin: top center;
 }
-.jacket-btn-wrap {
+details.expandable .expandable-body > div:last-child {
   opacity: 0;
   visibility: hidden;
   transition: opacity 0s;
-  margin-top: 1rem;
 }
-details.expandable:hover .jacket-btn-wrap {
+details.expandable:hover .expandable-body > div:last-child {
   opacity: 1;
   visibility: visible;
   animation: fadeInBtn 0.25s ease 0.15s both;
@@ -1400,33 +1409,8 @@ details.expandable:hover .jacket-btn-wrap {
   to   { opacity: 1; transform: translateY(0); }
 }
 
-/* --- Jacket images row --- */
-.jacket-img-row {
-  display: flex;
-  gap: 1.5rem;
-  flex-wrap: wrap;
-  align-items: center;
-  justify-content: center;
-  margin-bottom: 0.5rem;
-}
-.jacket-img-col {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 30px;
-}
-.jacket-img-col img {
-  max-height: 110px;
-  width: auto;
-  border-radius: 4px;
-  transition: transform 0.3s ease;
-}
-.jacket-desc {
-  margin: 0;
-  font-size: 0.9375rem;
-  color: var(--gray-700);
-  line-height: 1.6;
-}
+/* --- Jacket images hover --- */
+.jacket-img { cursor: pointer; }
 
 /* --- Tubes grid --- */
 .tubes-grid {
