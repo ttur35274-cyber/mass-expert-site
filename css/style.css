@@ -1382,7 +1382,7 @@ details.expandable:hover .jacket-content {
 }
 details.expandable:hover .jacket-img {
   transform: scale(2);
-  transform-origin: top left;
+  transform-origin: top center;
 }
 .jacket-btn-wrap {
   opacity: 0;
@@ -1401,8 +1401,26 @@ details.expandable:hover .jacket-btn-wrap {
 }
 
 /* --- Jacket images row --- */
-.jacket-img-row,
-.jacket-img-col { display: none; }
+.jacket-img-row {
+  display: flex;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 0.5rem;
+}
+.jacket-img-col {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 30px;
+}
+.jacket-img-col img {
+  max-height: 110px;
+  width: auto;
+  border-radius: 4px;
+  transition: transform 0.3s ease;
+}
 .jacket-desc {
   margin: 0;
   font-size: 0.9375rem;
