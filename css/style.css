@@ -1040,7 +1040,6 @@ details.expandable {
   border-radius: var(--radius);
   margin-bottom: 1rem;
   overflow: hidden;
-  transition: all var(--transition);
 }
 details.expandable[open] {
   border-color: var(--primary);
