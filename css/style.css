@@ -1401,7 +1401,9 @@ details.expandable .expandable-body {
   transition: transform 0.3s ease 0.05s;
 }
 .jacket-extra {
-  transition: opacity 0.2s ease 0.15s;
+  max-height: 500px;
+  overflow: hidden;
+  transition: max-height 0.35s ease 0s, opacity 0.2s ease 0.15s, padding 0.35s ease 0s, margin 0.35s ease 0s;
 }
 .jacket-meta {
   display: flex;
@@ -1432,6 +1434,9 @@ details.expandable:hover .jacket-text {
   transition: transform 0.3s ease 0s;
 }
 details.expandable:hover .jacket-extra {
+  max-height: 0;
+  padding: 0;
+  margin: 0;
   opacity: 0;
   pointer-events: none;
 }
