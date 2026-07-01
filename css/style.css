@@ -1076,10 +1076,6 @@ details.expandable .expandable-body {
   padding: 0 1.25rem 1.25rem;
   border-top: 1px solid var(--gray-100);
   overflow: hidden;
-  transition: padding-bottom 0.3s ease;
-}
-details.expandable:hover .expandable-body {
-  padding-bottom: 160px;
 }
 details.expandable .expandable-body > *:last-child { margin-bottom: 0; }
 details.expandable .expandable-body ul { padding-left: 1.25rem; }
@@ -1399,9 +1395,11 @@ details.expandable:hover .jacket-imgs img {
   transform: scale(2);
 }
 .jacket-text {
-  transition: transform 0.3s ease;
   display: flex;
   flex-direction: column;
+}
+.jacket-shift {
+  transition: transform 0.3s ease;
 }
 .jacket-extra {
   transition: opacity 0.2s ease 0.15s;
@@ -1433,8 +1431,8 @@ details.expandable:hover .jacket-meta {
   opacity: 1;
   pointer-events: auto;
 }
-details.expandable:hover .jacket-text {
-  transform: translateY(130px);
+details.expandable:hover .jacket-shift {
+  transform: translateY(105px);
 }
 details.expandable:hover .jacket-extra {
   opacity: 0;
