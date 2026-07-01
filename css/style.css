@@ -1374,25 +1374,42 @@ html.theme-accessibility .option-card-footer a {
 }
 
 /* --- Jacket card hover animation (like condition cards) --- */
-.jacket-content {
+.jacket-imgs {
+  display: flex;
+  gap: 2rem;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  justify-content: center;
+  line-height: 0;
+}
+.jacket-imgs img {
+  display: block;
+  max-height: 120px;
+  width: auto;
+  border-radius: 4px;
   transition: transform 0.3s ease;
 }
-details.expandable:hover .jacket-content {
-  transform: translateY(105px);
+details.expandable:hover .jacket-imgs img {
+  transform: scale(2);
+  transform-origin: top left;
 }
-.jacket-content ul,
-.jacket-content p:last-of-type {
-  transition: opacity 0.2s ease 0.15s, visibility 0s ease 0.35s, transform 0.3s ease;
-}
-details.expandable:hover .jacket-content ul,
-details.expandable:hover .jacket-content p:last-of-type {
+details.expandable .expandable-body > div:last-child {
   opacity: 0;
   visibility: hidden;
-  transform: translateY(105px);
+  transition: opacity 0s;
 }
-details.expandable:hover .jacket-img {
-  transform: scale(2);
-  transform-origin: top center;
+details.expandable:hover .expandable-body > div:last-child {
+  opacity: 1;
+  visibility: visible;
+  animation: fadeInBtn 0.25s ease 0.15s both;
+}
+@keyframes fadeInBtn {
+  from { opacity: 0; transform: translateY(8px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+/* Images flush to summary */
+details.expandable .jacket-content {
+  margin-top: -1px;
 }
 details.expandable .expandable-body > div:last-child {
   opacity: 0;
