@@ -1039,6 +1039,7 @@ details.expandable {
   border: 1px solid var(--gray-200);
   border-radius: var(--radius);
   margin-bottom: 1rem;
+  overflow: hidden;
 }
 details.expandable[open] {
   border-color: var(--primary);
@@ -1074,6 +1075,7 @@ details.expandable summary:hover { background: var(--gray-50); }
 details.expandable .expandable-body {
   padding: 0 1.25rem 1.25rem;
   border-top: 1px solid var(--gray-100);
+  overflow: hidden;
 }
 details.expandable .expandable-body > *:last-child { margin-bottom: 0; }
 details.expandable .expandable-body ul { padding-left: 1.25rem; }
@@ -1393,9 +1395,15 @@ details.expandable:hover .jacket-imgs img {
   transform: scale(2);
 }
 .jacket-text {
-  transition: transform 0.3s ease;
   display: flex;
   flex-direction: column;
+}
+.jacket-spacer {
+  height: 0;
+  transition: height 0.3s ease;
+}
+details.expandable:hover .jacket-spacer {
+  height: 130px;
 }
 .jacket-extra {
   transition: opacity 0.2s ease 0.15s;
@@ -1426,9 +1434,6 @@ details.expandable:hover .jacket-imgs img {
 details.expandable:hover .jacket-meta {
   opacity: 1;
   pointer-events: auto;
-}
-details.expandable:hover .jacket-text {
-  transform: translateY(130px);
 }
 details.expandable:hover .jacket-extra {
   opacity: 0;
