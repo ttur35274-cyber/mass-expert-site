@@ -1398,7 +1398,7 @@ details.expandable .expandable-body {
   overflow: hidden;
 }
 .jacket-text {
-  transition: transform 0.3s ease;
+  transition: transform 0.3s ease 0.05s;
 }
 .jacket-extra {
   transition: opacity 0.2s ease 0.15s;
@@ -1429,6 +1429,7 @@ details.expandable:hover .jacket-meta {
 }
 details.expandable:hover .jacket-text {
   transform: translateY(130px);
+  transition: transform 0.3s ease 0s;
 }
 details.expandable:hover .jacket-extra {
   opacity: 0;
