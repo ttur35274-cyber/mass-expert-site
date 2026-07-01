@@ -1075,6 +1075,11 @@ details.expandable summary:hover { background: var(--gray-50); }
 details.expandable .expandable-body {
   padding: 0 1.25rem 1.25rem;
   border-top: 1px solid var(--gray-100);
+  overflow: hidden;
+  transition: padding-bottom 0.3s ease;
+}
+details.expandable:hover .expandable-body {
+  padding-bottom: 160px;
 }
 details.expandable .expandable-body > *:last-child { margin-bottom: 0; }
 details.expandable .expandable-body ul { padding-left: 1.25rem; }
@@ -1392,9 +1397,6 @@ html.theme-accessibility .option-card-footer a {
 }
 details.expandable:hover .jacket-imgs img {
   transform: scale(2);
-}
-details.expandable .expandable-body {
-  overflow: hidden;
 }
 .jacket-text {
   transition: transform 0.3s ease 0.35s;
