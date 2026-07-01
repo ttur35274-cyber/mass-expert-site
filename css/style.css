@@ -1399,8 +1399,15 @@ details.expandable .expandable-body {
 .jacket-text {
   transition: transform 0.3s ease;
 }
+.jacket-extra {
+  transition: opacity 0.2s ease 0.15s, visibility 0s ease 0.35s;
+}
 details.expandable:hover .jacket-text {
   transform: translateY(130px);
+}
+details.expandable:hover .jacket-extra {
+  opacity: 0;
+  visibility: hidden;
 }
 details.expandable .expandable-body > div:last-child {
   opacity: 0;
