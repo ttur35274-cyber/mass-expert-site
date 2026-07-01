@@ -1391,11 +1391,16 @@ details.expandable:hover .jacket-content p:last-of-type {
   transform: translateY(105px);
 }
 details.expandable .expandable-body > div:last-child {
-  transition: opacity 0.25s ease 0.15s;
   opacity: 0.3;
+  transition: opacity 0s;
 }
 details.expandable:hover .expandable-body > div:last-child {
   opacity: 1;
+  animation: fadeInBtn 0.25s ease 0.15s both;
+}
+@keyframes fadeInBtn {
+  from { opacity: 0; transform: translateY(8px); }
+  to   { opacity: 1; transform: translateY(0); }
 }
 
 /* --- Jacket images hover --- */
