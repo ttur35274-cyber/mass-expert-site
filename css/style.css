@@ -1607,6 +1607,15 @@ details.expandable .jacket-content {
   details.expandable summary { padding: 0.75rem 1rem; font-size: 0.9375rem; }
   details.expandable .expandable-body { padding: 0 1rem 1rem; }
 
+  /* Jacket images — wrap on mobile */
+  .jacket-imgs {
+    flex-wrap: wrap;
+    gap: 0.5rem;
+  }
+  .jacket-imgs img {
+    max-height: 80px;
+  }
+
   /* Transmitter cards */
   .transmitter-card .tx-header { padding: 1rem 1rem 0.75rem; }
   .transmitter-card .tx-body { padding: 0.75rem 1rem 1rem; }
