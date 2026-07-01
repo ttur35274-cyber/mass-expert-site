@@ -1398,12 +1398,11 @@ details.expandable:hover .jacket-imgs img {
   display: flex;
   flex-direction: column;
 }
-.jacket-spacer {
-  height: 0;
-  transition: height 0.3s ease;
+.jacket-shift {
+  transition: transform 0.3s ease;
 }
-details.expandable:hover .jacket-spacer {
-  height: 130px;
+details.expandable:hover .jacket-shift {
+  transform: translateY(130px);
 }
 .jacket-extra {
   transition: opacity 0.2s ease 0.15s;
@@ -1444,6 +1443,8 @@ details.expandable .jacket-text > div:last-child {
   transform: translateY(8px);
   pointer-events: none;
   margin-top: auto;
+  position: relative;
+  z-index: 2;
   transition: opacity 0.25s ease 0.15s, transform 0.25s ease 0.15s;
 }
 details.expandable:hover .jacket-text > div:last-child {
