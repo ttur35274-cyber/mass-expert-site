@@ -1399,7 +1399,7 @@ details.expandable:hover .jacket-imgs img {
   transform: scale(2);
 }
 .jacket-text {
-  transition: transform 0.3s ease 0.35s;
+  transition: transform 0.3s ease;
   display: flex;
   flex-direction: column;
 }
@@ -1418,7 +1418,7 @@ details.expandable:hover .jacket-imgs img {
   margin-bottom: 0.5rem;
   opacity: 0;
   pointer-events: none;
-  transition: opacity 0.25s ease 0.35s;
+  transition: opacity 0.25s ease 0.15s;
 }
 .jacket-meta span {
   display: inline-block;
@@ -1432,11 +1432,9 @@ details.expandable:hover .jacket-imgs img {
 details.expandable:hover .jacket-meta {
   opacity: 1;
   pointer-events: auto;
-  transition: opacity 0.25s ease 0.35s;
 }
 details.expandable:hover .jacket-text {
   transform: translateY(130px);
-  transition: transform 0.3s ease 0s;
 }
 details.expandable:hover .jacket-extra {
   opacity: 0;
@@ -1447,13 +1445,12 @@ details.expandable .jacket-text > div:last-child {
   transform: translateY(8px);
   pointer-events: none;
   margin-top: auto;
-  transition: opacity 0.25s ease 0.35s, transform 0.25s ease 0.35s;
+  transition: opacity 0.25s ease 0.15s, transform 0.25s ease 0.15s;
 }
 details.expandable:hover .jacket-text > div:last-child {
   opacity: 1;
   transform: translateY(0);
   pointer-events: auto;
-  transition: opacity 0.25s ease 0.35s, transform 0.25s ease 0.35s;
 }
 /* Images flush to summary */
 details.expandable .jacket-content {
