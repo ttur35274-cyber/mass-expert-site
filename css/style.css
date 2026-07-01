@@ -1434,17 +1434,21 @@ details.expandable:hover .jacket-extra {
   opacity: 0;
   pointer-events: none;
 }
-details.expandable .expandable-body > div:last-child {
+details.expandable .jacket-text > div:last-child {
   opacity: 0;
   transform: translateY(8px);
   pointer-events: none;
   transition: opacity 0.25s ease 0.35s, transform 0.25s ease 0.35s;
 }
-details.expandable:hover .expandable-body > div:last-child {
+details.expandable:hover .jacket-text > div:last-child {
   opacity: 1;
   transform: translateY(0);
   pointer-events: auto;
   transition: opacity 0.25s ease 0.35s, transform 0.25s ease 0.35s;
+}
+/* Images flush to summary */
+details.expandable .jacket-content {
+  margin-top: -1px;
 }
 
 /* --- Jacket images hover --- */
