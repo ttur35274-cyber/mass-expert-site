@@ -1153,10 +1153,10 @@ details.expandable .expandable-body p {
   transition: transform 0.3s ease;
   display: block;
   margin: 0 auto;
+  transform-origin: top center;
 }
 .card-hover-zoom:hover .option-card-image img {
   transform: scale(2);
-  transform-origin: top center;
 }
 .card-hover-zoom .option-card-hover-btn {
   margin-top: auto;
@@ -1389,10 +1389,10 @@ html.theme-accessibility .option-card-footer a {
   width: auto;
   border-radius: 4px;
   transition: transform 0.3s ease;
+  transform-origin: top center;
 }
 details.expandable:hover .jacket-imgs img {
   transform: scale(2);
-  transform-origin: top center;
 }
 details.expandable .expandable-body {
   overflow: hidden;
