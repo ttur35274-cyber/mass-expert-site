@@ -72,21 +72,63 @@ document.addEventListener('DOMContentLoaded', () => {
       const isOpen = navLinks.classList.toggle('open');
       document.body.style.overflow = isOpen ? 'hidden' : '';
       document.documentElement.style.overflow = isOpen ? 'hidden' : '';
-      // Fix iOS Safari
       document.body.style.position = isOpen ? 'fixed' : '';
       document.body.style.width = isOpen ? '100%' : '';
       document.body.style.top = isOpen ? '-0px' : '';
+      if (isOpen) createOverlay();
+      else removeOverlay();
     });
     navLinks.querySelectorAll('a').forEach(link => {
-      link.addEventListener('click', () => {
-        navLinks.classList.remove('open');
-        document.body.style.overflow = '';
-        document.documentElement.style.overflow = '';
-        document.body.style.position = '';
-        document.body.style.width = '';
-        document.body.style.top = '';
-      });
+      link.addEventListener('click', closeNav);
     });
+    // Close on Escape
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape' && navLinks.classList.contains('open')) closeNav();
+    });
+    // Close on swipe left
+    let touchStartX = 0, touchStartY = 0;
+    navLinks.addEventListener('touchstart', (e) => {
+      touchStartX = e.changedTouches[0].screenX;
+      touchStartY = e.changedTouches[0].screenY;
+    }, { passive: true });
+    navLinks.addEventListener('touchend', (e) => {
+      const dx = e.changedTouches[0].screenX - touchStartX;
+      const dy = e.changedTouches[0].screenY - touchStartY;
+      if (Math.abs(dx) > 80 && Math.abs(dy) < 100) closeNav();
+    }, { passive: true });
+  }
+
+  function createOverlay() {
+    if (document.getElementById('nav-overlay')) return;
+    const overlay = document.createElement('div');
+    overlay.id = 'nav-overlay';
+    overlay.style.cssText = 'position:fixed;inset:0;background:rgba(0,0,0,0.5);z-index:999;';
+    overlay.addEventListener('click', closeNav);
+    overlay.addEventListener('touchstart', closeNav, { passive: true });
+    // Add close button in menu
+    const closeBtn = document.createElement('button');
+    closeBtn.innerHTML = '<i class="fas fa-times"></i>';
+    closeBtn.setAttribute('aria-label', 'Закрыть меню');
+    closeBtn.style.cssText = 'position:absolute;top:0.5rem;right:0.5rem;background:none;border:none;color:rgba(255,255,255,0.7);font-size:1.5rem;cursor:pointer;padding:0.5rem;z-index:1001;';
+    closeBtn.addEventListener('click', closeNav);
+    closeBtn.addEventListener('touchstart', closeNav, { passive: true });
+    document.body.appendChild(overlay);
+    document.body.appendChild(closeBtn);
+  }
+  function removeOverlay() {
+    const overlay = document.getElementById('nav-overlay');
+    const closeBtn = document.querySelector('button[aria-label="Закрыть меню"]');
+    if (overlay) overlay.remove();
+    if (closeBtn) closeBtn.remove();
+  }
+  function closeNav() {
+    navLinks.classList.remove('open');
+    document.body.style.overflow = '';
+    document.documentElement.style.overflow = '';
+    document.body.style.position = '';
+    document.body.style.width = '';
+    document.body.style.top = '';
+    removeOverlay();
   }
 
   // --- Navbar scroll effect ---
