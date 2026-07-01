@@ -1374,12 +1374,6 @@ html.theme-accessibility .option-card-footer a {
 }
 
 /* --- Jacket card hover animation (like condition cards) --- */
-.jacket-content {
-  transition: transform 0.3s ease;
-}
-details.expandable:hover .jacket-content {
-  transform: translateY(280px);
-}
 details.expandable:hover .jacket-img {
   transform: scale(2);
   transform-origin: top left;
