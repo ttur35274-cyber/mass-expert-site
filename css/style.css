@@ -1401,11 +1401,13 @@ details.expandable .expandable-body {
   transition: transform 0.3s ease 0.05s;
 }
 .jacket-extra {
-  max-height: 500px;
-  overflow: hidden;
-  transition: max-height 0.35s ease 0s, opacity 0.2s ease 0.15s, padding 0.35s ease 0s, margin 0.35s ease 0s;
+  transition: opacity 0.2s ease 0.15s;
 }
 .jacket-meta {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
   display: flex;
   flex-wrap: wrap;
   gap: 0.375rem;
@@ -1434,9 +1436,6 @@ details.expandable:hover .jacket-text {
   transition: transform 0.3s ease 0s;
 }
 details.expandable:hover .jacket-extra {
-  max-height: 0;
-  padding: 0;
-  margin: 0;
   opacity: 0;
   pointer-events: none;
 }
