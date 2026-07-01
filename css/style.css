@@ -1188,11 +1188,11 @@ details.expandable .expandable-body p {
   transform: translateY(105px);
 }
 .card-hover-zoom .option-card-desc {
-  transition: opacity 0.2s ease 0.15s, visibility 0s ease 0.35s, transform 0.3s ease;
+  transition: opacity 0.2s ease 0.15s, transform 0.3s ease;
 }
 .card-hover-zoom:hover .option-card-desc {
   opacity: 0;
-  visibility: hidden;
+  pointer-events: none;
   transform: translateY(105px);
 }
 .card-hover-zoom .option-card-header h4,
@@ -1401,7 +1401,7 @@ details.expandable .expandable-body {
   transition: transform 0.3s ease;
 }
 .jacket-extra {
-  transition: opacity 0.2s ease 0.15s, visibility 0s ease 0.35s;
+  transition: opacity 0.2s ease 0.15s;
 }
 .jacket-meta {
   display: flex;
@@ -1410,8 +1410,8 @@ details.expandable .expandable-body {
   margin-top: 0.75rem;
   margin-bottom: 0.5rem;
   opacity: 0;
-  visibility: hidden;
-  transition: opacity 0.25s ease 0.35s, visibility 0s ease 0.6s;
+  pointer-events: none;
+  transition: opacity 0.25s ease 0.35s;
 }
 .jacket-meta span {
   display: inline-block;
@@ -1424,47 +1424,27 @@ details.expandable .expandable-body {
 }
 details.expandable:hover .jacket-meta {
   opacity: 1;
-  visibility: visible;
-  transition: opacity 0.25s ease 0.35s, visibility 0s ease 0s;
+  pointer-events: auto;
+  transition: opacity 0.25s ease 0.35s;
 }
 details.expandable:hover .jacket-text {
   transform: translateY(130px);
 }
 details.expandable:hover .jacket-extra {
   opacity: 0;
-  visibility: hidden;
+  pointer-events: none;
 }
 details.expandable .expandable-body > div:last-child {
   opacity: 0;
-  visibility: hidden;
-  transition: opacity 0s;
+  transform: translateY(8px);
+  pointer-events: none;
+  transition: opacity 0.25s ease 0.35s, transform 0.25s ease 0.35s;
 }
 details.expandable:hover .expandable-body > div:last-child {
   opacity: 1;
-  visibility: visible;
-  animation: fadeInBtn 0.25s ease 0.15s both;
-}
-@keyframes fadeInBtn {
-  from { opacity: 0; transform: translateY(8px); }
-  to   { opacity: 1; transform: translateY(0); }
-}
-/* Images flush to summary */
-details.expandable .jacket-content {
-  margin-top: -1px;
-}
-details.expandable .expandable-body > div:last-child {
-  opacity: 0;
-  visibility: hidden;
-  transition: opacity 0s;
-}
-details.expandable:hover .expandable-body > div:last-child {
-  opacity: 1;
-  visibility: visible;
-  animation: fadeInBtn 0.25s ease 0.15s both;
-}
-@keyframes fadeInBtn {
-  from { opacity: 0; transform: translateY(8px); }
-  to   { opacity: 1; transform: translateY(0); }
+  transform: translateY(0);
+  pointer-events: auto;
+  transition: opacity 0.25s ease 0.35s, transform 0.25s ease 0.35s;
 }
 
 /* --- Jacket images hover --- */
