@@ -1393,6 +1393,15 @@ details.expandable:hover .jacket-imgs img {
   transform: scale(2);
   transform-origin: top left;
 }
+details.expandable .expandable-body {
+  overflow: hidden;
+}
+.jacket-text {
+  transition: transform 0.3s ease;
+}
+details.expandable:hover .jacket-text {
+  transform: translateY(130px);
+}
 details.expandable .expandable-body > div:last-child {
   opacity: 0;
   visibility: hidden;
