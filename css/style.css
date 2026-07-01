@@ -1373,6 +1373,31 @@ html.theme-accessibility .option-card-footer a {
   text-decoration: underline;
 }
 
+/* --- Jacket card hover animation (like condition cards) --- */
+.jacket-content {
+  transition: transform 0.3s ease;
+}
+details.expandable:hover .jacket-content {
+  transform: translateY(105px);
+}
+.jacket-content ul,
+.jacket-content p:last-of-type {
+  transition: opacity 0.2s ease 0.15s, visibility 0s ease 0.35s, transform 0.3s ease;
+}
+details.expandable:hover .jacket-content ul,
+details.expandable:hover .jacket-content p:last-of-type {
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(105px);
+}
+details.expandable .expandable-body > div:last-child {
+  transition: opacity 0.25s ease 0.15s;
+  opacity: 0.3;
+}
+details.expandable:hover .expandable-body > div:last-child {
+  opacity: 1;
+}
+
 /* --- Jacket images hover --- */
 .jacket-img { cursor: pointer; }
 .jacket-img:hover { transform: scale(2); transform-origin: top center; }
