@@ -1398,7 +1398,7 @@ details.expandable .expandable-body {
   overflow: hidden;
 }
 .jacket-text {
-  transition: transform 0.3s ease 0.05s;
+  transition: transform 0.3s ease 0.35s;
 }
 .jacket-extra {
   transition: opacity 0.2s ease 0.15s;
