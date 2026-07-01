@@ -1376,8 +1376,8 @@ html.theme-accessibility .option-card-footer a {
 /* --- Jacket card hover animation (like condition cards) --- */
 .jacket-imgs {
   display: flex;
-  gap: 2rem;
-  flex-wrap: wrap;
+  gap: 1px;
+  flex-wrap: nowrap;
   align-items: flex-start;
   justify-content: center;
   line-height: 0;
@@ -1391,7 +1391,7 @@ html.theme-accessibility .option-card-footer a {
 }
 details.expandable:hover .jacket-imgs img {
   transform: scale(2);
-  transform-origin: top left;
+  transform-origin: top center;
 }
 details.expandable .expandable-body {
   overflow: hidden;
