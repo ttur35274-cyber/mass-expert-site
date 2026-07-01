@@ -1400,6 +1400,8 @@ details.expandable:hover .jacket-imgs img {
 }
 .jacket-text {
   transition: transform 0.3s ease 0.35s;
+  display: flex;
+  flex-direction: column;
 }
 .jacket-extra {
   transition: opacity 0.2s ease 0.15s;
@@ -1444,6 +1446,7 @@ details.expandable .jacket-text > div:last-child {
   opacity: 0;
   transform: translateY(8px);
   pointer-events: none;
+  margin-top: auto;
   transition: opacity 0.25s ease 0.35s, transform 0.25s ease 0.35s;
 }
 details.expandable:hover .jacket-text > div:last-child {
