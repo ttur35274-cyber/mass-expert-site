@@ -1039,7 +1039,6 @@ details.expandable {
   border: 1px solid var(--gray-200);
   border-radius: var(--radius);
   margin-bottom: 1rem;
-  overflow: hidden;
 }
 details.expandable[open] {
   border-color: var(--primary);
@@ -1075,7 +1074,6 @@ details.expandable summary:hover { background: var(--gray-50); }
 details.expandable .expandable-body {
   padding: 0 1.25rem 1.25rem;
   border-top: 1px solid var(--gray-100);
-  overflow: hidden;
 }
 details.expandable .expandable-body > *:last-child { margin-bottom: 0; }
 details.expandable .expandable-body ul { padding-left: 1.25rem; }
