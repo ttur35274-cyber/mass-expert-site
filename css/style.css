@@ -1395,11 +1395,9 @@ details.expandable:hover .jacket-imgs img {
   transform: scale(2);
 }
 .jacket-text {
+  transition: transform 0.3s ease;
   display: flex;
   flex-direction: column;
-}
-.jacket-shift {
-  transition: transform 0.3s ease;
 }
 .jacket-extra {
   transition: opacity 0.2s ease 0.15s;
@@ -1431,8 +1429,8 @@ details.expandable:hover .jacket-meta {
   opacity: 1;
   pointer-events: auto;
 }
-details.expandable:hover .jacket-shift {
-  transform: translateY(105px);
+details.expandable:hover .jacket-text {
+  transform: translateY(130px);
 }
 details.expandable:hover .jacket-extra {
   opacity: 0;
