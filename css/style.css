@@ -254,6 +254,7 @@ html.theme-accessibility .client-tag {
 }
 html.theme-accessibility .theme-btn { color: #FFFFFF !important; }
 html.theme-accessibility .navbar-toggle { color: #FFFFFF !important; }
+html.theme-dark .navbar-toggle { color: var(--accent) !important; }
 html.theme-accessibility .navbar-brand .brand-icon {
   background: #FFFFFF !important;
   color: #000000 !important;
