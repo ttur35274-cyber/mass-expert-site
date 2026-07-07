@@ -1508,23 +1508,49 @@ details.expandable .jacket-content {
     padding: 3px;
   }
   .navbar-links {
-    display: none;
-    position: absolute;
-    top: 56px;
+    display: flex;
+    position: fixed;
+    top: 0;
     left: 0;
-    right: 0;
-    background: var(--primary-dark);
+    width: 100%;
+    height: 100%;
+    background: rgba(7, 38, 73, 0.97);
     flex-direction: column;
-    padding: 1rem;
-    border-bottom: 1px solid rgba(255,255,255,0.08);
-    max-height: calc(100vh - 56px);
-    overflow-y: auto;
+    align-items: center;
+    justify-content: center;
+    gap: 0.15rem;
+    z-index: 9998;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+    padding: 1.5rem;
+    -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(10px);
   }
-  .navbar-links.open { display: flex; }
-  .navbar-links a { width: 100%; padding: 0.75rem 1rem; }
-  .theme-toggles-mobile { display: flex; gap: 0.5rem; padding: 0.75rem 1rem; border-top: 1px solid rgba(255,255,255,0.1); margin-top: 0.5rem; }
+  .navbar-links.open {
+    opacity: 1;
+    visibility: visible;
+  }
+  .navbar-links a {
+    font-size: 1.2rem;
+    padding: 0.85rem 1.5rem;
+    width: auto;
+    text-align: center;
+  }
+  .theme-toggles-mobile {
+    display: flex;
+    gap: 1rem;
+    padding: 1.5rem 1rem 0;
+    border-top: 1px solid rgba(255,255,255,0.1);
+    margin-top: 0.5rem;
+    width: auto;
+  }
   .theme-toggles-desktop { display: none; }
-  .navbar-toggle { display: block; }
+  .navbar-toggle {
+    display: block;
+    z-index: 10000;
+    position: relative;
+  }
   .card-hover-zoom .option-card-hover-btn {
     opacity: 1;
     visibility: visible;
