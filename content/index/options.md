@@ -133,7 +133,7 @@ option_blocks:
   values: "Фланцы+крепёж"
  - block: "22V"
   name: "ETO — на заказ"
-  values: "Индивидуальные решения"
+  values: "N(нет) / ETOZZZ(индивидуальные решения)"
  - block: "23X"
   name: "Гарантия"
   values: "Станд. / Расшир. / Спец."
