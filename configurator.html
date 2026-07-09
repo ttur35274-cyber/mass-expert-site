@@ -48,10 +48,11 @@ body { font-family: 'Inter', sans-serif; background: #F8F9FA; padding-bottom: 4r
 
 .cfg-summary { background: white; border: 1px solid #E5E7EB; border-radius: 12px; padding: 1.5rem; margin-bottom: 1.5rem; }
 .cfg-summary h3 { margin: 0 0 0.75rem; font-size: 1rem; color: var(--cfg-primary); }
-.cfg-summary-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(140px, 1fr)); gap: 0.4rem; }
-.cfg-summary-item { font-size: 0.7rem; padding: 0.3rem 0.5rem; background: #F3F4F6; border-radius: 6px; }
-.cfg-summary-item .s-block { font-weight: 700; color: var(--cfg-primary); }
-.cfg-summary-item .s-code { font-weight: 700; color: #92400E; }
+.cfg-summary-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); gap: 0.35rem; }
+.cfg-summary-item { display: flex; align-items: center; gap: 0.35rem; font-size: 0.68rem; padding: 0.3rem 0.5rem; background: #F3F4F6; border-radius: 6px; line-height: 1.3; }
+.cfg-summary-item .s-block { font-weight: 800; color: var(--cfg-primary); min-width: 1.8rem; font-size: 0.6rem; flex-shrink: 0; }
+.cfg-summary-item .s-name { color: #374151; flex: 1; min-width: 0; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.cfg-summary-item .s-code { font-weight: 700; color: #92400E; font-size: 0.62rem; text-align: right; flex-shrink: 0; max-width: 55%; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
 
 .cfg-form { background: white; border: 1px solid #E5E7EB; border-radius: 12px; padding: 1.5rem; }
 .cfg-form h3 { margin: 0 0 0.75rem; font-size: 1rem; color: var(--cfg-primary); }
@@ -351,7 +352,13 @@ function updateSummary() {
   BLOCKS.forEach(b => {
     const val = selections[b.id] || '?';
     code += '-' + val;
-    html += `<div class="cfg-summary-item"><span class="s-block">${b.id}</span> ${val === '?' ? '?' : `<span class="s-code">${val}</span>`}</div>`;
+    const opt = b.opts.find(x => x.c === val);
+    const optDesc = opt ? opt.d : (val === '?' ? '—' : val);
+    html += `<div class="cfg-summary-item">
+      <span class="s-block">${b.id}</span>
+      <span class="s-name">${b.name}</span>
+      <span class="s-code">${optDesc}</span>
+    </div>`;
   });
   document.getElementById('cfgCode').textContent = code;
   grid.innerHTML = html;
