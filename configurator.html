@@ -128,7 +128,7 @@ body { font-family: 'Inter', sans-serif; background: var(--cfg-bg); padding-bott
 </style>
 </head>
 <body>
-<div class="cfg-header">
+<div class="cfg-header" id="cfgHeader">
  <div class="cfg-container">
   <h1>Конфигуратор Mass-EXPERT</h1>
   <p>Выберите опции по порядку — система подскажет доступные варианты</p>
@@ -187,7 +187,6 @@ body { font-family: 'Inter', sans-serif; background: var(--cfg-bg); padding-bott
       if (parentHtml.classList.contains('theme-dark')) {
         document.documentElement.classList.add('theme-dark');
       }
-      // Listen for theme changes
       const observer = new MutationObserver(function() {
         const isDark = parentHtml.classList.contains('theme-dark');
         document.documentElement.classList.toggle('theme-dark', isDark);
@@ -195,6 +194,11 @@ body { font-family: 'Inter', sans-serif; background: var(--cfg-bg); padding-bott
       observer.observe(parentHtml, { attributes: true, attributeFilter: ['class'] });
     }
   } catch(e) { /* cross-origin iframe */ }
+  // Hide header when embedded
+  if (window.location.search.includes('embedded')) {
+    document.getElementById('cfgHeader').style.display = 'none';
+    document.querySelector('.cfg-container').style.marginTop = '0';
+  }
 })();
 
 // ===== ПОЛНЫЕ ДАННЫЕ ОПЦИЙ (23 блока, нумерация из ОПИСАНИЯ ТИПА) =====
