@@ -64,6 +64,27 @@ body { font-family: 'Inter', sans-serif; background: #F8F9FA; padding-bottom: 4r
 .cfg-success { display: none; text-align: center; padding: 3rem 2rem; background: white; border: 1px solid #E5E7EB; border-radius: 12px; }
 .cfg-success.show { display: block; }
 .cfg-success .icon { font-size: 3rem; color: #10B981; margin-bottom: 1rem; }
+
+/* === MINIMAL CART === */
+.cfg-cart-bar { background: white; border: 1px solid #E5E7EB; border-radius: 12px; padding: 0.75rem 1rem; margin-bottom: 1.5rem; display: flex; align-items: center; gap: 0.75rem; cursor: pointer; transition: all 0.15s; user-select: none; }
+.cfg-cart-bar:hover { border-color: var(--cfg-accent); }
+.cfg-cart-bar .cc-icon { color: var(--cfg-accent); font-size: 1rem; }
+.cfg-cart-bar .cc-count { font-weight: 700; font-size: 0.875rem; color: var(--cfg-primary); flex: 1; }
+.cfg-cart-bar .cc-arrow { color: var(--cfg-gray); font-size: 0.7rem; transition: transform 0.2s; }
+.cfg-cart-bar .cc-arrow.open { transform: rotate(180deg); }
+.cfg-cart-items { display: none; margin-bottom: 1.5rem; background: white; border: 1px solid #E5E7EB; border-top: none; border-radius: 0 0 12px 12px; padding: 0.5rem 1rem 1rem; margin-top: -1.5rem; }
+.cfg-cart-items.open { display: block; }
+.cfg-cart-row { display: flex; align-items: center; gap: 0.6rem; padding: 0.4rem 0; border-bottom: 1px solid #F1F5F9; font-size: 0.78rem; }
+.cfg-cart-row:last-child { border-bottom: none; }
+.cfg-cart-row .cr-num { font-weight: 700; color: var(--cfg-primary); min-width: 1.2rem; font-size: 0.68rem; }
+.cfg-cart-row .cr-code { font-family: 'Courier New', monospace; font-weight: 600; color: #92400E; font-size: 0.7rem; flex: 1; min-width: 0; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.cfg-cart-row .cr-dn { font-size: 0.7rem; color: var(--cfg-gray); flex-shrink: 0; }
+.cfg-cart-row .cr-del { background: none; border: none; color: #CBD5E1; cursor: pointer; font-size: 0.8rem; padding: 0.1rem 0.3rem; border-radius: 4px; transition: all 0.15s; flex-shrink: 0; }
+.cfg-cart-row .cr-del:hover { color: #EF4444; background: #FEF2F2; }
+
+.cfg-actions { display: flex; gap: 0.75rem; flex-wrap: wrap; margin-bottom: 1.5rem; }
+.cfg-actions .btn { font-size: 0.9rem; padding: 0.6rem 1.25rem; }
+
 @media (max-width: 600px) { .cfg-form .form-row { grid-template-columns: 1fr; } }
 </style>
 </head>
@@ -87,6 +108,16 @@ body { font-family: 'Inter', sans-serif; background: #F8F9FA; padding-bottom: 4r
   <div style="font-size:0.875rem;font-family:monospace;margin-bottom:0.75rem;padding:0.5rem;background:#F3F4F6;border-radius:6px;" id="cfgCode">Mass-EXPERT-?-?-?-?-?-?-?-?-?-?-?-?-?-?-?-?-?-?-?-?-?-?-?</div>
   <div class="cfg-summary-grid" id="summaryGrid"></div>
  </div>
+ <div class="cfg-actions">
+  <button class="btn btn-primary" onclick="addToCart()"><i class="fas fa-cart-plus"></i> Добавить в заказ</button>
+  <button class="btn btn-outline" onclick="resetConfig()" style="background:transparent;color:var(--cfg-primary);border-color:var(--cfg-primary);"><i class="fas fa-redo"></i> Сбросить</button>
+ </div>
+ <div class="cfg-cart-bar" id="cartBar" onclick="toggleCart()">
+  <i class="fas fa-shopping-cart cc-icon"></i>
+  <span class="cc-count" id="cartCount">В заказе: 0 расходомеров</span>
+  <i class="fas fa-chevron-down cc-arrow" id="cartArrow"></i>
+ </div>
+ <div class="cfg-cart-items" id="cartItems"></div>
  <div class="cfg-form" id="orderForm">
   <h3><i class="fas fa-paper-plane"></i> Отправить запрос</h3>
   <div class="form-row">
@@ -104,7 +135,7 @@ body { font-family: 'Inter', sans-serif; background: #F8F9FA; padding-bottom: 4r
   <div class="icon"><i class="fas fa-check-circle"></i></div>
   <h3>Запрос отправлен!</h3>
   <p style="color:var(--cfg-gray);">Мы свяжемся с вами в ближайшее время.</p>
-  <button class="btn btn-outline" onclick="resetConfig()" style="margin-top:1rem;">Настроить ещё</button>
+  <button class="btn btn-outline" onclick="cart=[];renderCart();resetConfig();document.getElementById('cartBar').style.display='flex';document.getElementById('cartItems').style.display='block';document.getElementById('cartItems').classList.remove('open');cartOpen=false;document.getElementById('cartArrow').classList.remove('open');document.querySelector('.cfg-actions').style.display='flex';" style="margin-top:1rem;">Новый заказ</button>
  </div>
 </div>
 
@@ -252,6 +283,8 @@ const CONSTRAINTS = [
 
 let selections = {};
 let activeBlock = null;
+let cart = [];
+let cartOpen = false;
 
 function buildScheme() {
  const el = document.getElementById('scheme');
@@ -368,43 +401,123 @@ function updateSummary() {
  grid.innerHTML = html;
 }
 
+function getConfigCode() {
+  let code = 'Mass-EXPERT';
+  BLOCKS.forEach(b => { code += '-' + (selections[b.id] || '?'); });
+  return code;
+}
+
+function getConfigDN() {
+  const v = selections['1A'];
+  if (!v) return '';
+  const o = BLOCKS[0].opts.find(x => x.c === v);
+  return o ? o.d : 'DN' + v;
+}
+
+function addToCart() {
+  cart.push({...selections});
+  renderCart();
+  resetConfig();
+}
+
+function toggleCart() {
+  cartOpen = !cartOpen;
+  document.getElementById('cartItems').classList.toggle('open', cartOpen);
+  document.getElementById('cartArrow').classList.toggle('open', cartOpen);
+}
+
+function renderCart() {
+  const count = cart.length;
+  document.getElementById('cartCount').textContent = count > 0 ? `В заказе: ${count} расходомер${count === 1 ? '' : 'ов'}` : 'В заказе: 0 расходомеров';
+  const container = document.getElementById('cartItems');
+  if (count === 0) {
+    container.classList.remove('open');
+    cartOpen = false;
+    container.innerHTML = '';
+    return;
+  }
+  let html = '';
+  cart.forEach((item, idx) => {
+    let code = 'Mass-EXPERT';
+    BLOCKS.forEach(b => { code += '-' + (item[b.id] || '?'); });
+    const dn = item['1A'] ? getOptDesc('1A', item['1A']) : '';
+    html += `<div class="cfg-cart-row">
+      <span class="cr-num">${idx + 1}</span>
+      <span class="cr-code" title="${code}">${code}</span>
+      <span class="cr-dn">${dn}</span>
+      <button class="cr-del" onclick="removeFromCart(${idx})" title="Удалить"><i class="fas fa-times"></i></button>
+    </div>`;
+  });
+  container.innerHTML = html;
+}
+
+function removeFromCart(idx) {
+  cart.splice(idx, 1);
+  renderCart();
+}
+
 function sendOrder() {
- const name = document.getElementById('orderName').value.trim();
- const phone = document.getElementById('orderPhone').value.trim();
- if (!name || !phone) { alert('Заполните имя и телефон'); return; }
- let configStr = 'Mass-EXPERT';
- BLOCKS.forEach(b => { configStr += '-' + (selections[b.id] || '?'); });
- const comment = document.getElementById('orderComment').value.trim();
- const email = document.getElementById('orderEmail').value.trim();
- // Build detailed config
- let details = '';
- BLOCKS.forEach(b => { const v = selections[b.id]; if (v) { const o = b.opts.find(x=>x.c===v); details += `\n ${b.id} (${b.name}): ${v} — ${o ? o.d : ''}`; } });
- const msg = `🔧 НОВЫЙ ЗАПРОС КОНФИГУРАТОРА\n\nКонфигурация: ${configStr}\n${details}\n\nИмя: ${name}\nТелефон: ${phone}\nEmail: ${email || '—'}\nКомментарий: ${comment || '—'}`;
- document.getElementById('orderForm').style.display = 'none';
- document.getElementById('success').classList.add('show');
- navigator.clipboard.writeText(msg).catch(() => {});
- console.log('Order:', msg);
+  if (cart.length === 0) {
+    alert('Добавьте хотя бы одну конфигурацию в заказ.');
+    return;
+  }
+  const name = document.getElementById('orderName').value.trim();
+  const phone = document.getElementById('orderPhone').value.trim();
+  if (!name || !phone) { alert('Заполните имя и телефон'); return; }
+  const email = document.getElementById('orderEmail').value.trim();
+  const comment = document.getElementById('orderComment').value.trim();
+
+  let msg = `🔧 НОВЫЙ ЗАПРОС КОНФИГУРАТОРА\n\n━━━ ЗАКАЗ (${cart.length} шт.) ━━━\n`;
+  cart.forEach((item, idx) => {
+    let code = 'Mass-EXPERT';
+    BLOCKS.forEach(b => { code += '-' + (item[b.id] || '?'); });
+    msg += `\n--- Расходомер #${idx + 1} ---\nКод: ${code}`;
+    BLOCKS.forEach(b => {
+      const v = item[b.id];
+      if (v) {
+        const o = b.opts.find(x => x.c === v);
+        msg += `\n  ${b.id} (${b.name}): ${v} — ${o ? o.d : ''}`;
+      }
+    });
+  });
+  msg += `\n\n━━━ КОНТАКТЫ ━━━\nИмя: ${name}\nТелефон: ${phone}\nEmail: ${email || '—'}\nКомментарий: ${comment || '—'}`;
+
+  document.getElementById('orderForm').style.display = 'none';
+  document.getElementById('cartBar').style.display = 'none';
+  document.getElementById('cartItems').style.display = 'none';
+  document.querySelector('.cfg-actions').style.display = 'none';
+  document.getElementById('success').classList.add('show');
+  navigator.clipboard.writeText(msg).catch(() => {});
+  console.log('Order:', msg);
 }
 
 function resetConfig() {
- selections = {}; activeBlock = null;
- document.querySelectorAll('.cfg-block').forEach(el => el.classList.remove('selected'));
- BLOCKS.forEach(b => {
-  const el = document.getElementById(`val-${b.id}`);
-  el.textContent = '—';
-  el.classList.add('unset');
- });
- document.getElementById('panel').className = 'cfg-panel';
- document.getElementById('panel').innerHTML = '';
- document.getElementById('orderForm').style.display = 'block';
- document.getElementById('success').classList.remove('show');
- ['orderName','orderPhone','orderEmail','orderComment'].forEach(id => document.getElementById(id).value = '');
- updateSummary();
- selectBlock(0);
+  selections = {}; activeBlock = null;
+  document.querySelectorAll('.cfg-block').forEach(el => el.classList.remove('selected'));
+  BLOCKS.forEach(b => {
+   const el = document.getElementById(`val-${b.id}`);
+   el.textContent = '—';
+   el.classList.add('unset');
+  });
+  document.getElementById('panel').className = 'cfg-panel';
+  document.getElementById('panel').innerHTML = '';
+  document.getElementById('orderForm').style.display = 'block';
+  document.getElementById('success').classList.remove('show');
+  ['orderName','orderPhone','orderEmail','orderComment'].forEach(id => document.getElementById(id).value = '');
+  updateSummary();
+  selectBlock(0);
+}
+
+function getOptDesc(blockId, val) {
+  const b = BLOCKS.find(x => x.id === blockId);
+  if (!b) return val;
+  const o = b.opts.find(x => x.c === val);
+  return o ? o.d : val;
 }
 
 buildScheme();
 updateSummary();
+renderCart();
 </script>
 </body>
 </html>
