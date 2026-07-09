@@ -1471,8 +1471,13 @@ details.expandable .jacket-content {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 1rem;
+  align-items: stretch;
 }
-.tubes-grid details.expandable { margin-bottom: 0; }
+.tubes-grid details.expandable { margin-bottom: 0; height: 100%; }
+.tubes-grid details.expandable .expandable-body { height: 100%; display: flex; flex-direction: column; }
+.tubes-grid details.expandable .jacket-content { height: 100%; display: flex; flex-direction: column; }
+.tubes-grid details.expandable .jacket-text { height: 100%; flex: 1; }
+.tubes-grid details.expandable .jacket-text > div:last-child { margin-top: auto; padding-bottom: 2px; }
 @media (max-width: 700px) {
   .tubes-grid { grid-template-columns: 1fr; }
 }
