@@ -24,22 +24,6 @@
  --cfg-hover-bg: #FFFBEB;
  --cfg-selected-bg: #FEF3C7;
 }
-@media (prefers-color-scheme: dark) {
- :root {
-  --cfg-primary: #F59E0B;
-  --cfg-accent: #F59E0B;
-  --cfg-gray: #9CA3AF;
-  --cfg-bg: #0F172A;
-  --cfg-card: #1E293B;
-  --cfg-border: #334155;
-  --cfg-block-bg: #1E293B;
-  --cfg-block-border: #334155;
-  --cfg-text: var(--cfg-border);
-  --cfg-text-secondary: #CBD5E1;
-  --cfg-hover-bg: #422006;
-  --cfg-selected-bg: #422006;
- }
-}
 html.theme-dark {
  --cfg-primary: #F59E0B;
  --cfg-accent: #F59E0B;
@@ -128,7 +112,7 @@ body { font-family: 'Inter', sans-serif; background: var(--cfg-bg); padding-bott
 </style>
 </head>
 <body>
-<div class="cfg-header" id="cfgHeader">
+<div class="cfg-header">
  <div class="cfg-container">
   <h1>Конфигуратор Mass-EXPERT</h1>
   <p>Выберите опции по порядку — система подскажет доступные варианты</p>
@@ -194,11 +178,6 @@ body { font-family: 'Inter', sans-serif; background: var(--cfg-bg); padding-bott
       observer.observe(parentHtml, { attributes: true, attributeFilter: ['class'] });
     }
   } catch(e) { /* cross-origin iframe */ }
-  // Hide header when embedded
-  if (window.location.search.includes('embedded')) {
-    document.getElementById('cfgHeader').style.display = 'none';
-    document.querySelector('.cfg-container').style.marginTop = '0';
-  }
 })();
 
 // ===== ПОЛНЫЕ ДАННЫЕ ОПЦИЙ (23 блока, нумерация из ОПИСАНИЯ ТИПА) =====
