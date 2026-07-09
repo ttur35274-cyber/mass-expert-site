@@ -293,7 +293,6 @@
 
    <div class="product-tabs animate-on-scroll">
     <button class="product-tab active" data-tab="tab-flow">Массовый расход жидкости</button>
-    <button class="product-tab" data-tab="tab-zero">Стабильность нулевой точки</button>
     <button class="product-tab" data-tab="tab-pressure">Модификация P (высокое давление)</button>
     <button class="product-tab" data-tab="tab-pressure-k">Модификация PK (сверхвысокое давление)</button>
    </div>
@@ -304,61 +303,32 @@
     <div class="table-wrap animate-on-scroll">
      <table>
       <thead>
-       <tr>
-        <th>Модель</th>
+       <tr><th>Модель</th>
         <th>Условный диаметр</th>
         <th>Максимальный расход, кг/ч</th>
+        <th>Стабильность нулевой точки, кг/ч</th>
        </tr>
       </thead>
       <tbody>
-       <tr><td>Mass-EXPERT-001</td><td>DN01</td><td>12</td></tr>
-       <tr><td>Mass-EXPERT-002</td><td>DN02</td><td>96</td></tr>
-       <tr><td>Mass-EXPERT-003</td><td>DN03</td><td>180</td></tr>
-       <tr><td>Mass-EXPERT-004</td><td>DN04</td><td>300</td></tr>
-       <tr><td>Mass-EXPERT-008</td><td>DN08</td><td>1 200</td></tr>
-       <tr><td>Mass-EXPERT-015</td><td>DN15</td><td>3 600</td></tr>
-       <tr><td>Mass-EXPERT-020</td><td>DN20</td><td>6 000</td></tr>
-       <tr><td>Mass-EXPERT-025</td><td>DN25</td><td>12 000</td></tr>
-       <tr><td>Mass-EXPERT-040</td><td>DN40</td><td>27 000</td></tr>
-       <tr><td>Mass-EXPERT-050</td><td>DN50</td><td>39 000</td></tr>
-       <tr><td>Mass-EXPERT-080</td><td>DN80</td><td>120 000</td></tr>
-       <tr><td>Mass-EXPERT-100</td><td>DN100</td><td>180 000</td></tr>
-       <tr><td>Mass-EXPERT-150</td><td>DN150</td><td>720 000</td></tr>
-       <tr><td>Mass-EXPERT-200</td><td>DN200</td><td>1 080 000</td></tr>
-       <tr><td>Mass-EXPERT-250</td><td>DN250</td><td>1 740 000</td></tr>
+       <tr><td>Mass-EXPERT-001</td><td>DN01</td><td>12</td><td>0,012</td></tr>
+       <tr><td>Mass-EXPERT-002</td><td>DN02</td><td>96</td><td>0,030</td></tr>
+       <tr><td>Mass-EXPERT-003</td><td>DN03</td><td>180</td><td>0,060</td></tr>
+       <tr><td>Mass-EXPERT-004</td><td>DN04</td><td>300</td><td>0,060</td></tr>
+       <tr><td>Mass-EXPERT-008</td><td>DN08</td><td>1 200</td><td>0,120</td></tr>
+       <tr><td>Mass-EXPERT-015</td><td>DN15</td><td>3 600</td><td>0,360</td></tr>
+       <tr><td>Mass-EXPERT-020</td><td>DN20</td><td>6 000</td><td>0,600</td></tr>
+       <tr><td>Mass-EXPERT-025</td><td>DN25</td><td>12 000</td><td>0,600</td></tr>
+       <tr><td>Mass-EXPERT-040</td><td>DN40</td><td>27 000</td><td>1,200</td></tr>
+       <tr><td>Mass-EXPERT-050</td><td>DN50</td><td>39 000</td><td>1,500</td></tr>
+       <tr><td>Mass-EXPERT-080</td><td>DN80</td><td>120 000</td><td>3,000</td></tr>
+       <tr><td>Mass-EXPERT-100</td><td>DN100</td><td>180 000</td><td>6,000</td></tr>
+       <tr><td>Mass-EXPERT-150</td><td>DN150</td><td>720 000</td><td>12,000</td></tr>
+       <tr><td>Mass-EXPERT-200</td><td>DN200</td><td>1 080 000</td><td>18,000</td></tr>
+       <tr><td>Mass-EXPERT-250</td><td>DN250</td><td>1 740 000</td><td>45,000</td></tr>
       </tbody>
      </table>
     </div>
     <p style="font-size:0.8125rem;color:var(--gray-500);"><em>* При приближении расхода к нижней границе диапазона необходимо учитывать стабильность нулевой точки. Именно она определяет, насколько реально достичь заявленного диапазона на практике.</em></p>
-   </div>
-
-   <!-- Tab 2: Zero stability -->
-   <div class="product-panel" id="tab-zero">
-    <p class="animate-on-scroll" style="color:var(--gray-500);margin-bottom:1rem;">Стабильность нулевой точки по типоразмерам</p>
-    <div class="table-wrap animate-on-scroll">
-     <table>
-      <thead>
-       <tr><th>Модель</th><th>Стабильность нулевой точки, кг/ч</th></tr>
-      </thead>
-      <tbody>
-       <tr><td>Mass-EXPERT-001</td><td>0,012</td></tr>
-       <tr><td>Mass-EXPERT-002</td><td>0,030</td></tr>
-       <tr><td>Mass-EXPERT-003</td><td>0,060</td></tr>
-       <tr><td>Mass-EXPERT-004</td><td>0,060</td></tr>
-       <tr><td>Mass-EXPERT-008</td><td>0,120</td></tr>
-       <tr><td>Mass-EXPERT-015</td><td>0,360</td></tr>
-       <tr><td>Mass-EXPERT-020</td><td>0,600</td></tr>
-       <tr><td>Mass-EXPERT-025</td><td>0,600</td></tr>
-       <tr><td>Mass-EXPERT-040</td><td>1,200</td></tr>
-       <tr><td>Mass-EXPERT-050</td><td>1,500</td></tr>
-       <tr><td>Mass-EXPERT-080</td><td>3,000</td></tr>
-       <tr><td>Mass-EXPERT-100</td><td>6,000</td></tr>
-       <tr><td>Mass-EXPERT-150</td><td>12,000</td></tr>
-       <tr><td>Mass-EXPERT-200</td><td>18,000</td></tr>
-       <tr><td>Mass-EXPERT-250</td><td>45,000</td></tr>
-      </tbody>
-     </table>
-    </div>
    </div>
 
    <!-- Tab 3: High pressure P -->
