@@ -388,7 +388,7 @@ p { margin-bottom: 1rem; }
 .navbar-brand:hover { color: var(--accent); }
 .navbar-brand .brand-icon {
   width: 70px;
-  height: 35px;
+  height: 55px;
   background: var(--accent);
   border-radius: var(--radius);
   display: flex;
