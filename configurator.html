@@ -127,12 +127,13 @@ const BLOCKS = [
     {c:'C',d:'Сверхвысокая темп.',n:'−50…+350 °C, только раздельное исп.'},
     {c:'X',d:'Особые условия',n:'требуется описание'}
   ]},
-  {id:'3C',name:'Тип сенсора',desc:'U/K/W/L/Δ', opts:[
+  {id:'3C',name:'Тип сенсора',desc:'U/K/W/L/D/V/X', opts:[
     {c:'U',d:'U-образный',n:'≥DN03, универсальный'},
     {c:'K',d:'Широкий U-образный',n:'DN02–DN25, до 96 МПа'},
     {c:'W',d:'W-образный микроизгиб',n:'компактный'},
     {c:'L',d:'Прямотрубный',n:'CIP/SIP, вязкие среды'},
     {c:'D',d:'Δ-образный (треугольный)',n:'DN01/DN02/DN25, микрорасходы'},
+    {c:'V',d:'V-образный',n:'DN08/DN15/DN25/DN40/DN50, до 10 МПа, замена Endress+Hauser'},
     {c:'X',d:'Специальное',n:'требуется описание'}
   ]},
   {id:'4D',name:'Макс. давление',desc:'1,6–90 МПа', opts:[
@@ -244,6 +245,7 @@ const CONSTRAINTS = [
   {from:'3C',val:'U', check:(sel)=>{const d=sel['1A'];return !d||parseInt(d)>=3;}, msg:'U-образный: только ≥DN03'},
   {from:'3C',val:'K', check:(sel)=>{const d=sel['1A'];return !d||(parseInt(d)>=2&&parseInt(d)<=25);}, msg:'K-тип: только DN02–DN25'},
   {from:'3C',val:'D', check:(sel)=>{const d=sel['1A'];return !d||d==='001'||d==='002'||d==='025';}, msg:'Δ-тип: только DN01, DN02, DN25'},
+  {from:'3C',val:'V', check:(sel)=>{const d=sel['1A'];return !d||['008','015','025','040','050'].includes(d);}, msg:'V-тип: только DN08, DN15, DN25, DN40, DN50'},
   {from:'8H',val:'J', check:(sel)=>{const k=sel['11K'];return !k||k==='N'||k==='A';}, msg:'Компактное J: без взрывозащиты'},
   {from:'8H',val:'D', check:(sel)=>{const k=sel['11K'];return !k||k==='N'||k==='A';}, msg:'DIN-рейка D: без взрывозащиты'},
 ];
