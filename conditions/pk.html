@@ -1,556 +1,556 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>PK/P — Сверхвысокое и повышенное давление | Mass-EXPERT</title>
-  <meta name="description" content="Модели сверхвысокого давления PK до 96 МПа и повышенного давления P от 10 МПа. Широкий U-образный тип трубок. Оптимизированы для водорода. UNF, VCO/VCR.">
-  <meta name="keywords" content="расходомер сверхвысокого давления, PK, P, кориолисовый расходомер, водород, 96 МПа, Mass-EXPERT, высокое давление, UNF, VCO, VCR, композитный металл">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="../css/style.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-  <!-- Open Graph -->
-  <meta property="og:title" content="PK/P — Сверхвысокое и повышенное давление — Mass-EXPERT">
-  <meta property="og:description" content="Модели сверхвысокого давления PK до 96 МПа и повышенного давления P. Оптимизированы для водорода.">
-  <meta property="og:type" content="website">
-  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 40 40'><rect width='40' height='40' rx='8' fill='%23F59E0B'/><text x='20' y='26' text-anchor='middle' font-size='14' font-weight='900' fill='%230F172A' font-family='Inter'>ME</text></svg>">
-  <style>
-    .cond-hero {
-      position: relative;
-      min-height: 70vh;
-      display: flex;
-      align-items: center;
-      background: linear-gradient(135deg, #1a1a2e 0%, #0B3D6B 50%, #16213e 100%);
-      overflow: hidden;
-      padding-top: 72px;
-    }
-    .cond-hero::before {
-      content: '';
-      position: absolute;
-      inset: 0;
-      background:
-        radial-gradient(ellipse at 70% 30%, rgba(245, 158, 11, 0.10) 0%, transparent 60%),
-        radial-gradient(ellipse at 30% 80%, rgba(255,255,255,0.03) 0%, transparent 50%);
-      pointer-events: none;
-    }
-    .cond-hero-content { position: relative; z-index: 1; }
-    .cond-hero-content .cond-label {
-      display: inline-block;
-      font-size: 0.75rem;
-      color: var(--gray-400);
-      text-transform: uppercase;
-      letter-spacing: 0.08em;
-      font-weight: 600;
-      margin-bottom: 0.75rem;
-      background: rgba(255,255,255,0.08);
-      padding: 0.3rem 0.75rem;
-      border-radius: 999px;
-    }
-    .cond-hero-content h1 { color: var(--white); margin-bottom: 0.5rem; }
-    .cond-hero-content .cond-subtitle {
-      font-size: 1.35rem;
-      color: var(--accent);
-      font-weight: 600;
-      margin-bottom: 1.5rem;
-    }
-    .cond-hero-content .cond-desc {
-      color: rgba(255,255,255,0.8);
-      font-size: 1.0625rem;
-      margin: 1.5rem 0 2rem;
-      max-width: 680px;
-    }
-    .cond-badges {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 0.75rem;
-      margin-top: 1.5rem;
-    }
-    .cond-badge {
-      background: rgba(255,255,255,0.1);
-      border: 1px solid rgba(255,255,255,0.15);
-      color: rgba(255,255,255,0.9);
-      padding: 0.4rem 1rem;
-      border-radius: 999px;
-      font-size: 0.8125rem;
-      font-weight: 500;
-    }
-    .gallery-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-      gap: 1.5rem;
-    }
-    .gallery-item {
-      border-radius: var(--radius-lg);
-      overflow: hidden;
-      border: 1px solid var(--gray-200);
-      background: var(--white);
-      transition: all var(--transition);
-    }
-    .gallery-item:hover { box-shadow: var(--shadow-lg); transform: translateY(-4px); }
-    .gallery-item img { width: 100%; height: auto; display: block; }
-    .gallery-item .gallery-caption {
-      padding: 0.75rem 1rem;
-      font-size: 0.8125rem;
-      color: var(--gray-600);
-      font-weight: 500;
-      text-align: center;
-      border-top: 1px solid var(--gray-100);
-    }
-    .feat-list {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 1rem;
-      margin: 1.5rem 0;
-    }
-    .feat-item {
-      display: flex;
-      align-items: flex-start;
-      gap: 0.75rem;
-      padding: 0.75rem 0;
-    }
-    .feat-item .feat-icon {
-      flex-shrink: 0;
-      width: 28px;
-      height: 28px;
-      background: var(--accent-light);
-      border-radius: 50%;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 0.875rem;
-      color: var(--accent-hover);
-      font-weight: 700;
-    }
-    .feat-item .feat-text { font-size: 0.9375rem; color: var(--gray-700); }
-    .spec-highlight-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-      gap: 1rem;
-      margin: 2rem 0;
-    }
-    .spec-highlight-card {
-      background: var(--gray-50);
-      border: 1px solid var(--gray-200);
-      border-radius: var(--radius);
-      padding: 1.25rem;
-      text-align: center;
-    }
-    .spec-highlight-card .spec-hl-value {
-      font-size: 1.75rem;
-      font-weight: 800;
-      color: var(--primary);
-    }
-    .spec-highlight-card .spec-hl-label {
-      font-size: 0.8125rem;
-      color: var(--gray-500);
-      margin-top: 0.25rem;
-    }
-    .app-tags {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 0.5rem;
-      margin-top: 1rem;
-    }
-    .app-tag {
-      background: var(--gray-100);
-      border: 1px solid var(--gray-200);
-      padding: 0.5rem 1rem;
-      border-radius: 999px;
-      font-size: 0.875rem;
-      font-weight: 500;
-      color: var(--gray-700);
-      transition: all var(--transition);
-    }
-    .app-tag:hover { border-color: var(--primary); color: var(--primary); background: var(--white); }
-    .design-features {
-      margin: 1.5rem 0;
-      padding: 1.5rem;
-      background: var(--gray-50);
-      border: 1px solid var(--gray-200);
-      border-radius: var(--radius-lg);
-    }
-    .design-features h3 { font-size: 1.0625rem; margin-bottom: 1rem; color: var(--gray-900); }
-    .design-features ul { list-style: none; padding: 0; }
-    .design-features ul li {
-      padding: 0.5rem 0;
-      padding-left: 1.5rem;
-      position: relative;
-      font-size: 0.9375rem;
-      color: var(--gray-700);
-      border-bottom: 1px solid var(--gray-100);
-    }
-    .design-features ul li:last-child { border-bottom: none; }
-    .design-features ul li::before {
-      content: '▸';
-      position: absolute;
-      left: 0;
-      color: var(--accent);
-      font-weight: 700;
-    }
-    @media (max-width: 768px) {
-      .feat-list { grid-template-columns: 1fr; }
-      .cond-hero { min-height: auto; padding: 6rem 0 3rem; }
-    }
-  </style>
+ <meta charset="UTF-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <title>PK/P — Сверхвысокое и повышенное давление | Mass-EXPERT</title>
+ <meta name="description" content="Модели сверхвысокого давления PK до 96 МПа и повышенного давления P от 10 МПа. Широкий U-образный тип трубок. Оптимизированы для водорода. UNF, VCO/VCR.">
+ <meta name="keywords" content="расходомер сверхвысокого давления, PK, P, кориолисовый расходомер, водород, 96 МПа, Mass-EXPERT, высокое давление, UNF, VCO, VCR, композитный металл">
+ <link rel="preconnect" href="https://fonts.googleapis.com">
+ <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+ <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+ <link rel="stylesheet" href="../css/style.css">
+ <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+ <!-- Open Graph -->
+ <meta property="og:title" content="PK/P — Сверхвысокое и повышенное давление — Mass-EXPERT">
+ <meta property="og:description" content="Модели сверхвысокого давления PK до 96 МПа и повышенного давления P. Оптимизированы для водорода.">
+ <meta property="og:type" content="website">
+ <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 40 40'><rect width='40' height='40' rx='8' fill='%23F59E0B'/><text x='20' y='26' text-anchor='middle' font-size='14' font-weight='900' fill='%230F172A' font-family='Inter'>ME</text></svg>">
+ <style>
+  .cond-hero {
+   position: relative;
+   min-height: 70vh;
+   display: flex;
+   align-items: center;
+   background: linear-gradient(135deg, #1a1a2e 0%, #0B3D6B 50%, #16213e 100%);
+   overflow: hidden;
+   padding-top: 72px;
+  }
+  .cond-hero::before {
+   content: '';
+   position: absolute;
+   inset: 0;
+   background:
+    radial-gradient(ellipse at 70% 30%, rgba(245, 158, 11, 0.10) 0%, transparent 60%),
+    radial-gradient(ellipse at 30% 80%, rgba(255,255,255,0.03) 0%, transparent 50%);
+   pointer-events: none;
+  }
+  .cond-hero-content { position: relative; z-index: 1; }
+  .cond-hero-content .cond-label {
+   display: inline-block;
+   font-size: 0.75rem;
+   color: var(--gray-400);
+   text-transform: uppercase;
+   letter-spacing: 0.08em;
+   font-weight: 600;
+   margin-bottom: 0.75rem;
+   background: rgba(255,255,255,0.08);
+   padding: 0.3rem 0.75rem;
+   border-radius: 999px;
+  }
+  .cond-hero-content h1 { color: var(--white); margin-bottom: 0.5rem; }
+  .cond-hero-content .cond-subtitle {
+   font-size: 1.35rem;
+   color: var(--accent);
+   font-weight: 600;
+   margin-bottom: 1.5rem;
+  }
+  .cond-hero-content .cond-desc {
+   color: rgba(255,255,255,0.8);
+   font-size: 1.0625rem;
+   margin: 1.5rem 0 2rem;
+   max-width: 680px;
+  }
+  .cond-badges {
+   display: flex;
+   flex-wrap: wrap;
+   gap: 0.75rem;
+   margin-top: 1.5rem;
+  }
+  .cond-badge {
+   background: rgba(255,255,255,0.1);
+   border: 1px solid rgba(255,255,255,0.15);
+   color: rgba(255,255,255,0.9);
+   padding: 0.4rem 1rem;
+   border-radius: 999px;
+   font-size: 0.8125rem;
+   font-weight: 500;
+  }
+  .gallery-grid {
+   display: grid;
+   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+   gap: 1.5rem;
+  }
+  .gallery-item {
+   border-radius: var(--radius-lg);
+   overflow: hidden;
+   border: 1px solid var(--gray-200);
+   background: var(--white);
+   transition: all var(--transition);
+  }
+  .gallery-item:hover { box-shadow: var(--shadow-lg); transform: translateY(-4px); }
+  .gallery-item img { width: 100%; height: auto; display: block; }
+  .gallery-item .gallery-caption {
+   padding: 0.75rem 1rem;
+   font-size: 0.8125rem;
+   color: var(--gray-600);
+   font-weight: 500;
+   text-align: center;
+   border-top: 1px solid var(--gray-100);
+  }
+  .feat-list {
+   display: grid;
+   grid-template-columns: 1fr 1fr;
+   gap: 1rem;
+   margin: 1.5rem 0;
+  }
+  .feat-item {
+   display: flex;
+   align-items: flex-start;
+   gap: 0.75rem;
+   padding: 0.75rem 0;
+  }
+  .feat-item .feat-icon {
+   flex-shrink: 0;
+   width: 28px;
+   height: 28px;
+   background: var(--accent-light);
+   border-radius: 50%;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   font-size: 0.875rem;
+   color: var(--accent-hover);
+   font-weight: 700;
+  }
+  .feat-item .feat-text { font-size: 0.9375rem; color: var(--gray-700); }
+  .spec-highlight-grid {
+   display: grid;
+   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+   gap: 1rem;
+   margin: 2rem 0;
+  }
+  .spec-highlight-card {
+   background: var(--gray-50);
+   border: 1px solid var(--gray-200);
+   border-radius: var(--radius);
+   padding: 1.25rem;
+   text-align: center;
+  }
+  .spec-highlight-card .spec-hl-value {
+   font-size: 1.75rem;
+   font-weight: 800;
+   color: var(--primary);
+  }
+  .spec-highlight-card .spec-hl-label {
+   font-size: 0.8125rem;
+   color: var(--gray-500);
+   margin-top: 0.25rem;
+  }
+  .app-tags {
+   display: flex;
+   flex-wrap: wrap;
+   gap: 0.5rem;
+   margin-top: 1rem;
+  }
+  .app-tag {
+   background: var(--gray-100);
+   border: 1px solid var(--gray-200);
+   padding: 0.5rem 1rem;
+   border-radius: 999px;
+   font-size: 0.875rem;
+   font-weight: 500;
+   color: var(--gray-700);
+   transition: all var(--transition);
+  }
+  .app-tag:hover { border-color: var(--primary); color: var(--primary); background: var(--white); }
+  .design-features {
+   margin: 1.5rem 0;
+   padding: 1.5rem;
+   background: var(--gray-50);
+   border: 1px solid var(--gray-200);
+   border-radius: var(--radius-lg);
+  }
+  .design-features h3 { font-size: 1.0625rem; margin-bottom: 1rem; color: var(--gray-900); }
+  .design-features ul { list-style: none; padding: 0; }
+  .design-features ul li {
+   padding: 0.5rem 0;
+   padding-left: 1.5rem;
+   position: relative;
+   font-size: 0.9375rem;
+   color: var(--gray-700);
+   border-bottom: 1px solid var(--gray-100);
+  }
+  .design-features ul li:last-child { border-bottom: none; }
+  .design-features ul li::before {
+   content: '▸';
+   position: absolute;
+   left: 0;
+   color: var(--accent);
+   font-weight: 700;
+  }
+  @media (max-width: 768px) {
+   .feat-list { grid-template-columns: 1fr; }
+   .cond-hero { min-height: auto; padding: 6rem 0 3rem; }
+  }
+ </style>
 </head>
 <body>
 
-  <!-- ==================== NAVIGATION ==================== -->
-  <nav class="navbar" role="navigation" aria-label="Основная навигация">
-    <div class="container">
-      <a href="../index.html" class="navbar-brand">
-        <span class="brand-icon">MASS<br>EXPERT</span>
-      </a>
-      <div class="navbar-controls">
-        <button class="navbar-toggle" aria-label="Меню"><i class="fas fa-bars"></i></button>
-      </div>
-      <div class="navbar-links">
-        <a href="../index.html#about">О продукте</a>
-        <a href="../index.html#advantages">Преимущества</a>
-        <a href="../index.html#principle">Принцип работы</a>
-        <a href="../index.html#applications">Применение</a>
-        <a href="../index.html#product-line">Типоразмеры</a>
-        <a href="../index.html#specifications">Характеристики</a>
-        <a href="../index.html#contacts">Контакты</a>
-        <div class="theme-toggles-desktop">
-          <button class="theme-btn" id="themeToggle" aria-label="Переключить тему" title="Тёмная тема"><i class="fas fa-moon"></i></button>
-          <button class="theme-btn" id="accessibilityToggle" aria-label="Режим для слабовидящих" title="Режим для слабовидящих"><i class="fas fa-eye"></i></button>
-        </div>
-        <div class="theme-toggles-mobile">
-          <button class="theme-btn" id="themeToggleMobile" aria-label="Переключить тему" title="Тёмная тема"><i class="fas fa-moon"></i></button>
-          <button class="theme-btn" id="accessibilityToggleMobile" aria-label="Режим для слабовидящих" title="Режим для слабовидящих"><i class="fas fa-eye"></i></button>
-        </div>
-      </div>
+ <!-- ==================== NAVIGATION ==================== -->
+ <nav class="navbar" role="navigation" aria-label="Основная навигация">
+  <div class="container">
+   <a href="../index.html" class="navbar-brand">
+    <span class="brand-icon">MASS<br>EXPERT</span>
+   </a>
+   <div class="navbar-controls">
+    <button class="navbar-toggle" aria-label="Меню"><i class="fas fa-bars"></i></button>
+   </div>
+   <div class="navbar-links">
+    <a href="../index.html#about">О продукте</a>
+    <a href="../index.html#advantages">Преимущества</a>
+    <a href="../index.html#principle">Принцип работы</a>
+    <a href="../index.html#applications">Применение</a>
+    <a href="../index.html#product-line">Типоразмеры</a>
+    <a href="../index.html#specifications">Характеристики</a>
+    <a href="../index.html#contacts">Контакты</a>
+    <div class="theme-toggles-desktop">
+     <button class="theme-btn" id="themeToggle" aria-label="Переключить тему" title="Тёмная тема"><i class="fas fa-moon"></i></button>
+     <button class="theme-btn" id="accessibilityToggle" aria-label="Режим для слабовидящих" title="Режим для слабовидящих"><i class="fas fa-eye"></i></button>
     </div>
-  </nav>
-
-  <!-- ==================== HERO ==================== -->
-  <section class="cond-hero" id="hero">
-    <div class="container">
-      <div class="cond-hero-content">
-        <span class="cond-label">Исполнения высокого давления</span>
-        <h1>PK / P</h1>
-        <div class="cond-subtitle">Сверхвысокое и повышенное давление</div>
-        <p class="cond-desc">
-          Модели <strong>PK</strong> (до 96 МПа) с широким U-образным типом трубок и <strong>P</strong> (от 10 МПа) — 
-          решения для самых требовательных применений высокого давления. Оптимизированы для работы с водородом, 
-          обладают высокой точностью при малых расходах. Поддержка соединений <strong>UNF, VCO/VCR</strong>.
-        </p>
-        <div style="display:flex;gap:1rem;flex-wrap:wrap;">
-          <a href="#specifications" class="btn btn-primary">Технические характеристики</a>
-          <a href="../index.html#contacts" class="btn btn-outline">Запросить КП</a>
-        </div>
-        <div class="cond-badges">
-          <span class="cond-badge"><i class="fas fa-bolt"></i> PK: до 96 МПа</span>
-          <span class="cond-badge"><i class="fas fa-check" style="color:var(--success);font-size:inherit;"></i> P: от 10 МПа</span>
-          <span class="cond-badge"><i class="fas fa-check" style="color:var(--success);font-size:inherit;"></i> Для водорода</span>
-          <span class="cond-badge"><i class="fas fa-check" style="color:var(--success);font-size:inherit;"></i> U-образные трубки</span>
-          <span class="cond-badge"><i class="fas fa-check" style="color:var(--success);font-size:inherit;"></i> UNF / VCO / VCR</span>
-          <span class="cond-badge"><i class="fas fa-check" style="color:var(--success);font-size:inherit;"></i> Композитный металл</span>
-        </div>
-      </div>
+    <div class="theme-toggles-mobile">
+     <button class="theme-btn" id="themeToggleMobile" aria-label="Переключить тему" title="Тёмная тема"><i class="fas fa-moon"></i></button>
+     <button class="theme-btn" id="accessibilityToggleMobile" aria-label="Режим для слабовидящих" title="Режим для слабовидящих"><i class="fas fa-eye"></i></button>
     </div>
-  </section>
+   </div>
+  </div>
+ </nav>
 
-  <!-- ==================== OVERVIEW ==================== -->
-  <section class="section" id="overview">
-    <div class="container">
-      <div class="section-header">
-        <span class="section-badge">Обзор</span>
-        <h2>PK — сверхвысокое / P — повышенное давление</h2>
-        <p>
-          Исполнение <strong>PK</strong> предназначено для задач, требующих измерения расхода при экстремально
-          высоких давлениях до 96 МПа. Широкая U-образная конфигурация трубок обеспечивает высокую
-          чувствительность и точность даже при минимальных расходах.
-        </p>
-        <p style="margin-top:1rem;">
-          Исполнение <strong>P</strong> предназначено для систем с рабочим давлением <strong>выше 10 МПа</strong>, 
-          включая заправку и дозирование водорода. Высокая чувствительность и стабильность при малых расходах 
-          обеспечивают прецизионный контроль в условиях высокого давления.
-        </p>
-      </div>
-
-      <div class="spec-highlight-grid">
-        <div class="spec-highlight-card">
-          <div class="spec-hl-value">≤ 96</div>
-          <div class="spec-hl-label">PK: МПа макс.</div>
-        </div>
-        <div class="spec-highlight-card">
-          <div class="spec-hl-value">≤ 45</div>
-          <div class="spec-hl-label">P: МПа макс.</div>
-        </div>
-        <div class="spec-highlight-card">
-          <div class="spec-hl-value">U-образные</div>
-          <div class="spec-hl-label">Тип трубок</div>
-        </div>
-        <div class="spec-highlight-card">
-          <div class="spec-hl-value">H₂</div>
-          <div class="spec-hl-label">Оптимизация под водород</div>
-        </div>
-        <div class="spec-highlight-card">
-          <div class="spec-hl-value">UNF/VCO/VCR</div>
-          <div class="spec-hl-label">Типы соединений</div>
-        </div>
-      </div>
-
-      <!-- PK Features -->
-      <div style="margin-top:2rem;">
-        <h3 style="color:var(--primary);margin-bottom:1rem;">PK — ключевые особенности</h3>
-        <div class="feat-list">
-          <div class="feat-item">
-            <div class="feat-icon"><i class="fas fa-check" style="color:var(--success);font-size:inherit;"></i></div>
-            <div class="feat-text"><strong>Сверхвысокое давление</strong> — рабочее давление до 96 МПа для самых требовательных применений</div>
-          </div>
-          <div class="feat-item">
-            <div class="feat-icon"><i class="fas fa-check" style="color:var(--success);font-size:inherit;"></i></div>
-            <div class="feat-text"><strong>Оптимизация под водород</strong> — специальные материалы и конструкция для работы с водородсодержащими средами</div>
-          </div>
-          <div class="feat-item">
-            <div class="feat-icon"><i class="fas fa-check" style="color:var(--success);font-size:inherit;"></i></div>
-            <div class="feat-text"><strong>Высокая точность при малых расходах</strong> — широкая U-образная трубка обеспечивает максимальную чувствительность</div>
-          </div>
-          <div class="feat-item">
-            <div class="feat-icon"><i class="fas fa-check" style="color:var(--success);font-size:inherit;"></i></div>
-            <div class="feat-text"><strong>Компактность и прочность</strong> — усиленная конструкция в компактном корпусе</div>
-          </div>
-          <div class="feat-item">
-            <div class="feat-icon"><i class="fas fa-check" style="color:var(--success);font-size:inherit;"></i></div>
-            <div class="feat-text"><strong>Поддержка UNF, VCO/VCR</strong> — широкий выбор высоконапорных фитингов и соединений</div>
-          </div>
-          <div class="feat-item">
-            <div class="feat-icon"><i class="fas fa-check" style="color:var(--success);font-size:inherit;"></i></div>
-            <div class="feat-text"><strong>Подходит для водородной энергетики</strong>, нефтегаза и СУГ</div>
-          </div>
-        </div>
-      </div>
-
-      <!-- P Features -->
-      <div style="margin-top:2.5rem;" class="design-features">
-        <h3><i class="fas fa-wrench"></i> P — особенности конструкции повышенного давления</h3>
-        <ul>
-          <li><strong>Запас прочности 1,5×</strong> — рабочее давление превышает заявленный номинал в 1,5 раза</li>
-          <li><strong>Гладкая внутренняя поверхность трубок</strong> — минимальное гидравлическое сопротивление и стабильность измерений при минимальных расходах</li>
-          <li><strong>Специальный композитный металл</strong> — стойкий к водородному охрупчиванию, оптимален для водородной энергетики и заправочных станций H₂</li>
-        </ul>
-      </div>
-
-      <p style="font-size:1rem;line-height:1.7;color:var(--gray-700);margin:1.5rem 0;">
-        Применение специального композитного металла, устойчивого к водородному охрупчиванию, делает исполнение P и PK оптимальным выбором для водородной энергетики, 
-        заправочных станций и систем дозирования H₂. Гладкая внутренняя поверхность трубок минимизирует гидравлическое сопротивление и обеспечивает стабильность измерений 
-        даже при минимальных расходах.
-      </p>
-
-      <div style="margin-top:2.5rem;">
-        <h3 style="color:var(--primary);margin-bottom:0.75rem;">Рекомендуемые области применения</h3>
-        <div class="app-tags">
-          <span class="app-tag"><i class="fas fa-bolt"></i> Водородная энергетика</span>
-          <span class="app-tag"><i class="fas fa-gas-pump"></i> Нефтегазовая промышленность</span>
-          <span class="app-tag"><i class="fas fa-fire"></i> СУГ (сжиженные углеводородные газы)</span>
-          <span class="app-tag"><i class="fas fa-microscope"></i> Химическая промышленность</span>
-          <span class="app-tag"><i class="fas fa-cogs"></i> Гидроиспытания</span>
-          <span class="app-tag"><i class="fas fa-oil-can"></i> Добыча и переработка</span>
-          <span class="app-tag"><i class="fas fa-fill-drip"></i> Дозирование H₂</span>
-        </div>
-      </div>
+ <!-- ==================== HERO ==================== -->
+ <section class="cond-hero" id="hero">
+  <div class="container">
+   <div class="cond-hero-content">
+    <span class="cond-label">Исполнения высокого давления</span>
+    <h1>PK / P</h1>
+    <div class="cond-subtitle">Сверхвысокое и повышенное давление</div>
+    <p class="cond-desc">
+     Модели <strong>PK</strong> (до 96 МПа) с широким U-образным типом трубок и <strong>P</strong> (от 10 МПа) — 
+     решения для самых требовательных применений высокого давления. Оптимизированы для работы с водородом, 
+     обладают высокой точностью при малых расходах. Поддержка соединений <strong>UNF, VCO/VCR</strong>.
+    </p>
+    <div style="display:flex;gap:1rem;flex-wrap:wrap;">
+     <a href="#specifications" class="btn btn-primary">Технические характеристики</a>
+     <a href="../index.html#contacts" class="btn btn-outline">Запросить КП</a>
     </div>
-  </section>
-
-  <!-- ==================== GALLERY ==================== -->
-  <section class="section section-gray" id="gallery">
-    <div class="container">
-      <div class="section-header">
-        <span class="section-badge">Фотогалерея</span>
-        <h2>Исполнения PK и P</h2>
-        <p>Внешний вид моделей сверхвысокого PK и повышенного P давления</p>
-      </div>
-      <div class="gallery-grid">
-        <div class="gallery-item">
-          <img src="../images/PK.png" alt="PK — расходомер сверхвысокого давления" loading="lazy">
-          <div class="gallery-caption">PK — модель сверхвысокого давления</div>
-        </div>
-        <div class="gallery-item">
-          <img src="../images/P_01-02.png" alt="P — типоразмеры 001–002" loading="lazy">
-          <div class="gallery-caption">P — типоразмеры 001–002 (повышенное давление)</div>
-        </div>
-        <div class="gallery-item">
-          <img src="../images/P_03-015.png" alt="P — типоразмеры 003–015" loading="lazy">
-          <div class="gallery-caption">P — типоразмеры 003–015 (U-образные трубки)</div>
-        </div>
-        <div class="gallery-item">
-          <img src="../images/P_025.png" alt="P — типоразмер 025" loading="lazy">
-          <div class="gallery-caption">P — типоразмер 025</div>
-        </div>
-      </div>
+    <div class="cond-badges">
+     <span class="cond-badge"><i class="fas fa-bolt"></i> PK: до 96 МПа</span>
+     <span class="cond-badge"><i class="fas fa-check" style="color:var(--success);font-size:inherit;"></i> P: от 10 МПа</span>
+     <span class="cond-badge"><i class="fas fa-check" style="color:var(--success);font-size:inherit;"></i> Для водорода</span>
+     <span class="cond-badge"><i class="fas fa-check" style="color:var(--success);font-size:inherit;"></i> U-образные трубки</span>
+     <span class="cond-badge"><i class="fas fa-check" style="color:var(--success);font-size:inherit;"></i> UNF / VCO / VCR</span>
+     <span class="cond-badge"><i class="fas fa-check" style="color:var(--success);font-size:inherit;"></i> Композитный металл</span>
     </div>
-  </section>
+   </div>
+  </div>
+ </section>
 
-  <!-- ==================== SPECIFICATIONS ==================== -->
-  <section class="section" id="specifications">
-    <div class="container">
-      <div class="section-header">
-        <span class="section-badge">Технические характеристики</span>
-        <h2>Таблица типоразмеров PK и P</h2>
-        <p>Рабочее давление для всех моделей высокого и сверхвысокого давления</p>
-      </div>
+ <!-- ==================== OVERVIEW ==================== -->
+ <section class="section" id="overview">
+  <div class="container">
+   <div class="section-header">
+    <span class="section-badge">Обзор</span>
+    <h2>PK — сверхвысокое / P — повышенное давление</h2>
+    <p>
+     Исполнение <strong>PK</strong> предназначено для задач, требующих измерения расхода при экстремально
+     высоких давлениях до 96 МПа. Широкая U-образная конфигурация трубок обеспечивает высокую
+     чувствительность и точность даже при минимальных расходах.
+    </p>
+    <p style="margin-top:1rem;">
+     Исполнение <strong>P</strong> предназначено для систем с рабочим давлением <strong>выше 10 МПа</strong>, 
+     включая заправку и дозирование водорода. Высокая чувствительность и стабильность при малых расходах 
+     обеспечивают прецизионный контроль в условиях высокого давления.
+    </p>
+   </div>
 
-      <!-- PK table -->
-      <h3 style="font-size:1.125rem;font-weight:600;color:var(--gray-900);margin-bottom:1rem;">PK — сверхвысокое давление</h3>
-      <div class="table-wrap">
-        <table>
-          <thead>
-            <tr>
-              <th>Типоразмер</th>
-              <th>Рабочее давление, МПа</th>
-              <th>Примечание</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td><span class="option-code">003..PK</span></td>
-              <td>≤ 96 / ≤ 50 / ≤ 40</td>
-              <td>До 96 МПа в базовом исполнении; варианты 50 и 40 МПа для различных сред</td>
-            </tr>
-            <tr>
-              <td><span class="option-code">004..PK</span></td>
-              <td>≤ 35</td>
-              <td>Оптимизирован для средних давлений</td>
-            </tr>
-            <tr>
-              <td><span class="option-code">008..PK</span></td>
-              <td>≤ 30 / ≤ 45</td>
-              <td>Два исполнения под разные условия эксплуатации</td>
-            </tr>
-            <tr>
-              <td><span class="option-code">015..PK</span></td>
-              <td>≤ 30 / ≤ 45</td>
-              <td>Два исполнения под разные условия эксплуатации</td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
-
-      <!-- P table -->
-      <h3 style="font-size:1.125rem;font-weight:600;color:var(--gray-900);margin:2rem 0 1rem;">P — повышенное давление</h3>
-      <div class="table-wrap">
-        <table>
-          <thead>
-            <tr>
-              <th>Типоразмер</th>
-              <th>Максимальное давление, МПа</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr><td><span class="option-code">001..P</span></td><td>≤ 45</td></tr>
-            <tr><td><span class="option-code">002..P</span></td><td>≤ 20</td></tr>
-            <tr><td><span class="option-code">003..P</span></td><td>≤ 45</td></tr>
-            <tr><td><span class="option-code">004..P</span></td><td>≤ 30</td></tr>
-            <tr><td><span class="option-code">008..P</span></td><td>≤ 45 / ≤ 30</td></tr>
-            <tr><td><span class="option-code">015..P</span></td><td>≤ 30</td></tr>
-            <tr><td><span class="option-code">025..P</span></td><td>≤ 45</td></tr>
-          </tbody>
-        </table>
-      </div>
-      <p style="color:var(--gray-500);font-size:0.875rem;margin-top:0.5rem;">
-        * Для типоразмера 008..P указаны два значения в зависимости от исполнения.
-      </p>
-
-      <p style="font-size:0.875rem;color:var(--gray-500);margin-top:1rem;">
-        ** Указаны максимальные рабочие давления. Конкретное значение зависит от исполнения,
-        материала уплотнений и типа присоединений (UNF, VCO, VCR).
-        Уточняйте при заказе в зависимости от условий эксплуатации.
-      </p>
+   <div class="spec-highlight-grid">
+    <div class="spec-highlight-card">
+     <div class="spec-hl-value">≤ 96</div>
+     <div class="spec-hl-label">PK: МПа макс.</div>
     </div>
-  </section>
-
-  <!-- ==================== CONNECTIONS ==================== -->
-  <section class="section section-blue" id="connections">
-    <div class="container">
-      <div class="section-header">
-        <span class="section-badge" style="background:rgba(255,255,255,0.12);color:var(--accent);">Присоединения</span>
-        <h2>Типы соединений</h2>
-        <p>Исполнения PK и P поддерживают различные типы высоконапорных присоединений</p>
-      </div>
-      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:1.5rem;">
-        <div class="param-card" style="background:rgba(255,255,255,0.06);border:1px solid rgba(255,255,255,0.1);border-radius:var(--radius);padding:1.5rem;text-align:center;">
-          <div class="param-label">Тип</div>
-          <div class="param-value">UNF</div>
-          <p style="font-size:0.8125rem;color:rgba(255,255,255,0.6);margin-top:0.5rem;margin-bottom:0;">
-            Унифицированная мелкая резьба — стандарт для высоконапорных соединений
-          </p>
-        </div>
-        <div class="param-card" style="background:rgba(255,255,255,0.06);border:1px solid rgba(255,255,255,0.1);border-radius:var(--radius);padding:1.5rem;text-align:center;">
-          <div class="param-label">Тип</div>
-          <div class="param-value">VCO</div>
-          <p style="font-size:0.8125rem;color:rgba(255,255,255,0.6);margin-top:0.5rem;margin-bottom:0;">
-            Коническое уплотнение O-ring — герметичность при высоких давлениях
-          </p>
-        </div>
-        <div class="param-card" style="background:rgba(255,255,255,0.06);border:1px solid rgba(255,255,255,0.1);border-radius:var(--radius);padding:1.5rem;text-align:center;">
-          <div class="param-label">Тип</div>
-          <div class="param-value">VCR</div>
-          <p style="font-size:0.8125rem;color:rgba(255,255,255,0.6);margin-top:0.5rem;margin-bottom:0;">
-            Металлическое уплотнение — для критических сред без утечек
-          </p>
-        </div>
-      </div>
+    <div class="spec-highlight-card">
+     <div class="spec-hl-value">≤ 45</div>
+     <div class="spec-hl-label">P: МПа макс.</div>
     </div>
-  </section>
-
-  <!-- ==================== NAVIGATION HELP ==================== -->
-  <section class="section" id="more">
-    <div class="container">
-      <div class="section-header">
-        <span class="section-badge">Другие исполнения</span>
-        <h2>Больше информации</h2>
-        <p>Вернуться к основному каталогу продукции Mass-EXPERT</p>
-      </div>
-      <div style="text-align:center;">
-        <a href="../index.html" class="btn btn-primary">На главную</a>
-        <a href="../index.html#product-line" class="btn btn-outline-dark" style="margin-left:0.75rem;">Все типоразмеры</a>
-      </div>
+    <div class="spec-highlight-card">
+     <div class="spec-hl-value">U-образные</div>
+     <div class="spec-hl-label">Тип трубок</div>
     </div>
-  </section>
-
-  <!-- ==================== FOOTER ==================== -->
-  <footer class="footer">
-    <div class="container">
-      <div class="footer-grid">
-        <div class="footer-brand">
-          <h4>Mass-EXPERT</h4>
-          <p>Счетчики-расходомеры массовые кориолисового типа.</p>
-          <p>Госреестр № 98506-26. ТУ 26.51.52-016-88090790-2024.</p>
-          <p style="margin-top:0.75rem;font-size:0.8125rem;">
-            Разработка и производство:<br>
-            ООО «Автоматизация-Метрология-ЭКСПЕРТ», г. Уфа
-          </p>
-        </div>
-        <div class="footer-links">
-          <h5>Продукт</h5>
-          <a href="../index.html#specifications">Характеристики</a>
-          <a href="../index.html#product-line">Типоразмеры</a>
-          <a href="../index.html#options">Модификации</a>
-        </div>
-        <div class="footer-links">
-          <h5>Документация</h5>
-          <a href="../index.html#certificates">Сертификаты</a>
-          <a href="../docs/ОПИСАНИЕ_ТИПА_2026-98506-26.pdf" target="_blank">Описание типа</a>
-          <a href="../docs/РЭ_Масс_Эксперт_v09.pdf" target="_blank">Руководство по эксплуатации</a>
-        </div>
-        <div class="footer-links">
-          <h5>Контакты</h5>
-          <a href="tel:+734****5350">+7 (347) 286-53-50</a>
-          <a href="mailto:info@ame-info.ru">info@ame-info.ru</a>
-          <a href="https://www.ame-info.ru" target="_blank">www.ame-info.ru</a>
-          <a href="../sitemap.html" style="margin-top:0.5rem;font-size:0.8125rem;color:var(--gray-500);"><i class="fas fa-clipboard-list"></i> Карта сайта</a>
-        </div>
-      </div>
-      <div class="footer-bottom">
-        <p>© <span id="year">2026</span> ООО «Автоматизация-Метрология-ЭКСПЕРТ». Все права защищены.</p>
-      </div>
+    <div class="spec-highlight-card">
+     <div class="spec-hl-value">H₂</div>
+     <div class="spec-hl-label">Оптимизация под водород</div>
     </div>
-  </footer>
+    <div class="spec-highlight-card">
+     <div class="spec-hl-value">UNF/VCO/VCR</div>
+     <div class="spec-hl-label">Типы соединений</div>
+    </div>
+   </div>
+
+   <!-- PK Features -->
+   <div style="margin-top:2rem;">
+    <h3 style="color:var(--primary);margin-bottom:1rem;">PK — ключевые особенности</h3>
+    <div class="feat-list">
+     <div class="feat-item">
+      <div class="feat-icon"><i class="fas fa-check" style="color:var(--success);font-size:inherit;"></i></div>
+      <div class="feat-text"><strong>Сверхвысокое давление</strong> — рабочее давление до 96 МПа для самых требовательных применений</div>
+     </div>
+     <div class="feat-item">
+      <div class="feat-icon"><i class="fas fa-check" style="color:var(--success);font-size:inherit;"></i></div>
+      <div class="feat-text"><strong>Оптимизация под водород</strong> — специальные материалы и конструкция для работы с водородсодержащими средами</div>
+     </div>
+     <div class="feat-item">
+      <div class="feat-icon"><i class="fas fa-check" style="color:var(--success);font-size:inherit;"></i></div>
+      <div class="feat-text"><strong>Высокая точность при малых расходах</strong> — широкая U-образная трубка обеспечивает максимальную чувствительность</div>
+     </div>
+     <div class="feat-item">
+      <div class="feat-icon"><i class="fas fa-check" style="color:var(--success);font-size:inherit;"></i></div>
+      <div class="feat-text"><strong>Компактность и прочность</strong> — усиленная конструкция в компактном корпусе</div>
+     </div>
+     <div class="feat-item">
+      <div class="feat-icon"><i class="fas fa-check" style="color:var(--success);font-size:inherit;"></i></div>
+      <div class="feat-text"><strong>Поддержка UNF, VCO/VCR</strong> — широкий выбор высоконапорных фитингов и соединений</div>
+     </div>
+     <div class="feat-item">
+      <div class="feat-icon"><i class="fas fa-check" style="color:var(--success);font-size:inherit;"></i></div>
+      <div class="feat-text"><strong>Подходит для водородной энергетики</strong>, нефтегаза и СУГ</div>
+     </div>
+    </div>
+   </div>
+
+   <!-- P Features -->
+   <div style="margin-top:2.5rem;" class="design-features">
+    <h3><i class="fas fa-wrench"></i> P — особенности конструкции повышенного давления</h3>
+    <ul>
+     <li><strong>Запас прочности 1,5×</strong> — рабочее давление превышает заявленный номинал в 1,5 раза</li>
+     <li><strong>Гладкая внутренняя поверхность трубок</strong> — минимальное гидравлическое сопротивление и стабильность измерений при минимальных расходах</li>
+     <li><strong>Специальный композитный металл</strong> — стойкий к водородному охрупчиванию, оптимален для водородной энергетики и заправочных станций H₂</li>
+    </ul>
+   </div>
+
+   <p style="font-size:1rem;line-height:1.7;color:var(--gray-700);margin:1.5rem 0;">
+    Применение специального композитного металла, устойчивого к водородному охрупчиванию, делает исполнение P и PK оптимальным выбором для водородной энергетики, 
+    заправочных станций и систем дозирования H₂. Гладкая внутренняя поверхность трубок минимизирует гидравлическое сопротивление и обеспечивает стабильность измерений 
+    даже при минимальных расходах.
+   </p>
+
+   <div style="margin-top:2.5rem;">
+    <h3 style="color:var(--primary);margin-bottom:0.75rem;">Рекомендуемые области применения</h3>
+    <div class="app-tags">
+     <span class="app-tag"><i class="fas fa-bolt"></i> Водородная энергетика</span>
+     <span class="app-tag"><i class="fas fa-gas-pump"></i> Нефтегазовая промышленность</span>
+     <span class="app-tag"><i class="fas fa-fire"></i> СУГ (сжиженные углеводородные газы)</span>
+     <span class="app-tag"><i class="fas fa-microscope"></i> Химическая промышленность</span>
+     <span class="app-tag"><i class="fas fa-cogs"></i> Гидроиспытания</span>
+     <span class="app-tag"><i class="fas fa-oil-can"></i> Добыча и переработка</span>
+     <span class="app-tag"><i class="fas fa-fill-drip"></i> Дозирование H₂</span>
+    </div>
+   </div>
+  </div>
+ </section>
+
+ <!-- ==================== GALLERY ==================== -->
+ <section class="section section-gray" id="gallery">
+  <div class="container">
+   <div class="section-header">
+    <span class="section-badge">Фотогалерея</span>
+    <h2>Исполнения PK и P</h2>
+    <p>Внешний вид моделей сверхвысокого PK и повышенного P давления</p>
+   </div>
+   <div class="gallery-grid">
+    <div class="gallery-item">
+     <img src="../images/PK.png" alt="PK — расходомер сверхвысокого давления" loading="lazy">
+     <div class="gallery-caption">PK — модель сверхвысокого давления</div>
+    </div>
+    <div class="gallery-item">
+     <img src="../images/P_01-02.png" alt="P — типоразмеры 001–002" loading="lazy">
+     <div class="gallery-caption">P — типоразмеры 001–002 (повышенное давление)</div>
+    </div>
+    <div class="gallery-item">
+     <img src="../images/P_03-015.png" alt="P — типоразмеры 003–015" loading="lazy">
+     <div class="gallery-caption">P — типоразмеры 003–015 (U-образные трубки)</div>
+    </div>
+    <div class="gallery-item">
+     <img src="../images/P_025.png" alt="P — типоразмер 025" loading="lazy">
+     <div class="gallery-caption">P — типоразмер 025</div>
+    </div>
+   </div>
+  </div>
+ </section>
+
+ <!-- ==================== SPECIFICATIONS ==================== -->
+ <section class="section" id="specifications">
+  <div class="container">
+   <div class="section-header">
+    <span class="section-badge">Технические характеристики</span>
+    <h2>Таблица типоразмеров PK и P</h2>
+    <p>Рабочее давление для всех моделей высокого и сверхвысокого давления</p>
+   </div>
+
+   <!-- PK table -->
+   <h3 style="font-size:1.125rem;font-weight:600;color:var(--gray-900);margin-bottom:1rem;">PK — сверхвысокое давление</h3>
+   <div class="table-wrap">
+    <table>
+     <thead>
+      <tr>
+       <th>Типоразмер</th>
+       <th>Рабочее давление, МПа</th>
+       <th>Примечание</th>
+      </tr>
+     </thead>
+     <tbody>
+      <tr>
+       <td><span class="option-code">003..PK</span></td>
+       <td>≤ 96 / ≤ 50 / ≤ 40</td>
+       <td>До 96 МПа в базовом исполнении; варианты 50 и 40 МПа для различных сред</td>
+      </tr>
+      <tr>
+       <td><span class="option-code">004..PK</span></td>
+       <td>≤ 35</td>
+       <td>Оптимизирован для средних давлений</td>
+      </tr>
+      <tr>
+       <td><span class="option-code">008..PK</span></td>
+       <td>≤ 30 / ≤ 45</td>
+       <td>Два исполнения под разные условия эксплуатации</td>
+      </tr>
+      <tr>
+       <td><span class="option-code">015..PK</span></td>
+       <td>≤ 30 / ≤ 45</td>
+       <td>Два исполнения под разные условия эксплуатации</td>
+      </tr>
+     </tbody>
+    </table>
+   </div>
+
+   <!-- P table -->
+   <h3 style="font-size:1.125rem;font-weight:600;color:var(--gray-900);margin:2rem 0 1rem;">P — повышенное давление</h3>
+   <div class="table-wrap">
+    <table>
+     <thead>
+      <tr>
+       <th>Типоразмер</th>
+       <th>Максимальное давление, МПа</th>
+      </tr>
+     </thead>
+     <tbody>
+      <tr><td><span class="option-code">001..P</span></td><td>≤ 45</td></tr>
+      <tr><td><span class="option-code">002..P</span></td><td>≤ 20</td></tr>
+      <tr><td><span class="option-code">003..P</span></td><td>≤ 45</td></tr>
+      <tr><td><span class="option-code">004..P</span></td><td>≤ 30</td></tr>
+      <tr><td><span class="option-code">008..P</span></td><td>≤ 45 / ≤ 30</td></tr>
+      <tr><td><span class="option-code">015..P</span></td><td>≤ 30</td></tr>
+      <tr><td><span class="option-code">025..P</span></td><td>≤ 45</td></tr>
+     </tbody>
+    </table>
+   </div>
+   <p style="color:var(--gray-500);font-size:0.875rem;margin-top:0.5rem;">
+    * Для типоразмера 008..P указаны два значения в зависимости от исполнения.
+   </p>
+
+   <p style="font-size:0.875rem;color:var(--gray-500);margin-top:1rem;">
+    ** Указаны максимальные рабочие давления. Конкретное значение зависит от исполнения,
+    материала уплотнений и типа присоединений (UNF, VCO, VCR).
+    Уточняйте при заказе в зависимости от условий эксплуатации.
+   </p>
+  </div>
+ </section>
+
+ <!-- ==================== CONNECTIONS ==================== -->
+ <section class="section section-blue" id="connections">
+  <div class="container">
+   <div class="section-header">
+    <span class="section-badge" style="background:rgba(255,255,255,0.12);color:var(--accent);">Присоединения</span>
+    <h2>Типы соединений</h2>
+    <p>Исполнения PK и P поддерживают различные типы высоконапорных присоединений</p>
+   </div>
+   <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:1.5rem;">
+    <div class="param-card" style="background:rgba(255,255,255,0.06);border:1px solid rgba(255,255,255,0.1);border-radius:var(--radius);padding:1.5rem;text-align:center;">
+     <div class="param-label">Тип</div>
+     <div class="param-value">UNF</div>
+     <p style="font-size:0.8125rem;color:rgba(255,255,255,0.6);margin-top:0.5rem;margin-bottom:0;">
+      Унифицированная мелкая резьба — стандарт для высоконапорных соединений
+     </p>
+    </div>
+    <div class="param-card" style="background:rgba(255,255,255,0.06);border:1px solid rgba(255,255,255,0.1);border-radius:var(--radius);padding:1.5rem;text-align:center;">
+     <div class="param-label">Тип</div>
+     <div class="param-value">VCO</div>
+     <p style="font-size:0.8125rem;color:rgba(255,255,255,0.6);margin-top:0.5rem;margin-bottom:0;">
+      Коническое уплотнение O-ring — герметичность при высоких давлениях
+     </p>
+    </div>
+    <div class="param-card" style="background:rgba(255,255,255,0.06);border:1px solid rgba(255,255,255,0.1);border-radius:var(--radius);padding:1.5rem;text-align:center;">
+     <div class="param-label">Тип</div>
+     <div class="param-value">VCR</div>
+     <p style="font-size:0.8125rem;color:rgba(255,255,255,0.6);margin-top:0.5rem;margin-bottom:0;">
+      Металлическое уплотнение — для критических сред без утечек
+     </p>
+    </div>
+   </div>
+  </div>
+ </section>
+
+ <!-- ==================== NAVIGATION HELP ==================== -->
+ <section class="section" id="more">
+  <div class="container">
+   <div class="section-header">
+    <span class="section-badge">Другие исполнения</span>
+    <h2>Больше информации</h2>
+    <p>Вернуться к основному каталогу продукции Mass-EXPERT</p>
+   </div>
+   <div style="text-align:center;">
+    <a href="../index.html" class="btn btn-primary">На главную</a>
+    <a href="../index.html#product-line" class="btn btn-outline-dark" style="margin-left:0.75rem;">Все типоразмеры</a>
+   </div>
+  </div>
+ </section>
+
+ <!-- ==================== FOOTER ==================== -->
+ <footer class="footer">
+  <div class="container">
+   <div class="footer-grid">
+    <div class="footer-brand">
+     <h4>Mass-EXPERT</h4>
+     <p>Счетчики-расходомеры массовые кориолисового типа.</p>
+     <p>Госреестр № 98506-26. ТУ 26.51.52-016-88090790-2024.</p>
+     <p style="margin-top:0.75rem;font-size:0.8125rem;">
+      Разработка и производство:<br>
+      ООО «Автоматизация-Метрология-ЭКСПЕРТ», г. Уфа
+     </p>
+    </div>
+    <div class="footer-links">
+     <h5>Продукт</h5>
+     <a href="../index.html#specifications">Характеристики</a>
+     <a href="../index.html#product-line">Типоразмеры</a>
+     <a href="../index.html#options">Модификации</a>
+    </div>
+    <div class="footer-links">
+     <h5>Документация</h5>
+     <a href="../index.html#certificates">Сертификаты</a>
+     <a href="../docs/ОПИСАНИЕ_ТИПА_2026-98506-26.pdf" target="_blank">Описание типа</a>
+     <a href="../docs/РЭ_Масс_Эксперт_v09.pdf" target="_blank">Руководство по эксплуатации</a>
+    </div>
+    <div class="footer-links">
+     <h5>Контакты</h5>
+     <a href="tel:+734****5350">+7 (347) 286-53-50</a>
+     <a href="mailto:info@ame-info.ru">info@ame-info.ru</a>
+     <a href="https://www.ame-info.ru" target="_blank">www.ame-info.ru</a>
+     <a href="../sitemap.html" style="margin-top:0.5rem;font-size:0.8125rem;color:var(--gray-500);"><i class="fas fa-clipboard-list"></i> Карта сайта</a>
+    </div>
+   </div>
+   <div class="footer-bottom">
+    <p>© <span id="year">2026</span> ООО «Автоматизация-Метрология-ЭКСПЕРТ». Все права защищены.</p>
+   </div>
+  </div>
+ </footer>
 
 <script>
 (function(){var t=localStorage.getItem('mass-expert-theme');if(t==='dark')document.documentElement.classList.add('theme-dark');if(t==='accessibility')document.documentElement.classList.add('theme-accessibility');})();

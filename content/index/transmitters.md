@@ -3,9 +3,9 @@ title: "Трансмиттеры"
 section_id: "transmitters"
 badge: "Трансмиттеры"
 images:
-  me100: "images/ME100.png"
-  me200: "images/Mass-Expert_ME200.png"
-  me300: "images/ME300.png"
+ me100: "images/ME100.png"
+ me200: "images/Mass-Expert_ME200.png"
+ me300: "images/ME300.png"
 ---
 
 ### ME100 — Базовый встраиваемый
@@ -29,7 +29,7 @@ images:
 
 - Non-Ex
 - 4–20 мА + HART, RS-485 (Modbus), импульсный/частотный
-- Второй токовый выход, дискретный выход, CAN, PROFIBUS PA
+- Второй токовый выход, дискретный выход, CAN
 - Расширенная самодиагностика, журнал событий
 - WEB-интерфейс, измерение концентрации
 - Монтаж: DIN-рейка

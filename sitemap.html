@@ -1,73 +1,73 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Карта сайта — Mass-EXPERT</title>
-  <meta name="robots" content="noindex">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-  <link rel="stylesheet" href="css/style.css">
-  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 40 40'><rect width='40' height='40' rx='8' fill='%23F59E0B'/><text x='20' y='26' text-anchor='middle' font-size='14' font-weight='900' fill='%230F172A' font-family='Inter'>ME</text></svg>">
-  <style>
-    body { padding-top: 2rem; }
-    .sitemap-tree { max-width: 960px; margin: 0 auto; }
-    .sitemap-tree ul { padding-left: 1.5rem; margin: 0.4rem 0; }
-    .sitemap-tree > ul { padding-left: 0; }
-    .sitemap-tree li {
-      list-style: none;
-      margin: 0.25rem 0;
-      padding: 0.25rem 0.75rem;
-      border-left: 3px solid var(--gray-200);
-      font-size: 0.9375rem;
-    }
-    .sitemap-tree li.root {
-      border-left-color: var(--accent);
-      font-weight: 700;
-      font-size: 1.25rem;
-      margin-bottom: 1rem;
-    }
-    .sitemap-tree li.section {
-      border-left-color: var(--primary);
-      font-weight: 600;
-      font-size: 1.0625rem;
-      margin-top: 1rem;
-    }
-    .sitemap-tree li.sub { border-left-color: var(--gray-300); }
-    .sitemap-tree li.sub-sub { border-left-color: var(--gray-100); font-size: 0.875rem; }
-    .sitemap-tree a { color: var(--gray-700); text-decoration: none; }
-    .sitemap-tree a:hover { color: var(--primary); text-decoration: underline; }
-    .sitemap-tree .sitemap-link { font-size: 0.8125rem; color: var(--gray-500); margin-left: 0.5rem; font-weight: 400; }
-    .sitemap-tree .sitemap-link:hover { color: var(--primary); }
-    .badge-count {
-      display: inline-block;
-      background: var(--gray-100);
-      color: var(--gray-500);
-      font-size: 0.75rem;
-      padding: 0.1rem 0.5rem;
-      border-radius: 999px;
-      margin-left: 0.5rem;
-    }
-    .back-link {
-      display: inline-flex;
-      align-items: center;
-      gap: 0.5rem;
-      margin-bottom: 2rem;
-      font-weight: 500;
-    }
-    .cat-badge {
-      display: inline-block;
-      font-size: 0.7rem;
-      background: var(--gray-200);
-      color: var(--gray-600);
-      padding: 0.1rem 0.4rem;
-      border-radius: 4px;
-      margin-left: 0.25rem;
-      font-weight: 400;
-    }
-  
+ <meta charset="UTF-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <title>Карта сайта — Mass-EXPERT</title>
+ <meta name="robots" content="noindex">
+ <link rel="preconnect" href="https://fonts.googleapis.com">
+ <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+ <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+ <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+ <link rel="stylesheet" href="css/style.css">
+ <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 40 40'><rect width='40' height='40' rx='8' fill='%23F59E0B'/><text x='20' y='26' text-anchor='middle' font-size='14' font-weight='900' fill='%230F172A' font-family='Inter'>ME</text></svg>">
+ <style>
+  body { padding-top: 2rem; }
+  .sitemap-tree { max-width: 960px; margin: 0 auto; }
+  .sitemap-tree ul { padding-left: 1.5rem; margin: 0.4rem 0; }
+  .sitemap-tree > ul { padding-left: 0; }
+  .sitemap-tree li {
+   list-style: none;
+   margin: 0.25rem 0;
+   padding: 0.25rem 0.75rem;
+   border-left: 3px solid var(--gray-200);
+   font-size: 0.9375rem;
+  }
+  .sitemap-tree li.root {
+   border-left-color: var(--accent);
+   font-weight: 700;
+   font-size: 1.25rem;
+   margin-bottom: 1rem;
+  }
+  .sitemap-tree li.section {
+   border-left-color: var(--primary);
+   font-weight: 600;
+   font-size: 1.0625rem;
+   margin-top: 1rem;
+  }
+  .sitemap-tree li.sub { border-left-color: var(--gray-300); }
+  .sitemap-tree li.sub-sub { border-left-color: var(--gray-100); font-size: 0.875rem; }
+  .sitemap-tree a { color: var(--gray-700); text-decoration: none; }
+  .sitemap-tree a:hover { color: var(--primary); text-decoration: underline; }
+  .sitemap-tree .sitemap-link { font-size: 0.8125rem; color: var(--gray-500); margin-left: 0.5rem; font-weight: 400; }
+  .sitemap-tree .sitemap-link:hover { color: var(--primary); }
+  .badge-count {
+   display: inline-block;
+   background: var(--gray-100);
+   color: var(--gray-500);
+   font-size: 0.75rem;
+   padding: 0.1rem 0.5rem;
+   border-radius: 999px;
+   margin-left: 0.5rem;
+  }
+  .back-link {
+   display: inline-flex;
+   align-items: center;
+   gap: 0.5rem;
+   margin-bottom: 2rem;
+   font-weight: 500;
+  }
+  .cat-badge {
+   display: inline-block;
+   font-size: 0.7rem;
+   background: var(--gray-200);
+   color: var(--gray-600);
+   padding: 0.1rem 0.4rem;
+   border-radius: 4px;
+   margin-left: 0.25rem;
+   font-weight: 400;
+  }
+ 
 <style>
 .theme-float-btn{position:fixed;bottom:1rem;right:1rem;z-index:9999;width:44px;height:44px;border-radius:50%;background:var(--accent);color:#0F172A;border:none;font-size:1.25rem;cursor:pointer;box-shadow:0 2px 8px rgba(0,0,0,0.3);display:flex;align-items:center;justify-content:center;transition:all 0.2s;}
 .theme-float-btn:hover{transform:scale(1.1);}
@@ -75,147 +75,147 @@
 </style>
 </head>
 <body>
-  <div class="container" style="padding-bottom:3rem;">
-    <a href="index.html" class="back-link"><i class="fas fa-arrow-left"></i> На главную Mass-EXPERT</a>
-    <div class="section-header" style="text-align:left;margin:0 0 2rem;">
-      <span class="section-badge">Карта сайта</span>
-      <h2>Структура сайта Mass-EXPERT</h2>
-      <p>Полная карта всех страниц и разделов продукта «Счетчики-расходомеры массовые Mass-EXPERT»</p>
-    </div>
-
-    <div class="sitemap-tree">
-      <ul>
-        <li class="root"><i class="fas fa-home"></i> <a href="index.html">Главная страница</a> <span class="sitemap-link">index.html</span></li>
-
-        <li class="section"><i class="fas fa-image"></i> <a href="index.html">Hero — заглавный экран</a></li>
-        <ul>
-          <li class="sub">Фото семейства расходомеров · Точность ±0.1% · Диапазон 100:1 · 20 лет</li>
-          <li class="sub">Бейджи: Госреестр, ТР ТС, Ex, сейсмостойкость, криогенное</li>
-        </ul>
-
-        <li class="section"><i class="fas fa-ruler"></i> <a href="index.html">Полоса стандартов и интерфейсов</a></li>
-        <ul>
-          <li class="sub">ГОСТ, ТР ТС, HART, Modbus, PROFIBUS, CAN, 4-20 мА, IP66/IP67, Ex</li>
-        </ul>
-
-        <li class="section"><i class="fas fa-clipboard-list"></i> <a href="index.html#about">О продукте</a></li>
-        <ul>
-          <li class="sub">Назначение расходомера · 4 карточки преимуществ</li>
-        </ul>
-
-        <li class="section"><i class="fas fa-bullseye"></i> <a href="index.html#advantages">7 преимуществ</a></li>
-        <ul>
-          <li class="sub">Прямое измерение массы · Точность ±0.1% · Диапазон 100:1 · Демпфирование · 20 лет · Многофункциональность · Самодиагностика</li>
-        </ul>
-
-        <li class="section"><i class="fas fa-microscope"></i> <a href="index.html#principle">Принцип работы — эффект Кориолиса</a></li>
-        <ul>
-          <li class="sub">Массовый расход → Плотность → Объёмный расход → Температура</li>
-          <li class="sub">Параметры: 1 740 000 кг/ч · 650–2000 кг/м³ · −196…+350 °C · до 96 МПа</li>
-        </ul>
-
-        <li class="section"><i class="fas fa-industry"></i> <a href="index.html#applications">Отрасли применения</a> <span class="cat-badge">16 страниц</span></li>
-        <ul>
-          <li class="sub"><a href="applications/neftegaz.html">Нефтегазовая отрасль <i class="fas fa-external-link-alt sitemap-link"></i></a></li>
-          <li class="sub"><a href="applications/chemical.html">Химическая промышленность <i class="fas fa-external-link-alt sitemap-link"></i></a></li>
-          <li class="sub"><a href="applications/polymers.html">Производство полимеров <i class="fas fa-external-link-alt sitemap-link"></i></a></li>
-          <li class="sub"><a href="applications/pharma.html">Фармацевтика <i class="fas fa-external-link-alt sitemap-link"></i></a></li>
-          <li class="sub"><a href="applications/food.html">Пищевая и напитки <i class="fas fa-external-link-alt sitemap-link"></i></a></li>
-          <li class="sub"><a href="applications/electronics.html">Электроника и полупроводники <i class="fas fa-external-link-alt sitemap-link"></i></a></li>
-          <li class="sub"><a href="applications/hydrogen.html">Водородная энергетика <i class="fas fa-external-link-alt sitemap-link"></i></a></li>
-          <li class="sub"><a href="applications/batteries.html">Аккумуляторы и хранение энергии <i class="fas fa-external-link-alt sitemap-link"></i></a></li>
-          <li class="sub"><a href="applications/biotech.html">Биотехнологии и Life Sciences <i class="fas fa-external-link-alt sitemap-link"></i></a></li>
-          <li class="sub"><a href="applications/dosing.html">Системы дозирования и смешения <i class="fas fa-external-link-alt sitemap-link"></i></a></li>
-          <li class="sub"><a href="applications/laboratories.html">Лаборатории и испытательные стенды <i class="fas fa-external-link-alt sitemap-link"></i></a></li>
-          <li class="sub"><a href="applications/heatpower.html">Теплоэнергетика и ЖКХ <i class="fas fa-external-link-alt sitemap-link"></i></a></li>
-          <li class="sub"><a href="applications/cryogenic.html">Криогенные технологии <i class="fas fa-external-link-alt sitemap-link"></i></a></li>
-          <li class="sub"><a href="applications/lpg.html">СУГ / LPG <i class="fas fa-external-link-alt sitemap-link"></i></a></li>
-          <li class="sub"><a href="applications/lng.html">СПГ / LNG <i class="fas fa-external-link-alt sitemap-link"></i></a></li>
-          <li class="sub"><a href="applications/commercial.html">Коммерческий учёт <i class="fas fa-external-link-alt sitemap-link"></i></a></li>
-        </ul>
-
-        <li class="section"><i class="fas fa-chart-bar"></i> <a href="index.html#product-line">Типоразмеры</a></li>
-        <ul>
-          <li class="sub">Вкладка 1: Массовый расход жидкости — DN01–DN250 (до 1 740 000 кг/ч)</li>
-          <li class="sub">Вкладка 2: Стабильность нулевой точки</li>
-          <li class="sub">Вкладка 3: Модификация P (высокое давление)</li>
-          <li class="sub">Вкладка 4: Модификация PK (сверхвысокое до 96 МПа)</li>
-        </ul>
-
-        <li class="section"><i class="fas fa-clipboard-list"></i> <a href="index.html#specifications">Технические характеристики</a></li>
-        <ul>
-          <li class="sub">Метрологические · Технические · Надёжность (3 таблицы)</li>
-        </ul>
-
-        <li class="section"><i class="fas fa-plug"></i> <a href="index.html#transmitters">Трансмиттеры</a></li>
-        <ul>
-          <li class="sub">ME100 — базовый встраиваемый · ME200 — расширенный Ex · ME300 — DIN-рейка non-Ex</li>
-        </ul>
-
-        <li class="section"><i class="fas fa-cogs"></i> <a href="index.html#options">Модификации</a> <span class="cat-badge">11 детальных страниц</span></li>
-        <ul>
-          <li class="sub"><i class="fas fa-chevron-right"></i> <strong>Условия эксплуатации:</strong></li>
-          <ul>
-            <li class="sub-sub"><a href="conditions/t.html">T — Стандартное (−50…+150 °C, ≤10 МПа) <i class="fas fa-external-link-alt sitemap-link"></i></a></li>
-            <li class="sub-sub"><a href="conditions/p.html">P — Повышенное давление (до 45 МПа) <i class="fas fa-external-link-alt sitemap-link"></i></a></li>
-            <li class="sub-sub"><a href="conditions/pk.html">PK — Сверхвысокое давление (до 96 МПа) <i class="fas fa-external-link-alt sitemap-link"></i></a></li>
-            <li class="sub-sub"><a href="conditions/l-cryo.html">L — Криогенное (−200 °C) <i class="fas fa-external-link-alt sitemap-link"></i></a></li>
-            <li class="sub-sub"><a href="conditions/g.html">G — Высокая температура (+230 °C) <i class="fas fa-external-link-alt sitemap-link"></i></a></li>
-            <li class="sub-sub"><a href="conditions/c.html">C — Сверхвысокая температура (+350 °C) <i class="fas fa-external-link-alt sitemap-link"></i></a></li>
-          </ul>
-          <li class="sub"><i class="fas fa-chevron-right"></i> <strong>Типы измерительных трубок:</strong></li>
-          <ul>
-            <li class="sub-sub"><a href="tubes/u.html">U — U-образный (DN03–DN250) <i class="fas fa-external-link-alt sitemap-link"></i></a></li>
-            <li class="sub-sub"><a href="tubes/k.html">K — Широкий U-образный (DN03–DN25) <i class="fas fa-external-link-alt sitemap-link"></i></a></li>
-            <li class="sub-sub"><a href="tubes/w.html">W — Микроизгиб (DN08–DN100) <i class="fas fa-external-link-alt sitemap-link"></i></a></li>
-            <li class="sub-sub"><a href="tubes/l-straight.html">L — Прямотрубный (DN08–DN50) <i class="fas fa-external-link-alt sitemap-link"></i></a></li>
-            <li class="sub-sub"><a href="tubes/d.html">D — Δ-образный треугольный (DN01–DN25) <i class="fas fa-external-link-alt sitemap-link"></i></a></li>
-          </ul>
-          <li class="sub"><i class="fas fa-chevron-right"></i> <a href="isotermal-jacket.html">Изотермический кожух (опция 19S) <i class="fas fa-external-link-alt sitemap-link"></i></a></li>
-          <li class="sub"><i class="fas fa-chevron-right"></i> Полная таблица 23 блоков опций на главной</li>
-        </ul>
-
-        <li class="section"><i class="fas fa-scroll"></i> <a href="index.html#certificates">Сертификация и документация</a></li>
-        <ul>
-          <li class="sub"><a href="docs/ОПИСАНИЕ_ТИПА_2026-98506-26.pdf" target="_blank">Госреестр СИ № 98506-26 (PDF)</a></li>
-          <li class="sub"><a href="docs/Сертификат_об_УТСИ_№98506-26.pdf" target="_blank">Сертификат об УТСИ (PDF)</a></li>
-          <li class="sub"><a href="docs/ТР_ТС_-_012_№06611_Mass-EXPERT.pdf" target="_blank">ТР ТС 012 — Взрывозащита (PDF)</a></li>
-          <li class="sub"><a href="docs/Декларация_о_соответствии_ТР_ТС_020_004_Mass-EXPERT_compressed.pdf" target="_blank">ТР ТС 020 — ЭМС (PDF)</a></li>
-          <li class="sub"><a href="docs/2026-МП_98506-26_compressed.pdf" target="_blank">Методика поверки МП 98506-26 (PDF)</a></li>
-          <li class="sub"><a href="docs/РЭ_Масс_Эксперт_v09.pdf" target="_blank">Руководство по эксплуатации (PDF)</a></li>
-          <li class="sub"><a href="docs/СС_сейсмостойкость_Mass-EXPERT.pdf" target="_blank">Сейсмостойкость (PDF)</a></li>
-          <li class="sub"><a href="docs/Решение_(отказное)_ТР_ТС_032_Mass-EXPERT.pdf" target="_blank">ТР ТС 032 — Отказное письмо (PDF)</a></li>
-          <li class="sub">Испытательные центры: ФБУ «НИЦ ПМ – Ростест» (№ 30004-13), АО «Нефтеавтоматика» (RA.RU.311366)</li>
-        </ul>
-
-        <li class="section"><i class="fas fa-phone"></i> <a href="index.html#contacts">Контакты</a></li>
-        <ul>
-          <li class="sub">Юридический и почтовый адрес · Телефон · Email · Сайт · ИНН · Яндекс.Карты</li>
-        </ul>
-
-        <li class="section"><i class="fas fa-sitemap"></i> Дополнительные страницы</li>
-        <ul>
-          <li class="sub"><a href="sitemap.html">Карта сайта (HTML)</a> <span class="sitemap-link">sitemap.html</span></li>
-          <li class="sub"><a href="sitemap.xml">Карта сайта (XML, для поисковиков)</a> <span class="sitemap-link">sitemap.xml</span></li>
-          <li class="sub"><a href="KNOWLEDGE_BASE.md">База знаний (Markdown, 21 раздел)</a> <span class="sitemap-link">KNOWLEDGE_BASE.md</span></li>
-          <li class="sub"><a href="isotermal-jacket.html">Изотермический кожух — детальная страница</a> <span class="sitemap-link">isotermal-jacket.html</span></li>
-        </ul>
-      </ul>
-    </div>
-
-    <hr style="margin:3rem 0 1rem;border:none;border-top:1px solid var(--gray-200);">
-
-    <div style="text-align:center;color:var(--gray-500);font-size:0.875rem;">
-      <p>© 2026 ООО «Автоматизация-Метрология-ЭКСПЕРТ»</p>
-      <p style="margin-top:0.5rem;">
-        <a href="sitemap.xml" style="color:var(--gray-400);text-decoration:underline;">XML Sitemap</a>
-        &nbsp;·&nbsp;
-        <a href="index.html" style="color:var(--gray-400);text-decoration:underline;">Вернуться на сайт</a>
-        &nbsp;·&nbsp;
-        <a href="https://github.com/ttur35274-cyber/mass-expert-site" target="_blank" style="color:var(--gray-400);text-decoration:underline;">GitHub</a>
-      </p>
-    </div>
+ <div class="container" style="padding-bottom:3rem;">
+  <a href="index.html" class="back-link"><i class="fas fa-arrow-left"></i> На главную Mass-EXPERT</a>
+  <div class="section-header" style="text-align:left;margin:0 0 2rem;">
+   <span class="section-badge">Карта сайта</span>
+   <h2>Структура сайта Mass-EXPERT</h2>
+   <p>Полная карта всех страниц и разделов продукта «Счетчики-расходомеры массовые Mass-EXPERT»</p>
   </div>
+
+  <div class="sitemap-tree">
+   <ul>
+    <li class="root"><i class="fas fa-home"></i> <a href="index.html">Главная страница</a> <span class="sitemap-link">index.html</span></li>
+
+    <li class="section"><i class="fas fa-image"></i> <a href="index.html">Hero — заглавный экран</a></li>
+    <ul>
+     <li class="sub">Фото семейства расходомеров · Точность ±0.1% · Диапазон 100:1 · 20 лет</li>
+     <li class="sub">Бейджи: Госреестр, ТР ТС, Ex, сейсмостойкость, криогенное</li>
+    </ul>
+
+    <li class="section"><i class="fas fa-ruler"></i> <a href="index.html">Полоса стандартов и интерфейсов</a></li>
+    <ul>
+     <li class="sub">ГОСТ, ТР ТС, HART, Modbus, PROFIBUS, CAN, 4-20 мА, IP66/IP67, Ex</li>
+    </ul>
+
+    <li class="section"><i class="fas fa-clipboard-list"></i> <a href="index.html#about">О продукте</a></li>
+    <ul>
+     <li class="sub">Назначение расходомера · 4 карточки преимуществ</li>
+    </ul>
+
+    <li class="section"><i class="fas fa-bullseye"></i> <a href="index.html#advantages">7 преимуществ</a></li>
+    <ul>
+     <li class="sub">Прямое измерение массы · Точность ±0.1% · Диапазон 100:1 · Демпфирование · 20 лет · Многофункциональность · Самодиагностика</li>
+    </ul>
+
+    <li class="section"><i class="fas fa-microscope"></i> <a href="index.html#principle">Принцип работы — эффект Кориолиса</a></li>
+    <ul>
+     <li class="sub">Массовый расход → Плотность → Объёмный расход → Температура</li>
+     <li class="sub">Параметры: 1 740 000 кг/ч · 650–2000 кг/м³ · −196…+350 °C · до 96 МПа</li>
+    </ul>
+
+    <li class="section"><i class="fas fa-industry"></i> <a href="index.html#applications">Отрасли применения</a> <span class="cat-badge">16 страниц</span></li>
+    <ul>
+     <li class="sub"><a href="applications/neftegaz.html">Нефтегазовая отрасль <i class="fas fa-external-link-alt sitemap-link"></i></a></li>
+     <li class="sub"><a href="applications/chemical.html">Химическая промышленность <i class="fas fa-external-link-alt sitemap-link"></i></a></li>
+     <li class="sub"><a href="applications/polymers.html">Производство полимеров <i class="fas fa-external-link-alt sitemap-link"></i></a></li>
+     <li class="sub"><a href="applications/pharma.html">Фармацевтика <i class="fas fa-external-link-alt sitemap-link"></i></a></li>
+     <li class="sub"><a href="applications/food.html">Пищевая и напитки <i class="fas fa-external-link-alt sitemap-link"></i></a></li>
+     <li class="sub"><a href="applications/electronics.html">Электроника и полупроводники <i class="fas fa-external-link-alt sitemap-link"></i></a></li>
+     <li class="sub"><a href="applications/hydrogen.html">Водородная энергетика <i class="fas fa-external-link-alt sitemap-link"></i></a></li>
+     <li class="sub"><a href="applications/batteries.html">Аккумуляторы и хранение энергии <i class="fas fa-external-link-alt sitemap-link"></i></a></li>
+     <li class="sub"><a href="applications/biotech.html">Биотехнологии и Life Sciences <i class="fas fa-external-link-alt sitemap-link"></i></a></li>
+     <li class="sub"><a href="applications/dosing.html">Системы дозирования и смешения <i class="fas fa-external-link-alt sitemap-link"></i></a></li>
+     <li class="sub"><a href="applications/laboratories.html">Лаборатории и испытательные стенды <i class="fas fa-external-link-alt sitemap-link"></i></a></li>
+     <li class="sub"><a href="applications/heatpower.html">Теплоэнергетика и ЖКХ <i class="fas fa-external-link-alt sitemap-link"></i></a></li>
+     <li class="sub"><a href="applications/cryogenic.html">Криогенные технологии <i class="fas fa-external-link-alt sitemap-link"></i></a></li>
+     <li class="sub"><a href="applications/lpg.html">СУГ / LPG <i class="fas fa-external-link-alt sitemap-link"></i></a></li>
+     <li class="sub"><a href="applications/lng.html">СПГ / LNG <i class="fas fa-external-link-alt sitemap-link"></i></a></li>
+     <li class="sub"><a href="applications/commercial.html">Коммерческий учёт <i class="fas fa-external-link-alt sitemap-link"></i></a></li>
+    </ul>
+
+    <li class="section"><i class="fas fa-chart-bar"></i> <a href="index.html#product-line">Типоразмеры</a></li>
+    <ul>
+     <li class="sub">Вкладка 1: Массовый расход жидкости — DN01–DN250 (до 1 740 000 кг/ч)</li>
+     <li class="sub">Вкладка 2: Стабильность нулевой точки</li>
+     <li class="sub">Вкладка 3: Модификация P (высокое давление)</li>
+     <li class="sub">Вкладка 4: Модификация PK (сверхвысокое до 96 МПа)</li>
+    </ul>
+
+    <li class="section"><i class="fas fa-clipboard-list"></i> <a href="index.html#specifications">Технические характеристики</a></li>
+    <ul>
+     <li class="sub">Метрологические · Технические · Надёжность (3 таблицы)</li>
+    </ul>
+
+    <li class="section"><i class="fas fa-plug"></i> <a href="index.html#transmitters">Трансмиттеры</a></li>
+    <ul>
+     <li class="sub">ME100 — базовый встраиваемый · ME200 — расширенный Ex · ME300 — DIN-рейка non-Ex</li>
+    </ul>
+
+    <li class="section"><i class="fas fa-cogs"></i> <a href="index.html#options">Модификации</a> <span class="cat-badge">11 детальных страниц</span></li>
+    <ul>
+     <li class="sub"><i class="fas fa-chevron-right"></i> <strong>Условия эксплуатации:</strong></li>
+     <ul>
+      <li class="sub-sub"><a href="conditions/t.html">T — Стандартное (−50…+150 °C, ≤10 МПа) <i class="fas fa-external-link-alt sitemap-link"></i></a></li>
+      <li class="sub-sub"><a href="conditions/p.html">P — Повышенное давление (до 45 МПа) <i class="fas fa-external-link-alt sitemap-link"></i></a></li>
+      <li class="sub-sub"><a href="conditions/pk.html">PK — Сверхвысокое давление (до 96 МПа) <i class="fas fa-external-link-alt sitemap-link"></i></a></li>
+      <li class="sub-sub"><a href="conditions/l-cryo.html">L — Криогенное (−200 °C) <i class="fas fa-external-link-alt sitemap-link"></i></a></li>
+      <li class="sub-sub"><a href="conditions/g.html">G — Высокая температура (+230 °C) <i class="fas fa-external-link-alt sitemap-link"></i></a></li>
+      <li class="sub-sub"><a href="conditions/c.html">C — Сверхвысокая температура (+350 °C) <i class="fas fa-external-link-alt sitemap-link"></i></a></li>
+     </ul>
+     <li class="sub"><i class="fas fa-chevron-right"></i> <strong>Типы измерительных трубок:</strong></li>
+     <ul>
+      <li class="sub-sub"><a href="tubes/u.html">U — U-образный (DN03–DN250) <i class="fas fa-external-link-alt sitemap-link"></i></a></li>
+      <li class="sub-sub"><a href="tubes/k.html">K — Широкий U-образный (DN03–DN25) <i class="fas fa-external-link-alt sitemap-link"></i></a></li>
+      <li class="sub-sub"><a href="tubes/w.html">W — Микроизгиб (DN08–DN100) <i class="fas fa-external-link-alt sitemap-link"></i></a></li>
+      <li class="sub-sub"><a href="tubes/l-straight.html">L — Прямотрубный (DN08–DN50) <i class="fas fa-external-link-alt sitemap-link"></i></a></li>
+      <li class="sub-sub"><a href="tubes/d.html">D — Δ-образный треугольный (DN01–DN25) <i class="fas fa-external-link-alt sitemap-link"></i></a></li>
+     </ul>
+     <li class="sub"><i class="fas fa-chevron-right"></i> <a href="isotermal-jacket.html">Изотермический кожух (опция 19S) <i class="fas fa-external-link-alt sitemap-link"></i></a></li>
+     <li class="sub"><i class="fas fa-chevron-right"></i> Полная таблица 23 блоков опций на главной</li>
+    </ul>
+
+    <li class="section"><i class="fas fa-scroll"></i> <a href="index.html#certificates">Сертификация и документация</a></li>
+    <ul>
+     <li class="sub"><a href="docs/ОПИСАНИЕ_ТИПА_2026-98506-26.pdf" target="_blank">Госреестр СИ № 98506-26 (PDF)</a></li>
+     <li class="sub"><a href="docs/Сертификат_об_УТСИ_№98506-26.pdf" target="_blank">Сертификат об УТСИ (PDF)</a></li>
+     <li class="sub"><a href="docs/ТР_ТС_-_012_№06611_Mass-EXPERT.pdf" target="_blank">ТР ТС 012 — Взрывозащита (PDF)</a></li>
+     <li class="sub"><a href="docs/Декларация_о_соответствии_ТР_ТС_020_004_Mass-EXPERT_compressed.pdf" target="_blank">ТР ТС 020 — ЭМС (PDF)</a></li>
+     <li class="sub"><a href="docs/2026-МП_98506-26_compressed.pdf" target="_blank">Методика поверки МП 98506-26 (PDF)</a></li>
+     <li class="sub"><a href="docs/РЭ_Масс_Эксперт_v09.pdf" target="_blank">Руководство по эксплуатации (PDF)</a></li>
+     <li class="sub"><a href="docs/СС_сейсмостойкость_Mass-EXPERT.pdf" target="_blank">Сейсмостойкость (PDF)</a></li>
+     <li class="sub"><a href="docs/Решение_(отказное)_ТР_ТС_032_Mass-EXPERT.pdf" target="_blank">ТР ТС 032 — Отказное письмо (PDF)</a></li>
+     <li class="sub">Испытательные центры: ФБУ «НИЦ ПМ – Ростест» (№ 30004-13), АО «Нефтеавтоматика» (RA.RU.311366)</li>
+    </ul>
+
+    <li class="section"><i class="fas fa-phone"></i> <a href="index.html#contacts">Контакты</a></li>
+    <ul>
+     <li class="sub">Юридический и почтовый адрес · Телефон · Email · Сайт · ИНН · Яндекс.Карты</li>
+    </ul>
+
+    <li class="section"><i class="fas fa-sitemap"></i> Дополнительные страницы</li>
+    <ul>
+     <li class="sub"><a href="sitemap.html">Карта сайта (HTML)</a> <span class="sitemap-link">sitemap.html</span></li>
+     <li class="sub"><a href="sitemap.xml">Карта сайта (XML, для поисковиков)</a> <span class="sitemap-link">sitemap.xml</span></li>
+     <li class="sub"><a href="KNOWLEDGE_BASE.md">База знаний (Markdown, 21 раздел)</a> <span class="sitemap-link">KNOWLEDGE_BASE.md</span></li>
+     <li class="sub"><a href="isotermal-jacket.html">Изотермический кожух — детальная страница</a> <span class="sitemap-link">isotermal-jacket.html</span></li>
+    </ul>
+   </ul>
+  </div>
+
+  <hr style="margin:3rem 0 1rem;border:none;border-top:1px solid var(--gray-200);">
+
+  <div style="text-align:center;color:var(--gray-500);font-size:0.875rem;">
+   <p>© 2026 ООО «Автоматизация-Метрология-ЭКСПЕРТ»</p>
+   <p style="margin-top:0.5rem;">
+    <a href="sitemap.xml" style="color:var(--gray-400);text-decoration:underline;">XML Sitemap</a>
+    &nbsp;·&nbsp;
+    <a href="index.html" style="color:var(--gray-400);text-decoration:underline;">Вернуться на сайт</a>
+    &nbsp;·&nbsp;
+    <a href="https://github.com/ttur35274-cyber/mass-expert-site" target="_blank" style="color:var(--gray-400);text-decoration:underline;">GitHub</a>
+   </p>
+  </div>
+ </div>
 
 <script>
 (function(){var t=localStorage.getItem('mass-expert-theme');if(t==='dark')document.documentElement.classList.add('theme-dark');if(t==='accessibility')document.documentElement.classList.add('theme-accessibility');})();
