@@ -44,7 +44,7 @@ body::-webkit-scrollbar { width: 8px; height: 8px; }
 body::-webkit-scrollbar-track { background: transparent; }
 body::-webkit-scrollbar-thumb { background: #CBD5E1; border-radius: 4px; }
 html.theme-dark body::-webkit-scrollbar-thumb { background: #334155; }
-.cfg-header { background: var(--cfg-primary); color: white; padding: 3rem 0 2rem; text-align: center; }
+.cfg-header { background: var(--cfg-primary); color: white; padding: calc(3rem + 78px) 0 2rem; text-align: center; }
 html.theme-dark .cfg-header { color: #0F172A; }
 .cfg-header h1 { margin: 0; font-size: 1.75rem; }
 .cfg-header p { color: rgba(255,255,255,0.7); margin: 0.5rem 0 0; font-size: 0.9375rem; }
@@ -222,6 +222,8 @@ html.theme-dark .cfg-scheme-label { color: #0F172A; }
   if (window.location.search.includes('embedded')) {
     var hdr = document.getElementById('cfgHeader');
     if (hdr) hdr.style.display = 'none';
+    var nav = document.querySelector('.navbar');
+    if (nav) nav.style.display = 'none';
   }
 })();
 
