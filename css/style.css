@@ -1687,3 +1687,11 @@ details.expandable .jacket-content {
   .hero-content .hero-label { font-size: 0.65rem; }
   .hero-badge { font-size: 0.65rem; padding: 0.2rem 0.5rem; }
 }
+
+/* --- Scrollbar --- */
+:root { scrollbar-width: thin; scrollbar-color: #CBD5E1 transparent; }
+:root::-webkit-scrollbar { width: 8px; height: 8px; }
+:root::-webkit-scrollbar-track { background: transparent; }
+:root::-webkit-scrollbar-thumb { background: #CBD5E1; border-radius: 4px; }
+html.theme-dark { scrollbar-color: #334155 transparent; }
+html.theme-dark::-webkit-scrollbar-thumb { background: #334155; }
