@@ -45,13 +45,16 @@ body::-webkit-scrollbar-track { background: transparent; }
 body::-webkit-scrollbar-thumb { background: #CBD5E1; border-radius: 4px; }
 html.theme-dark body::-webkit-scrollbar-thumb { background: #334155; }
 .cfg-header { background: var(--cfg-primary); color: white; padding: 3rem 0 2rem; text-align: center; }
+html.theme-dark .cfg-header { color: #0F172A; }
 .cfg-header h1 { margin: 0; font-size: 1.75rem; }
 .cfg-header p { color: rgba(255,255,255,0.7); margin: 0.5rem 0 0; font-size: 0.9375rem; }
+html.theme-dark .cfg-header p { color: rgba(15,23,42,0.7); }
 .cfg-container { max-width: 1100px; margin: 0 auto; padding: 0 1.5rem; }
 
 .cfg-diagram { background: var(--cfg-card); border: 1px solid var(--cfg-border); border-radius: 16px; padding: 1.5rem; margin: 2rem auto; text-align: center; }
 .cfg-scheme { display: flex; flex-wrap: wrap; gap: 6px; justify-content: center; }
 .cfg-scheme-label { font-weight: 800; font-size: 0.75rem; color: white; background: var(--cfg-primary); padding: 8px 16px; border-radius: 10px; letter-spacing: 0.04em; display: inline-flex; align-items: center; gap: 4px; flex-shrink: 0; }
+html.theme-dark .cfg-scheme-label { color: #0F172A; }
 .cfg-scheme-label::after { content: '→'; font-weight: 400; opacity: 0.5; margin-left: 4px; }
 .cfg-block { display: inline-flex; align-items: center; gap: 6px; padding: 8px 12px; border: 1.5px solid var(--cfg-block-border); border-radius: 10px; cursor: pointer; transition: all 0.15s; background: var(--cfg-card); font-family: 'Inter', sans-serif; min-width: 0; }
 .cfg-block:hover { border-color: var(--cfg-accent); background: var(--cfg-hover-bg); box-shadow: 0 2px 8px rgba(245,158,11,0.12); }
