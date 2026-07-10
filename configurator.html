@@ -38,7 +38,12 @@ html.theme-dark {
  --cfg-hover-bg: #422006;
  --cfg-selected-bg: #422006;
 }
-body { font-family: 'Inter', sans-serif; background: var(--cfg-bg); padding-bottom: 4rem; color: var(--cfg-text); }
+body { font-family: 'Inter', sans-serif; background: var(--cfg-bg); padding-bottom: 4rem; color: var(--cfg-text); scrollbar-width: thin; scrollbar-color: #CBD5E1 transparent; }
+html.theme-dark body { scrollbar-color: #334155 transparent; }
+body::-webkit-scrollbar { width: 8px; height: 8px; }
+body::-webkit-scrollbar-track { background: transparent; }
+body::-webkit-scrollbar-thumb { background: #CBD5E1; border-radius: 4px; }
+html.theme-dark body::-webkit-scrollbar-thumb { background: #334155; }
 .cfg-header { background: var(--cfg-primary); color: white; padding: 3rem 0 2rem; text-align: center; }
 .cfg-header h1 { margin: 0; font-size: 1.75rem; }
 .cfg-header p { color: rgba(255,255,255,0.7); margin: 0.5rem 0 0; font-size: 0.9375rem; }
