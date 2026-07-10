@@ -120,6 +120,38 @@ html.theme-dark .cfg-scheme-label { color: #0F172A; }
 </style>
 </head>
 <body>
+
+<!-- ==================== NAVIGATION ==================== -->
+<nav class="navbar" role="navigation" aria-label="Основная навигация">
+ <div class="container">
+  <a href="index.html" class="navbar-brand">
+   <span class="brand-icon">MASS<br>EXPERT</span>
+  </a>
+  <div class="navbar-controls">
+   <button class="navbar-toggle" aria-label="Открыть меню"><i class="fas fa-bars"></i></button>
+  </div>
+  <div class="navbar-links">
+   <a href="index.html#about">О продукте</a>
+   <a href="index.html#advantages">Преимущества</a>
+   <a href="configurator.html">Конфигуратор</a>
+   <a href="index.html#applications">Применение</a>
+   <a href="index.html#product-line">Типоразмеры</a>
+   <a href="index.html#specifications">Характеристики</a>
+   <a href="index.html#options">Модификации</a>
+   <a href="index.html#certificates">Сертификаты</a>
+   <a href="index.html#contacts">Контакты</a>
+   <div class="theme-toggles-desktop">
+    <button class="theme-btn" id="themeToggle" aria-label="Переключить тему" title="Тёмная тема"><i class="fas fa-moon"></i></button>
+    <button class="theme-btn" id="accessibilityToggle" aria-label="Режим для слабовидящих" title="Режим для слабовидящих"><i class="fas fa-eye"></i></button>
+   </div>
+   <div class="theme-toggles-mobile">
+    <button class="theme-btn" id="themeToggleMobile" aria-label="Переключить тему" title="Тёмная тема"><i class="fas fa-moon"></i></button>
+    <button class="theme-btn" id="accessibilityToggleMobile" aria-label="Режим для слабовидящих" title="Режим для слабовидящих"><i class="fas fa-eye"></i></button>
+   </div>
+  </div>
+ </div>
+</nav>
+
 <div class="cfg-header" id="cfgHeader">
  <div class="cfg-container">
   <h1>Конфигуратор Mass-EXPERT</h1>
@@ -572,5 +604,6 @@ buildScheme();
 updateSummary();
 renderCart();
 </script>
+<script src="js/main.js"></script>
 </body>
 </html>
