@@ -79,7 +79,7 @@ document.addEventListener('DOMContentLoaded', () => {
       document.body.style.position = '';
       document.body.style.width = '';
       document.body.style.top = '';
-      window.scrollTo(0, scrollTop);
+      window.scrollTo({ top: scrollTop, behavior: 'instant' });
     }
     toggle.addEventListener('click', () => {
       const isOpen = navLinks.classList.toggle('open');
