@@ -258,6 +258,7 @@ html.theme-dark .navbar-toggle { color: var(--accent) !important; }
 html.theme-accessibility .navbar-brand .brand-icon {
   background: #FFFFFF !important;
   color: #000000 !important;
+  width: 100px !important;
 }
 html.theme-accessibility img {
   opacity: 0.85;
