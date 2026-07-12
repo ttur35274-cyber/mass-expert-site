@@ -260,6 +260,10 @@ html.theme-accessibility .navbar-brand .brand-icon {
   color: #000000 !important;
   width: 100px !important;
 }
+@media (max-width: 768px) {
+  html.theme-accessibility .navbar-links a { font-size: 1rem !important; padding: 0.5rem 1rem !important; }
+  html.theme-accessibility .navbar-links { justify-content: flex-start; padding: 1rem; gap: 0; }
+}
 html.theme-accessibility img {
   opacity: 0.85;
   filter: none !important;
