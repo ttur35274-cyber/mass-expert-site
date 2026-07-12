@@ -69,6 +69,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const navLinks = document.querySelector('.navbar-links');
   const toggleIcon = toggle ? toggle.querySelector('i') : null;
   if (toggle) {
+    let scrollTop = 0;
     function closeNav() {
       navLinks.classList.remove('open');
       if (toggleIcon) toggleIcon.className = 'fas fa-bars';
@@ -78,16 +79,22 @@ document.addEventListener('DOMContentLoaded', () => {
       document.body.style.position = '';
       document.body.style.width = '';
       document.body.style.top = '';
+      window.scrollTo(0, scrollTop);
     }
     toggle.addEventListener('click', () => {
       const isOpen = navLinks.classList.toggle('open');
       if (toggleIcon) toggleIcon.className = isOpen ? 'fas fa-times' : 'fas fa-bars';
       toggle.setAttribute('aria-label', isOpen ? 'Закрыть меню' : 'Открыть меню');
-      document.body.style.overflow = isOpen ? 'hidden' : '';
-      document.documentElement.style.overflow = isOpen ? 'hidden' : '';
-      document.body.style.position = isOpen ? 'fixed' : '';
-      document.body.style.width = isOpen ? '100%' : '';
-      document.body.style.top = isOpen ? '-0px' : '';
+      if (isOpen) {
+        scrollTop = window.scrollY;
+        document.body.style.overflow = 'hidden';
+        document.documentElement.style.overflow = 'hidden';
+        document.body.style.position = 'fixed';
+        document.body.style.width = '100%';
+        document.body.style.top = '-' + scrollTop + 'px';
+      } else {
+        closeNav();
+      }
     });
     // Close on link click
     navLinks.querySelectorAll('a').forEach(link => {
