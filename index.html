@@ -344,9 +344,36 @@
       <h2>Подберите расходомер под вашу задачу</h2>
       <p>Визуальный подбор опций — пошаговый выбор 23 блоков конфигурации. Система подскажет доступные варианты и ограничения.</p>
      </div>
-     <div style="margin-top:1.5rem;border-radius:16px;overflow:hidden;box-shadow:0 4px 24px rgba(0,0,0,0.08);">
-      <iframe src="configurator.html?embedded" title="Конфигуратор Mass-EXPERT" loading="lazy" style="width:100%;height:850px;border:none;display:block;"></iframe>
-     </div>
+     <details class="cfg-collapse animate-on-scroll">
+      <summary>
+       <div class="cfg-collapse-preview">
+        <div class="cfg-collapse-visual">
+         <i class="fas fa-cubes"></i>
+         <div class="cfg-collapse-steps">
+          <span>1A</span><span>→</span><span>2B</span><span>→</span><span>3C</span><span>⋯</span><span>23X</span>
+         </div>
+        </div>
+        <div class="cfg-collapse-info">
+         <h3>Подбор за 23 шага</h3>
+         <p>Диаметр → Условия → Сенсор → Давление → Соединение → Материал → Точность → … → Гарантия</p>
+         <div class="cfg-collapse-tags">
+          <span>23 блока опций</span>
+          <span>Система подсказок</span>
+          <span>ГОСТ / EN / ASME</span>
+         </div>
+        </div>
+        <div class="cfg-collapse-action">
+         <span class="cfg-collapse-btn">Настроить расходомер</span>
+         <i class="fas fa-chevron-down cfg-collapse-arrow"></i>
+        </div>
+       </div>
+      </summary>
+      <div class="expandable-body">
+       <div style="border-radius:16px;overflow:hidden;box-shadow:0 4px 24px rgba(0,0,0,0.08);">
+        <iframe src="configurator.html?embedded" title="Конфигуратор Mass-EXPERT" loading="lazy" style="width:100%;height:850px;border:none;display:block;"></iframe>
+       </div>
+      </div>
+     </details>
     </div>
    </section>
 
