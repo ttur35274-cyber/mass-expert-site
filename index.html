@@ -244,15 +244,24 @@
   <section class="section" id="replacement">
    <div class="container">
     <div class="section-header animate-on-scroll">
-     <span class="section-badge">Замена без изменений</span>
-     <h2>Быстрая и максимально простая замена установленного расходомера</h2>
+     <span class="section-badge" style="background:var(--success);color:#fff;">⚡ Замена без изменений</span>
+     <h2>Замените импортный или старый расходомер за 2 часа без остановки производства и сварки</h2>
     </div>
-    <div style="display:grid;grid-template-columns:1fr 1fr;gap:2rem;align-items:stretch;" class="animate-on-scroll">
-     <div style="display:flex;align-items:center;">
-      <div class="adv-card" style="border:1px solid var(--gray-200);padding:1.5rem;width:100%;">
-       <div class="adv-icon" style="margin-bottom:0.75rem;"><i class="fas fa-exchange-alt" style="color:var(--accent);font-size:1.5rem;"></i></div>
-       <h3 style="margin-bottom:0.5rem;font-size:1.05rem;">Замена импортных расходомеров без сварки</h3>
-       <p style="font-size:0.9rem;color:var(--gray-600);line-height:1.6;">Не просто расходомер, а точная копия вашего старого прибора по габаритам. Удлиним сенсор, применим этот же тип присоединения — <strong>замена без изменения проекта трубной обвязки</strong>.</p>
+
+    <!-- Pain points + SVG comparison -->
+    <div class="replacement-grid animate-on-scroll">
+     <div class="repl-pain">
+      <div class="repl-pain-item">
+       <i class="fas fa-times-circle"></i>
+       <p><strong>Импортный расходомер вышел из строя?</strong><br>Нет запчастей, срок поставки 6+ месяцев, производство простаивает</p>
+      </div>
+      <div class="repl-pain-item">
+       <i class="fas fa-times-circle"></i>
+       <p><strong>Боитесь менять проект и проходить экспертизу?</strong><br>Переварка трубопровода — это недели простоя и миллионы рублей</p>
+      </div>
+      <div class="repl-pain-item" style="border-left-color:var(--success);">
+       <i class="fas fa-check-circle" style="color:var(--success);"></i>
+       <p><strong>✅ Решение: Mass-EXPERT</strong><br>Точная копия вашего прибора по габаритам. Российский сервис, гарантия 5 лет, замена за 2 часа</p>
       </div>
      </div>
      <div style="display:flex;flex-direction:column;justify-content:center;">
@@ -263,40 +272,67 @@
        <rect x="240" y="10" width="10" height="48" rx="2" fill="#CBD5E1" stroke="#94A3B8" stroke-width="1"/>
        <rect x="160" y="2" width="80" height="64" rx="6" fill="#FEE2E2" stroke="#EF4444" stroke-width="2"/>
        <text x="200" y="42" text-anchor="middle" font-size="11" font-weight="600" fill="#DC2626">Старый</text>
-       <!-- L₁ measurement -->
        <line x1="160" y1="74" x2="240" y2="74" stroke="#64748B" stroke-width="1" stroke-dasharray="3"/>
        <line x1="160" y1="69" x2="160" y2="79" stroke="#64748B" stroke-width="1"/>
        <line x1="240" y1="69" x2="240" y2="79" stroke="#64748B" stroke-width="1"/>
        <text x="200" y="92" text-anchor="middle" font-size="18" fill="#64748B" font-weight="700">L₁</text>
-
        <!-- Arrow down -->
        <path d="M 200 96 L 200 114" stroke="#F59E0B" stroke-width="2" marker-end="url(#arrow)"/>
-
        <!-- ===== BOTTOM PIPE: green with L₂, flanges flush ===== -->
        <rect x="10" y="162" width="380" height="28" rx="4" fill="#E2E8F0" stroke="#94A3B8" stroke-width="1.5"/>
        <rect x="150" y="152" width="10" height="48" rx="2" fill="#CBD5E1" stroke="#94A3B8" stroke-width="1"/>
        <rect x="240" y="152" width="10" height="48" rx="2" fill="#CBD5E1" stroke="#94A3B8" stroke-width="1"/>
        <rect x="160" y="144" width="80" height="64" rx="6" fill="#D1FAE5" stroke="#10B981" stroke-width="2"/>
        <text x="200" y="184" text-anchor="middle" font-size="11" font-weight="600" fill="#059669">Mass-EXPERT</text>
-       <!-- L₂ measurement -->
        <line x1="160" y1="216" x2="240" y2="216" stroke="#64748B" stroke-width="1" stroke-dasharray="3"/>
        <line x1="160" y1="211" x2="160" y2="221" stroke="#64748B" stroke-width="1"/>
        <line x1="240" y1="211" x2="240" y2="221" stroke="#64748B" stroke-width="1"/>
        <text x="200" y="234" text-anchor="middle" font-size="18" fill="#64748B" font-weight="700">L₂</text>
-
-       <!-- Arrow markers -->
        <defs>
         <marker id="arrow" viewBox="0 0 10 10" refX="10" refY="5" markerWidth="6" markerHeight="6" orient="auto">
          <path d="M 0 0 L 10 5 L 0 10 z" fill="#F59E0B"/>
         </marker>
        </defs>
       </svg>
-      <p style="text-align:center;font-size:1.25rem;color:var(--gray-500);margin-top:1rem;font-weight:600;">L₁ = L₂ → межфланцевое расстояние и присоединение идентичны.</p>
+      <p style="text-align:center;font-size:1rem;color:var(--gray-500);margin-top:0.75rem;font-weight:600;">L₁ = L₂ → межфланцевое расстояние и присоединение идентичны</p>
      </div>
     </div>
+
+    <!-- Benefits infographic -->
+    <div class="repl-benefits animate-on-scroll">
+     <div class="repl-benefit-card">
+      <div class="repl-benefit-icon">⏱</div>
+      <div class="repl-benefit-value">2 часа</div>
+      <div class="repl-benefit-label">вместо 2 дней на<br>перепроектирование</div>
+     </div>
+     <div class="repl-benefit-card">
+      <div class="repl-benefit-icon">💰</div>
+      <div class="repl-benefit-value">до 500 000 ₽</div>
+      <div class="repl-benefit-label">экономия на монтаже<br>и экспертизе проекта</div>
+     </div>
+     <div class="repl-benefit-card">
+      <div class="repl-benefit-icon">📏</div>
+      <div class="repl-benefit-value">100%</div>
+      <div class="repl-benefit-label">совместимость<br>по габаритам</div>
+     </div>
+     <div class="repl-benefit-card">
+      <div class="repl-benefit-icon">🛠</div>
+      <div class="repl-benefit-value">0</div>
+      <div class="repl-benefit-label">сварочных работ<br>и изменений обвязки</div>
+     </div>
+    </div>
+
+    <!-- CTA block -->
+    <div class="repl-solution animate-on-scroll">
+     <div class="repl-solution-text">
+      <h3>📋 Получите коммерческое предложение за 1 час</h3>
+      <p>Мы подготовим индивидуальное КП под вашу задачу: подберём аналог по вашим фланцам, <strong>гарантируем 100% совместимость</strong> по межфланцевому расстоянию и присоединению</p>
+     </div>
+     <a href="#contacts" class="repl-btn">Получить КП <i class="fas fa-arrow-right"></i></a>
+    </div>
+
    </div>
   </section>
-
   <!-- ==================== CONFIGURATOR ==================== -->
    <section class="section section-gray" id="configurator">
     <div class="container">
