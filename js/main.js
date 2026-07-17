@@ -42,9 +42,20 @@ document.addEventListener('DOMContentLoaded', () => {
     setThemeUI(theme);
   }
 
-  // Load saved theme
+  // Load saved theme, or detect system preference
   const saved = localStorage.getItem('mass-expert-theme');
-  if (saved) setTheme(saved);
+  if (saved) {
+    setTheme(saved);
+  } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+    setTheme('dark');
+  }
+
+  // Listen for system theme changes while no saved preference
+  window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', (e) => {
+    if (!localStorage.getItem('mass-expert-theme')) {
+      setTheme(e.matches ? 'dark' : '');
+    }
+  });
 
   // Theme toggle click (both desktop and mobile)
   themeBtns.forEach(btn => {
