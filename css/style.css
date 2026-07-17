@@ -1224,7 +1224,7 @@ html.theme-dark .cfg-collapse-arrow { color: var(--gray-400); }
 
 .repl-benefits {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(5, 1fr);
   gap: 1rem;
   margin: 0 auto 2.5rem;
   max-width: 1100px;
