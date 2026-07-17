@@ -32,7 +32,7 @@ document.addEventListener('DOMContentLoaded', () => {
         : '<i class="fas fa-eye"></i>';
       btn.title = isA11y ? 'Обычный режим' : 'Режим для слабовидящих';
     });
-    localStorage.setItem('mass-expert-theme', theme || '');
+    localStorage.setItem('mass-expert-theme', theme || 'light');
   }
 
   function setTheme(theme) {
@@ -44,13 +44,17 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // Load saved theme, or detect system preference
   const saved = localStorage.getItem('mass-expert-theme');
-  if (saved) {
-    setTheme(saved);
+  if (saved === 'dark') {
+    setTheme('dark');
+  } else if (saved === 'accessibility') {
+    setTheme('accessibility');
+  } else if (saved === 'light') {
+    setTheme('');
   } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
     setTheme('dark');
   }
 
-  // Listen for system theme changes while no saved preference
+  // Listen for system theme changes only when user never made a choice
   window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', (e) => {
     if (!localStorage.getItem('mass-expert-theme')) {
       setTheme(e.matches ? 'dark' : '');
