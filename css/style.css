@@ -1226,8 +1226,7 @@ html.theme-dark .cfg-collapse-arrow { color: var(--gray-400); }
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: 1rem;
-  margin: 0 auto 2.5rem;
-  max-width: 900px;
+  margin-bottom: 2.5rem;
 }
 .repl-benefit-card {
   background: var(--white);
@@ -1267,8 +1266,7 @@ html.theme-dark .cfg-collapse-arrow { color: var(--gray-400); }
   grid-template-columns: 1fr auto;
   gap: 1.5rem;
   align-items: center;
-  margin: 0 auto 2rem;
-  max-width: 900px;
+  margin-bottom: 2rem;
 }
 .repl-solution-text { color: rgba(255,255,255,0.9); }
 .repl-solution-text h3 { color: #fff; font-size: 1.15rem; margin: 0 0 0.5rem; }
