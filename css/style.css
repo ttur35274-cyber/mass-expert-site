@@ -1293,7 +1293,7 @@ html.theme-dark .cfg-collapse-arrow { color: var(--gray-400); }
 html.theme-dark .repl-pain-item { background: var(--gray-800); border-left-color: #F87171; }
 html.theme-dark .repl-pain-item p { color: var(--gray-300); }
 html.theme-dark .repl-pain-item strong { color: var(--gray-100); }
-html.theme-dark .repl-benefit-card { background: var(--gray-800); border-color: var(--gray-700); }
+html.theme-dark .repl-benefit-card { background: var(--bg-card); border-color: var(--gray-200); }
 html.theme-dark .repl-benefit-value { color: var(--accent); }
 html.theme-dark .repl-benefit-label { color: var(--gray-400); }
 
