@@ -65,7 +65,7 @@
      </p>
      <div style="display:flex;gap:1rem;flex-wrap:wrap;">
       <a href="#specifications" class="btn btn-primary">Технические характеристики</a>
-      <a href="#contacts" class="btn btn-outline">Запросить КП</a>
+      <a href="#request" class="btn btn-outline">Запросить КП</a>
       <a href="configurator.html" class="btn btn-outline">Конфигуратор</a>
      </div>
      <div class="hero-badges">
@@ -334,7 +334,7 @@
       <h3>Получите коммерческое предложение</h3>
       <p>Мы подготовим индивидуальное КП под вашу задачу: подберём идентичное присоединение к процессу, <strong>гарантируем 100% совместимость</strong> по межфланцевому расстоянию</p>
      </div>
-     <a href="#contacts" class="repl-btn">Получить КП</a>
+     <a href="#request" class="repl-btn">Получить КП</a>
     </div>
 
    </div>
@@ -1208,6 +1208,37 @@
   </div>
   </div>
  </section>
+
+<!-- ==================== REQUEST FORM ==================== -->
+<section class="section request-section" id="request">
+ <div class="container">
+  <div class="section-header animate-on-scroll">
+   <span class="section-badge">Отправить запрос</span>
+   <h2>Получите индивидуальное предложение</h2>
+   <p>Заполните форму — мы подберём оптимальную конфигурацию под вашу задачу и пришлём КП в течение часа</p>
+  </div>
+  <form class="request-form animate-on-scroll" action="#" method="POST">
+   <div>
+    <label>Ваше имя <span class="required">*</span></label>
+    <input type="text" name="name" required placeholder="Иванов Иван Иванович">
+   </div>
+   <div>
+    <label>Телефон <span class="required">*</span></label>
+    <input type="tel" name="phone" required placeholder="+7 (___) ___-__-__">
+   </div>
+   <div>
+    <label>E-mail</label>
+    <input type="email" name="email" placeholder="ivanov@company.ru">
+   </div>
+   <div>
+    <label>Дополнительные требования, количество, сроки...</label>
+    <textarea name="message" placeholder="Опишите вашу задачу: тип среды, давление, температура, DN, необходимое количество, желаемые сроки поставки..."></textarea>
+   </div>
+   <button type="submit" class="repl-btn">Отправить запрос</button>
+   <p class="form-note">* — обязательные поля</p>
+  </form>
+ </div>
+</section>
 
 <!-- ==================== CONTACTS ==================== -->
  <section class="section" id="contacts">

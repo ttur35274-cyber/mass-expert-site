@@ -1288,7 +1288,7 @@ html.theme-dark .cfg-collapse-arrow { color: var(--gray-400); }
   cursor: pointer;
   border: none;
 }
-.repl-btn:hover { background: #D97706; transform: translateY(-1px); box-shadow: 0 4px 16px rgba(245,158,11,0.35); }
+.repl-btn:hover { background: #D97706; color: #fff; transform: translateY(-1px); box-shadow: 0 4px 16px rgba(245,158,11,0.35); }
 
 html.theme-dark .repl-pain-item { background: var(--gray-800); border-left-color: #F87171; }
 html.theme-dark .repl-pain-item p { color: var(--gray-300); }
@@ -1305,6 +1305,63 @@ html.theme-dark .repl-benefit-label { color: var(--gray-400); }
 }
 @media (max-width: 480px) {
   .repl-benefits { grid-template-columns: 1fr; }
+}
+
+/* --- Request Form --- */
+.request-section {
+  background: linear-gradient(135deg, var(--primary), #072649);
+  color: rgba(255,255,255,0.9);
+}
+.request-section .section-badge { background: var(--accent); color: #0F172A; }
+.request-section .section-header h2 { color: #fff; }
+.request-section .section-header p { color: rgba(255,255,255,0.7); }
+.request-form {
+  max-width: 640px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+.request-form label {
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: rgba(255,255,255,0.85);
+  margin-bottom: 0.25rem;
+  display: block;
+}
+.request-form label .required { color: var(--accent); }
+.request-form input,
+.request-form textarea {
+  width: 100%;
+  padding: 0.75rem 1rem;
+  border-radius: var(--radius);
+  border: 1px solid rgba(255,255,255,0.15);
+  background: rgba(255,255,255,0.08);
+  color: #fff;
+  font-size: 0.9375rem;
+  font-family: var(--font-sans);
+  transition: border-color var(--transition), background var(--transition);
+  box-sizing: border-box;
+}
+.request-form input::placeholder,
+.request-form textarea::placeholder { color: rgba(255,255,255,0.35); }
+.request-form input:focus,
+.request-form textarea:focus {
+  outline: none;
+  border-color: var(--accent);
+  background: rgba(255,255,255,0.12);
+}
+.request-form textarea { min-height: 100px; resize: vertical; }
+.request-form .form-note {
+  font-size: 0.8rem;
+  color: rgba(255,255,255,0.5);
+  text-align: center;
+  margin-top: -0.5rem;
+}
+.request-form .repl-btn {
+  align-self: center;
+  font-size: 1rem;
+  padding: 0.9rem 2rem;
 }
 @media (max-width: 768px) {
   .cfg-collapse summary { padding: 1.25rem; }
