@@ -106,6 +106,32 @@ html.theme-dark .section-dark { background: #0F172A !important; }
 html.theme-dark .section-dark h2 { color: var(--text-heading) !important; }
 html.theme-dark .hero-stat-value { color: #F59E0B !important; }
 
+/* Dark theme: info/highlight boxes on detail pages (page <style> blocks use hardcoded light colors) */
+html.theme-dark .highlight-box,
+html.theme-dark .food-highlight {
+  background: linear-gradient(135deg, #1a2236, #151b2b) !important;
+  border: 1px solid #2a2f3e !important;
+  border-left: 4px solid var(--accent) !important;
+}
+html.theme-dark .highlight-box.particle-free {
+  background: linear-gradient(135deg, #251a3d, #1b1430) !important;
+  border: 1px solid #3a2a5f !important;
+  border-left: 4px solid #a78bfa !important;
+}
+html.theme-dark .highlight-box h3,
+html.theme-dark .food-highlight h3 { color: var(--gray-700) !important; }
+html.theme-dark .highlight-box p,
+html.theme-dark .food-highlight p { color: var(--gray-600) !important; }
+html.theme-dark .highlight-box.particle-free h3,
+html.theme-dark .highlight-box.particle-free p { color: #ddd6fe !important; }
+html.theme-dark .micro-notice {
+  background: linear-gradient(135deg, #132a4d, #0e1e36) !important;
+  border: 1px solid #1d3a5f !important;
+  border-left: 4px solid #38BDF8 !important;
+}
+html.theme-dark .micro-notice h3 { color: #bae6fd !important; }
+html.theme-dark .micro-notice p { color: #93c5fd !important; }
+
 /* --- Accessibility / Visually Impaired mode (full WCAG) --- */
 html.theme-accessibility,
 html.theme-accessibility body {
