@@ -103,7 +103,7 @@ option_blocks:
     values: "N / A(3-A) / S(TS) / J(CCS)"
   - block: "12L"
     name: "Версия трансмиттера"
-    values: "V1(ME100) / V2(ME200) / V3(ME300)"
+    values: "V1(ME100) / V2(ME200) / V3(ME300) / V4(ME400)"
   - block: "13M"
     name: "Режим измерения"
     values: "M(масса) / D(плотность) / A(оба)"
