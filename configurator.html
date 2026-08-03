@@ -324,7 +324,7 @@ const BLOCKS = [
   {c:'H',d:'HART + 4–20 мА + имп.'},{c:'X',d:'Прочие',n:'описание обязательно'}
  ]},
  {id:'11K',name:'Сертификация',desc:'Ex, 3-A, TS…', opts:[
-  {c:'N',d:'Нет',n:'по умолчанию'},{c:'C',d:'Взрывозащита Ex'},{c:'A',d:'Сертификат 3-A'},
+  {c:'N',d:'Нет',n:'по умолчанию'},{c:'C',d:'Взрывозащита Ex',n:'только для ME100 / ME200'},{c:'A',d:'Сертификат 3-A'},
   {c:'S',d:'Лицензия TS'},{c:'J',d:'Сертификат CCS'},{c:'X',d:'Прочие',n:'описание обязательно'}
  ]},
  {id:'12L',name:'Трансмиттер',desc:'ME100/200/300/400', opts:[
@@ -366,9 +366,7 @@ const CONSTRAINTS = [
  {from:'3C',val:'V', check:(sel)=>{const d=sel['1A'];return !d||['008','015','025','040','050'].includes(d);}, msg:'V-тип: только DN08, DN15, DN25, DN40, DN50'},
  {from:'8H',val:'J', check:(sel)=>{const k=sel['11K'];return !k||k==='N'||k==='A';}, msg:'Компактное J: без взрывозащиты'},
  {from:'8H',val:'D', check:(sel)=>{const k=sel['11K'];return !k||k==='N'||k==='A';}, msg:'DIN-рейка D: без взрывозащиты'},
- {from:'12L',val:'V3', check:(sel)=>{const k=sel['11K'];return !k||k==='N'||k==='A';}, msg:'ME300 (DIN-рейка): без взрывозащиты'},
- {from:'12L',val:'V4', check:(sel)=>{const k=sel['11K'];return !k||k==='N'||k==='A';}, msg:'ME400 (сверхкомпактный): без взрывозащиты'},
- {from:'11K',val:'C', check:(sel)=>{const t=sel['12L'];return !t||(t!=='V3'&&t!=='V4');}, msg:'Взрывозащита Ex: не применима к ME300 / ME400'},
+ {from:'11K',val:'C', check:(sel)=>{const t=sel['12L'];return !t||t==='V1'||t==='V2';}, msg:'Взрывозащита Ex: только для ME100 / ME200'},
 ];
 
 let selections = {};
@@ -457,6 +455,12 @@ function showConstraintsNote(blockId) {
 }
 
 function selectOption(blockId, code, desc) {
+ // Auto-reset: если выбран трансмиттер без взрывозащиты (V3/V4), сбросить сертификацию Ex (11K=C)
+ if (blockId === '12L' && (code === 'V3' || code === 'V4') && selections['11K'] === 'C') {
+  selections['11K'] = 'N';
+  const vEl = document.getElementById('val-11K');
+  if (vEl) vEl.textContent = 'N';
+ }
  selections[blockId] = code;
  const valEl = document.getElementById(`val-${blockId}`);
  valEl.textContent = code;
