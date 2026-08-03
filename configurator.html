@@ -23,6 +23,9 @@
  --cfg-text-secondary: #374151;
  --cfg-hover-bg: #FFFBEB;
  --cfg-selected-bg: #FEF3C7;
+ --cfg-warn-bg: #FEF2F2;
+ --cfg-warn-border: #FEE2E2;
+ --cfg-warn-text: #B91C1C;
 }
 html.theme-dark {
  --cfg-primary: #F59E0B;
@@ -37,6 +40,9 @@ html.theme-dark {
  --cfg-text-secondary: #CBD5E1;
  --cfg-hover-bg: #422006;
  --cfg-selected-bg: #422006;
+ --cfg-warn-bg: #2A1414;
+ --cfg-warn-border: #4C1D1D;
+ --cfg-warn-text: #FCA5A5;
 }
 body { font-family: 'Inter', sans-serif; background: var(--cfg-bg); padding-bottom: 4rem; color: var(--cfg-text); scrollbar-width: thin; scrollbar-color: #CBD5E1 transparent; }
 html.theme-dark body { scrollbar-color: #334155 transparent; }
@@ -68,15 +74,18 @@ html.theme-dark .cfg-scheme-label { color: #0F172A; }
 .cfg-panel.active { display: block; }
 .cfg-panel h3 { margin: 0 0 0.25rem; font-size: 1.125rem; color: var(--cfg-primary); }
 .cfg-panel .panel-desc { font-size: 0.8125rem; color: var(--cfg-gray); margin-bottom: 1rem; }
-.cfg-panel .panel-note { font-size: 0.75rem; color: #B91C1C; background: #FEF2F2; padding: 0.5rem 0.75rem; border-radius: 6px; margin-bottom: 0.75rem; display: none; }
+.cfg-panel .panel-note { font-size: 0.75rem; color: var(--cfg-warn-text); background: var(--cfg-warn-bg); border: 1px solid var(--cfg-warn-border); padding: 0.5rem 0.75rem; border-radius: 6px; margin-bottom: 0.75rem; display: none; }
 .cfg-panel .panel-note.show { display: block; }
 .cfg-options { display: grid; grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); gap: 0.5rem; }
 .cfg-option { border: 1px solid var(--cfg-border); border-radius: 8px; padding: 0.5rem 0.75rem; cursor: pointer; transition: all 0.15s; font-size: 0.8125rem; }
 .cfg-option:hover { border-color: var(--cfg-accent); background: var(--cfg-hover-bg); }
 .cfg-option.selected { border-color: var(--cfg-accent); background: var(--cfg-selected-bg); font-weight: 600; }
+.cfg-option.disabled { cursor: not-allowed; border-style: dashed; border-color: var(--cfg-warn-border); background: var(--cfg-warn-bg); }
+.cfg-option.disabled .opt-code, .cfg-option.disabled .opt-desc { opacity: 0.6; }
 .cfg-option .opt-code { font-weight: 700; color: var(--cfg-primary); }
 .cfg-option .opt-desc { color: var(--cfg-gray); font-size: 0.75rem; margin-top: 2px; }
-.cfg-option .opt-note { color: #B91C1C; font-size: 0.7rem; font-style: italic; }
+.cfg-option .opt-note { color: var(--cfg-warn-text); font-size: 0.7rem; font-style: italic; }
+.cfg-option .opt-warn { color: var(--cfg-warn-text); background: var(--cfg-warn-bg); border: 1px solid var(--cfg-warn-border); border-radius: 4px; padding: 0.3rem 0.45rem; margin-top: 0.4rem; font-size: 0.68rem; font-style: normal; line-height: 1.35; }
 
 .cfg-summary { background: var(--cfg-card); border: 1px solid var(--cfg-border); border-radius: 12px; padding: 1.5rem; margin-bottom: 1.5rem; }
 .cfg-summary h3 { margin: 0 0 0.75rem; font-size: 1rem; color: var(--cfg-primary); }
@@ -356,17 +365,17 @@ const BLOCKS = [
 
 // ===== ОГРАНИЧЕНИЯ =====
 const CONSTRAINTS = [
- {from:'2B',val:'L', check:(sel)=>{const s=sel['3C'];return !s||s==='U'||s==='D'||s==='X';}, msg:'Криогенное L: только U/D сенсоры'},
- {from:'2B',val:'D', check:(sel)=>{const s=sel['8H'];return !s||s==='S';}, msg:'Сверхнизкие D: только раздельное исполнение (8H=S)'},
- {from:'2B',val:'G', check:(sel)=>{const s=sel['8H'];return !s||s==='S';}, msg:'Высокая темп. G: только раздельное исполнение (8H=S)'},
- {from:'2B',val:'C', check:(sel)=>{const s=sel['8H'];return !s||s==='S';}, msg:'Сверхвысокая C: только раздельное исполнение (8H=S)'},
- {from:'3C',val:'U', check:(sel)=>{const d=sel['1A'];return !d||parseInt(d)>=3;}, msg:'U-образный: только ≥DN03'},
- {from:'3C',val:'K', check:(sel)=>{const d=sel['1A'];return !d||(parseInt(d)>=2&&parseInt(d)<=25);}, msg:'K-тип: только DN02–DN25'},
- {from:'3C',val:'D', check:(sel)=>{const d=sel['1A'];return !d||d==='001'||d==='002'||d==='025';}, msg:'Δ-тип: только DN01, DN02, DN25'},
- {from:'3C',val:'V', check:(sel)=>{const d=sel['1A'];return !d||['008','015','025','040','050'].includes(d);}, msg:'V-тип: только DN08, DN15, DN25, DN40, DN50'},
- {from:'8H',val:'J', check:(sel)=>{const k=sel['11K'];return !k||k==='N'||k==='A';}, msg:'Компактное J: без взрывозащиты'},
- {from:'8H',val:'D', check:(sel)=>{const k=sel['11K'];return !k||k==='N'||k==='A';}, msg:'DIN-рейка D: без взрывозащиты'},
- {from:'11K',val:'C', check:(sel)=>{const t=sel['12L'];return !t||t==='V1'||t==='V2';}, msg:'Взрывозащита Ex: только для ME100 / ME200'},
+ {from:'2B',val:'L', check:(sel)=>{const s=sel['3C'];return !s||s==='U'||s==='D'||s==='X';}, msg:'Блок 3C: криогенное L (2B) — только сенсоры U/D'},
+ {from:'2B',val:'D', check:(sel)=>{const s=sel['8H'];return !s||s==='S';}, msg:'Блок 8H: сверхнизкие D (2B) — только раздельное исполнение (S)'},
+ {from:'2B',val:'G', check:(sel)=>{const s=sel['8H'];return !s||s==='S';}, msg:'Блок 8H: высокая темп. G (2B) — только раздельное исполнение (S)'},
+ {from:'2B',val:'C', check:(sel)=>{const s=sel['8H'];return !s||s==='S';}, msg:'Блок 8H: сверхвысокая C (2B) — только раздельное исполнение (S)'},
+ {from:'3C',val:'U', check:(sel)=>{const d=sel['1A'];return !d||parseInt(d)>=3;}, msg:'Блок 1A: U-образный (3C) — только ≥DN03'},
+ {from:'3C',val:'K', check:(sel)=>{const d=sel['1A'];return !d||(parseInt(d)>=2&&parseInt(d)<=25);}, msg:'Блок 1A: K-тип (3C) — только DN02–DN25'},
+ {from:'3C',val:'D', check:(sel)=>{const d=sel['1A'];return !d||d==='001'||d==='002'||d==='025';}, msg:'Блок 1A: Δ-тип (3C) — только DN01, DN02, DN25'},
+ {from:'3C',val:'V', check:(sel)=>{const d=sel['1A'];return !d||['008','015','025','040','050'].includes(d);}, msg:'Блок 1A: V-тип (3C) — только DN08, DN15, DN25, DN40, DN50'},
+ {from:'8H',val:'J', check:(sel)=>{const k=sel['11K'];return !k||k==='N'||k==='A';}, msg:'Блок 11K: компактное J (8H) — без взрывозащиты (только N/3-A)'},
+ {from:'8H',val:'D', check:(sel)=>{const k=sel['11K'];return !k||k==='N'||k==='A';}, msg:'Блок 11K: DIN-рейка D (8H) — без взрывозащиты (только N/3-A)'},
+ {from:'11K',val:'C', check:(sel)=>{const t=sel['12L'];const h=sel['8H'];const okT=!t||t==='V1'||t==='V2';const okH=!h||(h!=='J'&&h!=='D');return okT&&okH;}, msg:'Взрывозащита Ex (11K): только для ME100/ME200 (12L) и монтажа N/S (8H)'},
 ];
 
 let selections = {};
@@ -411,16 +420,12 @@ function selectBlock(idx) {
     if (!c.check(selections)) { disabled = true; warn = c.msg; }
    }
   });
-  // Also check constraints WHERE THIS BLOCK IS DEPENDED ON
-  CONSTRAINTS.forEach(c => {
-   if (c.from !== block.id && selections[c.from] === c.val && opt.c === selections[block.id]) {
-    // Check if current selection violates constraint
-   }
-  });
-  const disAttr = disabled ? ' style="opacity:0.4;cursor:not-allowed;"' : '';
+  const disCls = disabled ? ' disabled' : '';
+  const disAttr = disCls ? ' style="opacity:0.55;cursor:not-allowed;"' : '';
   const noteHtml = opt.n ? `<div class="opt-note">${opt.n}</div>` : '';
-  html += `<div class="cfg-option${sel}"${disAttr} onclick="${disabled?'':`selectOption('${block.id}','${opt.c}','${opt.d}')`}">
-   <div class="opt-code">${opt.c}</div><div class="opt-desc">${opt.d}</div>${noteHtml}
+  const warnHtml = warn ? `<div class="opt-warn">${warn}</div>` : '';
+  html += `<div class="cfg-option${sel}${disCls}"${disAttr} onclick="${disabled?'':`selectOption('${block.id}','${opt.c}','${opt.d}')`}">
+   <div class="opt-code">${opt.c}</div><div class="opt-desc">${opt.d}</div>${noteHtml}${warnHtml}
   </div>`;
  });
  html += `</div>`;
@@ -432,17 +437,10 @@ function selectBlock(idx) {
 
 function showConstraintsNote(blockId) {
  const note = document.getElementById('panel').querySelector('.panel-note') || document.createElement('div');
- // Check if any constraint applies to a BLOCK THAT WAS ALREADY SELECTED
+ // Показываем предупреждения только для блока-источника (где выбор уже сделан и влияет на другие блоки)
  let msgs = [];
  CONSTRAINTS.forEach(c => {
   if (c.from === blockId && selections[c.from] === c.val) {
-   // This block has a constraint that affects other blocks
-   msgs.push(`⚠ ${c.msg}`);
-  }
- });
- // Check if previously selected blocks constrain this block
- CONSTRAINTS.forEach(c => {
-  if (c.from !== blockId && selections[c.from] === c.val && !c.check(selections)) {
    msgs.push(`⚠ ${c.msg}`);
   }
  });
