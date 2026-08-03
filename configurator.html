@@ -375,6 +375,8 @@ const CONSTRAINTS = [
  {from:'3C',val:'V', check:(sel)=>{const d=sel['1A'];return !d||['008','015','025','040','050'].includes(d);}, msg:'Блок 1A: V-тип (3C) — только DN08, DN15, DN25, DN40, DN50'},
  {from:'8H',val:'J', check:(sel)=>{const k=sel['11K'];return !k||k==='N'||k==='A';}, msg:'Блок 11K: компактное J (8H) — без взрывозащиты (только N/3-A)'},
  {from:'8H',val:'D', check:(sel)=>{const k=sel['11K'];return !k||k==='N'||k==='A';}, msg:'Блок 11K: DIN-рейка D (8H) — без взрывозащиты (только N/3-A)'},
+ {from:'12L',val:'V3', check:(sel)=>{const k=sel['11K'];return !k||k!=='C';}, msg:'Блок 11K: выбрана взрывозащита Ex — ME300 доступен только без неё'},
+ {from:'12L',val:'V4', check:(sel)=>{const k=sel['11K'];return !k||k!=='C';}, msg:'Блок 11K: выбрана взрывозащита Ex — ME400 доступен только без неё'},
  {from:'11K',val:'C', check:(sel)=>{const t=sel['12L'];const h=sel['8H'];const okT=!t||t==='V1'||t==='V2';const okH=!h||(h!=='J'&&h!=='D');return okT&&okH;}, msg:'Взрывозащита Ex (11K): только для ME100/ME200 (12L) и монтажа N/S (8H)'},
 ];
 
@@ -421,7 +423,7 @@ function selectBlock(idx) {
    }
   });
   const disCls = disabled ? ' disabled' : '';
-  const disAttr = disCls ? ' style="opacity:0.55;cursor:not-allowed;"' : '';
+  const disAttr = disCls ? ' style="cursor:not-allowed;"' : '';
   const noteHtml = opt.n ? `<div class="opt-note">${opt.n}</div>` : '';
   const warnHtml = warn ? `<div class="opt-warn">${warn}</div>` : '';
   html += `<div class="cfg-option${sel}${disCls}"${disAttr} onclick="${disabled?'':`selectOption('${block.id}','${opt.c}','${opt.d}')`}">
