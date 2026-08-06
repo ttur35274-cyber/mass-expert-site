@@ -50,11 +50,13 @@ body::-webkit-scrollbar { width: 8px; height: 8px; }
 body::-webkit-scrollbar-track { background: transparent; }
 body::-webkit-scrollbar-thumb { background: #CBD5E1; border-radius: 4px; }
 html.theme-dark body::-webkit-scrollbar-thumb { background: #334155; }
-.cfg-header { background: var(--cfg-primary); color: white; padding: calc(3rem + 78px) 0 2rem; text-align: center; }
-html.theme-dark .cfg-header { color: white; background: #0a1628; }
-.cfg-header h1 { margin: 0; font-size: 1.75rem; }
-.cfg-header p { color: rgba(255,255,255,0.7); margin: 0.5rem 0 0; font-size: 0.9375rem; }
+.cfg-header { background: #ffffff; color: var(--cfg-text); padding: calc(3rem + 78px) 0 2rem; text-align: center; border-bottom: 1px solid var(--cfg-border); }
+html.theme-dark .cfg-header { color: white; background: #0a1628; border-bottom: none; }
+.cfg-header h1 { margin: 0; font-size: 1.75rem; color: var(--cfg-primary); }
+html.theme-dark .cfg-header h1 { color: white; }
+.cfg-header p { color: var(--cfg-gray); margin: 0.5rem 0 0; font-size: 0.9375rem; }
 html.theme-dark .cfg-header p { color: rgba(255,255,255,0.6); }
+@media (max-width: 600px) { .cfg-header-brand { display: block; } }
 .cfg-container { max-width: 1100px; margin: 0 auto; padding: 0 1.5rem; }
 
 .cfg-diagram { background: var(--cfg-card); border: 1px solid var(--cfg-border); border-radius: 16px; padding: 1.5rem; margin: 2rem auto; text-align: center; }
@@ -163,7 +165,7 @@ html.theme-dark .cfg-scheme-label { color: #0F172A; }
 
 <div class="cfg-header" id="cfgHeader">
  <div class="cfg-container">
-  <h1>Конфигуратор Mass-EXPERT</h1>
+  <h1>Конфигуратор <span class="cfg-header-brand">Mass-EXPERT</span></h1>
   <p>Выберите опции по порядку — система подскажет доступные варианты</p>
  </div>
 </div>
